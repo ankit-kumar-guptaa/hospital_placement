@@ -15,7 +15,7 @@
 .ensure-section .divider {
     width: 100px;
     height: 4px;
-    background-color: #007bff;
+    background-color: #6ec1e4;
     margin: 10px auto 30px;
     border-radius: 4px;
 }
@@ -78,7 +78,7 @@
 .divider {
     width: 50px;
     height: 4px;
-    background-color: #007bff; /* Primary theme color */
+    background-color: #6ec1e4; 
     margin: 10px auto;
     border-radius: 2px;
 }
@@ -114,5 +114,5 @@
 }
 
 .text-primary {
-    color: #007bff; /* Icon primary color */
+    color: #6ec1e4; /* Icon primary color */
 }
