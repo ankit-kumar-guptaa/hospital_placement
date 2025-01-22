@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <?php include "include/assets.php"?>
+        <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    
+
+
+<?php include "include/header.php"?>
+
+<section style="position: relative; background: url('https://www.deccanchronicle.com/h-upload/2024/01/18/1071450-doctors.jpg') no-repeat center center/cover; padding: 80px 0;">
+    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
+    <div class="container position-relative" data-aos="fade-down">
+        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Contact Us</h1>
+        <nav aria-label="breadcrumb" style="margin-top: 20px;">
+            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
+                <li class="breadcrumb-item">
+                    <a href="index.html" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Contact Us</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+
+
+
+<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 120px 0; position: relative; overflow: hidden;">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(60px);"></div>
+    <div style="position: absolute; bottom: -60px; right: -60px; width: 200px; height: 200px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(80px);"></div>
+
+    <div class="container" data-aos="fade-up">
+        <!-- Title -->
+        <h2 class="text-center" style="font-weight: bold; color: #222; font-size: 38px; margin-bottom: 20px;">
+            Contact Doctor Placement Agency
+        </h2>
+        <p class="text-center" style="font-size: 18px; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+            We are committed to providing excellent support for all your staffing needs. Whether you have a question or need assistance, 
+            feel free to reach out to us anytime!
+        </p>
+    </div>
+
+    <!-- Call-to-Action -->
+    <div class="text-center mt-5" data-aos="zoom-in">
+        <a href="#contact-form" class="btn btn-primary" style="padding: 12px 30px; font-size: 18px; border-radius: 30px; background-color: #007bff; border: none; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">
+            Get in Touch
+        </a>
+    </div>
+</section>
+
+
+<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 100px 0;">
+    <div class="container" data-aos="fade-up">
+        <div class="row">
+            <!-- Contact Details -->
+            <div class="col-md-6 mb-4">
+                <div style="background: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); padding: 30px;">
+                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px;">Get in Touch</h3>
+                    <ul style="list-style: none; padding: 0; font-size: 18px; color: #555; line-height: 2;">
+                        <li>
+                            <i class="fas fa-phone-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
+                            <b>Phone:</b> +91 98703 64340, 011-40747520
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
+                            <b>Head Office:</b> A-83, Okhla Phase II, New Delhi - 110020
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
+                            <b>Email:</b> info@hospitalplacement.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Opening Hours -->
+            <div class="col-md-6">
+                <div style="background: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); padding: 30px;">
+                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px;">Opening Hours</h3>
+                    <ul style="list-style: none; padding: 0; font-size: 18px; color: #555; line-height: 2;">
+                        <li>
+                            <i class="far fa-clock" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
+                            <b>Monday to Friday:</b> 9:30 am – 7:30 pm
+                        </li>
+                        <li>
+                            <i class="far fa-clock" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
+                            <b>Saturday:</b> 9:30 am – 6:00 pm
+                        </li>
+                        <li>
+                            <i class="fas fa-times-circle" style="color: #ff4d4d; font-size: 20px; margin-right: 10px;"></i>
+                            <b>Sunday:</b> Closed
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Branches Section with Cards -->
+<section style="background: linear-gradient(135deg, #eef2f7, #ffffff); padding: 100px 0; overflow: hidden;">
+    <div class="container" data-aos="fade-up">
+        <h3 class="text-center" style="font-weight: bold; color: #222; margin-bottom: 40px;">Our Branches Across India</h3>
+        <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
+            <div class="slider-track">
+                <!-- Branch Card -->
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Kashmir</h5>
+                    <p style="color: #555;">Srinagar - 199001</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Delhi</h5>
+                    <p style="color: #555;">Badarpur - 110044</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Andhra Pradesh</h5>
+                    <p style="color: #555;">Rajahmundry - 533103</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Maharashtra</h5>
+                    <p style="color: #555;">Durgapur - 442404</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Uttar Pradesh</h5>
+                    <p style="color: #555;">Noida - 201309</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Punjab</h5>
+                    <p style="color: #555;">Hoshiarpur - 144208</p>
+                </div>
+                <!-- Duplicate Cards for Infinite Scrolling -->
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Kashmir</h5>
+                    <p style="color: #555;">Srinagar - 199001</p>
+                </div>
+                <div class="branch-card">
+                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
+                    <h5 style="font-weight: bold; color: #333;">Delhi</h5>
+                    <p style="color: #555;">Badarpur - 110044</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS for Smooth Slider -->
+<style>
+    .slider-container {
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .slider-track {
+        display: flex;
+        animation: scroll 15s linear infinite;
+    }
+
+    .branch-card {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        flex: 0 0 25%;
+        margin-right: 15px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .branch-card h5 {
+        margin-bottom: 10px;
+    }
+</style>
+
+<!-- Contact Form -->
+<section style="background: linear-gradient(135deg, #eef2f7, #ffffff); padding: 100px 0;">
+    <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+            <!-- Left Side: Image -->
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div style="position: relative; text-align: center;">
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-illustration-download-in-svg-png-gif-file-formats--call-logo-laptop-helping-customer-service-pack-network-communication-illustrations-2912018.png" alt="Contact Us" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                    <!-- Decorative Circle -->
+                    <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(30px);"></div>
+                </div>
+            </div>
+
+            <!-- Right Side: Form -->
+            <div class="col-lg-6" data-aos="fade-left">
+                <div style="background: #ffffff; border-radius: 15px; padding: 40px; box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px;">Get in Touch</h3>
+                    <p style="font-size: 16px; color: #555; margin-bottom: 30px;">
+                        We’d love to hear from you! Whether you have a question or need assistance, just fill in the details below.
+                    </p>
+                    <form>
+                        <!-- Name and Email -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="name" style="font-weight: bold; color: #555;">Your Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="John Doe" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="email" style="font-weight: bold; color: #555;">Your Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="example@domain.com" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;">
+                            </div>
+                        </div>
+                        <!-- Phone and Message -->
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <label for="phone" style="font-weight: bold; color: #555;">Phone Number</label>
+                                <input type="text" id="phone" class="form-control" placeholder="+91 9876543210" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;">
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label for="message" style="font-weight: bold; color: #555;">Your Message</label>
+                                <textarea id="message" class="form-control" placeholder="Write your message here..." rows="4" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;"></textarea>
+                            </div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 25px; background: linear-gradient(135deg, #007bff, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php include "include/footer.php"?>

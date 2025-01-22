@@ -19,7 +19,7 @@
 
 
 
-    <section class="container py-5">
+    <!-- <section class="container py-5">
     <div class="row">
         <div class="col-md-12">
             
@@ -32,9 +32,49 @@
             </p>
         </div>
     </div>
-</section>
+</section> -->
 
     
+<section class="hospital-placement-section py-5" data-aos="fade-up">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Column with Images -->
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
+        <div class="position-relative">
+          <img src="https://eepicmanagement.com/wp-content/uploads/2022/07/WhatsApp-Image-2022-07-05-at-1.45.32-PM-3-290x300.jpeg" 
+               alt="Healthcare Professional" 
+               class="img-fluid rounded shadow w-75 position-absolute top-0 start-0" data-aos="zoom-in" data-aos-delay="300">
+          <img src="https://eepicmanagement.com/wp-content/uploads/2022/07/WhatsApp-Image-2022-07-05-at-1.45.32-PM-2.jpeg" 
+               alt="Nurse in Clinic" 
+               class="img-fluid rounded shadow w-75 position-absolute bottom-0 end-0" data-aos="zoom-in" data-aos-delay="500">
+        </div>
+      </div>
+
+      <!-- Right Column with Content -->
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+        <h6 class="text-danger fw-bold" data-aos="fade-up" data-aos-delay="100">GET YOUR BEST MEDICAL EMPLOYEE</h6>
+        <h2 class="fw-bold mb-4" data-aos="fade-up" data-aos-delay="200">
+          Best Medical and Healthcare Recruitment Services
+        </h2>
+        <p class="text-muted" data-aos="fade-up" data-aos-delay="300">
+          HospitalPlacement.com is your trusted recruitment consulting firm, serving the healthcare industry nationwide since 2010. We’re an ISO 9001:2000 certified organization specializing in providing comprehensive staffing solutions for hospitals, nursing homes, and healthcare facilities.
+        </p>
+        <ul class="list-unstyled mb-4">
+          <li class="d-flex align-items-center mb-2" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            <span class="text-secondary">Make improvements in your workplace productivity.</span>
+          </li>
+          <li class="d-flex align-items-center" data-aos="fade-up" data-aos-delay="500">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            <span class="text-secondary">Think Recruitment, Think Different.</span>
+          </li>
+        </ul>
+        <a href="#more-info" class="btn btn-primary px-4 py-2 shadow" data-aos="fade-up" data-aos-delay="600">READ MORE</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -68,91 +108,21 @@
 
 
 
-<section class="solutions-section py-5">
-    <div class="container text-center">
-        <!-- Title and Description -->
-        <div class="row">
-            <div class="col-12">
-                <h2 class="section-title mb-3">OUR SOLUTIONS</h2>
-                <div class="divider mx-auto"></div>
-                <p class="solutions-description mx-auto">
-                    We offer professional services in identifying and fulfilling your staffing and recruitment needs. 
-                    Our recruitment experts with domain specialization ensure you hire the best talents from the industry 
-                    to keep you ever ready for meeting your business challenges. Outsource your recruitments to find key 
-                    people faster while freeing your management bandwidth for core management activities.
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Solutions Cards -->
-    <div class="row text-center mt-5">
-            <!-- Single Solution Card -->
-            <div class="col-md-4 mb-4">
-                <div class="solution-card p-4 shadow-sm">
-                    <i class="fas fa-search fa-3x text-primary mb-3"></i>
-                    <h5 class="solution-title mb-2">Complete Recruitment Process Outsourcing</h5>
-                    <p>We manage the entire recruitment cycle for you.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="solution-card p-4 shadow-sm">
-                    <i class="fas fa-handshake fa-3x text-primary mb-3"></i>
-                    <h5 class="solution-title mb-2">Pay on Success Fee Model</h5>
-                    <p>Only pay when the right candidate is hired.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="solution-card p-4 shadow-sm">
-                    <i class="fas fa-paper-plane fa-3x text-primary mb-3"></i>
-                    <h5 class="solution-title mb-2">Faster Turnaround Time</h5>
-                    <p>Quick and efficient hiring process for your needs.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="solution-card p-4 shadow-sm">
-                    <i class="fas fa-laptop fa-3x text-primary mb-3"></i>
-                    <h5 class="solution-title mb-2">Best Fit Pre-Screening</h5>
-                    <p>Pre-screened candidates tailored to your needs.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="solution-card p-4 shadow-sm">
-                    <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
-                    <h5 class="solution-title mb-2">Wide Industry Skill Database</h5>
-                    <p>Access to a large pool of skilled candidates.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="solution-card p-4 shadow-sm">
-                    <i class="fas fa-lightbulb fa-3x text-primary mb-3"></i>
-                    <h5 class="solution-title mb-2">Head Hunting Expertise</h5>
-                    <p>Expert assistance in finding top-tier talent.</p>
-                </div>
-            </div>
-        </div>
-</section>
 
 
 
 
+<?php include "include/solution.php"?>
 
 
 
 
+<?php include "include/why-choose.php"?>
 
+<?php include "include/service.php"?>
 
+<?php include "include/counter.php"?>
 
+<?php include "include/testimonial.php"?>
 
-
-
-<script src="assets/animation.js"></script>
-
-<!-- Include reCAPTCHA script -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <!-- Bootstrap JS (Optional for some features like modals, dropdowns, etc.) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<?php include "include/footer.php"?>

@@ -116,3 +116,194 @@
 .text-primary {
     color: #6ec1e4; /* Icon primary color */
 }
+
+
+
+
+
+
+
+
+.hospital-placement-section {
+    background-color: #f8f9fa;
+  }
+  
+  .hospital-placement-section img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hospital-placement-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hospital-placement-section .position-relative {
+    height: 300px; /* Adjust as needed */
+  }
+  
+  .hospital-placement-section img.w-75 {
+    max-width: 52%; /* Smaller size for positioning */
+  }
+  
+  .hospital-placement-section img:first-child {
+    z-index: 2;
+    border: 4px solid white;
+  }
+  
+  .hospital-placement-section img:last-child {
+    z-index: 1;
+  }
+  
+  .hospital-placement-section h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+  }
+  
+  .hospital-placement-section .btn-primary {
+    background-color: #0069d9;
+    border: none;
+  }
+  
+  .hospital-placement-section .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+
+
+
+
+
+  .counter-box {
+	display: block;
+	background: #f6f6f6;
+	padding: 40px 20px 37px;
+	text-align: center
+}
+
+.counter-box p {
+	margin: 5px 0 0;
+	padding: 0;
+	color: #909090;
+	font-size: 18px;
+	font-weight: 500
+}
+
+.counter-box i {
+	font-size: 60px;
+	margin: 0 0 15px;
+	color: #d2d2d2
+}
+
+.counter { 
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+	color: #666;
+	line-height: 28px
+}
+
+.counter-box.colored {
+      background: #3acf87;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+	color: #fff
+}
+
+
+
+
+
+.counter-box {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .counter-box:hover {
+    transform: translateY(-10px);
+  }
+
+  .counter {
+    font-size: 2.5rem;
+  }
+
+
+
+
+
+
+
+  .why-choose-us-section {
+    background-color: #fafafa;  /* Very soft light gray background */
+    padding-top: 60px;
+  }
+
+  /* Section Heading Styling */
+  .why-choose-us-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;  /* Muted dark gray for heading */
+    font-weight: 700;
+  }
+
+  .divider {
+    width: 50px;
+    height: 3px;
+    background-color: #bdc3c7;  /* Subtle light gray divider color */
+    margin: 0 auto;
+  }
+
+  /* Feature Box Styling */
+  .feature-box {
+    background-color: #ffffff;  /* White background for the cards */
+    border: 1px solid #e0e0e0;  /* Soft border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);  /* Soft shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-8px);  /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);  /* Slightly stronger shadow */
+  }
+
+  .feature-box i {
+    color: #3498db;  /* Soft, professional blue for icons */
+  }
+
+  .feature-box h3 {
+    color: #34495e;  /* Darker muted gray for titles */
+  }
+
+  .feature-box p {
+    color: #7f8c8d;  /* Softer gray for paragraph text */
+  }
+
+  /* Row spacing */
+  .mb-4 {
+    margin-bottom: 30px;  /* Adequate space between rows */
+  }
+
+  /* Icon size */
+  .fa-4x {
+    font-size: 3rem;  /* Larger icon size */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .why-choose-us-section h2 {
+      font-size: 2rem;  /* Slightly smaller heading on mobile */
+    }
+
+    .feature-box {
+      margin-bottom: 20px;  /* Reduced space between cards on mobile */
+    }
+  }
+  
+  /* Soft Text-Primary Color - Customizing the 'primary' color */
+  .text-primary {
+    color: #5d6d7e;  /* Soft blue-gray tone for a calm and professional look */
+  }

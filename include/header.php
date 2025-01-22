@@ -2,7 +2,7 @@
 // header.php
 ?>
 
-<header>
+<header id="main-header" data-aos="fade-down">
     <div class="container1">
         <div class="logo">
             <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Logo">
@@ -12,29 +12,34 @@
                 <li><a href="index.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Home</a></li>
                 <li><a href="about.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">About Us</a></li>
                 <li>
-                    <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'pages.php' ? 'active' : ''; ?>">Pages</a>
+                    <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'pages.php' ? 'active' : ''; ?>">Pages <i class="fa-sharp fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="page1.php">Page 1</a></li>
-                        <li><a href="page2.php">Page 2</a></li>
-                        <li><a href="page3.php">Page 3</a></li>
+                        <li><a href="page1.php">Placement Consultants and <br>
+                        Recruitment Agency in Delhi</a></li>
+                        <li><a href="page2.php">Placement Agency in Hyderabad</a></li>
+                        <li><a href="page3.php">Placement Agency in Mumbai</a></li>
+                        <li><a href="page3.php">Placement Agency in Chandigarh</a></li>
+                        <li><a href="page3.php">Placement Agency in Kolkata</a></li>
+                        <li><a href="page3.php">Placement Agency in Lucknow</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">Services</a>
+                    <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">For Employers <i class="fa-sharp fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="service1.php">Service 1</a></li>
-                        <li><a href="service2.php">Service 2</a></li>
-                        <li><a href="service3.php">Service 3</a></li>
+                        <li><a href="service1.php">Specialty Placements</a></li>
+                        <li><a href="service2.php">Permanent Placement</a></li>
+                        <li><a href="service3.php">Temporary Staffing Services</a></li>
                     </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'healthcare.php' ? 'active' : ''; ?>">Healthcare Recruitment</a>
                     <ul class="dropdown">
                         <li><a href="healthcare1.php">Healthcare 1</a></li>
                         <li><a href="healthcare2.php">Healthcare 2</a></li>
                         <li><a href="healthcare3.php">Healthcare 3</a></li>
                     </ul>
-                </li>
+                </li> -->
+                <li><a href="solutions.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'solutions.php' ? 'active' : ''; ?>">Solutions</a></li>
                 <li><a href="jobs.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'jobs.php' ? 'active' : ''; ?>">Jobs</a></li>
                 <li><a href="contact.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Contact Us</a></li>
             </ul>
@@ -44,6 +49,7 @@
         </nav>
     </div>
 </header>
+
 
 <style>
     /* General Styles */
@@ -62,6 +68,32 @@
         position: relative;
         z-index: 1000;
     }
+
+    #main-header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+#main-header.sticky {
+    position: fixed;
+    /* background: rgba(255, 255, 255, 0.9); */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.5s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
     .container1 {
         display: flex;
         justify-content: space-between;
@@ -106,7 +138,7 @@
     .dropdown {
         display: none;
         position: absolute;
-        top: 40px;
+        top: 30px;
         left: 0;
         background: #fff;
         list-style: none;
@@ -122,6 +154,7 @@
         padding: 10px 20px;
         display: block;
         white-space: nowrap;
+       
     }
     .nav-links li:hover .dropdown {
         display: block;
@@ -204,5 +237,26 @@
         if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
             navLinks.classList.remove('show');
         }
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const header = document.getElementById('main-header');
+        const stickyOffset = header.offsetTop;
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > stickyOffset) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration
+            once: false,     // Whether animation should happen only once
+        });
     });
 </script>
