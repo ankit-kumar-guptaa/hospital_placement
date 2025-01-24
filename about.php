@@ -186,7 +186,7 @@
     <div class="container text-center" data-aos="fade-up">
         <h2 style="font-weight: bold; color: #222; font-size: 36px;">Get in Touch</h2>
         <p style="font-size: 18px; color: #555;">Contact us to explore tailored recruitment solutions for your healthcare institution.</p>
-        <a href="contact.html" class="btn btn-primary mt-4" style="padding: 10px 20px; font-size: 18px;">Contact Us</a>
+        <a href="contact.php" class="btn btn-primary mt-4" style="padding: 10px 20px; font-size: 18px;">Contact Us</a>
     </div>
 </section>
 

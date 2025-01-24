@@ -6,7 +6,7 @@
     <title>Contact Us</title>
     <?php include "include/assets.php"?>
         <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -197,51 +197,49 @@
 </style>
 
 <!-- Contact Form -->
-<section style="background: linear-gradient(135deg, #eef2f7, #ffffff); padding: 100px 0;">
+<section style="background: linear-gradient(135deg, #eef2f7, #ffffff); padding: 70px 0;" id="contact-form">
     <div class="container" data-aos="fade-up">
-        <div class="row align-items-center">
+        <div class="row justify-content-center">
             <!-- Left Side: Image -->
-            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
                 <div style="position: relative; text-align: center;">
-                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-illustration-download-in-svg-png-gif-file-formats--call-logo-laptop-helping-customer-service-pack-network-communication-illustrations-2912018.png" alt="Contact Us" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
-                    <!-- Decorative Circle -->
-                    <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(30px);"></div>
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-illustration-download-in-svg-png-gif-file-formats--call-logo-laptop-helping-customer-service-pack-network-communication-illustrations-2912018.png" alt="Contact Us" style="width: 100%; border-radius: 15px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);">
+                    <!-- Decorative Elements -->
+                    <div style="position: absolute; top: -20px; left: -20px; width: 150px; height: 150px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(40px);"></div>
                 </div>
             </div>
 
             <!-- Right Side: Form -->
             <div class="col-lg-6" data-aos="fade-left">
-                <div style="background: #ffffff; border-radius: 15px; padding: 40px; box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px;">Get in Touch</h3>
-                    <p style="font-size: 16px; color: #555; margin-bottom: 30px;">
-                        We’d love to hear from you! Whether you have a question or need assistance, just fill in the details below.
+                <div style="background: #ffffff; border-radius: 15px; padding: 25px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px; text-align: center;">Contact Us</h3>
+                    <p style="font-size: 15px; color: #555; margin-bottom: 25px; text-align: center;">
+                        Let us know how we can help you. Please fill out the form below.
                     </p>
                     <form>
-                        <!-- Name and Email -->
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label for="name" style="font-weight: bold; color: #555;">Your Name</label>
-                                <input type="text" id="name" class="form-control" placeholder="John Doe" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;">
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label for="email" style="font-weight: bold; color: #555;">Your Email</label>
-                                <input type="email" id="email" class="form-control" placeholder="example@domain.com" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;">
-                            </div>
+                        <!-- Name -->
+                        <div class="form-floating mb-3">
+                            <input type="text" id="name" class="form-control" placeholder="Your Name" style="padding: 12px; font-size: 14px; border-radius: 8px;">
+                            <label for="name">Your Name</label>
                         </div>
-                        <!-- Phone and Message -->
-                        <div class="row">
-                            <div class="col-md-6 mb-4">
-                                <label for="phone" style="font-weight: bold; color: #555;">Phone Number</label>
-                                <input type="text" id="phone" class="form-control" placeholder="+91 9876543210" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;">
-                            </div>
-                            <div class="col-md-6 mb-4">
-                                <label for="message" style="font-weight: bold; color: #555;">Your Message</label>
-                                <textarea id="message" class="form-control" placeholder="Write your message here..." rows="4" style="padding: 15px; font-size: 16px; border-radius: 10px; border: 1px solid #ddd;"></textarea>
-                            </div>
+                        <!-- Email -->
+                        <div class="form-floating mb-3">
+                            <input type="email" id="email" class="form-control" placeholder="Your Email" style="padding: 12px; font-size: 14px; border-radius: 8px;">
+                            <label for="email">Your Email</label>
+                        </div>
+                        <!-- Phone -->
+                        <div class="form-floating mb-3">
+                            <input type="text" id="phone" class="form-control" placeholder="Phone Number" style="padding: 12px; font-size: 14px; border-radius: 8px;">
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <!-- Message -->
+                        <div class="form-floating mb-3">
+                            <textarea id="message" class="form-control" placeholder="Your Message" rows="4" style="padding: 12px; font-size: 14px; border-radius: 8px;"></textarea>
+                            <label for="message">Your Message</label>
                         </div>
                         <!-- Submit Button -->
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 25px; background: linear-gradient(135deg, #007bff, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
+                            <button type="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 20px; background: linear-gradient(135deg, #0069d9, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
                                 Send Message
                             </button>
                         </div>
@@ -251,6 +249,8 @@
         </div>
     </div>
 </section>
+
+
 
 
 

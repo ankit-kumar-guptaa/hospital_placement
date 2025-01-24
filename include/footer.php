@@ -96,7 +96,7 @@
 AOS.init({
         duration: 1000, // Animation duration in ms
         easing: 'ease-in-out', // Animation easing
-        once: false, // Animation happens only once
+        once: true, // Animation happens only once
         offset: 100, // Trigger animation when 200px above the section's center
         anchorPlacement: 'top-center', // Animations trigger when the top of the section is near the center of the viewport
     });

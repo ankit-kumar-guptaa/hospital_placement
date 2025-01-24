@@ -108,15 +108,96 @@
 
             <!-- Dynamic Fields for Nurse (hidden by default) -->
             <div id="nurse-fields" class="dynamic-fields" style="display: none;">
-                <div class="mb-3">
-                    <label for="nurse-info" class="form-label">Nurse Information</label>
-                    <input type="text" name="nurse-info" class="form-control" placeholder="Nurse details">
+                <div class= "row mb-3">
+                     <div class="col-md-4">
+                        <label for="department" class="form-label">Department</label>
+                        <select id="department" name="department" class="form-select">
+                            <option value="" disabled selected>Select Department</option>
+                            <option value="Cardiology">Cardiology</option>
+                            <option value="Dermatology">Dermatology</option>
+                            <option value="ENT">ENT</option>
+                            <option value="Gastroenterology">Gastroenterology</option>
+                            <option value="General Practitioner">General Practitioner</option>
+                            <option value="General surgery">General surgery</option>
+                            <option value="Gynaecology">Gynaecology</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+
+                    <!-- Qualification Selection -->
+                    <div class="col-md-4">
+                        <label for="qualification" class="form-label">Qualification</label>
+                        <select id="qualification" name="qualification" class="form-select" required>
+                            <option value="" disabled selected>Select Qualification</option>
+                            <option value="MD">MD</option>
+                            <option value="MS">MS</option>
+                            <option value="MBBS">MBBS</option>
+                            <option value="BAMS">BAMS</option>
+                            <option value="BDS">BDS</option>
+                            <option value="BHMS">BHMS</option>
+                            <option value="PhD">PhD</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+
+                    <!-- College / Institute / University Selection -->
+                    <div class="col-md-4">
+                        <label for="college" class="form-label">College / Institute / University</label>
+                        <select id="college" name="college" class="form-select" required>
+                            <option value="" disabled selected>Select College</option>
+                            <option value="A J Institute of Medical Sciences">A J Institute of Medical Sciences</option>
+                            <option value="A N Magadh Medical College">A N Magadh Medical College</option>
+                            <option value="All India Institute of Medical Sciences">All India Institute of Medical
+                                Sciences</option>
+                            <option value="Amala Institute of Medical Sciences">Amala Institute of Medical Sciences
+                            </option>
+                            <option value="Bangalore Medical College and Research Institute">Bangalore Medical College
+                                and Research Institute</option>
+                            <option value="Banaras Hindu University">Banaras Hindu University</option>
+                            <option value="Bhabha Atomic Research Centre">Bhabha Atomic Research Centre</option>
+                            <option value="CMC Vellore">CMC Vellore</option>
+                            <option value="Dr. Ram Manohar Lohia Hospital, New Delhi">Dr. Ram Manohar Lohia Hospital,
+                                New Delhi</option>
+                            <option value="Gandhi Medical College, Bhopal">Gandhi Medical College, Bhopal</option>
+                            <option value="Grant Medical College, Mumbai">Grant Medical College, Mumbai</option>
+                            <option
+                                value="Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)">
+                                Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)</option>
+                            <option value="Kasturba Medical College, Manipal">Kasturba Medical College, Manipal</option>
+                            <option value="King George's Medical University, Lucknow">King George's Medical University,
+                                Lucknow</option>
+                            <option value="Maulana Azad Medical College, New Delhi">Maulana Azad Medical College, New
+                                Delhi</option>
+                            <option value="Medical College, Kolkata">Medical College, Kolkata</option>
+                            <option value="MGM Medical College, Navi Mumbai">MGM Medical College, Navi Mumbai</option>
+                            <option value="Mysore Medical College and Research Institute">Mysore Medical College and
+                                Research Institute</option>
+                            <option value="PGIMER Chandigarh">PGIMER Chandigarh</option>
+                            <option value="Post Graduate Institute of Medical Education and Research">Post Graduate
+                                Institute of Medical Education and Research</option>
+                            <option value="Sardar Patel Medical College, Bikaner">Sardar Patel Medical College, Bikaner
+                            </option>
+                            <option value="Shri Ram Murti Smarak Institute of Medical Sciences">Shri Ram Murti Smarak
+                                Institute of Medical Sciences</option>
+                            <option value="St. John's Medical College, Bangalore">St. John's Medical College, Bangalore
+                            </option>
+                            <option value="Sree Chitra Tirunal Institute for Medical Sciences and Technology">Sree
+                                Chitra Tirunal Institute for Medical Sciences and Technology</option>
+                            <option value="Tata Memorial Hospital, Mumbai">Tata Memorial Hospital, Mumbai</option>
+                            <option value="Teerthanker Mahaveer Medical College, Moradabad">Teerthanker Mahaveer Medical
+                                College, Moradabad</option>
+                            <option value="The Tamil Nadu Dr. M.G.R. Medical University">The Tamil Nadu Dr. M.G.R.
+                                Medical University</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
-            <!-- Personal Info (Name, Email, Phone in one row) -->
+          <h6>  Personal Info : </h6>
             <div class="personal-info mb-3 row">
                 <div class="col-md-4">
+                    
                     <input type="text" name="name" class="form-control" placeholder="Name" required>
                 </div>
                 <div class="col-md-4">
@@ -455,6 +536,7 @@
         flex: 1 1 60%;
         padding: 20px;
         color: #000;
+        width: 100%;
     }
 
     .slider-content h1 {
@@ -589,7 +671,7 @@
 
     @media screen and (max-width: 576px) {
         .slider-content h1 {
-            font-size: 2rem;
+            font-size: 1rem;
         }
 
         .slider-form input,

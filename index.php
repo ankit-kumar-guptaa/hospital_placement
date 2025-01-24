@@ -8,6 +8,14 @@
 
 <?php include 'include/assets.php'?>
 
+<style>
+    @media screen and (max-width: 576px){
+    .homeimg img{
+      height: 248px !important;
+    }
+  }
+</style>
+
 
 </head>
 <body>
@@ -40,13 +48,17 @@
     <div class="row align-items-center">
       <!-- Left Column with Images -->
       <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-delay="200">
-        <div class="position-relative">
-          <img src="https://eepicmanagement.com/wp-content/uploads/2022/07/WhatsApp-Image-2022-07-05-at-1.45.32-PM-3-290x300.jpeg" 
+        <div class="homeimg position-relative">
+          <img src="assets/img/home1.jpg" 
                alt="Healthcare Professional" 
-               class="img-fluid rounded shadow w-75 position-absolute top-0 start-0" data-aos="zoom-in" data-aos-delay="300">
-          <img src="https://eepicmanagement.com/wp-content/uploads/2022/07/WhatsApp-Image-2022-07-05-at-1.45.32-PM-2.jpeg" 
+               class="img-fluid rounded shadow w-75 position-absolute top-0 start-0" data-aos="zoom-in" data-aos-delay="300"style="
+    height: 380px;
+">
+          <img src="assets/img/home2.jpg" 
                alt="Nurse in Clinic" 
-               class="img-fluid rounded shadow w-75 position-absolute bottom-0 end-0" data-aos="zoom-in" data-aos-delay="500">
+               class="img-fluid rounded shadow w-75 position-absolute bottom-0 end-0" data-aos="zoom-in" data-aos-delay="500"style="
+    height: 360px;
+">
         </div>
       </div>
 

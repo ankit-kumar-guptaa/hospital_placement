@@ -14,13 +14,13 @@
                 <li>
                     <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'pages.php' ? 'active' : ''; ?>">Pages <i class="fa-sharp fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="page1.php">Placement Consultants and <br>
+                        <li><a href="recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php">Placement Consultants and <br>
                         Recruitment Agency in Delhi</a></li>
-                        <li><a href="page2.php">Placement Agency in Hyderabad</a></li>
-                        <li><a href="page3.php">Placement Agency in Mumbai</a></li>
-                        <li><a href="page3.php">Placement Agency in Chandigarh</a></li>
-                        <li><a href="page3.php">Placement Agency in Kolkata</a></li>
-                        <li><a href="page3.php">Placement Agency in Lucknow</a></li>
+                        <li><a href="placement-Agency-in-hyderabad.php">Placement Agency in Hyderabad</a></li>
+                        <li><a href="mumbai.php">Placement Agency in Mumbai</a></li>
+                        <li><a href="chandigarh.php">Placement Agency in Chandigarh</a></li>
+                        <li><a href="kolkata.php">Placement Agency in Kolkata</a></li>
+                        <li><a href="lucknow.php">Placement Agency in Lucknow</a></li>
                     </ul>
                 </li>
                 <li>
@@ -256,7 +256,7 @@
         // Initialize AOS
         AOS.init({
             duration: 1000, // Animation duration
-            once: false,     // Whether animation should happen only once
+            once: true,     // Whether animation should happen only once
         });
     });
 </script>
