@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About US</title>
+    <title>About Us - HospitalPlacement.com"></title>
+    <meta name="description" content="Learn more about our hospital, our mission, and the services we offer.">
+    <meta name="keywords" content="hospital, healthcare, medical services, about us">
+    <meta name="author" content="HospitalPlacement.com">
     <?php include "include/assets.php"?>
-        <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+       
 </head>
 <body>
 
