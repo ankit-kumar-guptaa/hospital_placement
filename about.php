@@ -40,12 +40,44 @@
 
 
 
-<section style="background: linear-gradient(135deg, #e0e7ff, #f3f4f6); padding: 100px 0;">
+<section class="welcome-section">
     <div class="container text-center" data-aos="fade-up">
-        <h1 style="font-weight: bold; font-size: 48px; color: #333;">Welcome to HospitalPlacement.com</h1>
-        <p style="font-size: 20px; color: #555;">Connecting Healthcare Talent with Leading Organizations Since 2010</p>
+        <h1>Welcome to HospitalPlacement.com</h1>
+        <p>Connecting Healthcare Talent with Leading Organizations Since 2010</p>
     </div>
 </section>
+
+<style>
+.welcome-section {
+    background: linear-gradient(135deg, #e0e7ff, #f3f4f6);
+    padding: 100px 0;
+}
+
+.welcome-section h1 {
+    font-weight: bold;
+    font-size: 48px;
+    color: #333;
+}
+
+.welcome-section p {
+    font-size: 20px;
+    color: #555;
+}
+
+@media (max-width: 767px) {
+    .welcome-section {
+        padding: 50px 0;
+    }
+
+    .welcome-section h1 {
+        font-size: 32px;
+    }
+
+    .welcome-section p {
+        font-size: 16px;
+    }
+}
+</style>
 
 
 
