@@ -24,7 +24,7 @@
 
       <!-- Extensive Candidate Network -->
       <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-left">
+        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-down">
           <i class="fa fa-users fa-4x  mb-3"></i>
           <h3 class="fw-bold text-muted">Extensive Candidate Network</h3>
           <p class="text-muted">
@@ -35,7 +35,7 @@
 
       <!-- Tailored Recruitment Strategies -->
       <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-right">
+        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-up">
           <i class="fa fa-cogs fa-4x  mb-3"></i>
           <h3 class="fw-bold text-muted">Tailored Recruitment Strategies</h3>
           <p class="text-muted">
@@ -49,7 +49,7 @@
     <div class="row justify-content-center">
       <!-- Comprehensive Screening Process -->
       <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-up">
+        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-down">
           <i class="fa fa-check-circle fa-4x  mb-3"></i>
           <h3 class="fw-bold text-muted">Comprehensive Screening Process</h3>
           <p class="text-muted">

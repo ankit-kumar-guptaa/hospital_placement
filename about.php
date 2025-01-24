@@ -70,7 +70,7 @@
     }
 
     .welcome-section h1 {
-        font-size: 32px;
+        font-size: 25px;
     }
 
     .welcome-section p {
