@@ -1,3 +1,9 @@
+body {
+  overflow-x: hidden !important;
+}
+
+
+
 /* Ensure Section Styles */
 .ensure-section {
     text-align: center;
@@ -311,3 +317,9 @@
 
 
 
+/* Adjust h2 font size for mobile screens */
+@media (max-width: 767px) {
+  h2.fw-bold {
+    font-size: 24px !important;
+  }
+}
