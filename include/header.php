@@ -17,10 +17,10 @@
                         <li><a href="recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php">Placement Consultants and <br>
                         Recruitment Agency in Delhi</a></li>
                         <li><a href="placement-Agency-in-hyderabad.php">Placement Agency in Hyderabad</a></li>
-                        <li><a href="mumbai.php">Placement Agency in Mumbai</a></li>
-                        <li><a href="chandigarh.php">Placement Agency in Chandigarh</a></li>
-                        <li><a href="kolkata.php">Placement Agency in Kolkata</a></li>
-                        <li><a href="lucknow.php">Placement Agency in Lucknow</a></li>
+                        <li><a href="placement-Agency-in-mumbai.php">Placement Agency in Mumbai</a></li>
+                        <li><a href="placement-Agency-in-chandigarh.php">Placement Agency in Chandigarh</a></li>
+                        <li><a href="placement-Agency-in-kolkata.php">Placement Agency in Kolkata</a></li>
+                        <li><a href="placement-Agency-in-lucknow.php">Placement Agency in Lucknow</a></li>
                     </ul>
                 </li>
                 <li>
