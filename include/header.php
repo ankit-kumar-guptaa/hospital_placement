@@ -26,9 +26,9 @@
                 <li>
                     <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">For Employers <i class="fa-sharp fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="service1.php">Specialty Placements</a></li>
-                        <li><a href="service2.php">Permanent Placement</a></li>
-                        <li><a href="service3.php">Temporary Staffing Services</a></li>
+                        <li><a href="specialty-placement.php">Specialty Placements</a></li>
+                        <li><a href="permanent-placement.php">Permanent Placement</a></li>
+                        <li><a href="temporary-staffing-services.php">Temporary Staffing Services</a></li>
                     </ul>
                 </li>
                 <!-- <li>
