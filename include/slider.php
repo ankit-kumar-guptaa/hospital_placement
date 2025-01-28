@@ -1,8 +1,4 @@
-<?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
+
 <!-- slider.php -->
 <div class="slider-container">
     <div class="slider-content">
@@ -429,7 +425,7 @@ error_reporting(E_ALL);
     <div class="slider-sidebar">
         <div class="sidebar-content">
             <h3>Employer Details</h3>
-            <form action="" method="post" class="employer-form">
+            <form action="../employer_form_submission.php" method="post" class="employer-form">
                 <div class="mb-3">
                     <input type="text" id="organization-name" name="organization_name" class="form-control"
                         placeholder="Enter Organization Name" required>
@@ -471,7 +467,7 @@ error_reporting(E_ALL);
                         style="max-width: 120px; margin-right: 10px;">
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                <button type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
             </form>
 
 
