@@ -54,7 +54,7 @@
                     </div>
 
                     <!-- College / Institute / University Selection -->
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <label for="college" class="form-label">College / Institute / University</label>
                         <select id="college" name="college" class="form-select" required>
                             <option value="" disabled selected>Select College</option>
@@ -103,7 +103,7 @@
                                 Medical University</option>
                             <option value="Others">Others</option>
                         </select>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -151,7 +151,7 @@
                     </div>
 
                     <!-- College / Institute / University Selection -->
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                         <label for="college" class="form-label">College / Institute / University</label>
                         <select id="college" name="college" class="form-select">
                             <option value="" disabled selected>Select College</option>
@@ -219,7 +219,7 @@
                                 Nursing</option>
                             <option value="Others">Others</option>
                         </select>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
