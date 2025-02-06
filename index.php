@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Placement</title>
+    <title>Hospital Placement - Best Medical Recruitment Services</title> 
+
+    <meta name="description" content="HospitalPlacement.com offers top-tier medical and healthcare recruitment services nationwide. ISO 9001:2000 certified, we connect talent with leading healthcare institutions."> <!-- Added meta description -->
+
 
 
 <?php include 'include/assets.php'?>
