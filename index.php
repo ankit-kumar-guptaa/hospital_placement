@@ -114,7 +114,8 @@
             <p>Right Place</p>
         </div>
         <div class="feature-card" id="feature5">
-            <i class="fas fa-rupee-sign fa-3x"></i>
+            <!-- <i class="fas fa-rupee fa-3x"></i> -->
+            <i class="fa-solid fa-indian-rupee-sign fa-3x"></i>
             <p>Right Cost</p>
         </div>
     </div>

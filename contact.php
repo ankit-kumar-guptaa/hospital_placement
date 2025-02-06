@@ -216,7 +216,7 @@
                     <p style="font-size: 15px; color: #555; margin-bottom: 25px; text-align: center;">
                         Let us know how we can help you. Please fill out the form below.
                     </p>
-                    <form>
+                    <form action="contactFormBackend.php" method="post"> 
                         <!-- Name -->
                         <div class="form-floating mb-3">
                             <input type="text" id="name" class="form-control" placeholder="Your Name" style="padding: 12px; font-size: 14px; border-radius: 8px;">
@@ -239,7 +239,7 @@
                         </div>
                         <!-- Submit Button -->
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 20px; background: linear-gradient(135deg, #0069d9, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
+                            <button type="submit" name="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 20px; background: linear-gradient(135deg, #0069d9, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
                                 Send Message
                             </button>
                         </div>

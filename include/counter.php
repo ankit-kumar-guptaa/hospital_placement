@@ -7,7 +7,7 @@
       <div class="col-md-3 mb-4 mb-md-0">
         <div class="counter-box">
           <i class="fa fa-users fa-3x text-primary mb-3"></i>
-          <h2 class="counter text-primary fw-bold" data-target="5000">0</h2>
+          <h2 class="counter text-primary fw-bold" data-target="4320">0</h2>
           <p class="text-muted">Happy Clients</p>
         </div>
       </div>
@@ -16,7 +16,7 @@
       <div class="col-md-3 mb-4 mb-md-0">
         <div class="counter-box">
           <i class="fa fa-briefcase fa-3x text-success mb-3"></i>
-          <h2 class="counter text-success fw-bold" data-target="2000">0</h2>
+          <h2 class="counter text-success fw-bold" data-target="4578">0</h2>
           <p class="text-muted">Successful Placements</p>
         </div>
       </div>

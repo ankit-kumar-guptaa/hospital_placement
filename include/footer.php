@@ -42,7 +42,7 @@
         <ul class="list-unstyled">
           <li class="mb-3">
             <i class="fa fa-map-marker-alt me-2" style="color: #1abc9c;"></i>
-            <span style="color: #dcdde1;">A-83, Okhla Phase II, New Delhi - 110020, India</span>
+            <span style="color: #dcdde1;">916, Astralis Tower, Supernova, Sector 94, Noida</span>
           </li>
           <li class="mb-3">
             <i class="fa fa-envelope me-2" style="color: #1abc9c;"></i>

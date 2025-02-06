@@ -18,8 +18,13 @@ $stmt_employer = $pdo->query("SELECT * FROM employer_submissions ORDER BY create
 $employer_submissions = $stmt_employer->fetchAll(PDO::FETCH_ASSOC);
 
 // Fetch Contact Form data
-// $stmt_contact = $pdo->query("SELECT * FROM contact_forms ORDER BY created_at DESC");
-// $contact_form_submissions = $stmt_contact->fetchAll(PDO::FETCH_ASSOC);
+$stmt_contact = $pdo->query("SELECT * FROM contact_forms ORDER BY created_at DESC");
+$contact_form_submissions = $stmt_contact->fetchAll(PDO::FETCH_ASSOC);
+
+
+// Fetch Hospital Application data
+$stmt_hospital = $pdo->query("SELECT * FROM hospital_applications ORDER BY created_at DESC");
+$hospital_applications = $stmt_hospital->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +58,10 @@ $employer_submissions = $stmt_employer->fetchAll(PDO::FETCH_ASSOC);
             background-color: #007bff;
             color: white;
         }
+        .card-body{
+            max-height: 500px;
+            overflow-y: auto;
+        }
         .table th {
             background-color: #007bff;
             color: white;
@@ -77,6 +86,11 @@ $employer_submissions = $stmt_employer->fetchAll(PDO::FETCH_ASSOC);
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" data-bs-toggle="tab">Contact Form Submissions</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hospital" data-bs-toggle="tab">Hospital Applications</a>
                     </li>
                 </ul>
                 <a href="logout.php" class="btn btn-danger btn-block logout-btn">Logout</a>
@@ -190,6 +204,65 @@ $employer_submissions = $stmt_employer->fetchAll(PDO::FETCH_ASSOC);
                                                 <td><?php echo $submission['email']; ?></td>
                                                 <td><?php echo $submission['message']; ?></td>
                                                 <td><?php echo $submission['created_at']; ?></td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                       <!-- Hospital Applications Tab -->
+                       <div class="tab-pane fade" id="hospital">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Hospital Applications</h4>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Gender</th>
+                                            <th>Date of Birth</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Address</th>
+                                            <th>City</th>
+                                            <th>Role</th>
+                                            <th>Qualification</th>
+                                            <th>Experience</th>
+                                            <th>Skills</th>
+                                            <th>Certifications</th>
+                                            <th>CV File</th>
+                                            <th>Created At</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($hospital_applications as $application): ?>
+                                            <tr>
+                                                <td><?php echo $application['id']; ?></td>
+                                                <td><?php echo $application['first_name']; ?></td>
+                                                <td><?php echo $application['last_name']; ?></td>
+                                                <td><?php echo $application['gender']; ?></td>
+                                                <td><?php echo $application['date_of_birth']; ?></td>
+                                                <td><?php echo $application['email']; ?></td>
+                                                <td><?php echo $application['phone']; ?></td>
+                                                <td><?php echo $application['address']; ?></td>
+                                                <td><?php echo $application['city']; ?></td>
+                                                <td><?php echo $application['role']; ?></td>
+                                                <td><?php echo $application['qualification']; ?></td>
+                                                <td><?php echo $application['experience']; ?></td>
+                                                <td><?php echo $application['skills']; ?></td>
+                                                <td><?php echo $application['certifications']; ?></td>
+                                                <td>
+                                                    <a href="<?php echo $application['cv_path']; ?>" target="_blank">Download CV</a>
+                                                </td>
+                                                <td><?php echo $application['created_at']; ?></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

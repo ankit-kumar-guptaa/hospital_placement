@@ -16,7 +16,7 @@
         <div class="feature-box p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
           <div class="icon-wrapper position-relative mx-auto mb-3">
             <i class="fas fa-briefcase fa-3x" style="color: #6c63ff;"></i>
-            <div class="circle-label" style="background-color: #6c63ff; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">01</div>
+            <!-- <div class="circle-label" style="background-color: #6c63ff; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">01</div> -->
           </div>
           <h4 class="text-dark">Recruitment Services</h4>
           <p class="text-muted" style="font-size: 0.95rem;">
@@ -30,7 +30,7 @@
         <div class="feature-box p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
           <div class="icon-wrapper position-relative mx-auto mb-3">
             <i class="fas fa-users fa-3x" style="color: #ff6f61;"></i>
-            <div class="circle-label" style="background-color: #ff6f61; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">02</div>
+            <!-- <div class="circle-label" style="background-color: #ff6f61; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">02</div> -->
           </div>
           <h4 class="text-dark">Placement Services</h4>
           <p class="text-muted" style="font-size: 0.95rem;">
@@ -44,7 +44,7 @@
         <div class="feature-box p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
           <div class="icon-wrapper position-relative mx-auto mb-3">
             <i class="fas fa-handshake fa-3x" style="color: #4caf50;"></i>
-            <div class="circle-label" style="background-color: #4caf50; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">03</div>
+            <!-- <div class="circle-label" style="background-color: #4caf50; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">03</div> -->
           </div>
           <h4 class="text-dark">Job Placement Consultancy</h4>
           <p class="text-muted" style="font-size: 0.95rem;">

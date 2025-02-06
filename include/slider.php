@@ -2,7 +2,8 @@
 <!-- slider.php -->
 <div class="slider-container">
     <div class="slider-content">
-        <h1>WELCOME TO HOSPITALPLACEMENT.COM</h1>
+        <!-- <h1>WELCOME TO HOSPITALPLACEMENT.COM</h1> -->
+         <h2>I'm an Employee</h2>
         <p>Your Premier Healthcare Recruitment Consultant</p>
         <form action="../backend_job_seeker.php" method="post" class="slider-form">
             <!-- Role Selection -->
@@ -424,7 +425,7 @@
 
     <div class="slider-sidebar">
         <div class="sidebar-content">
-            <h3>Employer Details</h3>
+            <h3>I'm an Employer</h3>
             <form action="../employer_form_submission.php" method="post" class="employer-form">
                 <div class="mb-3">
                     <input type="text" id="organization-name" name="organization_name" class="form-control"
@@ -459,7 +460,7 @@
                         style="max-width: 150px; height: auto; margin-right: 10px;">
 
                     <!-- CAPTCHA Refresh Button -->
-                    <button type="button" class="refresh-captcha btn btn-light"
+                    <button type="button" class="refresh-captcha "
                         style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%;">🔄</button>
 
                     <!-- CAPTCHA Input -->
@@ -467,7 +468,7 @@
                         style="max-width: 120px; margin-right: 10px;">
                 </div>
 
-                <button type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
+                <button style="background-color: #ffcc00;" type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
             </form>
 
 
@@ -842,7 +843,7 @@
     }
 
     .employer-form button {
-        background-color: #ffcc00;
+        /* background-color: #ffcc00; */
         color: #000;
         border: none;
         cursor: pointer;

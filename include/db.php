@@ -3,7 +3,7 @@
 
 $host = 'localhost';      // Database host
 $username = 'root';       // Database username
-$password = '';           // Database password
+$password = 'newpassword';           // Database password
 $database = 'form_db';    // Database name
 
 // Create a PDO connection
