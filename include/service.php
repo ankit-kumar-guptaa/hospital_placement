@@ -1,6 +1,6 @@
 <!-- our services sectionand our approach section -->
 
-<section class="recruitment-placement-approach py-5" style="background-color: #f9f9f9;">
+<section id="service" class="recruitment-placement-approach py-5" style="background-color: #f9f9f9;">
   <div class="container text-center" data-aos="fade-up">
     <!-- Header -->
     <h6 class="text-success fw-bold" style="letter-spacing: 1px;" data-aos="fade-up" data-aos-delay="100">OUR SERVICES</h6>

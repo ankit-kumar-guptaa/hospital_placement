@@ -433,8 +433,8 @@
                 </div>
                 <div class="mb-3 position-relative">
                     <input type="text" id="city" name="city" class="form-control" placeholder="Enter City"
-                        oninput="showCitySuggestions()" autocomplete="off" required>
-                    <div id="city-suggestions" class="autocomplete-suggestions"></div>
+                        required>
+                    <!-- <div id="city-suggestions" class="autocomplete-suggestions"></div> -->
                 </div>
                 <div class="mb-3">
                     <input type="text" id="contact-name" name="contact_name" class="form-control"
@@ -549,141 +549,7 @@
 </script>
 
 
-<!-- JavaScript for City Autocomplete -->
-<script>
-    // List of Cities
-    const cities = [
-        "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Ahmedabad", "Chennai", "Kolkata", "Surat",
-        "Pune", "Jaipur", "Lucknow", "Kanpur", "Nagpur", "Indore", "Thane", "Bhopal", "Visakhapatnam",
-        "Pimpri-Chinchwad", "Patna", "Vadodara", "Ghaziabad", "Ludhiana", "Agra", "Nashik",
-        "Ranchi", "Faridabad", "Meerut", "Rajkot", "Kalyan-Dombivli", "Vasai-Virar", "Varanasi",
-        "Srinagar", "Aurangabad", "Dhanbad", "Amritsar", "Navi Mumbai", "Allahabad", "Howrah",
-        // Andhra Pradesh
-        "Vijayawada", "Guntur", "Nellore", "Tirupati", "Kurnool", "Kakinada", "Rajahmundry",
-        // Arunachal Pradesh
-        "Itanagar", "Naharlagun", "Pasighat",
-        // Assam
-        "Guwahati", "Dibrugarh", "Silchar", "Jorhat", "Tinsukia",
-        // Bihar
-        "Gaya", "Bhagalpur", "Muzaffarpur", "Purnia", "Darbhanga",
-        // Chhattisgarh
-        "Raipur", "Bilaspur", "Korba", "Durg-Bhilai", "Jagdalpur",
-        // Goa
-        "Panaji", "Margao", "Vasco da Gama", "Mapusa",
-        // Gujarat
-        "Rajkot", "Bhavnagar", "Jamnagar", "Junagadh", "Gandhinagar",
-        // Haryana
-        "Gurgaon", "Panipat", "Ambala", "Yamunanagar", "Hisar",
-        // Himachal Pradesh
-        "Shimla", "Dharamshala", "Solan", "Mandi",
-        // Jammu and Kashmir
-        "Jammu", "Baramulla", "Udhampur",
-        // Jharkhand
-        "Jamshedpur", "Hazaribagh", "Bokaro",
-        // Karnataka
-        "Mysore", "Hubli-Dharwad", "Belgaum", "Mangalore", "Gulbarga",
-        // Kerala
-        "Thiruvananthapuram", "Kochi", "Kozhikode", "Kollam", "Kannur",
-        // Madhya Pradesh
-        "Gwalior", "Jabalpur", "Ujjain", "Sagar", "Dewas",
-        // Maharashtra
-        "Nagpur", "Nashik", "Aurangabad", "Solapur", "Jalgaon",
-        // Manipur
-        "Imphal",
-        // Meghalaya
-        "Shillong", "Tura",
-        // Mizoram
-        "Aizawl", "Lunglei",
-        // Nagaland
-        "Kohima", "Dimapur",
-        // Odisha
-        "Bhubaneswar", "Cuttack", "Rourkela", "Berhampur", "Sambalpur",
-        // Punjab
-        "Ludhiana", "Amritsar", "Jalandhar", "Patiala", "Bathinda",
-        // Rajasthan
-        "Jodhpur", "Kota", "Ajmer", "Udaipur", "Bikaner",
-        // Sikkim
-        "Gangtok",
-        // Tamil Nadu
-        "Coimbatore", "Madurai", "Salem", "Tiruchirappalli", "Erode",
-        // Telangana
-        "Warangal", "Karimnagar", "Nizamabad",
-        // Tripura
-        "Agartala",
-        // Uttar Pradesh
-        "Agra", "Varanasi", "Meerut", "Bareilly", "Aligarh",
-        // Uttarakhand
-        "Dehradun", "Haridwar", "Rishikesh",
-        // West Bengal
-        "Asansol", "Durgapur", "Siliguri", "Kharagpur",
-        // States
-        "Andhra Pradesh",
-        "Arunachal Pradesh",
-        "Assam",
-        "Bihar",
-        "Chhattisgarh",
-        "Goa",
-        "Gujarat",
-        "Haryana",
-        "Himachal Pradesh",
-        "Jharkhand",
-        "Karnataka",
-        "Kerala",
-        "Madhya Pradesh",
-        "Maharashtra",
-        "Manipur",
-        "Meghalaya",
-        "Mizoram",
-        "Nagaland",
-        "Odisha",
-        "Punjab",
-        "Rajasthan",
-        "Sikkim",
-        "Tamil Nadu",
-        "Telangana",
-        "Tripura",
-        "Uttar Pradesh",
-        "Uttarakhand",
-        "West Bengal",
 
-        // Union Territories
-        "Andaman and Nicobar Islands",
-        "Chandigarh",
-        "Dadra and Nagar Haveli and Daman and Diu",
-        // "Delhi",
-        "noida",
-        "Jammu and Kashmir",
-        "Ladakh",
-        "Lakshadweep",
-        "Puducherry"
-    ];
-
-
-    // Show Suggestions
-    function showCitySuggestions() {
-        const input = document.getElementById("city").value.toLowerCase();
-        const suggestionsBox = document.getElementById("city-suggestions");
-        suggestionsBox.innerHTML = "";
-
-        if (input.length > 0) {
-            const filteredCities = cities.filter(city => city.toLowerCase().startsWith(input));
-            if (filteredCities.length > 0) {
-                filteredCities.forEach(city => {
-                    const suggestion = document.createElement("div");
-                    suggestion.className = "suggestion";
-                    suggestion.textContent = city;
-                    suggestion.onclick = () => {
-                        document.getElementById("city").value = city;
-                        suggestionsBox.innerHTML = "";
-                    };
-                    suggestionsBox.appendChild(suggestion);
-                });
-            } else {
-                suggestionsBox.innerHTML = "<div class='no-suggestions'>No suggestions found</div>";
-            }
-        }
-    }
-</script>
 
 <!-- CSS for Suggestions -->
 <style>

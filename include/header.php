@@ -5,7 +5,7 @@
 <header id="main-header" data-aos="fade-down">
     <div class="container1">
         <div class="logo">
-            <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Logo">
+           <a href="index.php"> <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Logo"></a>
         </div>
         <nav>
             <ul class="nav-links">
