@@ -12,3 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
     <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Add this in the <head> section of your HTML -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+

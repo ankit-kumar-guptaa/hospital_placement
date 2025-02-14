@@ -1,9 +1,10 @@
 
 <!-- slider.php -->
 <div class="slider-container">
+<h1>HOSPITAL PLACEMENT HR SINCE 2010</h1>
     <div class="slider-content">
-        <h1>HOSPITAL PLACEMENT HR SINCE 2010</h1>
-         <h2>I'm an Employee</h2>
+       
+         <h3>Looking For Job</h3>
         <!-- <p>Your Premier Healthcare Recruitment Consultant</p> -->
         <form action="../backend_job_seeker.php" method="post" class="slider-form">
             <!-- Role Selection -->
@@ -22,7 +23,7 @@
             <!-- Dynamic Fields for Doctor (hidden by default) -->
             <div id="doctor-fields" class="dynamic-fields" style="display: none;">
                 <div class="row mb-3">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label for="department" class="form-label">Department</label>
                         <select id="department" name="department" class="form-select">
                             <option value="" disabled selected>Select Department</option>
@@ -38,7 +39,7 @@
                     </div>
 
                     <!-- Qualification Selection -->
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label for="qualification" class="form-label">Qualification</label>
                         <select id="qualification" name="qualification" class="form-select" required>
                             <option value="" disabled selected>Select Qualification</option>
@@ -296,17 +297,13 @@
 
     <div class="slider-sidebar">
         <div class="sidebar-content">
-            <h3>I'm an Employer</h3>
+            <h3>Looking for Employee</h3>
             <form action="../employer_form_submission.php" method="post" class="employer-form">
                 <div class="mb-3">
                     <input type="text" id="organization-name" name="organization_name" class="form-control"
                         placeholder="Enter Organization Name" required>
                 </div>
-                <div class="mb-3 position-relative">
-                    <input type="text" id="city" name="city" class="form-control" placeholder="Enter City"
-                        required>
-                    <!-- <div id="city-suggestions" class="autocomplete-suggestions"></div> -->
-                </div>
+                
                 <div class="mb-3">
                     <input type="text" id="contact-name" name="contact_name" class="form-control"
                         placeholder="Enter Contact Name" required>
@@ -319,8 +316,8 @@
                         required>
                 </div>
                 <div class="mb-3">
-                    <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label>
-                    <textarea id="remarks" name="remarks" class="form-control" placeholder="Enter Details Here" rows="4"
+                    <!-- <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label> -->
+                    <textarea id="remarks" name="remarks" class="form-control" placeholder="Remarks (Hiring For / Budget, etc.)" rows="4"
                         required></textarea>
                 </div>
 
@@ -422,44 +419,6 @@
 
 
 
-<!-- CSS for Suggestions -->
-<style>
-    .autocomplete-suggestions {
-        position: absolute;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        max-height: 150px;
-        overflow-y: auto;
-        z-index: 1000;
-        width: 100%;
-        margin-top: 5px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .suggestion {
-        padding: 8px;
-        cursor: pointer;
-        font-size: 0.9rem;
-    }
-
-    .suggestion:hover {
-        background-color: #f0f0f0;
-    }
-
-    .no-suggestions {
-        padding: 8px;
-        color: #888;
-        font-style: italic;
-    }
-
-    .position-relative {
-        position: relative;
-    }
-</style>
-
-
-
 
 
 
@@ -468,192 +427,172 @@
 
 
 <style>
-    /* General Styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+   /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-    /* Slider Container */
+/* Slider Container */
+.slider-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #6ec1e4;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.slider-content,
+.slider-sidebar {
+    flex: 1 1 48%; /* Same width for both forms */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Ensure both forms have the same height */
+}
+
+/* Slider Container h1 Styling */
+/* Slider Container h1 Styling */
+.slider-container h1 {
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+    font-size: 2.5rem; /* Adjust font size */
+    text-align: center; /* Center align text */
+    margin: 0 auto 20px; /* Margin for spacing */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Text color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a soft effect */
+    width: 100%; /* Ensures it takes full width of container */
+    display: block; /* Ensures the h1 behaves like a block element */
+}
+
+
+
+
+/* Heading Styling */
+.slider-content h3,
+.slider-sidebar h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Space between heading and form */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Form Styling */
+.slider-form,
+.employer-form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-top: 10px; /* Ensures space between heading and form */
+}
+
+.slider-form input,
+.slider-form select,
+.slider-form textarea,
+.employer-form input,
+.employer-form select,
+.employer-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    background-color: #f9f9f9;
+}
+
+.slider-form textarea,
+.employer-form textarea {
+    height: 50px;
+    resize: none;
+}
+
+.slider-form input:focus,
+.slider-form select:focus,
+.slider-form textarea:focus,
+.employer-form input:focus,
+.employer-form select:focus,
+.employer-form textarea:focus {
+    border-color: #42a5f5;
+    outline: none;
+    background-color: #fff;
+}
+
+.slider-form button,
+.employer-form button {
+    /* background-color: #ffcc00; */
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+.slider-form button:hover,
+.employer-form button:hover {
+    background-color: #ff9900;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     .slider-container {
-        display: flex;
-        flex-wrap: wrap;
-        /* background: linear-gradient(135deg, #42a5f5, #1e88e5); */
-        background-color: #6ec1e4;
-        padding: 40px 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .slider-content {
-        flex: 1 1 60%;
-        padding: 20px;
-        color: #000;
-        width: 100%;
+    .slider-content,
+    .slider-sidebar {
+        flex: 1 1 100%;
     }
 
-    .slider-content h1 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        font-weight: bold;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .slider-content p {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-        color: #f1f1f1;
-    }
-
-    /* Form Styling */
-    .slider-form,
     .employer-form {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .slider-content h1,
+    .slider-sidebar h3 {
+        font-size: 1.5rem;
     }
 
-    .slider-form {
-        width: 100%;
-    }
-
-    /* Employer Form Styling */
-    .employer-form {
-        max-width: 400px;
-        /* Slightly increased width */
-        margin: 0 auto;
-        padding: 15px;
-        /* Reduced padding */
-        font-size: 0.9rem;
-        background-color: #f8f9fa;
-        line-height: 1.2;
-        /* Reduced line height for compact look */
-    }
-
-    .employer-form label {
-        font-weight: bold;
-        font-size: 0.85rem;
-        margin-bottom: 4px;
-        display: block;
-    }
-
+    .slider-form input,
+    .slider-form select,
     .employer-form input,
-    .employer-form textarea,
-    .employer-form select {
-        width: 100%;
-        padding: 6px;
-        /* Reduced padding */
-        font-size: 0.85rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        margin-bottom: 8px;
-        /* Compact spacing */
-        background-color: #f9f9f9;
-        transition: border-color 0.3s ease;
-        height: 35px;
-        /* Adjusted height of input fields */
+    .employer-form select,
+    .employer-form textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .slider-form button,
+    .employer-form button {
+        font-size: 0.9rem;
+        padding: 10px;
     }
 
     .employer-form textarea {
-        height: 50px;
-        /* Reduced height for textarea */
-        resize: none;
-        /* Prevent resizing */
+        height: 40px;
     }
+}
 
-    .employer-form input:focus,
-    .employer-form textarea:focus,
-    .employer-form select:focus {
-        border-color: #42a5f5;
-        outline: none;
-        background-color: #fff;
-    }
-
-    .employer-form button {
-        /* background-color: #ffcc00; */
-        color: #000;
-        border: none;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 6px;
-        padding: 8px;
-        /* Reduced button padding */
-        font-size: 0.85rem;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        width: 100%;
-    }
-
-    .employer-form button:hover {
-        background-color: #ff9900;
-        transform: translateY(-3px);
-    }
-
-    /* Sidebar Styling */
-    .slider-sidebar {
-        flex: 1 1 30%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    .sidebar-content {
-        background-color: #fff;
-        padding: 15px;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        width: 100%;
-    }
-
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-        .slider-container {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .slider-content,
-        .slider-sidebar {
-            flex: 1 1 100%;
-        }
-
-        .employer-form {
-            max-width: 90%;
-        }
-    }
-
-    @media screen and (max-width: 576px) {
-        .slider-content h1 {
-            font-size: 1rem;
-        }
-
-        .slider-form input,
-        .slider-form select,
-        .employer-form input,
-        .employer-form select,
-        .employer-form textarea {
-            font-size: 0.8rem;
-            padding: 5px;
-        }
-
-        .slider-form button,
-        .employer-form button {
-            font-size: 0.8rem;
-            padding: 7px;
-        }
-
-        .employer-form textarea {
-            height: 40px;
-            /* Further reduced textarea height for small screens */
-        }
-    }
 </style>
