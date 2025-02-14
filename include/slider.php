@@ -1,7 +1,7 @@
 
 <!-- slider.php -->
 <div class="slider-container">
-<h1>HOSPITAL PLACEMENT HR SINCE 2010</h1>
+<div class="heading1">HOSPITAL PLACEMENT HR <div class="small1">SINCE 2010</div></div>
     <div class="slider-content">
        
          <h3>Looking For Job</h3>
@@ -464,16 +464,20 @@ body {
 
 /* Slider Container h1 Styling */
 /* Slider Container h1 Styling */
-.slider-container h1 {
-    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+.slider-container .heading1 {
+    font-family: Arial, Helvetica, sans-serif; /* Apply Dancing Script font */
     font-size: 2.5rem; /* Adjust font size */
     text-align: center; /* Center align text */
     margin: 0 auto 20px; /* Margin for spacing */
     font-weight: bold; /* Bold text */
     color: #333; /* Text color */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for a soft effect */
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); Optional shadow for a soft effect */
     width: 100%; /* Ensures it takes full width of container */
     display: block; /* Ensures the h1 behaves like a block element */
+}
+
+.slider-container .small1{
+    font-size: 25px;
 }
 
 
