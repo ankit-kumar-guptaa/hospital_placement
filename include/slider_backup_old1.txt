@@ -2,9 +2,9 @@
 <!-- slider.php -->
 <div class="slider-container">
     <div class="slider-content">
-        <h1>HOSPITAL PLACEMENT HR SINCE 2010</h1>
+        <!-- <h1>WELCOME TO HOSPITALPLACEMENT.COM</h1> -->
          <h2>I'm an Employee</h2>
-        <!-- <p>Your Premier Healthcare Recruitment Consultant</p> -->
+        <p>Your Premier Healthcare Recruitment Consultant</p>
         <form action="../backend_job_seeker.php" method="post" class="slider-form">
             <!-- Role Selection -->
             <div class="mb-3">
@@ -53,7 +53,58 @@
                         </select>
                     </div>
 
-                 
+                    <!-- College / Institute / University Selection -->
+                    <!-- <div class="col-md-4">
+                        <label for="college" class="form-label">College / Institute / University</label>
+                        <select id="college" name="college" class="form-select" required>
+                            <option value="" disabled selected>Select College</option>
+                            <option value="A J Institute of Medical Sciences">A J Institute of Medical Sciences</option>
+                            <option value="A N Magadh Medical College">A N Magadh Medical College</option>
+                            <option value="All India Institute of Medical Sciences">All India Institute of Medical
+                                Sciences</option>
+                            <option value="Amala Institute of Medical Sciences">Amala Institute of Medical Sciences
+                            </option>
+                            <option value="Bangalore Medical College and Research Institute">Bangalore Medical College
+                                and Research Institute</option>
+                            <option value="Banaras Hindu University">Banaras Hindu University</option>
+                            <option value="Bhabha Atomic Research Centre">Bhabha Atomic Research Centre</option>
+                            <option value="CMC Vellore">CMC Vellore</option>
+                            <option value="Dr. Ram Manohar Lohia Hospital, New Delhi">Dr. Ram Manohar Lohia Hospital,
+                                New Delhi</option>
+                            <option value="Gandhi Medical College, Bhopal">Gandhi Medical College, Bhopal</option>
+                            <option value="Grant Medical College, Mumbai">Grant Medical College, Mumbai</option>
+                            <option
+                                value="Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)">
+                                Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER)</option>
+                            <option value="Kasturba Medical College, Manipal">Kasturba Medical College, Manipal</option>
+                            <option value="King George's Medical University, Lucknow">King George's Medical University,
+                                Lucknow</option>
+                            <option value="Maulana Azad Medical College, New Delhi">Maulana Azad Medical College, New
+                                Delhi</option>
+                            <option value="Medical College, Kolkata">Medical College, Kolkata</option>
+                            <option value="MGM Medical College, Navi Mumbai">MGM Medical College, Navi Mumbai</option>
+                            <option value="Mysore Medical College and Research Institute">Mysore Medical College and
+                                Research Institute</option>
+                            <option value="PGIMER Chandigarh">PGIMER Chandigarh</option>
+                            <option value="Post Graduate Institute of Medical Education and Research">Post Graduate
+                                Institute of Medical Education and Research</option>
+                            <option value="Sardar Patel Medical College, Bikaner">Sardar Patel Medical College, Bikaner
+                            </option>
+                            <option value="Shri Ram Murti Smarak Institute of Medical Sciences">Shri Ram Murti Smarak
+                                Institute of Medical Sciences</option>
+                            <option value="St. John's Medical College, Bangalore">St. John's Medical College, Bangalore
+                            </option>
+                            <option value="Sree Chitra Tirunal Institute for Medical Sciences and Technology">Sree
+                                Chitra Tirunal Institute for Medical Sciences and Technology</option>
+                            <option value="Tata Memorial Hospital, Mumbai">Tata Memorial Hospital, Mumbai</option>
+                            <option value="Teerthanker Mahaveer Medical College, Moradabad">Teerthanker Mahaveer Medical
+                                College, Moradabad</option>
+                            <option value="The Tamil Nadu Dr. M.G.R. Medical University">The Tamil Nadu Dr. M.G.R.
+                                Medical University</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div> -->
+
                 </div>
             </div>
 
@@ -99,7 +150,77 @@
                         </select>
                     </div>
 
-                   
+                    <!-- College / Institute / University Selection -->
+                    <!-- <div class="col-md-4">
+                        <label for="college" class="form-label">College / Institute / University</label>
+                        <select id="college" name="college" class="form-select">
+                            <option value="" disabled selected>Select College</option>
+                            <option value="ADARSH COLLEGE OF NURSING">ADARSH COLLEGE OF NURSING</option>
+                            <option value="AdeshCollege of Nursing, Bhatinda">AdeshCollege of Nursing, Bhatinda</option>
+                            <option value="Ahilya Bai College Of Nursing">Ahilya Bai College Of Nursing</option>
+                            <option value="AKAL COLLEGE OF NURSING">AKAL COLLEGE OF NURSING</option>
+                            <option value="AMAR PROFESSIONAL COLLEGE OF NURSING">AMAR PROFESSIONAL COLLEGE OF NURSING
+                            </option>
+                            <option value="AMBIKA INSTITUTE OF NURSING">AMBIKA INSTITUTE OF NURSING</option>
+                            <option value="Amity College of Nursing, Gurgaon">Amity College of Nursing, Gurgaon</option>
+                            <option value="ANIL BAGHI COLLEGE OF NURSING">ANIL BAGHI COLLEGE OF NURSING</option>
+                            <option value="BABA FARID COLLEGE OF NURSING">BABA FARID COLLEGE OF NURSING</option>
+                            <option value="BANDA BAHADUR COLLEGE OF NURSING">BANDA BAHADUR COLLEGE OF NURSING</option>
+                            <option value="Bankura Sammilani Medical College">Bankura Sammilani Medical College</option>
+                            <option value="BHARAT INSTITUTE OF NURSING TRAINING">BHARAT INSTITUTE OF NURSING TRAINING
+                            </option>
+                            <option value="Bhopal Nursing College">Bhopal Nursing College</option>
+                            <option value="BIRENDER SINGH COLLEGE OF NURSING">BIRENDER SINGH COLLEGE OF NURSING</option>
+                            <option value="CHAMUNDA INSTITUTE OF MEDICAL SCIENCE">CHAMUNDA INSTITUTE OF MEDICAL SCIENCE
+                            </option>
+                            <option value="CHINTPURNI INSTITUTE OF NURSING">CHINTPURNI INSTITUTE OF NURSING</option>
+                            <option value="CHITKARA SCHOOL OF HEALTH SCIENCES">CHITKARA SCHOOL OF HEALTH SCIENCES
+                            </option>
+                            <option value="College Of Nursing">College Of Nursing</option>
+                            <option value="College Of Nursing Kurji">College Of Nursing Kurji</option>
+                            <option value="Dayanand Medical College & Hospital College Of Nursing">Dayanand Medical
+                                College & Hospital College Of Nursing</option>
+                            <option value="Desh Bhagat Institute of Nursing">Desh Bhagat Institute of Nursing</option>
+                            <option value="DR JAI PRAKASH SHARMA MEMORIAL COLLEGE">DR JAI PRAKASH SHARMA MEMORIAL
+                                COLLEGE</option>
+                            <option value="Dr M G R Educational & Research Institute">Dr M G R Educational & Research
+                                Institute</option>
+                            <option value="DR SHYAM LAL THAPAR COLLEGE OF NURSING">DR SHYAM LAL THAPAR COLLEGE OF
+                                NURSING</option>
+                            <option value="Galgotias School Of Nursing">Galgotias School Of Nursing</option>
+                            <option value="GAUTAM COLLEGE OF NURSING">GAUTAM COLLEGE OF NURSING</option>
+                            <option value="GEETANJALI COLLEGE OF NURSING">GEETANJALI COLLEGE OF NURSING</option>
+                            <option value="GEMS COLLEGE OF NURSING">GEMS COLLEGE OF NURSING</option>
+                            <option value="Government Medical College College Of Nursing">Government Medical College
+                                College Of Nursing</option>
+                            <option value="Government College Of Nursing, Ajmer">Government College Of Nursing, Ajmer
+                            </option>
+                            <option value="Govt College Of Nursing">Govt College Of Nursing</option>
+                            <option value="GURU DRONACHARYA COLLEGE OF NURSING">GURU DRONACHARYA COLLEGE OF NURSING
+                            </option>
+                            <option value="GURU GOBIND SINGH COLLEGE OF NURSING">GURU GOBIND SINGH COLLEGE OF NURSING
+                            </option>
+                            <option value="GURU NANAK COLLEGE OF NURSING">GURU NANAK COLLEGE OF NURSING</option>
+                            <option value="GURU TEG BAHADUR COLLEGE OF NURSING">GURU TEG BAHADUR COLLEGE OF NURSING
+                            </option>
+                            <option value="HOLY FAMILY HOSPITAL">HOLY FAMILY HOSPITAL</option>
+                            <option value="Indira Gandhi Institute Of Medical Sciences">Indira Gandhi Institute Of
+                                Medical Sciences</option>
+                            <option value="Institute Of Nursing">Institute Of Nursing</option>
+                            <option value="LINGAYAS INSTITUTE OF HEALTH SCIENCES">LINGAYAS INSTITUTE OF HEALTH SCIENCES
+                            </option>
+                            <option value="NATIONAL COLLEGE OF NURSING">NATIONAL COLLEGE OF NURSING</option>
+                            <option value="RAJENDRA INSTITUTE OF MEDICAL SCIENCES">RAJENDRA INSTITUTE OF MEDICAL
+                                SCIENCES</option>
+                            <option value="SHIMLA NURSING COLLEGE">SHIMLA NURSING COLLEGE</option>
+                            <option value="Sikkim Manipal Institute Of Medical Sciences">Sikkim Manipal Institute Of
+                                Medical Sciences</option>
+                            <option value="Teerthanker Mahaveer College Of Nursing">Teerthanker Mahaveer College Of
+                                Nursing</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div> -->
+
                 </div>
             </div>
 
@@ -292,7 +413,15 @@
         </form>
     </div>
 
-  
+    <!-- Sidebar Section -->
+    <!-- <div class="slider-sidebar">
+        <div class="sidebar-content">
+            <img src="https://cdn-icons-png.freepik.com/256/4521/4521422.png?semt=ais_hybrid" alt="Hospital Icon"
+                class="img-fluid">
+            <h3>Hospital / Pharma Co. & Home Care</h3>
+            <a href="#" class="share-requirement-btn">Click Here to Share Your Requirement</a>
+        </div>
+    </div> -->
 
     <div class="slider-sidebar">
         <div class="sidebar-content">
