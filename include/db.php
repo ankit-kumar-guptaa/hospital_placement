@@ -1,10 +1,15 @@
 <?php
 // db.php - Database Connection File
 
+// $host = 'localhost';      // Database host
+// $username = 'root';       // Database username
+// $password = 'newpassword';           // Database password
+// $database = 'form_db';    // Database name
+
 $host = 'localhost';      // Database host
-$username = 'root';       // Database username
-$password = 'newpassword';           // Database password
-$database = 'form_db';    // Database name
+$username = 'u141142577_admin';       // Database username
+$password = 'Elite@1925';           // Database password
+$database = 'u141142577_hospital';    // Database name
 
 // Create a PDO connection
 try {
