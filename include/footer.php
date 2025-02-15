@@ -80,7 +80,13 @@
   </div>
 </footer>
 
-
+<script>  // Show loader on page change
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.overlay').style.display = 'block';
+        document.querySelector('.loader').style.display = 'block';
+    });
+});</script>
   <!-- GSAP CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -145,7 +151,12 @@ AOS.init({
 
 
 
-<script src="assets/animation.js"></script>
+<!-- <script src="../assets/script.js"></script> -->
+
+
+
+
+
 <!-- Bootstrap JS (Optional for some features like modals, dropdowns, etc.) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

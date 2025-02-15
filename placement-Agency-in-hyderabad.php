@@ -108,7 +108,7 @@
                         Proven track record of building long-term partnerships with healthcare institutions in Hyderabad.
                     </li>
                 </ul>
-                <a href="#contact" class="btn btn-primary mt-4">Get in Touch</a>
+                <a href="contact.php" class="btn btn-primary mt-4">Get in Touch</a>
             </div>
         </div>
     </div>

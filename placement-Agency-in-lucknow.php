@@ -16,7 +16,7 @@
 
 <?php include "include/slider.php"?>
 
-<section style="position: relative; background: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Lucknow_Charbagh_railway_station.jpg') no-repeat center center/cover; padding: 80px 0;">
+<section style="position: relative; background: url('https://www.deccanchronicle.com/h-upload/2024/01/18/1071450-doctors.jpg') no-repeat center center/cover; padding: 80px 0;">
     <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
     <div class="container position-relative" data-aos="fade-down">
         <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Placement Consultants and Recruitment Agency in Lucknow</h1>
@@ -115,7 +115,7 @@
                         A proven track record of successful placements in leading hospitals and clinics in Lucknow.
                     </li>
                 </ul>
-                <a href="#contact" class="btn btn-primary mt-4">Get in Touch</a>
+                <a href="contact.php" class="btn btn-primary mt-4">Get in Touch</a>
             </div>
         </div>
     </div>

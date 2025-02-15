@@ -286,7 +286,7 @@
 
                 <!-- CAPTCHA Input -->
                 <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
-                    style="max-width: 120px; margin-right: 10px;">
+                    style="max-width: 130px; margin-right: 10px;">
             </div>
 
             <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>
@@ -333,7 +333,7 @@
 
                     <!-- CAPTCHA Input -->
                     <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
-                        style="max-width: 120px; margin-right: 10px;">
+                        style="max-width: 130px; margin-right: 10px;">
                 </div>
 
                 <button style="background-color: #ffcc00;" type="submit" name="submit" class="btn btn-primary w-100">Submit</button>

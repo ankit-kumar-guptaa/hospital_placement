@@ -19,7 +19,7 @@
         <nav aria-label="breadcrumb" style="margin-top: 20px;">
             <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
                 <li class="breadcrumb-item">
-                    <a href="index.html" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
+                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Placement Consultants and Recruitment Agency in Chandigarh</li>
             </ol>
