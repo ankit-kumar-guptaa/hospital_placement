@@ -18,7 +18,7 @@
     <div class="container text-center">
         <div class="row text-center mt-5">
             <!-- Solution Card 1 -->
-            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1200">
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200">
                 <div class="solution-card p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
                     <i class="fas fa-search fa-3x" style="color: #4caf50;"></i>
                     <h5 class="solution-title mt-3 mb-2" style="color: #333;">Complete Recruitment Process Outsourcing</h5>
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <!-- Solution Card 2 -->
-            <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1200">
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1200">
                 <div class="solution-card p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
                     <i class="fas fa-handshake fa-3x" style="color: #6c63ff;"></i>
                     <h5 class="solution-title mt-3 mb-2" style="color: #333;">Pay on Success Fee Model</h5>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <!-- Solution Card 5 -->
-            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="800" data-aos-duration="1200">
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-delay="800" data-aos-duration="1200">
                 <div class="solution-card p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
                     <i class="fas fa-cogs fa-3x" style="color: #6c63ff;"></i>
                     <h5 class="solution-title mt-3 mb-2" style="color: #333;">Wide Industry Skill Database</h5>
