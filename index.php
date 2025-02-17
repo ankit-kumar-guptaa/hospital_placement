@@ -18,47 +18,12 @@
     }
   }
 </style>
-<style>
-  /* Loader Styling */
-.loader {
-    border: 5px solid #f3f3f3; /* Light grey */
-    border-top: 5px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-    position: fixed; /* Fixed position */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999; /* Ensure it's on top */
-    display: none; /* Initially hidden */
-}
 
-@keyframes spin {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* Overlay for background */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    z-index: 9998; /* Below loader */
-    display: none; /* Initially hidden */
-}
-</style>
 
 
 </head>
 <body>
-    <!-- Loader and Overlay -->
-    <div class="overlay"></div>
-    <div class="loader"></div>
+   
 
     <?php include "include/header.php"?>
 
@@ -121,7 +86,7 @@
             <span class="text-secondary">Think Recruitment, Think Different.</span>
           </li>
         </ul>
-        <a href="#more-info" class="btn btn-primary px-4 py-2 shadow" data-aos="fade-up" data-aos-delay="600">READ MORE</a>
+        <a href="about.php" class="btn btn-primary px-4 py-2 shadow" data-aos="fade-up" data-aos-delay="600">READ MORE</a>
       </div>
     </div>
   </div>

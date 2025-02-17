@@ -7,15 +7,15 @@
     <meta name="description" content="Learn more about our hospital, our mission, and the services we offer.">
     <meta name="keywords" content="hospital, healthcare, medical services, about us">
     <meta name="author" content="HospitalPlacement.com">
+
+
+    
     <?php include "include/assets.php"?>
        
 </head>
 <body>
 
-      <!-- Loader and Overlay -->
-      <div class="overlay"></div>
-    <div class="loader"></div>
-
+    
 
 <?php include "include/header.php"?>
 

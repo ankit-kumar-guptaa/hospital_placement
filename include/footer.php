@@ -72,6 +72,9 @@
         <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-twitter"></i>
         </a>
+        <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
+          <i class="fab fa-instagram"></i>
+        </a>
         <a href="#" class="text-light" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-linkedin-in"></i>
         </a>
@@ -79,6 +82,78 @@
     </div>
   </div>
 </footer>
+
+
+<div id="sticky-cta">
+    <a href="tel:+919870364340" class="cta-icon call">
+        <i class="fas fa-phone"></i>
+    </a>
+    <a href="https://wa.me/+919870364340" class="cta-icon whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+
+<style>
+  #sticky-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+
+.cta-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: #007bff; /* Default blue color */
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Vibrate effect for call icon */
+.cta-icon.call {
+    animation: vibrate 0.5s infinite alternate;
+}
+
+/* Hover effect for better visibility */
+.cta-icon:hover {
+    background-color:rgb(231, 236, 241); /* Darker blue on hover */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+/* Custom color for WhatsApp icon */
+.cta-icon.whatsapp {
+    background-color: #25d366;
+}
+
+/* Hover effect for WhatsApp */
+.cta-icon.whatsapp:hover {
+    background-color: #128c7e; /* Darker WhatsApp green */
+}
+
+/* Vibrating animation */
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(4px); }
+}
+
+</style>
+
+
+
+
+
 
 <script>  // Show loader on page change
   document.querySelectorAll('a').forEach(link => {

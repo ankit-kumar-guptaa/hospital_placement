@@ -50,6 +50,16 @@
     <h1>Welcome to My Website</h1>
     <a href="page2.php">Go to Page 2</a>
 
+    <!-- JavaScript -->
+    <script>
+        // Hide loader when page is fully loaded
+        window.addEventListener('load', () => {
+            document.querySelector('.overlay').style.display = 'none';
+            document.querySelector('.loader').style.display = 'none';
+        });
+
+        </script
+
     <script>
         // Show loader on page change
         document.querySelectorAll('a').forEach(link => {
