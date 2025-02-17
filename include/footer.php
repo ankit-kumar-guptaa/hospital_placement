@@ -14,22 +14,22 @@
         <h5 class="fw-bold text-uppercase mb-3" style="color: #ecf0f1;">Quick Links</h5>
         <ul class="list-unstyled">
           <li class="mb-2">
-            <a href="#home" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
+            <a href="index.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
               <i class="fa fa-home me-2"></i>Home
             </a>
           </li>
           <li class="mb-2">
-            <a href="#services" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
-              <i class="fa fa-briefcase me-2"></i>Services
+            <a href="solutions.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
+              <i class="fa fa-briefcase me-2"></i>solutions
             </a>
           </li>
           <li class="mb-2">
-            <a href="#about" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
+            <a href="about.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
               <i class="fa fa-info-circle me-2"></i>About Us
             </a>
           </li>
           <li>
-            <a href="#contact" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
+            <a href="contact.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
               <i class="fa fa-phone me-2"></i>Contact
             </a>
           </li>
@@ -72,10 +72,10 @@
         <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
+        <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw==" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="#" class="text-light" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
+        <a href="https://www.linkedin.com/posts/hospital-placement_healthcare-facts-hospitalplacement-activity-7289623509473861632-Grtu?utm_source=share&utm_medium=member_android&rcm=ACoAADP699QBNUaBQI6EsjAd4G-1BINWmnVfT6g" class="text-light" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
