@@ -1,32 +1,3 @@
-<?php
-// Include the routes file
-include 'routes.php';
-
-// Get the current path
-$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
-// Check if the path exists in the routes array
-if (array_key_exists($path, $routes)) {
-    // Include the corresponding file
-    include $routes[$path];
-} else {
-    // If the route does not exist, show a 404 error page
-    http_response_code(404);
-    echo '404 Not Found';
-}
-?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
