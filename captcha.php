@@ -28,8 +28,8 @@ for ($i = 0; $i < 1000; $i++) {
 }
 
 // Path to a TrueType font (ensure this file exists on your server)
-$font_path = __DIR__ . '/fonts/arial.ttf'; // Update the path to the font file
-$font_size = 18; // Set font size
+$font_path = __DIR__ . '/fonts/Arial.ttf'; // Update the path to the font file
+$font_size = 28; // Set font size
 
 // Add the CAPTCHA text using imagettftext
 imagettftext($image, $font_size, 0, 35, 45, $text_color, $font_path, $captcha_code);
