@@ -8,18 +8,16 @@ use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/src/Exception.php';
 require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
-require 'include/db.php'; // Include database connection file
+require 'include/db.php'; // Database connection file
 
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     // Validate CAPTCHA (optional, if you have CAPTCHA implemented)
-//     if (!isset($_POST['captcha']) || $_POST['captcha'] !== $_SESSION['captcha']) {
-//         echo "<script>
-//                 alert('Invalid CAPTCHA. Please try again.');
-//                 window.history.back();
-//               </script>";
-//         exit();
-//     }
-    unset($_SESSION['captcha']);
+// Check if form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // Validate form fields (simple validation)
+    if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message'])) {
+        echo "<script>alert('All fields are required!'); window.history.back();</script>";
+        exit();
+    }
 
     // Collect form data
     $name = $_POST['name'];
@@ -33,6 +31,7 @@ require 'include/db.php'; // Include database connection file
             // Insert data into the database
             $stmt = $pdo->prepare("INSERT INTO contact_forms (name, email, phone, message) VALUES (?, ?, ?, ?)");
             $stmt->execute([$name, $email, $phone, $message]);
+            $contactId = $pdo->lastInsertId(); // Get the last inserted ID (optional)
         } catch (PDOException $e) {
             echo "Database error: " . $e->getMessage();
             exit();
@@ -71,13 +70,14 @@ require 'include/db.php'; // Include database connection file
 
         // Send the email
         $mail->send();
+
+        // Success message and redirect
         echo "<script>
                 alert('Form submitted successfully!');
-                window.location.href = 'thankyou.php';
+                window.location.href = 'thankyou.php'; // Redirect to a thank you page
               </script>";
-        exit();
     } catch (Exception $e) {
         echo "Email sending failed: {$mail->ErrorInfo}";
     }
-
+}
 ?>

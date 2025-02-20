@@ -217,33 +217,34 @@
                         Let us know how we can help you. Please fill out the form below.
                     </p>
                     <form action="contactFormBackend.php" method="post"> 
-                        <!-- Name -->
-                        <div class="form-floating mb-3">
-                            <input type="text" id="name" class="form-control" placeholder="Your Name" style="padding: 12px; font-size: 14px; border-radius: 8px;">
-                            <label for="name">Your Name</label>
-                        </div>
-                        <!-- Email -->
-                        <div class="form-floating mb-3">
-                            <input type="email" id="email" class="form-control" placeholder="Your Email" style="padding: 12px; font-size: 14px; border-radius: 8px;">
-                            <label for="email">Your Email</label>
-                        </div>
-                        <!-- Phone -->
-                        <div class="form-floating mb-3">
-                            <input type="text" id="phone" class="form-control" placeholder="Phone Number" style="padding: 12px; font-size: 14px; border-radius: 8px;">
-                            <label for="phone">Phone Number</label>
-                        </div>
-                        <!-- Message -->
-                        <div class="form-floating mb-3">
-                            <textarea id="message" class="form-control" placeholder="Your Message" rows="4" style="padding: 12px; font-size: 14px; border-radius: 8px;"></textarea>
-                            <label for="message">Your Message</label>
-                        </div>
-                        <!-- Submit Button -->
-                        <div class="text-center">
-                            <button type="submit" name="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 20px; background: linear-gradient(135deg, #0069d9, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
-                                Send Message
-                            </button>
-                        </div>
-                    </form>
+    <!-- Name -->
+    <div class="form-floating mb-3">
+        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" style="padding: 12px; font-size: 14px; border-radius: 8px;">
+        <label for="name">Your Name</label>
+    </div>
+    <!-- Email -->
+    <div class="form-floating mb-3">
+        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" style="padding: 12px; font-size: 14px; border-radius: 8px;">
+        <label for="email">Your Email</label>
+    </div>
+    <!-- Phone -->
+    <div class="form-floating mb-3">
+        <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number" style="padding: 12px; font-size: 14px; border-radius: 8px;">
+        <label for="phone">Phone Number</label>
+    </div>
+    <!-- Message -->
+    <div class="form-floating mb-3">
+        <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="4" style="padding: 12px; font-size: 14px; border-radius: 8px;"></textarea>
+        <label for="message">Your Message</label>
+    </div>
+    <!-- Submit Button -->
+    <div class="text-center">
+        <button type="submit" name="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 20px; background: linear-gradient(135deg, #0069d9, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
+            Send Message
+        </button>
+    </div>
+</form>
+
                 </div>
             </div>
         </div>

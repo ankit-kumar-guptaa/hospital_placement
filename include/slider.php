@@ -6,7 +6,7 @@
        
          <h3>Looking For Job</h3>
         <!-- <p>Your Premier Healthcare Recruitment Consultant</p> -->
-        <form action="../backend_job_seeker.php" method="post" class="slider-form">
+        <form action="backend_job_seeker.php" method="post" class="slider-form">
             <!-- Role Selection -->
             <div class="mb-3">
                 <label for="role" class="form-label">I'm a</label>
@@ -62,7 +62,7 @@
             <div id="nurse-fields" class="dynamic-fields" style="display: none;">
                 <div class="row mb-3">
                     <!-- Department Selection -->
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label for="department" class="form-label">Department</label>
                         <select id="department" name="department" class="form-select">
                             <option value="" disabled selected>Select Department</option>
@@ -85,7 +85,7 @@
                     </div>
 
                     <!-- Qualification Selection -->
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <label for="qualification" class="form-label">Qualification</label>
                         <select id="qualification" name="qualification" class="form-select">
                             <option value="" disabled selected>Select Qualification</option>
@@ -282,7 +282,7 @@
 
                 <!-- CAPTCHA Refresh Button -->
                 <button type="button" class="refresh-captcha btn btn-light"
-                    style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%;">🔄</button>
+                    style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
 
                 <!-- CAPTCHA Input -->
                 <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
@@ -298,7 +298,7 @@
     <div class="slider-sidebar">
         <div class="sidebar-content">
             <h3>Looking for Employee</h3>
-            <form action="../employer_form_submission.php" method="post" class="employer-form">
+            <form action="employer_form_submission.php" method="post" class="employer-form">
                 <div class="mb-3">
                     <input type="text" id="organization-name" name="organization_name" class="form-control"
                         placeholder="Enter Organization Name" required>
@@ -317,7 +317,7 @@
                 </div>
                 <div class="mb-3">
                     <!-- <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label> -->
-                    <textarea id="remarks" name="remarks" class="form-control" placeholder="Remarks (Hiring For / Budget, etc.)" rows="4"
+                    <textarea id="remarks" name="remarks" class="form-control" placeholder="Remarks (Hiring For / Budget, etc.)" rows="2"
                         required></textarea>
                 </div>
 
@@ -329,7 +329,7 @@
 
                     <!-- CAPTCHA Refresh Button -->
                     <button type="button" class="refresh-captcha "
-                        style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%;">🔄</button>
+                        style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
 
                     <!-- CAPTCHA Input -->
                     <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
@@ -427,7 +427,7 @@
 
 
 <style>
-   /* General Styles */
+    /* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -435,62 +435,67 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1; /* Light gray background */
+    color: #333; /* Dark text for better readability */
 }
 
 /* Slider Container */
 .slider-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: #6ec1e4;
+    background: linear-gradient(135deg, #42a5f5, #262728); /* Gradient background for a fresh look */
     padding: 40px 20px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
+    /* margin: 40px auto; Center and add some space around the container */
+    /* max-width: 1200px; */
 }
 
+/* Slider Content and Sidebar */
 .slider-content,
 .slider-sidebar {
     flex: 1 1 48%; /* Same width for both forms */
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    height: 100%; /* Ensure both forms have the same height */
+    height: 100%;
 }
-
-/* Slider Container h1 Styling */
-/* Slider Container h1 Styling */
-.slider-container .heading1 {
-    font-family: Arial, Helvetica, sans-serif; /* Apply Dancing Script font */
-    font-size: 2.5rem; /* Adjust font size */
-    text-align: center; /* Center align text */
-    margin: 0 auto 20px; /* Margin for spacing */
-    font-weight: bold; /* Bold text */
-    color: #333; /* Text color */
-    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); Optional shadow for a soft effect */
-    width: 100%; /* Ensures it takes full width of container */
-    display: block; /* Ensures the h1 behaves like a block element */
-}
-
-.slider-container .small1{
-    font-size: 25px;
-}
-
-
-
 
 /* Heading Styling */
+.slider-container .heading1 {
+    font-family: 'Dancing Script', cursive; /* Elegant font for the heading */
+    font-size: 3rem; /* Larger font size */
+    text-align: center;
+    margin: 0 auto 20px;
+    font-weight: bold;
+    color: #fff; /* White color for the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+    width: 100%;
+}
+
+/* Small Heading for Subsections */
+.slider-container .small1 {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Section Heading Styling */
 .slider-content h3,
 .slider-sidebar h3 {
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px; /* Space between heading and form */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    color: #1e88e5; /* Blue color for headings */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
 /* Form Styling */
@@ -501,9 +506,11 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-    margin-top: 10px; /* Ensures space between heading and form */
+    margin-top: 10px;
+    border: 2px solid #ddd; /* Light border for forms */
 }
 
+/* Input & Select Styling */
 .slider-form input,
 .slider-form select,
 .slider-form textarea,
@@ -511,20 +518,16 @@ body {
 .employer-form select,
 .employer-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    margin-bottom: 12px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.slider-form textarea,
-.employer-form textarea {
-    height: 50px;
-    resize: none;
-}
-
+/* Focus Effect on Inputs */
 .slider-form input:focus,
 .slider-form select:focus,
 .slider-form textarea:focus,
@@ -532,27 +535,28 @@ body {
 .employer-form select:focus,
 .employer-form textarea:focus {
     border-color: #42a5f5;
-    outline: none;
-    background-color: #fff;
+    background-color: #f0f8ff; /* Soft blue background on focus */
 }
 
+/* Button Styling */
 .slider-form button,
 .employer-form button {
-    /* background-color: #ffcc00; */
-    color: #000;
+    background-color: #ff5722;
+    color: white;
     border: none;
     cursor: pointer;
     font-weight: bold;
     border-radius: 6px;
-    padding: 12px;
-    font-size: 1rem;
+    padding: 14px;
+    font-size: 1.1rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
     width: 100%;
+    margin-top: 10px;
 }
 
 .slider-form button:hover,
 .employer-form button:hover {
-    background-color: #ff9900;
+    background-color: #e64a19; /* Darker orange on hover */
     transform: translateY(-3px);
 }
 
@@ -568,8 +572,14 @@ body {
         flex: 1 1 100%;
     }
 
-    .employer-form {
-        max-width: 90%;
+    .slider-form input,
+    .slider-form select,
+    .slider-form textarea,
+    .employer-form input,
+    .employer-form select,
+    .employer-form textarea {
+        font-size: 1rem;
+        padding: 12px;
     }
 }
 
@@ -585,17 +595,13 @@ body {
     .employer-form select,
     .employer-form textarea {
         font-size: 0.9rem;
-        padding: 8px;
+        padding: 10px;
     }
 
     .slider-form button,
     .employer-form button {
-        font-size: 0.9rem;
-        padding: 10px;
-    }
-
-    .employer-form textarea {
-        height: 40px;
+        font-size: 1rem;
+        padding: 12px;
     }
 }
 

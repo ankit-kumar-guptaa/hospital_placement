@@ -155,16 +155,6 @@
 
 
 
-<script>  // Show loader on page change
-  document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.overlay').style.display = 'block';
-        document.querySelector('.loader').style.display = 'block';
-    });
-});</script>
-  <!-- GSAP CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
