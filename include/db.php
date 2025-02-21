@@ -4,8 +4,8 @@
 // $host = 'localhost';      // Database host
 // $username = 'root';       // Database username
 // $password = '';           // Database password
-// $database = 'hospital';    // Database name
-
+// // $database = 'hospital';    // Database name
+// $database = 'form_db'; 
 $host = 'localhost';      // Database host
 $username = 'u141142577_admin';       // Database username
 $password = 'Elite@1925';           // Database password

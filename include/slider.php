@@ -2,6 +2,64 @@
 <!-- slider.php -->
 <div class="slider-container">
 <div class="heading1">HOSPITAL PLACEMENT HR <div class="small1">SINCE 2010</div></div>
+
+<div class="slider-sidebar">
+        <div class="sidebar-content">
+            <h3>Looking for Employee</h3>
+            <form action="employer_form_submission.php" method="post" class="employer-form">
+                <div class="mb-3">
+                    <input type="text" id="organization-name" name="organization_name" class="form-control"
+                        placeholder="Enter Organization Name" required>
+                </div>
+                
+                <div class="mb-3">
+                    <input type="text" id="contact-name" name="contact_name" class="form-control"
+                        placeholder="Enter Contact Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <!-- <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label> -->
+                    <textarea id="remarks" name="remarks" class="form-control" placeholder="Remarks (Hiring For / Budget, etc.)" rows="2"
+                        required></textarea>
+                </div>
+
+                <!-- CAPTCHA Image, Input and Refresh Button in Same Row -->
+                <div class="mb-3 d-flex align-items-center">
+                    <!-- CAPTCHA Image -->
+                    <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
+                        style="max-width: 150px; height: auto; margin-right: 10px;">
+
+                    <!-- CAPTCHA Refresh Button -->
+                    <button type="button" class="refresh-captcha "
+                        style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+
+                    <!-- CAPTCHA Input -->
+                    <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
+                        style="max-width: 130px; margin-right: 10px;">
+                </div>
+
+                <button style="background-color: #ffcc00;" type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
     <div class="slider-content">
        
          <h3>Looking For Job</h3>
@@ -295,55 +353,7 @@
 
   
 
-    <div class="slider-sidebar">
-        <div class="sidebar-content">
-            <h3>Looking for Employee</h3>
-            <form action="employer_form_submission.php" method="post" class="employer-form">
-                <div class="mb-3">
-                    <input type="text" id="organization-name" name="organization_name" class="form-control"
-                        placeholder="Enter Organization Name" required>
-                </div>
-                
-                <div class="mb-3">
-                    <input type="text" id="contact-name" name="contact_name" class="form-control"
-                        placeholder="Enter Contact Name" required>
-                </div>
-                <div class="mb-3">
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" required>
-                </div>
-                <div class="mb-3">
-                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number"
-                        required>
-                </div>
-                <div class="mb-3">
-                    <!-- <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label> -->
-                    <textarea id="remarks" name="remarks" class="form-control" placeholder="Remarks (Hiring For / Budget, etc.)" rows="2"
-                        required></textarea>
-                </div>
-
-                <!-- CAPTCHA Image, Input and Refresh Button in Same Row -->
-                <div class="mb-3 d-flex align-items-center">
-                    <!-- CAPTCHA Image -->
-                    <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
-                        style="max-width: 150px; height: auto; margin-right: 10px;">
-
-                    <!-- CAPTCHA Refresh Button -->
-                    <button type="button" class="refresh-captcha "
-                        style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
-
-                    <!-- CAPTCHA Input -->
-                    <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
-                        style="max-width: 130px; margin-right: 10px;">
-                </div>
-
-                <button style="background-color: #ffcc00;" type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
-            </form>
-
-
-
-        </div>
-    </div>
-
+  
 
 </div>
 
