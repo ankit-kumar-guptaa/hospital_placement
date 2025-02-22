@@ -115,7 +115,7 @@ We leverage advanced communication tools, a robust recruitment database, and sta
                 </div>
             </div>
             <div class="col-lg-12 text-center mt-5" data-aos="fade-up">
-                <img src="https://hospitalplacement.com/wp-content/uploads/2021/03/reqruitement_process.png" alt="Recruitment Process" class="img-fluid rounded shadow-sm">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/03/reqruitement_process.png" alt="Recruitment Process" class="img-fluid rounded shadow-sm">
             </div>
         </div>
     </div>
@@ -140,12 +140,12 @@ We begin by gathering comprehensive information from candidates through a detail
 Our recruitment process is tailored to meet the specific needs of your healthcare facility, ensuring that we source candidates who are not only qualified but also culturally aligned with your organization. With a focus on speed and accuracy, we strive to streamline the hiring process while maintaining the highest standards.</p>
             </div>
             <div class="col-md-6 mb-4 text-center" data-aos="fade-left">
-                <img src="https://hospitalplacement.com/wp-content/uploads/2021/03/method-1.jpg" alt="Method - 1" class="img-fluid rounded shadow-sm">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/03/method-1.jpg" alt="Method - 1" class="img-fluid rounded shadow-sm">
             </div>
 
             <!-- Media Advertisement -->
             <div class="col-md-6 mb-4 text-center" data-aos="fade-right">
-                <img src="https://hospitalplacement.com/wp-content/uploads/2021/03/media-2.jpg" alt="Method - 2" class="img-fluid rounded shadow-sm">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/03/media-2.jpg" alt="Method - 2" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-md-6 mb-4" data-aos="fade-left">
                 <h3 class="fw-bold" style="color: #007bff;">Media Advertisement</h3>
@@ -166,12 +166,12 @@ To further enhance this strategy, we regularly organize Career Workshops, Career
 The referral process is efficient, cost-effective, and provides a higher likelihood of success as referred candidates tend to be more committed and better suited to the roles they apply for.</p>
             </div>
             <div class="col-md-6 mb-4 text-center" data-aos="fade-left">
-                <img src="https://hospitalplacement.com/wp-content/uploads/2021/03/reffral-1.jpg" alt="Referral Method" class="img-fluid rounded shadow-sm">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/03/reffral-1.jpg" alt="Referral Method" class="img-fluid rounded shadow-sm">
             </div>
 
             <!-- Screening Methodology -->
             <div class="col-md-6 mb-4 text-center" data-aos="fade-right">
-                <img src="https://hospitalplacement.com/wp-content/uploads/2021/03/screening.jpg" alt="Screening Method" class="img-fluid rounded shadow-sm">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/03/screening.jpg" alt="Screening Method" class="img-fluid rounded shadow-sm">
             </div>
             <div class="col-md-6 mb-4" data-aos="fade-left">
                 <h3 class="fw-bold" style="color: #007bff;">Screening Methodology</h3>
