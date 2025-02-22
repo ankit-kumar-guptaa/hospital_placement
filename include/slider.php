@@ -1,7 +1,8 @@
 
 <!-- slider.php -->
 <div class="slider-container">
-<div class="heading1">HOSPITAL PLACEMENT HR <div class="small1">SINCE 2010</div></div>
+<div class="heading1">Specialized Medical Recruitment Team since 2010 <div class="small1">
+Let us know what are you looking for </div></div>
 
 <div class="slider-sidebar">
         <div class="sidebar-content">
@@ -448,6 +449,10 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f1f1f1; /* Light gray background */
     color: #333; /* Dark text for better readability */
+
+overflow: hidden;
+
+
 }
 
 /* Slider Container */
@@ -478,7 +483,7 @@ body {
 
 /* Heading Styling */
 .slider-container .heading1 {
-    font-family: 'Dancing Script', cursive; /* Elegant font for the heading */
+    font-family: "Playfair Display", serif; /* Elegant font for the heading */
     font-size: 3rem; /* Larger font size */
     text-align: center;
     margin: 0 auto 20px;
@@ -490,7 +495,7 @@ body {
 
 /* Small Heading for Subsections */
 .slider-container .small1 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     color: #ffcc00;
     text-align: center;
     margin-top: 10px;
@@ -551,7 +556,7 @@ body {
 /* Button Styling */
 .slider-form button,
 .employer-form button {
-    background-color: #ff5722;
+    background-color: #3b76a6;
     color: white;
     border: none;
     cursor: pointer;
@@ -566,7 +571,7 @@ body {
 
 .slider-form button:hover,
 .employer-form button:hover {
-    background-color: #e64a19; /* Darker orange on hover */
+    background-color: #3b76a6; /* Darker orange on hover */
     transform: translateY(-3px);
 }
 
