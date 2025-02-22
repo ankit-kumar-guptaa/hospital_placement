@@ -355,57 +355,133 @@
 <?php include "include/footer.php"?>
 
 
-
 <style>
     #solutions {
-    background-color: #f9f9f9;
-}
+        background-color: #f9f9f9;
+        padding: 20px;
+    }
 
-.section-heading {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-}
+    .section-heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333;
+        text-align: center;
+    }
 
-.section-subheading {
-    font-size: 1.2rem;
-    color: #777;
-    margin-top: 0.5rem;
-}
+    .section-subheading {
+        font-size: 1.2rem;
+        color: #777;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
 
-.solution-card {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+    .solution-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin: 20px;
+    }
 
-.solution-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
+    .solution-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
 
-.icon-container {
-    font-size: 3rem;
-    color: #007bff;
-    margin-bottom: 15px;
-}
+    .icon-container {
+        font-size: 3rem;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
 
-.solution-card h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #333;
-}
+    .solution-card h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+    }
 
-.solution-card p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-}
+    .solution-card p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+    }
 
+    /* Media Query for Tablet */
+    @media (max-width: 768px) {
+        .section-heading {
+            font-size: 2rem; /* Smaller heading on tablets */
+        }
 
+        .solution-card {
+            padding: 20px;
+            margin: 15px;
+        }
 
+        .icon-container {
+            font-size: 2.5rem;
+        }
+
+        .solution-card h4 {
+            font-size: 1.3rem;
+        }
+
+        .solution-card p {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Media Query for Mobile */
+    @media (max-width: 480px) {
+        #solutions {
+            padding: 15px;
+        }
+
+        .section-heading {
+            font-size: 1.8rem; /* Even smaller heading for mobile */
+        }
+
+        .solution-card {
+            padding: 15px;
+            margin: 10px;
+        }
+
+        .icon-container {
+            font-size: 2rem;
+        }
+
+        .solution-card h4 {
+            font-size: 1.2rem;
+        }
+
+        .solution-card p {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Extra Small Screen (for very small devices) */
+    @media (max-width: 375px) {
+        .section-heading {
+            font-size: 1.6rem;
+        }
+
+        .solution-card {
+            padding: 12px;
+            margin: 8px;
+        }
+
+        .icon-container {
+            font-size: 1.8rem;
+        }
+
+        .solution-card h4 {
+            font-size: 1.1rem;
+        }
+
+        .solution-card p {
+            font-size: 0.85rem;
+        }
+    }
 </style>

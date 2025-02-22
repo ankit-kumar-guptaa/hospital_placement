@@ -3,7 +3,7 @@
     <div class="row text-light">
       <!-- Logo and About Section -->
       <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacement Logo" class="mb-3" style="width: 180px;">
+        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacement Logo" class="mb-3" style="width: 180px;">
         <p style="color: #dcdde1; line-height: 1.8;">
           HospitalPlacement.com is your trusted partner in medical recruitment, offering seamless staffing solutions for healthcare facilities nationwide. Bridging talent with opportunity since 2010.
         </p>
