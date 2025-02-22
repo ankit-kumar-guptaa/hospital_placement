@@ -1,6 +1,6 @@
 body {
-  overflow-x: hidden; /* Horizontal scroll ko hatao */
-    overflow-y: auto;   
+  overflow-x: hidden !important; /* Horizontal scroll ko hatao */
+    overflow-y: auto !important;   
 }
 
 
