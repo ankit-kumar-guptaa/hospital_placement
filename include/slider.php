@@ -601,7 +601,7 @@ body {
 @media screen and (max-width: 576px) {
     .slider-content h1,
     .slider-sidebar h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .slider-form input,
