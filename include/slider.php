@@ -449,8 +449,8 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f1f1f1; /* Light gray background */
     color: #333; /* Dark text for better readability */
-
-overflow: hidden;
+    overflow-x: hidden; /* Horizontal scroll ko hatao */
+    overflow-y: auto;   
 
 
 }
