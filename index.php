@@ -8,7 +8,31 @@
 
     <meta name="description" content="HospitalPlacement.com offers top-tier medical and healthcare recruitment services nationwide. ISO 9001:2000 certified, we connect talent with leading healthcare institutions."> <!-- Added meta description -->
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'AW-10893858085');
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 <?php include 'include/assets.php'?>
 

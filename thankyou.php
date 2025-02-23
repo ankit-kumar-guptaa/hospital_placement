@@ -1,6 +1,4 @@
-<?php
-// You can include any logic to handle the post-submission process if needed.
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +37,27 @@
             background-color: #0056b3;
         }
     </style>
+
+    <!-- Event snippet for hospital placement conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-10893858085/yNPDCKzkkLwDEKWqzMoo'});
+</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
 
