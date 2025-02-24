@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->Port       = 587;
 
         $mail->setFrom('rajiv@greencarcarpool.com', 'Hospital Placement Application');
-        $mail->addAddress('theankitkumarg@gmail.com'); // Admin email
+        $mail->addAddress('rajiv@elitecorporatesolutions.com'); // Admin email
 
         $mail->isHTML(true);
         $mail->Subject = 'New Hospital Placement Application';
