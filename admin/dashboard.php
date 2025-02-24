@@ -14,7 +14,7 @@ $stmt_job_seeker = $pdo->query("SELECT * FROM form_submissions ORDER BY created_
 $job_seeker_submissions = $stmt_job_seeker->fetchAll(PDO::FETCH_ASSOC);
 
 // Fetch Employer data
-$stmt_employer = $pdo->query("SELECT * FROM employer_submissions ORDER BY created_at DESC");
+$stmt_employer = $pdo->query("SELECT * FROM employer_submissions ORDER BY submission_date DESC");
 $employer_submissions = $stmt_employer->fetchAll(PDO::FETCH_ASSOC);
 
 // Fetch Contact Form data
@@ -225,7 +225,7 @@ $hospital_applications = $stmt_hospital->fetchAll(PDO::FETCH_ASSOC);
                                                 <td><?php echo $submission['email']; ?></td>
                                                 <td><?php echo $submission['phone']; ?></td>
                                                 <td><?php echo $submission['remarks']; ?></td>
-                                                <td><?php echo $submission['created_at']; ?></td>
+                                                <td><?php echo $submission['submission_date']; ?></td>
                                             </tr>
                                         <?php endforeach; ?>
                                     </tbody>

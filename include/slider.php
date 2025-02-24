@@ -30,20 +30,24 @@
                         placeholder="Remarks (Hiring For / Budget, etc.)" rows="2" required></textarea>
                 </div>
 
-                <!-- CAPTCHA Image, Input and Refresh Button in Same Row -->
-                <div class="mb-3 d-flex align-items-center">
-                    <!-- CAPTCHA Image -->
-                    <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
-                        style="max-width: 150px; height: auto; margin-right: 10px;">
+                <!-- CAPTCHA Container -->
+<div class="mb-3 captcha-container">
+    <!-- CAPTCHA Image and Refresh Button (Row for Desktop) -->
+    <div class="d-flex align-items-center mb-2">
+        <!-- CAPTCHA Image -->
+        <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
+            style="max-width: 150px; height: auto; margin-right: 10px;">
 
-                    <!-- CAPTCHA Refresh Button -->
-                    <button type="button" class="refresh-captcha "
-                        style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+        <!-- CAPTCHA Refresh Button -->
+        <button type="button" class="refresh-captcha"
+            style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+    </div>
 
-                    <!-- CAPTCHA Input -->
-                    <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
-                        style="max-width: 130px; margin-right: 10px;">
-                </div>
+    <!-- CAPTCHA Input (Below Image and Button on Mobile) -->
+    <div>
+        <input type="text" name="captcha" class="form-control captcha-input" placeholder="Enter Captcha" required>
+    </div>
+</div>
 
                 <button style="background-color: #ffcc00;" type="submit" name="submit"
                     class="btn btn-primary w-100">Submit</button>
@@ -327,20 +331,26 @@
                 </div>
             </div>
 
-            <!-- CAPTCHA Image, Input and Refresh Button in Same Row -->
-            <div class="mb-3 d-flex align-items-center">
-                <!-- CAPTCHA Image -->
-                <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
-                    style="max-width: 150px; height: auto; margin-right: 10px;">
+            <!-- CAPTCHA Container -->
+<div class="mb-3 captcha-container">
+    <!-- CAPTCHA Image and Refresh Button (Row for Desktop) -->
+    <div class="d-flex align-items-center mb-2">
+        <!-- CAPTCHA Image -->
+        <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
+            style="max-width: 150px; height: auto; margin-right: 10px;">
 
-                <!-- CAPTCHA Refresh Button -->
-                <button type="button" class="refresh-captcha btn btn-light"
-                    style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+        <!-- CAPTCHA Refresh Button -->
+        <button type="button" class="refresh-captcha btn btn-light"
+            style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+    </div>
 
-                <!-- CAPTCHA Input -->
-                <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
-                    style="max-width: 130px; margin-right: 10px;">
-            </div>
+    <!-- CAPTCHA Input (Below Image and Button on Mobile) -->
+    <div>
+        <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
+            style="max-width: 100%;">
+    </div>
+</div>
+
 
             <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>
         </form>
@@ -478,6 +488,7 @@
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         height: 100%;
+        width: 100%;
     }
 
     /* Heading Styling */
@@ -626,6 +637,34 @@
         .employer-form button {
             font-size: 1rem;
             padding: 12px;
+        }
+    }
+</style>
+
+
+<style>
+    /* Default layout for desktop */
+    .captcha-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .captcha-container .form-control {
+        max-width: 130px;
+        margin-right: 10px;
+    }
+
+    /* Mobile layout (for screens less than 768px) */
+    @media (max-width: 767.98px) {
+        .captcha-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .captcha-container .form-control {
+            max-width: 100%;
+            margin-right: 0;
+            margin-top: 10px; /* Add some spacing between image and input */
         }
     }
 </style>
