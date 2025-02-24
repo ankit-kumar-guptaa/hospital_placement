@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $department = $_POST['department'] ?? null;
-    $qualification = $_POST['qualification'] ?? null;
+    $department = $_POST['department'] ?? null; // Optional field
+    $qualification = $_POST['qualification'] ?? null; // Optional field
 
     // Check if the PDO connection is established
     if ($pdo) {
@@ -37,11 +37,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $pdo->prepare("INSERT INTO form_submissions (role, name, email, phone, department, qualification) VALUES (?, ?, ?, ?, ?, ?)");
             $stmt->execute([$role, $name, $email, $phone, $department, $qualification]);
         } catch (PDOException $e) {
-            echo "Database error: " . $e->getMessage();
+            echo "<script>
+                    alert('Database error: " . $e->getMessage() . "');
+                    window.history.back();
+                  </script>";
             exit();
         }
     } else {
-        echo "Database connection failed!";
+        echo "<script>
+                alert('Database connection failed!');
+                window.history.back();
+              </script>";
         exit();
     }
 
@@ -71,8 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
             <p><strong>Phone:</strong> $phone</p>
-            <p><strong>Department:</strong> $department</p>
-            <p><strong>Qualification:</strong> $qualification</p>
+            <p><strong>Department:</strong> " . ($department ?? 'Not provided') . "</p>
+            <p><strong>Qualification:</strong> " . ($qualification ?? 'Not provided') . "</p>
         ";
 
         // Send the email
@@ -85,7 +91,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
 
     } catch (Exception $e) {
-        echo "Email sending failed: {$mail->ErrorInfo}";
+        echo "<script>
+                alert('Email sending failed: {$mail->ErrorInfo}');
+                window.history.back();
+              </script>";
     }
 }
 ?>
