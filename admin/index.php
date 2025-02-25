@@ -6,18 +6,9 @@ if (!isset($_SESSION['admin_logged_in'])) {
 }
 
 require '../include/db.php';
-// require 'visitor_tracking.php'; // Visitor tracking script include
 
 $admin_name = $_SESSION['admin_name'] ?? 'Admin';
 $selected_month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
-
-// Clear recent submissions if requested
-if (isset($_POST['clear_recent'])) {
-    $stmt_clear = $pdo->prepare("DELETE FROM visitors WHERE visit_date >= DATE_SUB(NOW(), INTERVAL 24 HOUR)");
-    $stmt_clear->execute();
-    header("Location: index.php"); // Refresh page after clearing
-    exit();
-}
 
 // Total Visitors (all visits)
 $stmt_visitors = $pdo->query("SELECT COUNT(*) as total_visitors FROM visitors");
@@ -71,16 +62,10 @@ $last7_forms = array_sum(array_map(function($table) use ($pdo, $tables) {
     return $stmt->fetch(PDO::FETCH_ASSOC)['count'];
 }, array_keys($tables)));
 
-// Recent Submissions (last 24 hours)
-$recent_submissions = [];
-foreach ($tables as $table => $config) {
-    $stmt = $pdo->prepare("SELECT * FROM $table WHERE {$config['date_column']} >= DATE_SUB(NOW(), INTERVAL 24 HOUR) ORDER BY {$config['date_column']} DESC LIMIT 5");
-    $stmt->execute();
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($results as $row) {
-        $recent_submissions[] = ['type' => $config['label'], 'time' => $row[$config['date_column']]];
-    }
-}
+// Recent Visitors (last 24 hours)
+$stmt_recent_visitors = $pdo->prepare("SELECT DISTINCT ip_address, MAX(visit_date) as last_visit FROM visitors WHERE visit_date >= DATE_SUB(NOW(), INTERVAL 24 HOUR) GROUP BY ip_address ORDER BY last_visit DESC LIMIT 5");
+$stmt_recent_visitors->execute();
+$recent_visitors = $stmt_recent_visitors->fetchAll(PDO::FETCH_ASSOC);
 
 // Prepare Chart Data
 $visitor_dates = array_column($visitors_by_date, 'date');
@@ -157,7 +142,7 @@ foreach ($forms_by_date as $label => $data) {
             font-size: 1.5rem;
             color: #ffffff;
         }
-        body.dark-mode .notification-list {
+        body.dark-mode .visitor-list {
             max-height: 200px;
             overflow-y: auto;
             color: #d1d4d7;
@@ -179,15 +164,6 @@ foreach ($forms_by_date as $label => $data) {
             background-color: #3a3f44;
             color: #d1d4d7;
             border-color: #5bc0de;
-        }
-        body.dark-mode .btn-clear {
-            background-color: #dc3545;
-            border-color: #dc3545;
-            color: #ffffff;
-        }
-        body.dark-mode .btn-clear:hover {
-            background-color: #c82333;
-            border-color: #c82333;
         }
 
         /* Light Mode */
@@ -232,7 +208,7 @@ foreach ($forms_by_date as $label => $data) {
             font-size: 1.5rem;
             color: #343a40;
         }
-        body.light-mode .notification-list {
+        body.light-mode .visitor-list {
             max-height: 200px;
             overflow-y: auto;
             color: #495057;
@@ -255,15 +231,6 @@ foreach ($forms_by_date as $label => $data) {
             background-color: #ffffff;
             color: #495057;
             border-color: #80bdff;
-        }
-        body.light-mode .btn-clear {
-            background-color: #dc3545;
-            border-color: #dc3545;
-            color: #ffffff;
-        }
-        body.light-mode .btn-clear:hover {
-            background-color: #c82333;
-            border-color: #c82333;
         }
 
         /* Common Styles */
@@ -365,19 +332,16 @@ foreach ($forms_by_date as $label => $data) {
                     </div>
                     <div class="col-md-3">
                         <div class="card">
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <h5><i class="fas fa-bell icon"></i> Recent Submissions</h5>
-                                <form method="POST" style="margin: 0;">
-                                    <button type="submit" name="clear_recent" class="btn btn-clear btn-sm"><i class="fas fa-trash"></i> Clear</button>
-                                </form>
+                            <div class="card-header">
+                                <h5><i class="fas fa-clock icon"></i> Recent Visitors</h5>
                             </div>
-                            <div class="card-body notification-list">
-                                <?php if (empty($recent_submissions)): ?>
-                                    <p>No recent submissions</p>
+                            <div class="card-body visitor-list">
+                                <?php if (empty($recent_visitors)): ?>
+                                    <p>No recent visitors</p>
                                 <?php else: ?>
                                     <ul class="list-unstyled">
-                                        <?php foreach ($recent_submissions as $submission): ?>
-                                            <li><strong><?php echo $submission['type']; ?></strong> - <?php echo $submission['time']; ?></li>
+                                        <?php foreach ($recent_visitors as $visitor): ?>
+                                            <li><strong><?php echo $visitor['ip_address']; ?></strong> - <?php echo $visitor['last_visit']; ?></li>
                                         <?php endforeach; ?>
                                     </ul>
                                 <?php endif; ?>
@@ -447,14 +411,19 @@ foreach ($forms_by_date as $label => $data) {
         });
 
         // Visitors Chart
+        const visitorDates = <?php echo json_encode($visitor_dates); ?>;
+        const visitorCounts = <?php echo json_encode($visitor_counts); ?>;
+        console.log('Visitor Dates:', visitorDates);
+        console.log('Visitor Counts:', visitorCounts);
+
         const visitorsCtx = document.getElementById('visitorsChart').getContext('2d');
         new Chart(visitorsCtx, {
             type: 'line',
             data: {
-                labels: <?php echo json_encode($visitor_dates); ?>,
+                labels: visitorDates.length ? visitorDates : ['No Data'],
                 datasets: [{
                     label: 'Visitors',
-                    data: <?php echo json_encode($visitor_counts); ?>,
+                    data: visitorCounts.length ? visitorCounts : [0],
                     borderColor: '#5bc0de',
                     backgroundColor: 'rgba(91, 192, 222, 0.1)',
                     fill: true,
@@ -463,7 +432,10 @@ foreach ($forms_by_date as $label => $data) {
             },
             options: {
                 responsive: true,
-                scales: { x: { title: { display: true, text: 'Date' } }, y: { title: { display: true, text: 'Count' }, beginAtZero: true } },
+                scales: { 
+                    x: { title: { display: true, text: 'Date' } }, 
+                    y: { title: { display: true, text: 'Count' }, beginAtZero: true } 
+                },
                 plugins: { legend: { position: 'top' } }
             }
         });
