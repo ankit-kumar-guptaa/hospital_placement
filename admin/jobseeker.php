@@ -10,6 +10,46 @@ require '../include/db.php';
 $admin_name = $_SESSION['admin_name'] ?? 'Admin';
 $stmt_job_seeker = $pdo->query("SELECT * FROM form_submissions ORDER BY created_at DESC");
 $job_seeker_submissions = $stmt_job_seeker->fetchAll(PDO::FETCH_ASSOC);
+
+// CSV Export functionality
+if (isset($_GET['export']) && $_GET['export'] === 'csv') {
+    header('Content-Type: text/csv');
+    header('Content-Disposition: attachment; filename="job_seeker_submissions_' . date('Y-m-d') . '.csv"');
+    header('Cache-Control: no-cache, no-store, must-revalidate');
+    header('Pragma: no-cache');
+    header('Expires: 0');
+
+    $output = fopen('php://output', 'w');
+
+    fputcsv($output, [
+        'ID',
+        'Role',
+        'Name',
+        'Email',
+        'Phone',
+        'Department',
+        'Qualification',
+        'College',
+        'Created At'
+    ]);
+
+    foreach ($job_seeker_submissions as $submission) {
+        fputcsv($output, [
+            $submission['id'],
+            $submission['role'],
+            $submission['name'],
+            $submission['email'],
+            $submission['phone'],
+            $submission['department'] ?: 'N/A',
+            $submission['qualification'] ?: 'N/A',
+            $submission['college'] ?: 'N/A',
+            $submission['created_at']
+        ]);
+    }
+
+    fclose($output);
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -199,7 +239,10 @@ $job_seeker_submissions = $stmt_job_seeker->fetchAll(PDO::FETCH_ASSOC);
                         <h4><i class="fas fa-users icon"></i> Job Seeker Submissions</h4>
                     </div>
                     <div class="card-body">
-                        <input type="text" id="jobSeekerSearch" class="form-control search-box" placeholder="Search...">
+                        <div class="d-flex justify-content-between mb-3">
+                            <input type="text" id="jobSeekerSearch" class="form-control search-box w-75" placeholder="Search...">
+                            <a href="?export=csv" class="btn btn-success"><i class="fas fa-download"></i> Export to CSV</a>
+                        </div>
                         <div class="row mb-3">
                             <div class="col-md-6">
                                 <label for="fromDateJobSeeker">From Date:</label>
@@ -292,7 +335,6 @@ $job_seeker_submissions = $stmt_job_seeker->fetchAll(PDO::FETCH_ASSOC);
             const modeToggle = document.getElementById('modeToggle');
             const body = document.body;
 
-            // Load saved theme from localStorage
             if (localStorage.getItem('theme') === 'light') {
                 body.classList.remove('dark-mode');
                 body.classList.add('light-mode');
