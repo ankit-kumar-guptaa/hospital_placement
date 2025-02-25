@@ -1,3 +1,7 @@
+<?php
+require 'visitor_tracking.php';
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">

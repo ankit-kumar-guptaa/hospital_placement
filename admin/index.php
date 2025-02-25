@@ -6,7 +6,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
 }
 
 require '../include/db.php';
-require 'visitor_tracking.php'; // Visitor tracking script include
+// require 'visitor_tracking.php'; // Visitor tracking script include
 
 $admin_name = $_SESSION['admin_name'] ?? 'Admin';
 $selected_month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');

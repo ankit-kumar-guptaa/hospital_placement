@@ -1,5 +1,5 @@
 <?php
-require '../include/db.php';
+require 'include/db.php';
 
 $ip_address = $_SERVER['REMOTE_ADDR'];
 
