@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($email === $admin_email && $password === $admin_password) {
         $_SESSION['admin_logged_in'] = true;
-        header('Location: dashboard.php');
+        header('Location: index.php');
         exit();
     } else {
         $error = 'Invalid login credentials';
