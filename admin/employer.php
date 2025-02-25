@@ -216,7 +216,7 @@ $employer_submissions = $stmt_employer->fetchAll(PDO::FETCH_ASSOC);
                                     <tr>
                                         <th>ID</th>
                                         <th>Organization</th>
-                                        <th>City</th>
+                                        <!-- <th>City</th> -->
                                         <th>Contact Person</th>
                                         <th>Email</th>
                                         <th>Phone</th>
@@ -229,7 +229,7 @@ $employer_submissions = $stmt_employer->fetchAll(PDO::FETCH_ASSOC);
                                         <tr>
                                             <td><?php echo $submission['id']; ?></td>
                                             <td><?php echo $submission['organization_name']; ?></td>
-                                            <td><?php echo $submission['city']; ?></td>
+                                            <!-- <td><?php echo $submission['city']; ?></td> -->
                                             <td><?php echo $submission['contact_name']; ?></td>
                                             <td><?php echo $submission['email']; ?></td>
                                             <td><?php echo $submission['phone']; ?></td>

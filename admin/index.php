@@ -269,6 +269,10 @@ foreach ($forms_by_date as $label => $data) {
         <div class="row g-0">
             <!-- Sidebar -->
             <div class="col-md-2 sidebar p-4">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" style="
+    width: 105px;
+    margin-bottom: 10px;
+"alt="">
                 <h3 class="text-center mb-4">Admin Panel</h3>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link active" href="index.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>

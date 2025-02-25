@@ -92,11 +92,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Hospital Logo">
+        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Hospital Logo">
         <!-- <div class="hospital-name">CityCare Hospital</div> -->
         <h2>Admin Login</h2>
-        <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-left" alt="Hospital Icon">
-        <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-right" alt="Hospital Icon">
+        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-left" alt="Hospital Icon">
+        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-right" alt="Hospital Icon">
         <?php if (isset($error)): ?>
             <div class="alert alert-danger"> <?php echo $error; ?> </div>
         <?php endif; ?>
