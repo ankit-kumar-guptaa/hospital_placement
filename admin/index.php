@@ -6,13 +6,26 @@ if (!isset($_SESSION['admin_logged_in'])) {
 }
 
 require '../include/db.php';
+require 'visitor_tracking.php'; // Visitor tracking script include
 
 $admin_name = $_SESSION['admin_name'] ?? 'Admin';
 $selected_month = isset($_GET['month']) ? $_GET['month'] : date('Y-m');
 
-// Total Visitors
+// Clear recent submissions if requested
+if (isset($_POST['clear_recent'])) {
+    $stmt_clear = $pdo->prepare("DELETE FROM visitors WHERE visit_date >= DATE_SUB(NOW(), INTERVAL 24 HOUR)");
+    $stmt_clear->execute();
+    header("Location: index.php"); // Refresh page after clearing
+    exit();
+}
+
+// Total Visitors (all visits)
 $stmt_visitors = $pdo->query("SELECT COUNT(*) as total_visitors FROM visitors");
 $total_visitors = $stmt_visitors->fetch(PDO::FETCH_ASSOC)['total_visitors'];
+
+// Unique Visitors (distinct IPs)
+$stmt_unique_visitors = $pdo->query("SELECT COUNT(DISTINCT ip_address) as unique_visitors FROM visitors");
+$unique_visitors = $stmt_unique_visitors->fetch(PDO::FETCH_ASSOC)['unique_visitors'];
 
 // Visitors by Date (filtered by month)
 $stmt_visitors_date = $pdo->prepare("SELECT DATE(visit_date) as date, COUNT(*) as count FROM visitors WHERE DATE_FORMAT(visit_date, '%Y-%m') = :month GROUP BY DATE(visit_date) ORDER BY date ASC");
@@ -132,13 +145,21 @@ foreach ($forms_by_date as $label => $data) {
         body.dark-mode .card-body {
             color: #d1d4d7;
         }
+        body.dark-mode .graph-container {
+            max-width: 100%;
+        }
         body.dark-mode .icon {
+            font-size: 2rem;
+            margin-right: 10px;
             color: #6c757d;
         }
         body.dark-mode .welcome-text {
+            font-size: 1.5rem;
             color: #ffffff;
         }
         body.dark-mode .notification-list {
+            max-height: 200px;
+            overflow-y: auto;
             color: #d1d4d7;
         }
         body.dark-mode .btn-primary {
@@ -148,6 +169,25 @@ foreach ($forms_by_date as $label => $data) {
         body.dark-mode .btn-primary:hover {
             background-color: #3a506b;
             border-color: #3a506b;
+        }
+        body.dark-mode .form-control {
+            background-color: #3a3f44;
+            color: #d1d4d7;
+            border: 1px solid #495057;
+        }
+        body.dark-mode .form-control:focus {
+            background-color: #3a3f44;
+            color: #d1d4d7;
+            border-color: #5bc0de;
+        }
+        body.dark-mode .btn-clear {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: #ffffff;
+        }
+        body.dark-mode .btn-clear:hover {
+            background-color: #c82333;
+            border-color: #c82333;
         }
 
         /* Light Mode */
@@ -180,13 +220,21 @@ foreach ($forms_by_date as $label => $data) {
         body.light-mode .card-body {
             color: #495057;
         }
+        body.light-mode .graph-container {
+            max-width: 100%;
+        }
         body.light-mode .icon {
+            font-size: 2rem;
+            margin-right: 10px;
             color: #6c757d;
         }
         body.light-mode .welcome-text {
+            font-size: 1.5rem;
             color: #343a40;
         }
         body.light-mode .notification-list {
+            max-height: 200px;
+            overflow-y: auto;
             color: #495057;
         }
         body.light-mode .btn-primary {
@@ -197,6 +245,25 @@ foreach ($forms_by_date as $label => $data) {
         body.light-mode .btn-primary:hover {
             background-color: #adb5bd;
             border-color: #adb5bd;
+        }
+        body.light-mode .form-control {
+            background-color: #ffffff;
+            color: #495057;
+            border: 1px solid #ced4da;
+        }
+        body.light-mode .form-control:focus {
+            background-color: #ffffff;
+            color: #495057;
+            border-color: #80bdff;
+        }
+        body.light-mode .btn-clear {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: #ffffff;
+        }
+        body.light-mode .btn-clear:hover {
+            background-color: #c82333;
+            border-color: #c82333;
         }
 
         /* Common Styles */
@@ -219,20 +286,6 @@ foreach ($forms_by_date as $label => $data) {
         }
         .card-header {
             border-radius: 10px 10px 0 0;
-        }
-        .graph-container {
-            max-width: 100%;
-        }
-        .icon {
-            font-size: 2rem;
-            margin-right: 10px;
-        }
-        .welcome-text {
-            font-size: 1.5rem;
-        }
-        .notification-list {
-            max-height: 200px;
-            overflow-y: auto;
         }
         .btn-success {
             background-color: #28a745;
@@ -292,6 +345,16 @@ foreach ($forms_by_date as $label => $data) {
                     <div class="col-md-3">
                         <div class="card">
                             <div class="card-header">
+                                <h5><i class="fas fa-user-check icon"></i> Unique Visitors</h5>
+                            </div>
+                            <div class="card-body">
+                                <h3><?php echo $unique_visitors; ?></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-header">
                                 <h5><i class="fas fa-file-alt icon"></i> Total Forms</h5>
                             </div>
                             <div class="card-body">
@@ -302,18 +365,11 @@ foreach ($forms_by_date as $label => $data) {
                     </div>
                     <div class="col-md-3">
                         <div class="card">
-                            <div class="card-header">
-                                <h5><i class="fas fa-calendar icon"></i> Month</h5>
-                            </div>
-                            <div class="card-body">
-                                <h3><?php echo date('F Y', strtotime($selected_month)); ?></h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card">
-                            <div class="card-header">
+                            <div class="card-header d-flex justify-content-between align-items-center">
                                 <h5><i class="fas fa-bell icon"></i> Recent Submissions</h5>
+                                <form method="POST" style="margin: 0;">
+                                    <button type="submit" name="clear_recent" class="btn btn-clear btn-sm"><i class="fas fa-trash"></i> Clear</button>
+                                </form>
                             </div>
                             <div class="card-body notification-list">
                                 <?php if (empty($recent_submissions)): ?>
@@ -367,7 +423,6 @@ foreach ($forms_by_date as $label => $data) {
         const modeToggle = document.getElementById('modeToggle');
         const body = document.body;
 
-        // Load saved theme from localStorage
         if (localStorage.getItem('theme') === 'light') {
             body.classList.remove('dark-mode');
             body.classList.add('light-mode');
