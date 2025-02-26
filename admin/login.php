@@ -9,8 +9,8 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Sample hardcoded admin credentials (you can store in DB later)
-    $admin_email = 'admin@example.com';
-    $admin_password = 'admin123'; // In real systems, use hashed passwords!
+    $admin_email = 'admin@hospitalplacement.com';
+    $admin_password = 'Admin@123'; // In real systems, use hashed passwords!
 
     $email = $_POST['email'];
     $password = $_POST['password'];
