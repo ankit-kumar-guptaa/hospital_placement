@@ -1,17 +1,18 @@
 <?php
 // db.php - Database Connection File
 
-$host = 'localhost';      // Database host
-$username = 'root';       // Database username
-$password = '';           // Database password
+// $host = 'localhost';      // Database host
+// $username = 'root';       // Database username
+// $password = '';           // Database password
 
-$database = 'hospital';
+// $database = 'hospital';
 
-// $host = 'localhost:3306';      // Database host
-// $username = 'recru2l1_hospital_placement';       // Database username
-// $password = 'Hospital@123@';           // Database password
 
-// $database = 'recru2l1_hospital_placement';
+$host = 'localhost:3306';      // Database host
+$username = 'recru2l1_hospital_placement';       // Database username
+$password = 'Hospital@123@';           // Database password
+
+$database = 'recru2l1_hospital_placement';
 
 // $host = 'localhost';      // Database host
 // $username = 'u141142577_admin';       // Database username
