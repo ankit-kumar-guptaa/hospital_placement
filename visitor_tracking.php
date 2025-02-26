@@ -1,5 +1,5 @@
 <?php
-require '../include/db.php';
+require 'include/db.php';
 
 // Fetch visitors without country
 $stmt = $pdo->query("SELECT DISTINCT ip_address FROM visitors WHERE country IS NULL OR country = 'Unknown'");
