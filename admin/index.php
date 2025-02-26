@@ -23,6 +23,10 @@ $stmt_visitors_date = $pdo->prepare("SELECT DATE(visit_date) as date, COUNT(*) a
 $stmt_visitors_date->execute(['month' => $selected_month]);
 $visitors_by_date = $stmt_visitors_date->fetchAll(PDO::FETCH_ASSOC);
 
+// Country-wise Visitors
+$stmt_country_visitors = $pdo->query("SELECT country, COUNT(*) as count FROM visitors GROUP BY country ORDER BY count DESC");
+$country_visitors = $stmt_country_visitors->fetchAll(PDO::FETCH_ASSOC);
+
 // Form Submissions Counts
 $stmt_job_seeker = $pdo->query("SELECT COUNT(*) as count FROM form_submissions");
 $total_job_seeker = $stmt_job_seeker->fetch(PDO::FETCH_ASSOC)['count'];
@@ -85,6 +89,10 @@ foreach ($forms_by_date as $label => $data) {
     }
     $form_datasets[] = ['label' => $label, 'data' => $counts];
 }
+
+// Country Chart Data
+$country_labels = array_column($country_visitors, 'country');
+$country_counts = array_column($country_visitors, 'count');
 ?>
 
 <!DOCTYPE html>
@@ -142,7 +150,7 @@ foreach ($forms_by_date as $label => $data) {
             font-size: 1.5rem;
             color: #ffffff;
         }
-        body.dark-mode .visitor-list {
+        body.dark-mode .visitor-list, body.dark-mode .country-list {
             max-height: 200px;
             overflow-y: auto;
             color: #d1d4d7;
@@ -208,7 +216,7 @@ foreach ($forms_by_date as $label => $data) {
             font-size: 1.5rem;
             color: #343a40;
         }
-        body.light-mode .visitor-list {
+        body.light-mode .visitor-list, body.light-mode .country-list {
             max-height: 200px;
             overflow-y: auto;
             color: #495057;
@@ -269,10 +277,7 @@ foreach ($forms_by_date as $label => $data) {
         <div class="row g-0">
             <!-- Sidebar -->
             <div class="col-md-2 sidebar p-4">
-                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" style="
-    width: 105px;
-    margin-bottom: 10px;
-"alt="">
+                <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" style="width: 105px; margin-bottom: 10px;" alt="">
                 <h3 class="text-center mb-4">Admin Panel</h3>
                 <ul class="nav flex-column">
                     <li class="nav-item"><a class="nav-link active" href="index.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
@@ -354,6 +359,28 @@ foreach ($forms_by_date as $label => $data) {
                     </div>
                 </div>
 
+                <!-- Country-wise Visitors -->
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5><i class="fas fa-globe icon"></i> Visitor Countries</h5>
+                            </div>
+                            <div class="card-body country-list">
+                                <?php if (empty($country_visitors)): ?>
+                                    <p>No visitor data available</p>
+                                <?php else: ?>
+                                    <ul class="list-unstyled">
+                                        <?php foreach ($country_visitors as $country): ?>
+                                            <li><strong><?php echo $country['country']; ?></strong>: <?php echo $country['count']; ?> visits</li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Graphs -->
                 <div class="row">
                     <div class="col-md-6 graph-container mb-4">
@@ -375,6 +402,16 @@ foreach ($forms_by_date as $label => $data) {
                             </div>
                             <div class="card-body">
                                 <canvas id="formsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 graph-container mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>Country-wise Visitor Distribution</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="countryChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -466,6 +503,30 @@ foreach ($forms_by_date as $label => $data) {
             options: {
                 responsive: true,
                 scales: { x: { title: { display: true, text: 'Date' } }, y: { title: { display: true, text: 'Count' }, beginAtZero: true } },
+                plugins: { legend: { position: 'top' } }
+            }
+        });
+
+        // Country-wise Visitor Chart
+        const countryCtx = document.getElementById('countryChart').getContext('2d');
+        new Chart(countryCtx, {
+            type: 'bar',
+            data: {
+                labels: <?php echo json_encode($country_labels); ?>,
+                datasets: [{
+                    label: 'Visitor Count by Country',
+                    data: <?php echo json_encode($country_counts); ?>,
+                    backgroundColor: 'rgba(91, 192, 222, 0.5)',
+                    borderColor: '#5bc0de',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { title: { display: true, text: 'Country' } },
+                    y: { title: { display: true, text: 'Count' }, beginAtZero: true }
+                },
                 plugins: { legend: { position: 'top' } }
             }
         });
