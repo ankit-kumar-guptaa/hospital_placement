@@ -131,7 +131,7 @@ function gtag_report_conversion(url) {
                 <img src="https://www.shutterstock.com/image-photo/group-confident-indian-male-female-600nw-2298543747.jpg" alt="About Us" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
             </div>
             <!-- Right Section: Text -->
-            <div class="col-md-6" data-aos="fade-left">
+            <div class="col-md-6" data-aos="fade-up">
                 <h3 style="font-weight: bold; color: #333;">Our Expertise</h3>
                 <p style="font-size: 18px; color: #555; line-height: 1.8; margin-top: 20px;">
                     Our team brings a wealth of experience and a dedicated approach to healthcare recruitment. Here’s what sets us apart:

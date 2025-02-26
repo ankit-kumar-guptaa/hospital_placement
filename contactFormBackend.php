@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Recipients
         $mail->setFrom('rajiv@greencarcarpool.com', 'Contact Form Submission');
-        $mail->addAddress('theankitkumarg@gmail.com'); // Admin email
+        $mail->addAddress('rajiv@elitecorporatesolutions.com'); // Admin email
 
         // Email content
         $mail->isHTML(true);

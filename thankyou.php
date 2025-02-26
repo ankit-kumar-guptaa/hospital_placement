@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,34 +36,53 @@
         }
     </style>
 
+    <?php include "include/assets.php"?>
+
     <!-- Event snippet for hospital placement conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-10893858085/yNPDCKzkkLwDEKWqzMoo'});
-</script>
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-      'value': 1.0,
-      'currency': 'INR',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+    <script>
+        gtag('event', 'conversion', {'send_to': 'AW-10893858085/yNPDCKzkkLwDEKWqzMoo'});
+    </script>
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
+                'value': 1.0,
+                'currency': 'INR',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
 </head>
 <body>
 
 <div class="thankyou-container">
     <h2>Thank You!</h2>
     <p>Your submission has been received successfully. We will get back to you soon.</p>
+    <p>You will be redirected to the homepage in <span id="countdown">5</span> seconds.</p>
     <a href="index.php" class="btn btn-primary">Go to Homepage</a>
 </div>
+
+<script>
+    // Countdown and redirect logic
+    let seconds = 5;
+    const countdownElement = document.getElementById('countdown');
+
+    const countdownInterval = setInterval(() => {
+        seconds--;
+        countdownElement.textContent = seconds;
+
+        if (seconds <= 0) {
+            clearInterval(countdownInterval);
+            window.location.href = 'index.php'; // Redirect to homepage
+        }
+    }, 1000);
+</script>
 
 </body>
 </html>

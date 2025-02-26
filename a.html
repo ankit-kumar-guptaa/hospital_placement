@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BEML Recruitment Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+        }
+        
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .left-panel, .middle-panel, .right-panel {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .menu-item {
+            background-color: #87CEEB;
+            padding: 12px 15px;
+            color: #000;
+            font-size: 14px;
+            margin-bottom: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .menu-item:hover {
+            background-color: #5fb9e5;
+        }
+        
+        .helpdesk {
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .helpdesk img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        
+        .contact-info {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        
+        .middle-panel {
+            padding: 20px;
+        }
+        
+        .panel-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .step-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .step {
+            text-align: center;
+            width: 22%;
+        }
+        
+        .step-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0 auto 10px;
+        }
+        
+        .step-text {
+            font-size: 12px;
+            line-height: 1.3;
+        }
+        
+        .arrow {
+           width: 100%;
+        }
+        
+        .advisory-box {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+        
+        .visa-categories-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 20px 0 15px;
+        }
+        
+        .visa-categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .visa-type {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 13px;
+        }
+        
+        .right-panel {
+            padding: 15px;
+            font-size: 13px;
+        }
+        
+        .right-panel p {
+            margin-bottom: 15px;
+        }
+        
+        .useful-links {
+            margin-top: 20px;
+        }
+        
+        .useful-links h5 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .useful-links ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .useful-links li {
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .useful-links li::before {
+            content: "•";
+            color: #007bff;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        
+        .action-button {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            flex: 1;
+        }
+        
+        .action-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .action-icon {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        
+        .action-text {
+            font-size: 12px;
+            line-height: 1.3;
+            color: #333;
+        }
+
+        .btn-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container py-4">
+        <div class="row g-4">
+            <!-- Left Panel -->
+            <div class="col-md-3">
+                <div class="left-panel h-100">
+                    <div class="menu-item">Eligibility Criteria</div>
+                    <div class="menu-item">Application Instructions</div>
+                    <div class="menu-item">FAQ's</div>
+                    <div class="menu-item">Payment Guidelines</div>
+                    <div class="menu-item">Authorized Recruitment Centers</div>
+                    <div class="menu-item">Recruitment Helpdesk</div>
+                    
+                    <div class="helpdesk">
+                        <h5>Recruitment Helpdesk</h5>
+                        <div class="d-flex">
+                            <img src="https://cdn-icons-png.flaticon.com/512/7269/7269995.png" alt="Helpdesk">
+                            <div class="contact-info">
+                                <div>(+91) 82 7808 7808</div>
+                                <div>beml-recruitment@beml.in</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Panel -->
+            <div class="col-md-6">
+                <div class="middle-panel">
+                    <h4 class="panel-title">BEML Application PROCESS</h4>
+                    
+                    <div class="step-container">
+                        <div class="step">
+                            <div class="step-circle">1</div>
+                            <div class="step-text">
+                               Registration Details
+                            </div>
+                        </div>
+                        
+                        <div class="arrow">
+                            <img class="arrow" src="arrow.png" alt="">
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-circle">2</div>
+                            <div class="step-text">
+                              Personal Details
+                            </div>
+                        </div>
+                        
+                        <div class="arrow">
+                            <img class="arrow" src="arrow.png" alt="">
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-circle">3</div>
+                            <div class="step-text">
+                               Educational Qualification
+                            </div>
+                        </div>
+                        
+                        <div class="arrow">
+                            <img class="arrow" src="arrow.png" alt="">
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-circle">4</div>
+                            <div class="step-text">
+                                Photo/Signature & Documents
+                            </div>
+                        </div>
+                        <div class="arrow">
+                            <img class="arrow" src="arrow.png" alt="">
+                        </div>
+                        
+                        <div class="step">
+                            <div class="step-circle">5</div>
+                            <div class="step-text">
+                                Confirmation/Print Application
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advisory-box">
+                        <strong>Advisory</strong><br>
+                        BEML Limited is a pioneer in Multi-Business Heavy Engineering with an Annual Turnover of around Rs.4000 Crores. We are known for innovation, inclusion, and integration across various business verticals. Applicants must ensure all details are accurate and documents are uploaded as per guidelines.<br><br>
+                        For more details, visit the official BEML website at <a href="https://www.bemlindia.in" class="btn-link">https://www.bemlindia.in</a>.
+                    </div>
+                    
+                    <div class="visa-categories-title">
+                        BEML Recruitment is open for the following domains:
+                    </div>
+                    
+                    <div class="visa-categories">
+                        <div class="visa-type">Defence & Aerospace</div>
+                        <div class="visa-type">Mining & Construction</div>
+                        <div class="visa-type">Rail & Metro</div>
+                        <div class="visa-type">Product Design</div>
+                        <div class="visa-type">Manufacturing</div>
+                        <div class="visa-type">Servicing</div>
+                        <div class="visa-type">Technology Development</div>
+                        <div class="visa-type">Business Strategy</div>
+                        <div class="visa-type">Global Operations</div>
+                        <div class="visa-type">Innovation & R&D</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Panel -->
+            <div class="col-md-3">
+                <div class="right-panel h-100">
+                    <p>If the applicant is unable to complete the application form, they may save the application and return to complete it later by clicking the tab at the bottom of the page.</p>
+                    
+                    <p>After your application is submitted, it will be scrutinized. If any document or image is not appropriate, you will be advised via email to re-upload the same. Use the tab at the bottom of the page for re-uploading. Applicants should normally receive this email within 24 hours.</p>
+                    
+                    <div class="useful-links">
+                        <h5>Useful Web Links</h5>
+                        <ul>
+                            <li>BEML Official Website</li>
+                            <li>Ministry of Defence, Govt. Of India</li>
+                            <li>Ministry of Heavy Industries, Govt. Of India</li>
+                            <li>Indian Railways</li>
+                            <li>Make in India Initiative</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Action Buttons -->
+        <div class="action-buttons">
+            <div class="action-button">
+                <i class="fas fa-file-alt action-icon"></i>
+                <div class="action-text">Sample Application<br>Form</div>
+            </div>
+            
+            <div class="action-button">
+                <i class="fas fa-edit action-icon"></i>
+                <div class="action-text">Apply Here for<br>Recruitment</div>
+            </div>
+            
+            <div class="action-button">
+                <i class="fas fa-clipboard-list action-icon"></i>
+                <div class="action-text">Complete Partially<br>Filled Application</div>
+            </div>
+            
+            <div class="action-button">
+                <i class="fas fa-credit-card action-icon"></i>
+                <div class="action-text">Verify Payment/<br>Pay Application Fee</div>
+            </div>
+            
+            <div class="action-button">
+                <i class="fas fa-print action-icon"></i>
+                <div class="action-text">Print Application<br>Form</div>
+            </div>
+            
+            <div class="action-button">
+                <i class="fas fa-search action-icon"></i>
+                <div class="action-text">Check Your<br>Application Status</div>
+            </div>
+            
+            <div class="action-button">
+                <i class="fas fa-upload action-icon"></i>
+                <div class="action-text">Reupload<br>Documents</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

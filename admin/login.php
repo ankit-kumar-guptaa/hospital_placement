@@ -9,15 +9,15 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Sample hardcoded admin credentials (you can store in DB later)
-    $admin_email = 'admin@example.com';
-    $admin_password = 'admin123'; // In real systems, use hashed passwords!
+    $admin_email = 'admin@hospitalplacement.com';
+    $admin_password = 'Admin@123'; // In real systems, use hashed passwords!
 
     $email = $_POST['email'];
     $password = $_POST['password'];
 
     if ($email === $admin_email && $password === $admin_password) {
         $_SESSION['admin_logged_in'] = true;
-        header('Location: dashboard.php');
+        header('Location: index.php');
         exit();
     } else {
         $error = 'Invalid login credentials';
@@ -92,11 +92,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="login-container">
-        <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Hospital Logo">
+        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Hospital Logo">
         <!-- <div class="hospital-name">CityCare Hospital</div> -->
         <h2>Admin Login</h2>
-        <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-left" alt="Hospital Icon">
-        <img src="https://hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-right" alt="Hospital Icon">
+        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-left" alt="Hospital Icon">
+        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" class="floating-icons icon-right" alt="Hospital Icon">
         <?php if (isset($error)): ?>
             <div class="alert alert-danger"> <?php echo $error; ?> </div>
         <?php endif; ?>
