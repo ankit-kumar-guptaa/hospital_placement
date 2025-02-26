@@ -89,17 +89,6 @@ foreach ($forms_by_date as $label => $data) {
     }
     $form_datasets[] = ['label' => $label, 'data' => $counts];
 }
-
-// Bubble Chart Data
-$bubble_data = array_map(function($country, $index) {
-    return [
-        'x' => $index * 50 + 50, // Spread horizontally
-        'y' => rand(50, 400), // Random vertical for visual appeal
-        'r' => min($country['count'] / 10 + 5, 50), // Radius based on count, max 50
-        'label' => $country['country'],
-        'count' => $country['count']
-    ];
-}, $country_visitors, array_keys($country_visitors));
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +96,7 @@ $bubble_data = array_map(function($country, $index) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Enhanced Overview</title>
+    <title>Admin Dashboard - Creative Overview</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -165,6 +154,38 @@ $bubble_data = array_map(function($country, $index) {
         body.dark-mode canvas {
             background: #3a3f44;
         }
+        body.dark-mode .country-card {
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(232, 76, 61, 0.2), rgba(232, 76, 61, 0.8));
+            color: #ffffff;
+        }
+        body.dark-mode .country-card:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        body.dark-mode .country-card .details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        body.dark-mode .country-card:hover .details {
+            opacity: 1;
+        }
 
         /* Light Mode */
         body.light-mode {
@@ -216,6 +237,38 @@ $bubble_data = array_map(function($country, $index) {
         body.light-mode canvas {
             background: #f8f9fa;
         }
+        body.light-mode .country-card {
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(232, 76, 61, 0.2), rgba(232, 76, 61, 0.8));
+            color: #ffffff;
+        }
+        body.light-mode .country-card:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        body.light-mode .country-card .details {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        body.light-mode .country-card:hover .details {
+            opacity: 1;
+        }
 
         /* Common Styles */
         .sidebar {
@@ -245,6 +298,14 @@ $bubble_data = array_map(function($country, $index) {
         .mode-toggle {
             cursor: pointer;
             font-size: 1.2rem;
+        }
+        .country-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-height: 500px;
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -335,7 +396,7 @@ $bubble_data = array_map(function($country, $index) {
                     </div>
                 </div>
 
-                <!-- Graphs and Bubble Chart -->
+                <!-- Graphs and Country Grid -->
                 <div class="row">
                     <div class="col-md-6 graph-container mb-4">
                         <div class="card">
@@ -365,7 +426,28 @@ $bubble_data = array_map(function($country, $index) {
                                 <h5><i class="fas fa-globe icon"></i> Visitor Locations</h5>
                             </div>
                             <div class="card-body">
-                                <canvas id="bubbleChart"></canvas>
+                                <div class="country-grid">
+                                    <?php if (empty($country_visitors)): ?>
+                                        <div class="country-card" style="width: 150px; height: 150px;">
+                                            <h5>No Data</h5>
+                                        </div>
+                                    <?php else: ?>
+                                        <?php foreach ($country_visitors as $country): ?>
+                                            <?php
+                                            $size = min(100 + $country['count'] * 5, 250); // Size based on count, max 250px
+                                            $opacity = min($country['count'] / $total_visitors * 10, 1); // Opacity based on proportion
+                                            $percentage = round(($country['count'] / $total_visitors) * 100, 2);
+                                            ?>
+                                            <div class="country-card" style="width: <?php echo $size; ?>px; height: <?php echo $size; ?>px; background: linear-gradient(135deg, rgba(232, 76, 61, <?php echo $opacity * 0.2; ?>), rgba(232, 76, 61, <?php echo $opacity * 0.8; ?>));">
+                                                <h5><?php echo htmlspecialchars($country['country']); ?></h5>
+                                                <div class="details">
+                                                    <p><strong>Visitors:</strong> <?php echo $country['count']; ?></p>
+                                                    <p><strong>Percentage:</strong> <?php echo $percentage; ?>%</p>
+                                                </div>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -455,49 +537,6 @@ $bubble_data = array_map(function($country, $index) {
                 responsive: true,
                 scales: { x: { title: { display: true, text: 'Date' } }, y: { title: { display: true, text: 'Count' }, beginAtZero: true } },
                 plugins: { legend: { position: 'top' } }
-            }
-        });
-
-        // Bubble Chart
-        const bubbleData = <?php echo json_encode($bubble_data); ?>;
-        console.log('Bubble Data:', bubbleData);
-        const bubbleCtx = document.getElementById('bubbleChart').getContext('2d');
-        new Chart(bubbleCtx, {
-            type: 'bubble',
-            data: {
-                datasets: [{
-                    label: 'Visitors by Country',
-                    data: bubbleData,
-                    backgroundColor: 'rgba(232, 76, 61, 0.7)',
-                    borderColor: '#e84c3d',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        display: false, // Hide X-axis for aesthetics
-                        min: 0,
-                        max: <?php echo (count($country_visitors) * 50 + 100); ?>
-                    },
-                    y: {
-                        display: false, // Hide Y-axis for aesthetics
-                        min: 0,
-                        max: 450
-                    }
-                },
-                plugins: {
-                    legend: { position: 'top' },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                const data = context.raw;
-                                return `${data.label}: ${data.count} visitors`;
-                            }
-                        }
-                    }
-                }
             }
         });
     </script>
