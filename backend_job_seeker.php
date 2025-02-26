@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->send();
 
         echo "<script>
-                alert('Form submitted successfully!');
+              
                 window.location.href = 'thankyou.php';
               </script>";
         exit();

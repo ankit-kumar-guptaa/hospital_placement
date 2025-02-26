@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$organization_name, $city, $contact_name, $email, $phone, $remarks]);
 
         // On successful submission, show alert and redirect
-        echo "<script>alert('Form submitted successfully!'); window.location.href = 'thankyou.php';</script>";
+        echo "<script> window.location.href = 'thankyou.php';</script>";
 
     } catch (PDOException $e) {
         // Handle database errors

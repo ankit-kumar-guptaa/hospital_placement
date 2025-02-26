@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Success message and redirect
         echo "<script>
-                alert('Form submitted successfully!');
+              
                 window.location.href = 'thankyou.php'; // Redirect to a thank you page
               </script>";
     } catch (Exception $e) {
