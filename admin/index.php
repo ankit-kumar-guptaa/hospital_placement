@@ -23,8 +23,8 @@ $stmt_visitors_date = $pdo->prepare("SELECT DATE(visit_date) as date, COUNT(*) a
 $stmt_visitors_date->execute(['month' => $selected_month]);
 $visitors_by_date = $stmt_visitors_date->fetchAll(PDO::FETCH_ASSOC);
 
-// Country-wise Visitors
-$stmt_country_visitors = $pdo->query("SELECT country, COUNT(*) as count FROM visitors GROUP BY country ORDER BY count DESC");
+// Country-wise Visitors with Coordinates
+$stmt_country_visitors = $pdo->query("SELECT country, COUNT(*) as count, AVG(latitude) as lat, AVG(longitude) as lon FROM visitors WHERE latitude IS NOT NULL AND longitude IS NOT NULL GROUP BY country ORDER BY count DESC");
 $country_visitors = $stmt_country_visitors->fetchAll(PDO::FETCH_ASSOC);
 
 // Form Submissions Counts
@@ -89,10 +89,6 @@ foreach ($forms_by_date as $label => $data) {
     }
     $form_datasets[] = ['label' => $label, 'data' => $counts];
 }
-
-// Country Chart Data
-$country_labels = array_column($country_visitors, 'country');
-$country_counts = array_column($country_visitors, 'count');
 ?>
 
 <!DOCTYPE html>
@@ -103,6 +99,7 @@ $country_counts = array_column($country_visitors, 'count');
     <title>Admin Dashboard - Enhanced Overview</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -150,10 +147,14 @@ $country_counts = array_column($country_visitors, 'count');
             font-size: 1.5rem;
             color: #ffffff;
         }
-        body.dark-mode .visitor-list, body.dark-mode .country-list {
+        body.dark-mode .visitor-list {
             max-height: 200px;
             overflow-y: auto;
             color: #d1d4d7;
+        }
+        body.dark-mode #map {
+            height: 400px;
+            background-color: #3a3f44;
         }
         body.dark-mode .btn-primary {
             background-color: #2c3e50;
@@ -216,10 +217,14 @@ $country_counts = array_column($country_visitors, 'count');
             font-size: 1.5rem;
             color: #343a40;
         }
-        body.light-mode .visitor-list, body.light-mode .country-list {
+        body.light-mode .visitor-list {
             max-height: 200px;
             overflow-y: auto;
             color: #495057;
+        }
+        body.light-mode #map {
+            height: 400px;
+            background-color: #f8f9fa;
         }
         body.light-mode .btn-primary {
             background-color: #ced4da;
@@ -359,29 +364,7 @@ $country_counts = array_column($country_visitors, 'count');
                     </div>
                 </div>
 
-                <!-- Country-wise Visitors -->
-                <div class="row mb-4">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5><i class="fas fa-globe icon"></i> Visitor Countries</h5>
-                            </div>
-                            <div class="card-body country-list">
-                                <?php if (empty($country_visitors)): ?>
-                                    <p>No visitor data available</p>
-                                <?php else: ?>
-                                    <ul class="list-unstyled">
-                                        <?php foreach ($country_visitors as $country): ?>
-                                            <li><strong><?php echo $country['country']; ?></strong>: <?php echo $country['count']; ?> visits</li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Graphs -->
+                <!-- Graphs and Map -->
                 <div class="row">
                     <div class="col-md-6 graph-container mb-4">
                         <div class="card">
@@ -408,10 +391,10 @@ $country_counts = array_column($country_visitors, 'count');
                     <div class="col-md-12 graph-container mb-4">
                         <div class="card">
                             <div class="card-header">
-                                <h5>Country-wise Visitor Distribution</h5>
+                                <h5><i class="fas fa-globe icon"></i> Visitor Locations</h5>
                             </div>
                             <div class="card-body">
-                                <canvas id="countryChart"></canvas>
+                                <div id="map"></div>
                             </div>
                         </div>
                     </div>
@@ -423,6 +406,7 @@ $country_counts = array_column($country_visitors, 'count');
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script>
         // Theme Toggle Functionality
         const modeToggle = document.getElementById('modeToggle');
@@ -507,27 +491,20 @@ $country_counts = array_column($country_visitors, 'count');
             }
         });
 
-        // Country-wise Visitor Chart
-        const countryCtx = document.getElementById('countryChart').getContext('2d');
-        new Chart(countryCtx, {
-            type: 'bar',
-            data: {
-                labels: <?php echo json_encode($country_labels); ?>,
-                datasets: [{
-                    label: 'Visitor Count by Country',
-                    data: <?php echo json_encode($country_counts); ?>,
-                    backgroundColor: 'rgba(91, 192, 222, 0.5)',
-                    borderColor: '#5bc0de',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: { title: { display: true, text: 'Country' } },
-                    y: { title: { display: true, text: 'Count' }, beginAtZero: true }
-                },
-                plugins: { legend: { position: 'top' } }
+        // World Map with Leaflet
+        const map = L.map('map').setView([20, 0], 2); // Center of the world
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const countryData = <?php echo json_encode($country_visitors); ?>;
+        console.log('Country Data:', countryData);
+
+        countryData.forEach(function(country) {
+            if (country.lat && country.lon) {
+                L.marker([country.lat, country.lon])
+                    .addTo(map)
+                    .bindPopup(`<strong>${country.country}</strong><br>Visits: ${country.count}`);
             }
         });
     </script>
