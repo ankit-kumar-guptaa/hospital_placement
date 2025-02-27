@@ -41,10 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Insert data into the database
     try {
         // Prepare SQL statement
-        $stmt = $pdo->prepare("INSERT INTO employer_submissions (organization_name, city, contact_name, email, phone, remarks) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt = $pdo->prepare("INSERT INTO employer_submissions (organization_name, contact_name, email, phone, remarks) VALUES (?, ?, ?, ?, ?, ?)");
         
         // Execute query with form data
-        $stmt->execute([$organization_name, $city, $contact_name, $email, $phone, $remarks]);
+        $stmt->execute([$organization_name,  $contact_name, $email, $phone, $remarks]);
 
         // On successful submission, show alert and redirect
         echo "<script>alert('Form submitted successfully!'); window.location.href = 'thankyou.php';</script>";
@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->send();
 
         echo "<script>
-                alert('Form submitted successfully!');
+               
                 window.location.href = 'thankyou.php';
               </script>";
         exit();
