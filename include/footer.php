@@ -66,11 +66,11 @@
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-light">
       <p class="mb-2 mb-md-0">&copy; 2025 HospitalPlacement.com. All rights reserved.</p>
       <div>
-        <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
+        <!-- <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-facebook-f"></i>
         </a>
         <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-twitter"></i> -->
         </a>
         <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw==" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-instagram"></i>
