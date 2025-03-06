@@ -66,13 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Recipients
         $mail->setFrom('rajiv@greencarcarpool.com', 'Form Submission');
-        $mail->addAddress('rajiv@elitecorporatesolutions.com'); // Admin email
+        $mail->addAddress('info@elitecorporatesolutions.com'); // Admin email
 
         // Email content
         $mail->isHTML(true);
-        $mail->Subject = 'New Form Submission';
+        $mail->Subject = 'New Job Seeker Form Submission';
         $mail->Body = "
-            <h2>New Form Submission</h2>
+            <h2>New Job Seeker Form Submission</h2>
             <p><strong>Role:</strong> $role</p>
             <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
