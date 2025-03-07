@@ -220,7 +220,10 @@ AOS.init({
 
 
 
+<!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js" async></script> -->
+<script src="https://recruitment-chatbot.greencarcarpool.com/assets/js/chatbot-widget.js"></script>
 
+<!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js"></script> -->
 
 <!-- Bootstrap JS (Optional for some features like modals, dropdowns, etc.) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
