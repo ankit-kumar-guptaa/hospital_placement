@@ -14,6 +14,17 @@ require 'visitor_tracking.php';
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
+
+<style>
+    .message {
+        animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
