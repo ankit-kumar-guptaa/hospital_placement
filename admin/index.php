@@ -440,7 +440,7 @@ foreach ($forms_by_date as $label => $data) {
                                             ?>
                                             <div class="country-card" style="width: <?php echo $size; ?>px; height: <?php echo $size; ?>px; background: linear-gradient(135deg, rgba(232, 76, 61, <?php echo $opacity * 0.2; ?>), rgba(232, 76, 61, <?php echo $opacity * 0.8; ?>));">
                                                 <h5><?php echo htmlspecialchars($country['country']); ?></h5>
-                                                <div class="details">
+                                                <div class="detail">
                                                     <p><strong>Visitors:</strong> <?php echo $country['count']; ?></p>
                                                     <p><strong>Percentage:</strong> <?php echo $percentage; ?>%</p>
                                                 </div>

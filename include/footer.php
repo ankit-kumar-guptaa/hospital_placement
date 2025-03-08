@@ -63,15 +63,13 @@
     <hr class="text-muted my-4" style="border-color: rgba(236, 240, 241, 0.2);">
 
     <!-- Footer Bottom -->
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-light">
-      <p class="mb-2 mb-md-0">&copy; 2025 HospitalPlacement.com. All rights reserved.</p>
-      <div>
-        <!-- <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
-          <i class="fab fa-twitter"></i> -->
-        </a>
+    <div class="d-flex flex-column flex-md-row align-items-center">
+      <!-- Copyright Text (Always Centered) -->
+      <div class="flex-grow-1 text-center">
+        <p class="mb-2 text-white mb-md-0">© 2025 HospitalPlacement.com. All rights reserved.</p>
+      </div>
+      <!-- Social Icons (Right-Aligned on Medium Screens and Up) -->
+      <div class="mt-2 mt-md-0">
         <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw==" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
           <i class="fab fa-instagram"></i>
         </a>
@@ -219,9 +217,9 @@ AOS.init({
 <script src="../assets/script.js"></script>
 
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js" async></script> -->
-<!-- <script src="https://recruitment-chatbot.greencarcarpool.com/assets/js/chatbot-widget.js"></script> -->
+<script src="https://recruitment-chatbot.greencarcarpool.com/assets/js/chatbot-widget.js"></script>
 
 <!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js"></script> -->
 

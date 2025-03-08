@@ -6,7 +6,7 @@
     <title>Privacy Policy</title>
     <?php include "include/assets.php"; ?>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS for animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         body {
             background-color: #f8f9fa;
@@ -37,7 +37,7 @@
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="200">
                 <h2>1. Introduction</h2>
                 <p>
-                    At Hospital Placement, we are committed to protecting the privacy and security of your personal information. As a leading healthcare staffing agency based in Delhi, NCR, India, we understand the importance of safeguarding the data of our clients, candidates, and visitors. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you interact with our website, <a href="https://hospitalplacement.com" class="text-primary">hospitalplacement.com</a>, or use our services.
+                    At Hospital Placement, we are committed to protecting the privacy and security of your personal information. As a leading healthcare staffing agency based in Delhi, NCR, India, we prioritize safeguarding the data of our clients, candidates, and website visitors. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit <a href="https://hospitalplacement.com" class="text-primary">hospitalplacement.com</a> or use our services. We comply with applicable local and international privacy laws, including the CCPA (USA), GDPR (EU), and DPDP Act (India).
                 </p>
             </section>
 
@@ -45,100 +45,111 @@
                 <h2>2. Information We Collect</h2>
                 <p>We may collect the following types of information:</p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>Personal Information:</strong> Name, email address, phone number, resume/CV details, and professional credentials provided by candidates or clients.</li>
-                    <li class="list-group-item"><strong>Contact Information:</strong> Details submitted through our contact forms or during communication with our team.</li>
-                    <li class="list-group-item"><strong>Usage Data:</strong> Information about how you interact with our website, such as IP address, browser type, pages visited, and time spent.</li>
-                    <li class="list-group-item"><strong>Device Information:</strong> Technical data like device type, operating system, and unique identifiers.</li>
+                    <li class="list-group-item"><strong>Personal Information:</strong> Name, email address, phone number, resume/CV details, professional credentials, and other sensitive data provided by candidates or clients.</li>
+                    <li class="list-group-item"><strong>Contact Information:</strong> Details submitted via contact forms or during communication with our team.</li>
+                    <li class="list-group-item"><strong>Usage Data:</strong> Information about your website interactions, including IP address, browser type, pages visited, and time spent (collected with your consent where required).</li>
+                    <li class="list-group-item"><strong>Device Information:</strong> Technical data such as device type, operating system, and unique identifiers.</li>
                 </ul>
+                <p>We collect this data based on lawful grounds, such as your consent, contractual necessity, or our legitimate interests (e.g., improving services).</p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="400">
                 <h2>3. How We Use Your Information</h2>
                 <p>We use your information to:</p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Facilitate healthcare staffing services, including matching candidates (doctors, nurses, lab technicians, etc.) with hospitals and healthcare facilities.</li>
-                    <li class="list-group-item">Respond to inquiries, provide support, and communicate updates about our services.</li>
-                    <li class="list-group-item">Improve our website and services through analytics and user feedback.</li>
-                    <li class="list-group-item">Ensure compliance with legal obligations and protect against fraudulent activities.</li>
+                    <li class="list-group-item">Facilitate healthcare staffing services, including matching candidates (e.g., doctors, nurses, lab technicians) with hospitals and healthcare facilities (contractual necessity).</li>
+                    <li class="list-group-item">Respond to inquiries, provide support, and send service updates (with your consent where required).</li>
+                    <li class="list-group-item">Improve our website and services through analytics and feedback (legitimate interest).</li>
+                    <li class="list-group-item">Comply with legal obligations, including healthcare regulations (e.g., HIPAA where applicable), and prevent fraud.</li>
                 </ul>
+                <p>We may use your data for marketing purposes, but you can opt out anytime by clicking "unsubscribe" in our emails.</p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="500">
                 <h2>4. How We Share Your Information</h2>
-                <p>We do not sell, trade, or rent your personal information to third parties. However, we may share your data with:</p>
+                <p>We do not sell, trade, or rent your personal information. We may share your data with:</p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>Trusted Partners:</strong> Hospitals, nursing homes, and healthcare facilities seeking staffing solutions, under strict confidentiality agreements.</li>
-                    <li class="list-group-item"><strong>Service Providers:</strong> Third-party vendors who assist with website hosting, analytics, or customer support, bound by data protection terms.</li>
-                    <li class="list-group-item"><strong>Legal Authorities:</strong> When required by law or to protect the rights, safety, or property of Hospital Placement and its users.</li>
+                    <li class="list-group-item"><strong>Trusted Partners:</strong> Hospitals and healthcare facilities seeking staffing solutions, under strict confidentiality agreements.</li>
+                    <li class="list-group-item"><strong>Service Providers:</strong> Third-party vendors (data processors) for hosting, analytics, or support, bound by data protection contracts.</li>
+                    <li class="list-group-item"><strong>Legal Authorities:</strong> When required by law or to protect Hospital Placement’s rights, safety, or property.</li>
                 </ul>
+                <p>For international users, data may be transferred outside your country with appropriate safeguards (e.g., Standard Contractual Clauses). You may opt out of data sharing for non-essential purposes by contacting us.</p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="600">
                 <h2>5. Data Security</h2>
                 <p>
-                    We implement industry-standard security measures to protect your information from unauthorized access, loss, or misuse. This includes encryption, secure servers, and regular audits. However, no online system is 100% secure, and we encourage you to take steps to safeguard your data, such as using strong passwords.
+                    We use industry-standard measures like encryption, secure servers, and regular audits to protect your data from unauthorized access, loss, or misuse. For healthcare-related data, we comply with applicable standards (e.g., HIPAA for US clients). In case of a data breach, we will notify affected users within 72 hours where required by law (e.g., GDPR). However, no system is 100% secure, so we encourage you to use strong passwords and secure devices.
                 </p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="700">
                 <h2>6. Your Rights</h2>
-                <p>You have the right to:</p>
+                <p>Depending on your location, you have the following rights:</p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Access, update, or delete your personal information by contacting us.</li>
-                    <li class="list-group-item">Opt out of marketing communications at any time by clicking "unsubscribe" in our emails.</li>
-                    <li class="list-group-item">Request details about how your data is processed.</li>
+                    <li class="list-group-item">Access, update, or delete your personal information.</li>
+                    <li class="list-group-item">Opt out of marketing emails or data sharing for non-essential purposes.</li>
+                    <li class="list-group-item">Request details about how your data is processed or portability of your data (e.g., GDPR).</li>
+                    <li class="list-group-item">Object to or restrict certain data uses (e.g., analytics).</li>
+                    <li class="list-group-item">Correct inaccurate data or nominate someone to manage it (e.g., DPDP Act).</li>
+                    <li class="list-group-item">Not face discrimination for exercising your rights (e.g., CCPA).</li>
                 </ul>
                 <p>
-                    To exercise these rights, please email us at <a href="mailto:info@hospitalplacement.com" class="text-primary">info@hospitalplacement.com</a>.
+                    To exercise these rights, email us at <a href="mailto:info@hospitalplacement.com" class="text-primary">info@hospitalplacement.com</a>. We will respond within 30 days.
                 </p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="800">
                 <h2>7. Cookies and Tracking</h2>
                 <p>
-                    Our website uses cookies to enhance your experience, analyze traffic, and personalize content. You can manage your cookie preferences through your browser settings. By continuing to use our site, you consent to our use of cookies as described in this policy.
+                    We use cookies (essential, analytics, and personalization) to enhance your experience and analyze traffic. You can accept or decline non-essential cookies via our cookie banner or adjust settings in your browser. For California residents, a “Do Not Sell My Personal Information” option is available at <a href="mailto:info@hospitalplacement.com" class="text-primary">info@hospitalplacement.com</a>.
                 </p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="900">
                 <h2>8. Third-Party Links</h2>
                 <p>
-                    Our website may contain links to external sites. We are not responsible for the privacy practices or content of these third-party websites. We recommend reviewing their policies before sharing any information.
+                    Our website may link to external sites. We are not responsible for their privacy practices or content. Please review their policies before sharing information.
                 </p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="1000">
                 <h2>9. Changes to This Policy</h2>
                 <p>
-                    We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The updated version will be posted on this page with a revised "Last Updated" date. We encourage you to review it periodically.
+                    We may update this Privacy Policy to reflect changes in practices or laws. Updates will be posted here with a revised "Last Updated" date. For significant changes, we’ll notify you via email or a website banner.
                 </p>
             </section>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="1100">
                 <h2>10. Contact Us</h2>
-                <p>
-                    If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to us at:
-                </p>
+                <p>For questions or requests about this policy or your data, contact us at:</p>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><strong>Email:</strong> <a href="mailto:info@hospitalplacement.com" class="text-primary">info@hospitalplacement.com</a></li>
                     <li class="list-group-item"><strong>Address:</strong> Hospital Placement, Delhi, NCR, India</li>
                     <li class="list-group-item"><strong>Phone:</strong> +91 98703 64340</li>
                 </ul>
+                <p>For EU users, our Data Protection Officer can be reached at the same email.</p>
+            </section>
+
+            <section class="privacy-section" data-aos="fade-up" data-aos-delay="1200">
+                <h2>11. Accessibility</h2>
+                <p>
+                    We strive to make our website accessible to all users, following WCAG 2.1 guidelines. Contact us if you face any accessibility issues.
+                </p>
             </section>
         </div>
     </div>
 
     <?php include "include/footer.php"; ?>
 
-    <!-- Bootstrap JS and AOS JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800, // Animation duration
-            once: true,    // Animate only once on scroll
+            duration: 800,
+            once: true,
         });
     </script>
 </body>
