@@ -251,19 +251,24 @@
     </div>
     <h3>Cookie Consent</h3>
     <p>
-        We use cookies to improve your experience on <a href="https://hospitalplacement.com">hospitalplacement.com</a>. By clicking "Accept", you agree to our use of cookies as outlined in our <a href="/privacy-policy">Privacy Policy</a>. Choose "Deny" to opt out of non-essential cookies.
+        We use cookies to improve your experience on <a href="https://hospitalplacement.com">hospitalplacement.com</a>. By clicking "Accept", you agree to our use of cookies as outlined in our <a href="../privacy-policy">Privacy Policy</a>. Choose "Deny" to opt out of non-essential cookies.
     </p>
     <div class="cookie-buttons">
-        <button class="cookie-btn accept-btn"><span>Accept</span></button>
-        <button class="cookie-btn deny-btn"><span>Deny</span></button>
+        <button class="cookie-btn accept-btn" onclick="acceptCookies()"><span>Accept</span></button>
+        <button class="cookie-btn deny-btn" onclick="denyCookies()"><span>Deny</span></button>
     </div>
 </div>
 
 <script>
     // Check if cookie consent is already given
     document.addEventListener("DOMContentLoaded", function () {
-        if (!getCookie("cookieConsent")) {
+        const cookieConsent = getCookie("cookieConsent");
+        if (!cookieConsent) {
             document.getElementById("cookieConsent").style.display = "block";
+        } else if (cookieConsent === "accepted") {
+            enableTracking();
+        } else if (cookieConsent === "denied") {
+            disableTracking();
         }
     });
 
@@ -271,7 +276,7 @@
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
-            let date = new Date();
+            const date = new Date();
             date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
             expires = "; expires=" + date.toUTCString();
         }
@@ -280,12 +285,11 @@
 
     // Function to get a cookie
     function getCookie(name) {
-        let nameEQ = name + "=";
-        let ca = document.cookie.split(';');
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
         for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            let c = ca[i].trim();
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
         }
         return null;
     }
@@ -312,6 +316,9 @@
             gtag('consent', 'update', {
                 'analytics_storage': 'granted'
             });
+            console.log("Tracking enabled via Google Analytics.");
+        } else {
+            console.log("No tracking script detected (e.g., Google Analytics).");
         }
     }
 
@@ -321,6 +328,9 @@
             gtag('consent', 'update', {
                 'analytics_storage': 'denied'
             });
+            console.log("Tracking disabled via Google Analytics.");
+        } else {
+            console.log("No tracking script detected (e.g., Google Analytics).");
         }
     }
 </script>
