@@ -251,7 +251,7 @@
     </div>
     <h3>Cookie Consent</h3>
     <p>
-        We use cookies to improve your experience on <a href="https://hospitalplacement.com">hospitalplacement.com</a>. By clicking "Accept", you agree to our use of cookies as outlined in our <a href="../privacy-policy">Privacy Policy</a>. Choose "Deny" to opt out of non-essential cookies.
+        We use cookies to improve your experience on <a href="https://hospitalplacement.com">hospitalplacement.com</a>. By clicking "Accept", you agree to our use of cookies as outlined in our <a href="../privacy-policy.php">Privacy Policy</a>. Choose "Deny" to opt out of non-essential cookies.
     </p>
     <div class="cookie-buttons">
         <button class="cookie-btn accept-btn" onclick="acceptCookies()"><span>Accept</span></button>
@@ -304,7 +304,7 @@
 
     // Deny Cookies Logic
     function denyCookies() {
-        setCookie("cookieConsent", "denied", 365); // Cookie for 1 year
+        setCookie("cookieConsent", "denied", 1); // Cookie for 1 day
         disableTracking();
         document.getElementById("cookieConsent").style.display = "none";
         console.log("Cookies denied. Tracking disabled.");

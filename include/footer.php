@@ -220,7 +220,7 @@ AOS.init({
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js" async></script> -->
-<script src="https://recruitment-chatbot.greencarcarpool.com/assets/js/chatbot-widget.js"></script>
+<!-- <script src="https://recruitment-chatbot.greencarcarpool.com/assets/js/chatbot-widget.js"></script> -->
 
 <!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js"></script> -->
 
