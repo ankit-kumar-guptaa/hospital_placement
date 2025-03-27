@@ -1,28 +1,37 @@
+<?php
+// Check if India was selected to prevent popup reappearance
+$showPopup = true;
+if (isset($_GET['country']) && $_GET['country'] === 'india') {
+    $showPopup = false;
+}
+?>
+
 <!-- Country Selection Popup -->
-<div class="popup-overlay" id="countryPopup">
+<div class="popup-overlay" id="countryPopup" <?php if (!$showPopup) echo 'style="display: none;"'; ?>>
     <div class="popup-content">
         <h2>Select Your Country</h2>
-        <div class="country-option" data-country="us">
-            <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" alt="US Flag"> United States
-        </div>
-        <div class="country-option" data-country="india">
-            <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag"> India
-        </div>
-        <div class="country-option" data-country="germany">
-            <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="Germany Flag"> Germany
-        </div>
-        <div class="country-option" data-country="japan">
-            <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japan Flag"> Japan
-        </div>
-        <div class="country-option" data-country="singapore">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg" alt="Singapore Flag"> Singapore
-        </div>
-        <!-- Add Europe Option -->
-<div class="country-option" data-country="europe">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="Europe Flag"> Europe
-</div>
-        <div class="country-option" data-country="other">
-            <span class="globe-icon">🌐</span> Other
+        <div class="country-container">
+            <div class="country-option" data-country="us">
+                <img src="https://cdn.britannica.com/79/4479-050-6EF87027/flag-Stars-and-Stripes-May-1-1795.jpg" alt="US Flag"> United States
+            </div>
+            <div class="country-option" data-country="india">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Flag"> India
+            </div>
+            <div class="country-option" data-country="germany">
+                <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="Germany Flag"> Germany
+            </div>
+            <div class="country-option" data-country="japan">
+                <img src="https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg" alt="Japan Flag"> Japan
+            </div>
+            <div class="country-option" data-country="singapore">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg" alt="Singapore Flag"> Singapore
+            </div>
+            <div class="country-option" data-country="europe">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="Europe Flag"> Europe
+            </div>
+            <div class="country-option" data-country="other">
+                <span class="globe-icon">🌐</span> Other
+            </div>
         </div>
     </div>
 </div>
@@ -53,7 +62,6 @@
         width: 400px;
         max-width: 90%;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.15);
-        border: none;
         position: relative;
         overflow: hidden;
         animation: slideUp 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -92,7 +100,6 @@
         margin-bottom: 25px;
         position: relative;
         padding-bottom: 15px;
-        border-bottom: none;
         font-weight: 600;
         letter-spacing: -0.5px;
     }
@@ -109,10 +116,10 @@
         border-radius: 3px;
     }
 
-    /* Country Container */
+    /* Country Container with Fixed Height */
     .country-container {
-        max-height: 400px;
-        overflow-y: auto;
+        max-height: 300px; /* Reduced height for compactness */
+        overflow-y: auto; /* Scrollable if content exceeds */
         margin: 0 -15px;
         padding: 5px 15px;
     }
@@ -170,17 +177,6 @@
         box-shadow: 0 4px 10px rgba(74, 144, 226, 0.25);
     }
 
-    /* Country Name */
-    .country-name {
-        font-weight: 500;
-        font-size: 16px;
-        transition: all 0.3s ease;
-    }
-
-    .country-option:hover .country-name {
-        transform: translateX(3px);
-    }
-
     /* Enhanced Flag Image */
     .country-option img {
         width: 40px;
@@ -228,56 +224,6 @@
     .country-option:hover:after {
         opacity: 1;
         right: 15px;
-    }
-
-    /* Close Button */
-    .close-btn {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: rgba(0, 0, 0, 0.05);
-        border: none;
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        color: #7f8c8d;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .close-btn:hover {
-        background: rgba(74, 144, 226, 0.1);
-        color: #4a90e2;
-        transform: rotate(90deg);
-    }
-
-    /* Footer Area */
-    .popup-footer {
-        margin-top: 25px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .cancel-btn {
-        background: transparent;
-        border: 2px solid #e0e6ed;
-        padding: 10px 25px;
-        border-radius: 30px;
-        color: #7f8c8d;
-        font-weight: 500;
-        font-size: 14px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .cancel-btn:hover {
-        border-color: #4a90e2;
-        color: #4a90e2;
-        transform: translateY(-2px);
     }
 
     /* Improved Animations */
@@ -330,88 +276,15 @@
             font-size: 18px;
         }
     }
-
-    /* Dark Mode Support */
-    @media (prefers-color-scheme: dark) {
-        .popup-content {
-            background: linear-gradient(145deg, #2c3e50, #1e2a38);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-        }
-        
-        .popup-content h2 {
-            color: #ecf0f1;
-        }
-        
-        .country-option {
-            background: rgba(255, 255, 255, 0.05);
-            color: #ecf0f1;
-        }
-        
-        .country-container::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .cancel-btn {
-            border-color: rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        .cancel-btn:hover {
-            border-color: #4a90e2;
-            color: #4a90e2;
-        }
-        
-        .close-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
-        }
-    }
 </style>
 
-<!-- <script>
-    // Show popup every time the page loads
-    window.onload = function() {
-        document.getElementById('countryPopup').style.display = 'flex';
-    };
-
-    // Handle country selection
-    document.querySelectorAll('.country-option').forEach(option => {
-        option.addEventListener('click', function() {
-            const country = this.getAttribute('data-country');
-            
-            // Redirect based on selection
-            switch (country) {
-                case 'us':
-                    window.location.href = 'https://us.hospitalplacement.com';
-                    break;
-                case 'india':
-                    window.location.href = 'https://india.hospitalplacement.com';
-                    break;
-                case 'germany':
-                    window.location.href = 'https://germany.hospitalplacement.com';
-                    break;
-                case 'japan':
-                    window.location.href = 'https://japan.hospitalplacement.com';
-                    break;
-                case 'singapore':
-                    window.location.href = 'https://singapore.hospitalplacement.com';
-                    break;
-                default:
-                    // For "Other", hide popup and stay on default site
-                    document.getElementById('countryPopup').style.display = 'none';
-                    break;
-            }
-        });
-    });
-</script> -->
-
-
-
-<!-- Update Redirect Logic in Script -->
 <script>
-    // Show popup every time the page loads
+    // Show popup only if not hidden by PHP
     window.onload = function() {
-        document.getElementById('countryPopup').style.display = 'flex';
+        var popup = document.getElementById('countryPopup');
+        if (popup.style.display !== 'none') {
+            popup.style.display = 'flex';
+        }
     };
 
     // Handle country selection
@@ -425,7 +298,7 @@
                     window.location.href = 'https://us.hospitalplacement.com';
                     break;
                 case 'india':
-                    window.location.href = 'https://hospitalplacement.com';
+                    window.location.href = 'https://hospitalplacement.com?country=india';
                     break;
                 case 'germany':
                     window.location.href = 'https://germany.hospitalplacement.com';

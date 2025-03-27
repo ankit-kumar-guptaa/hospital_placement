@@ -2,8 +2,7 @@
 require 'visitor_tracking.php';
 ?>
 
-<?
-require 'popup.php'?>
+
 
 
 <!DOCTYPE html>
