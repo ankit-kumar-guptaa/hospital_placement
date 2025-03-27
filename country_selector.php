@@ -17,6 +17,10 @@
         <div class="country-option" data-country="singapore">
             <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg" alt="Singapore Flag"> Singapore
         </div>
+        <!-- Add Europe Option -->
+<div class="country-option" data-country="europe">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="Europe Flag"> Europe
+</div>
         <div class="country-option" data-country="other">
             <span class="globe-icon">🌐</span> Other
         </div>
@@ -364,7 +368,7 @@
     }
 </style>
 
-<script>
+<!-- <script>
     // Show popup every time the page loads
     window.onload = function() {
         document.getElementById('countryPopup').style.display = 'flex';
@@ -391,6 +395,49 @@
                     break;
                 case 'singapore':
                     window.location.href = 'https://singapore.hospitalplacement.com';
+                    break;
+                default:
+                    // For "Other", hide popup and stay on default site
+                    document.getElementById('countryPopup').style.display = 'none';
+                    break;
+            }
+        });
+    });
+</script> -->
+
+
+
+<!-- Update Redirect Logic in Script -->
+<script>
+    // Show popup every time the page loads
+    window.onload = function() {
+        document.getElementById('countryPopup').style.display = 'flex';
+    };
+
+    // Handle country selection
+    document.querySelectorAll('.country-option').forEach(option => {
+        option.addEventListener('click', function() {
+            const country = this.getAttribute('data-country');
+            
+            // Redirect based on selection
+            switch (country) {
+                case 'us':
+                    window.location.href = 'https://us.hospitalplacement.com';
+                    break;
+                case 'india':
+                    window.location.href = 'https://hospitalplacement.com';
+                    break;
+                case 'germany':
+                    window.location.href = 'https://germany.hospitalplacement.com';
+                    break;
+                case 'japan':
+                    window.location.href = 'https://japan.hospitalplacement.com';
+                    break;
+                case 'singapore':
+                    window.location.href = 'https://singapore.hospitalplacement.com';
+                    break;
+                case 'europe':
+                    window.location.href = 'https://europe.hospitalplacement.com';
                     break;
                 default:
                     // For "Other", hide popup and stay on default site
