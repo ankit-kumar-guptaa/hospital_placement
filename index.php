@@ -3,7 +3,7 @@ require 'visitor_tracking.php';
 ?>
 
 
-
+<?php include 'country_selector.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">

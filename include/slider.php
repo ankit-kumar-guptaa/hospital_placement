@@ -31,23 +31,24 @@
                 </div>
 
                 <!-- CAPTCHA Container -->
-<div class="mb-3 captcha-container">
-    <!-- CAPTCHA Image and Refresh Button (Row for Desktop) -->
-    <div class="d-flex align-items-center mb-2">
-        <!-- CAPTCHA Image -->
-        <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
-            style="max-width: 150px; height: auto; margin-right: 10px;">
+                <div class="mb-3 captcha-container">
+                    <!-- CAPTCHA Image and Refresh Button (Row for Desktop) -->
+                    <div class="d-flex align-items-center mb-2">
+                        <!-- CAPTCHA Image -->
+                        <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
+                            style="max-width: 150px; height: auto; margin-right: 10px;">
 
-        <!-- CAPTCHA Refresh Button -->
-        <button type="button" class="refresh-captcha"
-            style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
-    </div>
+                        <!-- CAPTCHA Refresh Button -->
+                        <button type="button" class="refresh-captcha"
+                            style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+                    </div>
 
-    <!-- CAPTCHA Input (Below Image and Button on Mobile) -->
-    <div>
-        <input type="text" name="captcha" class="form-control captcha-input" placeholder="Enter Captcha" required>
-    </div>
-</div>
+                    <!-- CAPTCHA Input (Below Image and Button on Mobile) -->
+                    <div>
+                        <input type="text" name="captcha" class="form-control captcha-input" placeholder="Enter Captcha"
+                            required>
+                    </div>
+                </div>
 
                 <button style="background-color: #ffcc00;" type="submit" name="submit"
                     class="btn btn-primary w-100">Submit</button>
@@ -89,7 +90,7 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="doctor-department" class="form-label">Department</label>
-                        <select id="doctor-department" name="doctor_department" class="form-select">
+                        <select id="doctor-department" name="department" class="form-select">
                             <option value="" disabled selected>Select Department</option>
                             <option value="Cardiology">Cardiology</option>
                             <option value="Dermatology">Dermatology</option>
@@ -103,7 +104,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="doctor-qualification" class="form-label">Qualification</label>
-                        <select id="doctor-qualification" name="doctor_qualification" class="form-select">
+                        <select id="doctor-qualification" name="qualification" class="form-select">
                             <option value="" disabled selected>Select Qualification</option>
                             <option value="MD">MD</option>
                             <option value="MS">MS</option>
@@ -123,7 +124,7 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="nurse-department" class="form-label">Department</label>
-                        <select id="nurse-department" name="nurse_department" class="form-select">
+                        <select id="nurse-department" name="department" class="form-select">
                             <option value="" disabled selected>Select Department</option>
                             <option value="Anaesthesiology">Anaesthesiology</option>
                             <!-- <option value="Critical-care / ICU">Critical-care / ICU</option> -->
@@ -145,7 +146,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="nurse-qualification" class="form-label">Qualification</label>
-                        <select id="nurse-qualification" name="nurse_qualification" class="form-select">
+                        <select id="nurse-qualification" name="qualification" class="form-select">
                             <option value="" disabled selected>Select Qualification</option>
                             <option value="B.Sc (N) Distance">B.Sc (N) Distance</option>
                             <option value="B.Sc (N) Post-Basic">B.Sc (N) Post-Basic</option>
@@ -332,24 +333,24 @@
             </div>
 
             <!-- CAPTCHA Container -->
-<div class="mb-3 captcha-container">
-    <!-- CAPTCHA Image and Refresh Button (Row for Desktop) -->
-    <div class="d-flex align-items-center mb-2">
-        <!-- CAPTCHA Image -->
-        <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
-            style="max-width: 150px; height: auto; margin-right: 10px;">
+            <div class="mb-3 captcha-container">
+                <!-- CAPTCHA Image and Refresh Button (Row for Desktop) -->
+                <div class="d-flex align-items-center mb-2">
+                    <!-- CAPTCHA Image -->
+                    <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
+                        style="max-width: 150px; height: auto; margin-right: 10px;">
 
-        <!-- CAPTCHA Refresh Button -->
-        <button type="button" class="refresh-captcha btn btn-light"
-            style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
-    </div>
+                    <!-- CAPTCHA Refresh Button -->
+                    <button type="button" class="refresh-captcha btn btn-light"
+                        style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+                </div>
 
-    <!-- CAPTCHA Input (Below Image and Button on Mobile) -->
-    <div>
-        <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
-            style="max-width: 100%;">
-    </div>
-</div>
+                <!-- CAPTCHA Input (Below Image and Button on Mobile) -->
+                <div>
+                    <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
+                        style="max-width: 100%;">
+                </div>
+            </div>
 
 
             <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>
@@ -664,7 +665,8 @@
         .captcha-container .form-control {
             max-width: 100%;
             margin-right: 0;
-            margin-top: 10px; /* Add some spacing between image and input */
+            margin-top: 10px;
+            /* Add some spacing between image and input */
         }
     }
 </style>
