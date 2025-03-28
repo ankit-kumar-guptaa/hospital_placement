@@ -278,7 +278,7 @@ if (isset($_GET['export']) && $_GET['export'] === 'csv') {
                                             <td><?php echo $submission['phone']; ?></td>
                                             <td><?php echo $submission['department'] ?: 'N/A'; ?></td>
                                             <td><?php echo $submission['qualification'] ?: 'N/A'; ?></td>
-                                            <td><?php echo $submission['college'] ?: 'N/A'; ?></td>
+                                           
                                             <td><?php echo $submission['created_at']; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
