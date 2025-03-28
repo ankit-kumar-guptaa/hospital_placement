@@ -264,7 +264,7 @@ if (isset($_GET['export']) && $_GET['export'] === 'csv') {
                                         <th>Phone</th>
                                         <th>Department</th>
                                         <th>Qualification</th>
-                                        <th>College</th>
+                                        <!-- <th>College</th> -->
                                         <th>Created At</th>
                                     </tr>
                                 </thead>
