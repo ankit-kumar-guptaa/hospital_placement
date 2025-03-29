@@ -54,12 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->Port       = 587;
 
         // Recipients
-        $mail->setFrom('rajiv@greencarcarpool.com', 'Contact Form Submission');
+        $mail->setFrom('rajiv@greencarcarpool.com', 'Contact Form Submission for HospitalPlacement.com');
         $mail->addAddress('rajiv@elitecorporatesolutions.com'); // Admin email
 
         // Email content
         $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Submission';
+        $mail->Subject = 'New Contact Form Submission from HospitalPlacement.com';
         $mail->Body = "
             <h2>New Contact Form Submission</h2>
             <p><strong>Name:</strong> $name</p>

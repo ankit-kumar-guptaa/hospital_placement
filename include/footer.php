@@ -171,6 +171,8 @@ AOS.init({
         anchorPlacement: 'top-center', // Animations trigger when the top of the section is near the center of the viewport
     });
 </script>
+
+<script src="https://recruitment-chatbot.greencarcarpool.com/script/chatbot.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll('.counter');
