@@ -218,7 +218,7 @@
             transform: translateY(0);
         }
         to {
-            opacity: 0;
+            opacity: 1;
             transform: translateY(-20px);
         }
     }
