@@ -30,3 +30,17 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+
+
+
+
+
+RewriteEngine On
+
+# User Blog Page
+RewriteRule ^blogs$ blog.php [L]
+
+# Admin Blog URL rewriting
+RewriteRule ^admin/blog/([a-z0-9-]+)$ blog/view.php?slug=$1 [L]
+RewriteRule ^admin/blog$ blog/index.php [L]
