@@ -90,7 +90,7 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="doctor-department" class="form-label">Department</label>
-                        <select id="doctor-department" name="department" class="form-select">
+                        <select id="doctor-department" name="department" class="form-select" required>
                             <option value="" disabled selected>Select Department</option>
                             <option value="Cardiology">Cardiology</option>
                             <option value="Dermatology">Dermatology</option>
@@ -104,7 +104,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="doctor-qualification" class="form-label">Qualification</label>
-                        <select id="doctor-qualification" name="qualification" class="form-select">
+                        <select id="doctor-qualification" name="qualification" class="form-select" required>
                             <option value="" disabled selected>Select Qualification</option>
                             <option value="MD">MD</option>
                             <option value="MS">MS</option>
@@ -124,7 +124,7 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="nurse-department" class="form-label">Department</label>
-                        <select id="nurse-department" name="department" class="form-select">
+                        <select id="nurse-department" name="department" class="form-select" required>
                             <option value="" disabled selected>Select Department</option>
                             <option value="Anaesthesiology">Anaesthesiology</option>
                             <!-- <option value="Critical-care / ICU">Critical-care / ICU</option> -->
@@ -146,7 +146,7 @@
                     </div>
                     <div class="col-md-6">
                         <label for="nurse-qualification" class="form-label">Qualification</label>
-                        <select id="nurse-qualification" name="qualification" class="form-select">
+                        <select id="nurse-qualification" name="qualification" class="form-select" required>
                             <option value="" disabled selected>Select Qualification</option>
                             <option value="B.Sc (N) Distance">B.Sc (N) Distance</option>
                             <option value="B.Sc (N) Post-Basic">B.Sc (N) Post-Basic</option>
@@ -167,7 +167,7 @@
                     <!-- Department Selection -->
                     <div class="col-md-6">
                         <label for="department" class="form-label">Department</label>
-                        <select id="department" name="department" class="form-select">
+                        <select id="department" name="department" class="form-select" required>
                             <option value="" disabled selected>Select Department</option>
                             <option value="Clinical">Clinical</option>
                             <option value="Manufacturing">Manufacturing</option>
@@ -186,7 +186,7 @@
                     <!-- Qualification Selection -->
                     <div class="col-md-6">
                         <label for="qualification" class="form-label">Qualification</label>
-                        <select id="qualification" name="qualification" class="form-select">
+                        <select id="qualification" name="qualification" class="form-select" required>
                             <option value="" disabled selected>Select Qualification</option>
                             <option value="10th Pass">10th Pass</option>
                             <option value="12th">12th</option>
@@ -207,7 +207,7 @@
                     <!-- Department Selection -->
                     <div class="col-md-4">
                         <label for="department" class="form-label">Department</label>
-                        <select id="department" name="department" class="form-select">
+                        <select id="department" name="department" class="form-select" required>
                             <option value="" disabled selected>Select Department</option>
                             <option value="Audio metrics">Audio metrics</option>
                             <option value="Bronchoscopy">Bronchoscopy</option>
@@ -225,7 +225,7 @@
                     <!-- Qualification Selection -->
                     <div class="col-md-4">
                         <label for="qualification" class="form-label">Qualification</label>
-                        <select id="qualification" name="qualification" class="form-select">
+                        <select id="qualification" name="qualification" class="form-select" required>
                             <option value="" disabled selected>Select Qualification</option>
                             <option value="BOT - Bachelor of Occupational Therapy">BOT - Bachelor of Occupational
                                 Therapy</option>
@@ -280,7 +280,7 @@
                     <!-- Department Selection -->
                     <div class="col-md-6">
                         <label for="department" class="form-label">Department</label>
-                        <select id="department" name="department" class="form-select">
+                        <select id="department" name="department" class="form-select" required>
                             <option value="" disabled selected>Select Department</option>
                             <option value="Purchasing">Purchasing</option>
                             <option value="Accounts">Accounts</option>
@@ -304,7 +304,7 @@
                     <!-- Qualification Selection -->
                     <div class="col-md-6">
                         <label for="qualification" class="form-label">Qualification</label>
-                        <select id="qualification" name="qualification" class="form-select">
+                        <select id="qualification" name="qualification" class="form-select" required>
                             <option value="" disabled selected>Select Qualification</option>
                             <option value="10th Pass">10th Pass</option>
                             <option value="12th">12th</option>
