@@ -149,7 +149,7 @@
 </style>
 
 <!-- Include Cookie Consent Popup -->
-<?php include "cookie-consent.php"; ?>
+<!-- <?php include "cookie-consent.php"; ?> -->
 
 
 
