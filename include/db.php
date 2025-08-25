@@ -8,7 +8,7 @@
 // $database = 'hospital';
 
 
-$host = 'localhost:3306';      // Database host
+$host = '45.113.122.178';      // Database host
 $username = 'recru2l1_hospital_placement';       // Database username
 $password = 'Hospital@123@';           // Database password
 
