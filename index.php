@@ -12,6 +12,7 @@ require 'visitor_tracking.php';
     <title>Hospital Placement - Best Medical Recruitment Services</title> 
 
     <meta name="description" content="HospitalPlacement.com offers top-tier medical and healthcare recruitment services nationwide. ISO 9001:2000 certified, we connect talent with leading healthcare institutions."> <!-- Added meta description -->
+    <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>

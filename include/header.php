@@ -5,11 +5,11 @@
 <header id="main-header" data-aos="fade-down">
     <div class="container1">
         <div class="logo">
-           <a href="index.php"> <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Logo"></a>
+           <a href="/"> <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Logo"></a>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="index.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Home</a></li>
+                <li><a href="/" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Home</a></li>
                 <li><a href="about.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">About Us</a></li>
                 <li>
                     <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'pages.php' ? 'active' : ''; ?>">Pages <i class="fa-sharp fa-solid fa-caret-down"></i></a>
@@ -41,6 +41,7 @@
                 </li> -->
                 <li><a href="solutions.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'solutions.php' ? 'active' : ''; ?>">Solutions</a></li>
                 <li><a href="jobs.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'jobs.php' ? 'active' : ''; ?>">Jobs</a></li>
+                <li><a href="blog/" class="<?php echo basename($_SERVER['PHP_SELF']) == 'blog/' ? 'active' : ''; ?>">Blog</a></li>
                 <li><a href="contact.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Contact Us</a></li>
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()">

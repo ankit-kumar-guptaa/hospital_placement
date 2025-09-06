@@ -20,13 +20,26 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 # Base directory
 RewriteBase /
 
+# Remove .php extension from URLs (Hide .php extension)
+# Redirect .php URLs to clean URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Add .php extension internally for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^.]+)$ $1.php [NC,L]
+
 # Prevent direct access to index.php
 RewriteRule ^index\.php$ - [L]
 
-# Handle requests that are not for existing files or directories
+# Handle WordPress requests that are not for existing files or directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !\.php$
 RewriteRule . /index.php [L]
+
 </IfModule>
 
 # END WordPress

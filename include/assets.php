@@ -25,3 +25,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
 <script src="https://cdn.tailwindcss.com"></script>
+
+ <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
+

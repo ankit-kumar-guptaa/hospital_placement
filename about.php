@@ -8,6 +8,8 @@
     <meta name="keywords" content="hospital, healthcare, medical services, about us">
     <meta name="author" content="HospitalPlacement.com">
 
+     <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
 <script>
