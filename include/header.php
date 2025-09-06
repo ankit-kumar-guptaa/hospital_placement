@@ -10,25 +10,25 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="/" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Home</a></li>
-                <li><a href="about.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">About Us</a></li>
+                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>about.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">About Us</a></li>
                 <li>
                     <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'pages.php' ? 'active' : ''; ?>">Pages <i class="fa-sharp fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php">Placement Consultants and <br>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php">Placement Consultants and <br>
                         Recruitment Agency in Delhi</a></li>
-                        <li><a href="placement-Agency-in-hyderabad.php">Placement Agency in Hyderabad</a></li>
-                        <li><a href="placement-Agency-in-mumbai.php">Placement Agency in Mumbai</a></li>
-                        <li><a href="placement-Agency-in-chandigarh.php">Placement Agency in Chandigarh</a></li>
-                        <li><a href="placement-Agency-in-kolkata.php">Placement Agency in Kolkata</a></li>
-                        <li><a href="placement-Agency-in-lucknow.php">Placement Agency in Lucknow</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-hyderabad.php">Placement Agency in Hyderabad</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-mumbai.php">Placement Agency in Mumbai</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-chandigarh.php">Placement Agency in Chandigarh</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-kolkata.php">Placement Agency in Kolkata</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-lucknow.php">Placement Agency in Lucknow</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">For Employers <i class="fa-sharp fa-solid fa-caret-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href="specialty-placement.php">Specialty Placements</a></li>
-                        <li><a href="permanent-placement.php">Permanent Placement</a></li>
-                        <li><a href="temporary-staffing-services.php">Temporary Staffing Services</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>specialty-placement.php">Specialty Placements</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>permanent-placement.php">Permanent Placement</a></li>
+                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>temporary-staffing-services.php">Temporary Staffing Services</a></li>
                     </ul>
                 </li>
                 <!-- <li>
@@ -39,10 +39,10 @@
                         <li><a href="healthcare3.php">Healthcare 3</a></li>
                     </ul>
                 </li> -->
-                <li><a href="solutions.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'solutions.php' ? 'active' : ''; ?>">Solutions</a></li>
-                <li><a href="jobs.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'jobs.php' ? 'active' : ''; ?>">Jobs</a></li>
-                <li><a href="blog/" class="<?php echo basename($_SERVER['PHP_SELF']) == 'blog/' ? 'active' : ''; ?>">Blog</a></li>
-                <li><a href="contact.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Contact Us</a></li>
+                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>solutions.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'solutions.php' ? 'active' : ''; ?>">Solutions</a></li>
+                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>jobs.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'jobs.php' ? 'active' : ''; ?>">Jobs</a></li>
+                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>blog/" class="<?php echo basename($_SERVER['PHP_SELF']) == 'blog/' ? 'active' : ''; ?>">Blog</a></li>
+                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>contact.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Contact Us</a></li>
             </ul>
             <div class="menu-toggle" onclick="toggleMenu()">
                 &#9776;
