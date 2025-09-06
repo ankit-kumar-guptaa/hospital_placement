@@ -31,24 +31,23 @@
                 </div>
 
                 <!-- CAPTCHA Container -->
-                <div class="mb-3 captcha-container">
-                    <!-- CAPTCHA Image and Refresh Button (Row for Desktop) -->
+                <!-- <div class="mb-3 captcha-container">
+                   
                     <div class="d-flex align-items-center mb-2">
-                        <!-- CAPTCHA Image -->
+                 
                         <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
                             style="max-width: 150px; height: auto; margin-right: 10px;">
 
-                        <!-- CAPTCHA Refresh Button -->
                         <button type="button" class="refresh-captcha"
                             style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
                     </div>
 
-                    <!-- CAPTCHA Input (Below Image and Button on Mobile) -->
-                    <!-- <div>
+                   
+                    <div>
                         <input type="text" name="captcha" class="form-control captcha-input" placeholder="Enter Captcha"
                             required>
-                    </div> -->
-                </div>
+                    </div>
+                </div> -->
 
                 <button style="background-color: #ffcc00;" type="submit" name="submit"
                     class="btn btn-primary w-100">Submit</button>
