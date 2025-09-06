@@ -11,15 +11,7 @@ require 'PHPMailer/src/SMTP.php';
 require 'include/db.php'; // Include database connection file
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Validate CAPTCHA
-    if (!isset($_POST['captcha']) || empty($_POST['captcha']) || $_POST['captcha'] !== $_SESSION['captcha']) {
-        echo "<script>
-                alert('Invalid CAPTCHA. Please try again.');
-                window.history.back();
-              </script>";
-        exit();
-    }
-    unset($_SESSION['captcha']); // Clear CAPTCHA session after validation
+    // CAPTCHA validation removed
 
     // Collect and sanitize form data
     $organization_name = htmlspecialchars(trim($_POST['organization_name']));

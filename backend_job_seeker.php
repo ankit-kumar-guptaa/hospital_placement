@@ -12,15 +12,7 @@ require 'include/db.php'; // Include database connection file
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    // Validate CAPTCHA
-    if (!isset($_POST['captcha']) || $_POST['captcha'] !== $_SESSION['captcha']) {
-        echo "<script>
-                alert('Invalid CAPTCHA. Please try again.');
-                window.history.back();
-              </script>";
-        exit();
-    }
-    unset($_SESSION['captcha']);
+    // CAPTCHA validation removed
 
     // Collect form data
     $role = $_POST['role'];
