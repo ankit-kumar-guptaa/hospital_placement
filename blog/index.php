@@ -45,24 +45,24 @@
         <div class="container">
             <div class="section-intro">
                 <h2 class="section-heading">Featured Article</h2>
-                <p class="section-subheading">Our most impactful insights for healthcare professionals</p>
+                <p class="section-subheading">Our most impactful insights for healthcare employers</p>
             </div>
             
             <div class="featured-post">
                 <div class="featured-image">
-                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop" alt="Healthcare professionals in a team meeting">
+                    <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=800&auto=format&fit=crop" alt="Healthcare administrators planning workforce strategy">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="featured-content">
-                    <span class="post-category featured-badge">Strategic Staffing</span>
-                    <h2 class="featured-title">Strategic Healthcare Staffing: Building Resilient Medical Teams</h2>
-                    <p class="featured-excerpt">In today's challenging healthcare environment, building resilient medical teams is essential for maintaining quality patient care. This comprehensive guide explores strategic workforce planning, employer value proposition development, and innovative approaches to create sustainable staffing solutions for your healthcare facility.</p>
+                    <span class="post-category featured-badge">Strategic Planning</span>
+                    <h2 class="featured-title">Healthcare Workforce Planning: Future-Proofing Your Medical Staffing Strategy</h2>
+                    <p class="featured-excerpt">In today's rapidly evolving healthcare landscape, reactive staffing approaches are increasingly insufficient. This comprehensive guide explores how healthcare organizations can develop robust workforce planning strategies to ensure clinical excellence and operational stability while anticipating future challenges.</p>
                     <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> June 28, 2024</span>
-                        <span><i class="far fa-clock"></i> 10 min read</span>
+                        <span><i class="far fa-calendar"></i> July 15, 2024</span>
+                        <span><i class="far fa-clock"></i> 12 min read</span>
                         <span><i class="far fa-user"></i> By Hospital Placement Team</span>
                     </div>
-                    <a href="strategic-healthcare-staffing.php" class="btn-primary">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    <a href="healthcare-workforce-planning.php" class="btn-primary">Read Full Article <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -77,7 +77,43 @@
             </div>
             
             <div class="posts-grid">
-                <!-- Blog Post 1 - Strategic Healthcare Staffing -->
+                <!-- Blog Post 1 - Healthcare Workforce Planning -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=600&auto=format&fit=crop" alt="Healthcare administrators planning workforce strategy">
+                        <span class="card-category">Strategic Planning</span>
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="healthcare-workforce-planning.php">Healthcare Workforce Planning: Future-Proofing Your Medical Staffing Strategy</a></h3>
+                        <p class="card-excerpt">Learn how strategic healthcare workforce planning can help your organization anticipate future staffing needs, address skill gaps, and maintain optimal patient care.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> July 15, 2024</span>
+                            <span><i class="far fa-clock"></i> 12 min read</span>
+                        </div>
+                        <a href="healthcare-workforce-planning.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 - Reducing Healthcare Staff Turnover -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1576671414121-aa0c81c869e1?q=80&w=600&auto=format&fit=crop" alt="Healthcare team in a positive work environment">
+                        <span class="card-category">Staff Retention</span>
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="reducing-healthcare-staff-turnover.php">Reducing Healthcare Staff Turnover: Evidence-Based Retention Strategies</a></h3>
+                        <p class="card-excerpt">Discover proven, evidence-based strategies to reduce healthcare staff turnover, improve retention rates, and create a stable workforce environment.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> July 10, 2024</span>
+                            <span><i class="far fa-clock"></i> 13 min read</span>
+                        </div>
+                        <a href="reducing-healthcare-staff-turnover.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 3 - Strategic Healthcare Staffing -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=600&auto=format&fit=crop" alt="Healthcare professionals in a team meeting">
@@ -92,42 +128,6 @@
                             <span><i class="far fa-clock"></i> 10 min read</span>
                         </div>
                         <a href="strategic-healthcare-staffing.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <!-- Blog Post 2 - Cost-Effective Healthcare Recruitment -->
-                <article class="blog-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Healthcare recruitment budget planning meeting">
-                        <span class="card-category">Recruitment</span>
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title"><a href="cost-effective-healthcare-recruitment.php">Cost-Effective Healthcare Recruitment Strategies for 2024</a></h3>
-                        <p class="card-excerpt">Learn how to optimize your healthcare recruitment budget while attracting top talent through innovative, cost-effective strategies tailored for today's competitive market.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> June 26, 2024</span>
-                            <span><i class="far fa-clock"></i> 8 min read</span>
-                        </div>
-                        <a href="cost-effective-healthcare-recruitment.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </article>
-                
-                <!-- Blog Post 3 - International Medical Recruitment -->
-                <article class="blog-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?q=80&w=600&auto=format&fit=crop" alt="Diverse group of medical professionals in a hospital setting">
-                        <span class="card-category">Global Recruitment</span>
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title"><a href="international-medical-recruitment.php">International Medical Recruitment: A Guide for Healthcare Employers</a></h3>
-                        <p class="card-excerpt">Explore how to successfully navigate international medical recruitment to address staffing shortages and build diverse healthcare teams with our comprehensive guide.</p>
-                        <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> June 25, 2024</span>
-                            <span><i class="far fa-clock"></i> 12 min read</span>
-                        </div>
-                        <a href="international-medical-recruitment.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
