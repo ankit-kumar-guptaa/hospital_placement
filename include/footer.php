@@ -228,5 +228,8 @@ AOS.init({
 
 <!-- Bootstrap JS (Optional for some features like modals, dropdowns, etc.) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Google reCAPTCHA v3 integration -->
+<script src="/hospital_placement/assets/js/recaptcha.js"></script>
 </body>
 </html>

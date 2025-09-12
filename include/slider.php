@@ -30,24 +30,8 @@
                         placeholder="Remarks (Hiring For / Budget, etc.)" rows="2" required></textarea>
                 </div>
 
-                <!-- CAPTCHA Container -->
-                <!-- <div class="mb-3 captcha-container">
-                   
-                    <div class="d-flex align-items-center mb-2">
-                 
-                        <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
-                            style="max-width: 150px; height: auto; margin-right: 10px;">
-
-                        <button type="button" class="refresh-captcha"
-                            style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
-                    </div>
-
-                   
-                    <div>
-                        <input type="text" name="captcha" class="form-control captcha-input" placeholder="Enter Captcha"
-                            required>
-                    </div>
-                </div> -->
+                <!-- reCAPTCHA v3 hidden input -->
+                <input type="hidden" name="g-recaptcha-response" id="employer-recaptcha-response">
 
                 <button style="background-color: #ffcc00;" type="submit" name="submit"
                     class="btn btn-primary w-100">Submit</button>
@@ -350,6 +334,9 @@
                         style="max-width: 100%;">
                 </div>
             </div> -->
+            
+            <!-- reCAPTCHA v3 hidden input -->
+            <input type="hidden" name="g-recaptcha-response" id="jobseeker-recaptcha-response">
 
 
             <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>

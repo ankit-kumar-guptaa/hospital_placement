@@ -265,6 +265,8 @@ function gtag_report_conversion(url) {
         <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="4" style="padding: 12px; font-size: 14px; border-radius: 8px;"></textarea>
         <label for="message">Your Message</label>
     </div>
+    <!-- reCAPTCHA v3 hidden input -->
+    <input type="hidden" name="g-recaptcha-response" id="contact-recaptcha-response">
     <!-- Submit Button -->
     <div class="text-center">
         <button type="submit" name="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 20px; background: linear-gradient(135deg, #0069d9, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">

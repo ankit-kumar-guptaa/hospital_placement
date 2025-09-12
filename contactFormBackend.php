@@ -12,6 +12,35 @@ require 'include/db.php'; // Database connection file
 
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Google reCAPTCHA v3 validation
+    $recaptcha_secret = '6Ledy8UrAAAAAERlqjDOP4rshduNBcWdZ_l_n-av';
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+    
+    // Make the API call to verify the token
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = [
+        'secret' => $recaptcha_secret,
+        'response' => $recaptcha_response,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
+    
+    $recaptcha_options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        ]
+    ];
+    
+    $recaptcha_context = stream_context_create($recaptcha_options);
+    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $recaptcha_json = json_decode($recaptcha_result, true);
+    
+    // Check if the reCAPTCHA verification was successful
+    if (!$recaptcha_json['success'] || $recaptcha_json['score'] < 0.5) {
+        echo "<script>alert('reCAPTCHA verification failed. Please try again.'); window.history.back();</script>";
+        exit();
+    }
 
     // Validate form fields (simple validation)
     if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['phone']) || empty($_POST['message'])) {

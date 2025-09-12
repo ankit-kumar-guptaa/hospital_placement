@@ -11,7 +11,38 @@ require 'PHPMailer/src/SMTP.php';
 require 'include/db.php'; // Include database connection file
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // CAPTCHA validation removed
+    // Google reCAPTCHA v3 validation
+    $recaptcha_secret = '6Ledy8UrAAAAAERlqjDOP4rshduNBcWdZ_l_n-av';
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+    
+    // Make the API call to verify the token
+    $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    $recaptcha_data = [
+        'secret' => $recaptcha_secret,
+        'response' => $recaptcha_response,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
+    
+    $recaptcha_options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($recaptcha_data)
+        ]
+    ];
+    
+    $recaptcha_context = stream_context_create($recaptcha_options);
+    $recaptcha_result = file_get_contents($recaptcha_url, false, $recaptcha_context);
+    $recaptcha_json = json_decode($recaptcha_result, true);
+    
+    // Check if the reCAPTCHA verification was successful
+    if (!$recaptcha_json['success'] || $recaptcha_json['score'] < 0.5) {
+        echo "<script>
+                alert('reCAPTCHA verification failed. Please try again.');
+                window.history.back();
+              </script>";
+        exit();
+    }
 
     // Collect and sanitize form data
     $organization_name = htmlspecialchars(trim($_POST['organization_name']));
