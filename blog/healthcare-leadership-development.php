@@ -27,7 +27,7 @@
         <div class="article-header-content">
             <h1 class="article-title">Building Effective Healthcare Leadership Teams</h1>
             <div class="article-meta">
-                <span><i class="far fa-calendar"></i> May 28, 2024</span>
+                <span><i class="far fa-calendar"></i> May 28, 2025</span>
                 <span><i class="far fa-clock"></i> 9 min read</span>
                 <span><i class="far fa-folder"></i> Leadership</span>
             </div>

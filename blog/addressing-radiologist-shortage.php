@@ -27,7 +27,7 @@
         <div class="article-header-content">
             <h1 class="article-title">Addressing the Radiologist Shortage: Solutions for Hospitals</h1>
             <div class="article-meta">
-                <span><i class="far fa-calendar"></i> June 10, 2024</span>
+                <span><i class="far fa-calendar"></i> June 10, 2025</span>
                 <span><i class="far fa-clock"></i> 6 min read</span>
                 <span><i class="far fa-folder"></i> Medical Staffing</span>
             </div>

@@ -96,7 +96,7 @@ $featured_image = "../assets/img/blog/healthcare-recruitment.jpg";
                     </ul>
 
                     <h2>Case Study: Success Through Strategic Recruitment</h2>
-                    <p>Memorial Healthcare Network, facing critical staffing shortages in 2024, implemented a comprehensive recruitment transformation that yielded impressive results. By combining predictive workforce planning with an enhanced employee value proposition and innovative retention strategies, they reduced turnover by 35% and filled 90% of their specialized positions within six months.</p>
+                    <p>Memorial Healthcare Network, facing critical staffing shortages in 2025, implemented a comprehensive recruitment transformation that yielded impressive results. By combining predictive workforce planning with an enhanced employee value proposition and innovative retention strategies, they reduced turnover by 35% and filled 90% of their specialized positions within six months.</p>
                     
                     <p>Key elements of their approach included:</p>
                     <ul>

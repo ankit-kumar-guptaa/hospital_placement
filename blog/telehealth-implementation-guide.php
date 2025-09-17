@@ -27,7 +27,7 @@
         <div class="article-header-content">
             <h1 class="article-title">Telehealth Implementation Guide for Hospitals</h1>
             <div class="article-meta">
-                <span><i class="far fa-calendar"></i> May 25, 2024</span>
+                <span><i class="far fa-calendar"></i> May 25, 2025</span>
                 <span><i class="far fa-clock"></i> 10 min read</span>
                 <span><i class="far fa-folder"></i> Technology</span>
             </div>

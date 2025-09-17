@@ -28,7 +28,7 @@ $metaDescription = "Learn how strategic healthcare workforce planning can help y
             <span class="post-category">Strategic Planning</span>
             <h1><?php echo $pageTitle; ?></h1>
             <div class="post-meta">
-                <span><i class="far fa-calendar"></i> July 15, 2024</span>
+                <span><i class="far fa-calendar"></i> July 15, 2025</span>
                 <span><i class="far fa-clock"></i> 12 min read</span>
                 <span><i class="far fa-user"></i> By Hospital Placement Team</span>
             </div>
@@ -344,15 +344,15 @@ $metaDescription = "Learn how strategic healthcare workforce planning can help y
                     <div class="related-posts">
                         <a href="reducing-healthcare-staff-turnover.php" class="related-post">
                             <span class="related-title">Reducing Healthcare Staff Turnover: Evidence-Based Retention Strategies</span>
-                            <span class="related-date">July 10, 2024</span>
+                            <span class="related-date">July 10, 2025</span>
                         </a>
                         <a href="healthcare-talent-acquisition.php" class="related-post">
                             <span class="related-title">Healthcare Talent Acquisition: Advanced Strategies for Modern Hospitals</span>
-                            <span class="related-date">July 5, 2024</span>
+                            <span class="related-date">July 5, 2025</span>
                         </a>
                         <a href="strategic-healthcare-staffing.php" class="related-post">
                             <span class="related-title">Strategic Healthcare Staffing: Building Resilient Medical Teams</span>
-                            <span class="related-date">June 28, 2024</span>
+                            <span class="related-date">June 28, 2025</span>
                         </a>
                     </div>
                 </div>

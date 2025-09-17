@@ -28,7 +28,7 @@ $metaDescription = "Discover proven, evidence-based strategies to reduce healthc
             <span class="post-category">Staff Retention</span>
             <h1><?php echo $pageTitle; ?></h1>
             <div class="post-meta">
-                <span><i class="far fa-calendar"></i> July 10, 2024</span>
+                <span><i class="far fa-calendar"></i> July 10, 2025</span>
                 <span><i class="far fa-clock"></i> 13 min read</span>
                 <span><i class="far fa-user"></i> By Hospital Placement Team</span>
             </div>
@@ -293,15 +293,15 @@ $metaDescription = "Discover proven, evidence-based strategies to reduce healthc
                     <div class="related-posts">
                         <a href="healthcare-talent-acquisition.php" class="related-post">
                             <span class="related-title">Healthcare Talent Acquisition: Advanced Strategies for Modern Hospitals</span>
-                            <span class="related-date">July 5, 2024</span>
+                            <span class="related-date">July 5, 2025</span>
                         </a>
                         <a href="strategic-healthcare-staffing.php" class="related-post">
                             <span class="related-title">Strategic Healthcare Staffing: Building Resilient Medical Teams</span>
-                            <span class="related-date">June 28, 2024</span>
+                            <span class="related-date">June 28, 2025</span>
                         </a>
                         <a href="cost-effective-healthcare-recruitment.php" class="related-post">
-                            <span class="related-title">Cost-Effective Healthcare Recruitment Strategies for 2024</span>
-                            <span class="related-date">June 26, 2024</span>
+                            <span class="related-title">Cost-Effective Healthcare Recruitment Strategies for 2025</span>
+                            <span class="related-date">June 26, 2025</span>
                         </a>
                     </div>
                 </div>

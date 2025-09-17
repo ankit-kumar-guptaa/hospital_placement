@@ -29,7 +29,7 @@
             <header class="article-header">
                 <div class="article-meta">
                     <span class="article-category">Healthcare Staffing</span>
-                    <span class="article-date"><i class="far fa-calendar"></i> June 20, 2024</span>
+                    <span class="article-date"><i class="far fa-calendar"></i> June 20, 2025</span>
                     <span class="article-read-time"><i class="far fa-clock"></i> 10 min read</span>
                 </div>
                 <h1 class="article-title">Strategic Healthcare Staffing: Building Resilient Medical Teams</h1>

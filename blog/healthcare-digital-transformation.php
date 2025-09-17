@@ -30,7 +30,7 @@
                 <header class="post-header">
                     <div class="post-meta-top">
                         <span class="post-category">Digital Innovation</span>
-                        <span class="post-date"><i class="far fa-calendar"></i> August 10, 2024</span>
+                        <span class="post-date"><i class="far fa-calendar"></i> August 10, 2025</span>
                     </div>
                     <h1 class="post-title">Healthcare Digital Transformation: Revolutionizing Medical Recruitment</h1>
                     <div class="post-meta-bottom">
@@ -221,7 +221,7 @@
                         </a>
                         <a href="healthcare-workforce-trends.php" class="related-post">
                             <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=300&auto=format&fit=crop" alt="Healthcare Workforce Trends">
-                            <h4>Healthcare Workforce Trends: What to Expect in 2024 and Beyond</h4>
+                            <h4>Healthcare Workforce Trends: What to Expect in 2025 and Beyond</h4>
                         </a>
                         <a href="telehealth-implementation-guide.php" class="related-post">
                             <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=300&auto=format&fit=crop" alt="Telehealth Implementation Guide">
@@ -253,7 +253,7 @@
                             </div>
                             <div class="post-info">
                                 <h4>Healthcare Workforce Planning: Future-Proofing Your Medical Staffing Strategy</h4>
-                                <span class="post-date">July 15, 2024</span>
+                                <span class="post-date">July 15, 2025</span>
                             </div>
                         </a>
                         <a href="nurse-retention-strategies.php" class="popular-post">
@@ -262,7 +262,7 @@
                             </div>
                             <div class="post-info">
                                 <h4>7 Proven Nurse Retention Strategies for Healthcare Facilities</h4>
-                                <span class="post-date">June 5, 2024</span>
+                                <span class="post-date">June 5, 2025</span>
                             </div>
                         </a>
                         <a href="strategic-healthcare-staffing.php" class="popular-post">
@@ -271,7 +271,7 @@
                             </div>
                             <div class="post-info">
                                 <h4>Strategic Healthcare Staffing: Building Resilient Medical Teams</h4>
-                                <span class="post-date">June 28, 2024</span>
+                                <span class="post-date">June 28, 2025</span>
                             </div>
                         </a>
                     </div>

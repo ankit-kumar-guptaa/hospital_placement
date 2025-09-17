@@ -29,7 +29,7 @@
             <header class="article-header">
                 <div class="article-meta">
                     <span class="article-category">Global Recruitment</span>
-                    <span class="article-date"><i class="far fa-calendar"></i> June 25, 2024</span>
+                    <span class="article-date"><i class="far fa-calendar"></i> June 25, 2025</span>
                     <span class="article-read-time"><i class="far fa-clock"></i> 12 min read</span>
                 </div>
                 <h1 class="article-title">International Medical Recruitment: A Comprehensive Guide for Healthcare Employers</h1>
@@ -394,7 +394,7 @@
                     </a>
                     <a href="cost-effective-healthcare-recruitment.php" class="related-post">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=300&auto=format&fit=crop" alt="Healthcare recruitment budget planning meeting">
-                        <h4>Cost-Effective Healthcare Recruitment Strategies for 2024</h4>
+                        <h4>Cost-Effective Healthcare Recruitment Strategies for 2025</h4>
                     </a>
                     <a href="healthcare-leadership-development.php" class="related-post">
                         <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=300&auto=format&fit=crop" alt="Healthcare professionals in a meeting">

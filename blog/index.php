@@ -58,7 +58,7 @@
                     <h2 class="featured-title">Healthcare Workforce Planning: Future-Proofing Your Medical Staffing Strategy</h2>
                     <p class="featured-excerpt">In today's rapidly evolving healthcare landscape, reactive staffing approaches are increasingly insufficient. This comprehensive guide explores how healthcare organizations can develop robust workforce planning strategies to ensure clinical excellence and operational stability while anticipating future challenges.</p>
                     <div class="post-meta">
-                        <span><i class="far fa-calendar"></i> July 15, 2024</span>
+                        <span><i class="far fa-calendar"></i> July 15, 2025</span>
                         <span><i class="far fa-clock"></i> 12 min read</span>
                         <span><i class="far fa-user"></i> By Hospital Placement Team</span>
                     </div>
@@ -88,7 +88,7 @@
                         <h3 class="card-title"><a href="healthcare-digital-transformation.php">Healthcare Digital Transformation: Revolutionizing Medical Recruitment</a></h3>
                         <p class="card-excerpt">Discover how digital transformation is revolutionizing healthcare recruitment and staffing processes, improving efficiency and patient outcomes.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> August 10, 2024</span>
+                            <span><i class="far fa-calendar"></i> August 10, 2025</span>
                             <span><i class="far fa-clock"></i> 11 min read</span>
                         </div>
                         <a href="healthcare-digital-transformation.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
@@ -106,7 +106,7 @@
                         <h3 class="card-title"><a href="healthcare-workforce-planning.php">Healthcare Workforce Planning: Future-Proofing Your Medical Staffing Strategy</a></h3>
                         <p class="card-excerpt">Learn how strategic healthcare workforce planning can help your organization anticipate future staffing needs, address skill gaps, and maintain optimal patient care.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> July 15, 2024</span>
+                            <span><i class="far fa-calendar"></i> July 15, 2025</span>
                             <span><i class="far fa-clock"></i> 12 min read</span>
                         </div>
                         <a href="healthcare-workforce-planning.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
@@ -124,7 +124,7 @@
                         <h3 class="card-title"><a href="reducing-healthcare-staff-turnover.php">Reducing Healthcare Staff Turnover: Evidence-Based Retention Strategies</a></h3>
                         <p class="card-excerpt">Discover proven, evidence-based strategies to reduce healthcare staff turnover, improve retention rates, and create a stable workforce environment.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> July 10, 2024</span>
+                            <span><i class="far fa-calendar"></i> July 10, 2025</span>
                             <span><i class="far fa-clock"></i> 13 min read</span>
                         </div>
                         <a href="reducing-healthcare-staff-turnover.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
@@ -142,7 +142,7 @@
                         <h3 class="card-title"><a href="strategic-healthcare-staffing.php">Strategic Healthcare Staffing: Building Resilient Medical Teams</a></h3>
                         <p class="card-excerpt">Discover proven strategies to build and maintain resilient healthcare teams that can adapt to changing demands while delivering exceptional patient care.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> June 28, 2024</span>
+                            <span><i class="far fa-calendar"></i> June 28, 2025</span>
                             <span><i class="far fa-clock"></i> 10 min read</span>
                         </div>
                         <a href="strategic-healthcare-staffing.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
@@ -160,7 +160,7 @@
                         <h3 class="card-title"><a href="addressing-radiologist-shortage.php">Addressing the Radiologist Shortage: Solutions for Hospitals</a></h3>
                         <p class="card-excerpt">Explore effective strategies to overcome the growing radiologist shortage and maintain quality diagnostic services in your healthcare facility.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> June 10, 2024</span>
+                            <span><i class="far fa-calendar"></i> June 10, 2025</span>
                             <span><i class="far fa-clock"></i> 6 min read</span>
                         </div>
                         <a href="addressing-radiologist-shortage.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
@@ -178,7 +178,7 @@
                         <h3 class="card-title"><a href="nurse-retention-strategies.php">7 Proven Nurse Retention Strategies for Healthcare Facilities</a></h3>
                         <p class="card-excerpt">Discover practical approaches to improve nurse satisfaction, reduce turnover, and build a stable nursing workforce in your hospital.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> June 5, 2024</span>
+                            <span><i class="far fa-calendar"></i> June 5, 2025</span>
                             <span><i class="far fa-clock"></i> 7 min read</span>
                         </div>
                         <a href="nurse-retention-strategies.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>

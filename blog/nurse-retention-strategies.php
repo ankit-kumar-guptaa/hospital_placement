@@ -27,7 +27,7 @@
         <div class="article-header-content">
             <h1 class="article-title">7 Proven Nurse Retention Strategies for Healthcare Facilities</h1>
             <div class="article-meta">
-                <span><i class="far fa-calendar"></i> June 5, 2024</span>
+                <span><i class="far fa-calendar"></i> June 5, 2025</span>
                 <span><i class="far fa-clock"></i> 7 min read</span>
                 <span><i class="far fa-folder"></i> Nursing</span>
             </div>

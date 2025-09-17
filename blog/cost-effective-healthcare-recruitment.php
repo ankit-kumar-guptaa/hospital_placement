@@ -29,10 +29,10 @@
             <header class="article-header">
                 <div class="article-meta">
                     <span class="article-category">Recruitment Strategy</span>
-                    <span class="article-date"><i class="far fa-calendar"></i> June 22, 2024</span>
+                    <span class="article-date"><i class="far fa-calendar"></i> June 22, 2025</span>
                     <span class="article-read-time"><i class="far fa-clock"></i> 8 min read</span>
                 </div>
-                <h1 class="article-title">Cost-Effective Healthcare Recruitment Strategies for 2024</h1>
+                <h1 class="article-title">Cost-Effective Healthcare Recruitment Strategies for 2025</h1>
                 <div class="article-author">
                     <img src="../assets/images/team/author-avatar.jpg" alt="Hospital Placement Team" class="author-avatar">
                     <div class="author-info">
