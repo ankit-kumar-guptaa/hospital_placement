@@ -77,7 +77,25 @@
             </div>
             
             <div class="posts-grid">
-                <!-- Blog Post 1 - Healthcare Workforce Planning -->
+                <!-- Blog Post 1 - Healthcare Digital Transformation (NEW) -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop" alt="Digital healthcare transformation with medical professional using advanced technology">
+                        <span class="card-category">Digital Innovation</span>
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="healthcare-digital-transformation.php">Healthcare Digital Transformation: Revolutionizing Medical Recruitment</a></h3>
+                        <p class="card-excerpt">Discover how digital transformation is revolutionizing healthcare recruitment and staffing processes, improving efficiency and patient outcomes.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> August 10, 2024</span>
+                            <span><i class="far fa-clock"></i> 11 min read</span>
+                        </div>
+                        <a href="healthcare-digital-transformation.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 - Healthcare Workforce Planning -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=600&auto=format&fit=crop" alt="Healthcare administrators planning workforce strategy">
@@ -95,7 +113,7 @@
                     </div>
                 </article>
                 
-                <!-- Blog Post 2 - Reducing Healthcare Staff Turnover -->
+                <!-- Blog Post 3 - Reducing Healthcare Staff Turnover -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1576671414121-aa0c81c869e1?q=80&w=600&auto=format&fit=crop" alt="Healthcare team in a positive work environment">
@@ -113,7 +131,7 @@
                     </div>
                 </article>
                 
-                <!-- Blog Post 3 - Strategic Healthcare Staffing -->
+                <!-- Blog Post 4 - Strategic Healthcare Staffing -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=600&auto=format&fit=crop" alt="Healthcare professionals in a team meeting">
@@ -131,7 +149,7 @@
                     </div>
                 </article>
                 
-                <!-- Blog Post 4 -->
+                <!-- Blog Post 5 -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=600&auto=format&fit=crop" alt="Doctor examining medical scans">
@@ -149,7 +167,7 @@
                     </div>
                 </article>
                 
-                <!-- Blog Post 5 -->
+                <!-- Blog Post 6 -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop" alt="Nurses in a hospital corridor">
