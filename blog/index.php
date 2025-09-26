@@ -77,7 +77,25 @@
             </div>
             
             <div class="posts-grid">
-                <!-- Blog Post 1 - Healthcare Digital Transformation (NEW) -->
+                <!-- Blog Post 1 - Telemedicine and Remote Healthcare Staffing (NEW) -->
+                <article class="blog-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1516841273335-e39b37888115?q=80&w=600&auto=format&fit=crop" alt="Doctor consulting patient through telemedicine video call">
+                        <span class="card-category">Digital Healthcare</span>
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><a href="telemedicine-remote-healthcare-staffing.php">Telemedicine and Remote Healthcare Staffing: The Future of Medical Services</a></h3>
+                        <p class="card-excerpt">Explore how telemedicine is transforming healthcare staffing models and creating new opportunities for medical professionals in the digital health era.</p>
+                        <div class="card-meta">
+                            <span><i class="far fa-calendar"></i> August 15, 2024</span>
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <a href="telemedicine-remote-healthcare-staffing.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 - Healthcare Digital Transformation -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop" alt="Digital healthcare transformation with medical professional using advanced technology">
@@ -88,14 +106,14 @@
                         <h3 class="card-title"><a href="healthcare-digital-transformation.php">Healthcare Digital Transformation: Revolutionizing Medical Recruitment</a></h3>
                         <p class="card-excerpt">Discover how digital transformation is revolutionizing healthcare recruitment and staffing processes, improving efficiency and patient outcomes.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> August 10, 2025</span>
+                            <span><i class="far fa-calendar"></i> August 10, 2024</span>
                             <span><i class="far fa-clock"></i> 11 min read</span>
                         </div>
                         <a href="healthcare-digital-transformation.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
-                <!-- Blog Post 2 - Healthcare Workforce Planning -->
+                <!-- Blog Post 3 - Healthcare Workforce Planning -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=600&auto=format&fit=crop" alt="Healthcare administrators planning workforce strategy">
@@ -106,14 +124,14 @@
                         <h3 class="card-title"><a href="healthcare-workforce-planning.php">Healthcare Workforce Planning: Future-Proofing Your Medical Staffing Strategy</a></h3>
                         <p class="card-excerpt">Learn how strategic healthcare workforce planning can help your organization anticipate future staffing needs, address skill gaps, and maintain optimal patient care.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> July 15, 2025</span>
+                            <span><i class="far fa-calendar"></i> July 15, 2024</span>
                             <span><i class="far fa-clock"></i> 12 min read</span>
                         </div>
                         <a href="healthcare-workforce-planning.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
-                <!-- Blog Post 3 - Reducing Healthcare Staff Turnover -->
+                <!-- Blog Post 4 - Reducing Healthcare Staff Turnover -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1576671414121-aa0c81c869e1?q=80&w=600&auto=format&fit=crop" alt="Healthcare team in a positive work environment">
@@ -124,14 +142,14 @@
                         <h3 class="card-title"><a href="reducing-healthcare-staff-turnover.php">Reducing Healthcare Staff Turnover: Evidence-Based Retention Strategies</a></h3>
                         <p class="card-excerpt">Discover proven, evidence-based strategies to reduce healthcare staff turnover, improve retention rates, and create a stable workforce environment.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> July 10, 2025</span>
+                            <span><i class="far fa-calendar"></i> July 10, 2024</span>
                             <span><i class="far fa-clock"></i> 13 min read</span>
                         </div>
                         <a href="reducing-healthcare-staff-turnover.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
-                <!-- Blog Post 4 - Strategic Healthcare Staffing -->
+                <!-- Blog Post 5 - Strategic Healthcare Staffing -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=600&auto=format&fit=crop" alt="Healthcare professionals in a team meeting">
@@ -142,14 +160,14 @@
                         <h3 class="card-title"><a href="strategic-healthcare-staffing.php">Strategic Healthcare Staffing: Building Resilient Medical Teams</a></h3>
                         <p class="card-excerpt">Discover proven strategies to build and maintain resilient healthcare teams that can adapt to changing demands while delivering exceptional patient care.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> June 28, 2025</span>
+                            <span><i class="far fa-calendar"></i> June 28, 2024</span>
                             <span><i class="far fa-clock"></i> 10 min read</span>
                         </div>
                         <a href="strategic-healthcare-staffing.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
-                <!-- Blog Post 5 -->
+                <!-- Blog Post 6 -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=600&auto=format&fit=crop" alt="Doctor examining medical scans">
@@ -160,14 +178,14 @@
                         <h3 class="card-title"><a href="addressing-radiologist-shortage.php">Addressing the Radiologist Shortage: Solutions for Hospitals</a></h3>
                         <p class="card-excerpt">Explore effective strategies to overcome the growing radiologist shortage and maintain quality diagnostic services in your healthcare facility.</p>
                         <div class="card-meta">
-                            <span><i class="far fa-calendar"></i> June 10, 2025</span>
+                            <span><i class="far fa-calendar"></i> June 10, 2024</span>
                             <span><i class="far fa-clock"></i> 6 min read</span>
                         </div>
                         <a href="addressing-radiologist-shortage.php" class="read-more">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
                 
-                <!-- Blog Post 6 -->
+                <!-- Blog Post 7 -->
                 <article class="blog-card">
                     <div class="card-image">
                         <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop" alt="Nurses in a hospital corridor">
