@@ -172,7 +172,7 @@ AOS.init({
     });
 </script>
 
-<script src="https://recruitment-chatbot.greencarcarpool.com/script/chatbot.js"></script>
+<!-- <script src="https://recruitment-chatbot.greencarcarpool.com/script/chatbot.js"></script> -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll('.counter');
