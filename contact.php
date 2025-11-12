@@ -100,7 +100,7 @@ function gtag_report_conversion(url) {
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                                                       <b>Head Office:</b> A-83, Okhla Phase II, New Delhi - 110020
+                                                       <b>Office:</b> A-83, Okhla Phase II, New Delhi - 110020
 
                         </li>
                         <li>
