@@ -61,7 +61,7 @@ function gtag_report_conversion(url) {
 
 
 
-<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 120px 0; position: relative; overflow: hidden;">
+<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 70px 0; position: relative; overflow: hidden;">
     <!-- Decorative Elements -->
     <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(60px);"></div>
     <div style="position: absolute; bottom: -60px; right: -60px; width: 200px; height: 200px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(80px);"></div>
@@ -86,7 +86,7 @@ function gtag_report_conversion(url) {
 </section>
 
 
-<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 100px 0;">
+<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 50px 0;">
     <div class="container" data-aos="fade-up">
         <div class="row">
             <!-- Contact Details -->
@@ -96,11 +96,12 @@ function gtag_report_conversion(url) {
                     <ul style="list-style: none; padding: 0; font-size: 18px; color: #555; line-height: 2;">
                         <li>
                             <i class="fas fa-phone-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Phone:</b>+971582348005, +91 98703 64340, 011-40747520
+                            <b>Phone:</b>+91 98703 64340, 011-40747520, +971582348005
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Head Office:</b> BC-889265 26th Floor, Amber Gem Tower, Ajman , UAE
+                                                       <b>Head Office:</b> A-83, Okhla Phase II, New Delhi - 110020
+
                         </li>
                         <li>
                             <i class="fas fa-envelope" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
@@ -233,19 +234,7 @@ function gtag_report_conversion(url) {
                 <div style="background: #ffffff; border-radius: 15px; padding: 30px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);">
                     <h3 style="font-weight: bold; color: #222; margin-bottom: 25px;">Our Offices</h3>
                     
-                    <!-- Corporate Headquarters -->
-                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
-                            <i class="fas fa-building" style="margin-right: 8px;"></i>Corporate Headquarters
-                        </h5>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">BC-889265</p>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">26th Floor, Amber Gem Tower, Ajman, UAE</p>
-                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
-                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+971582348005
-                        </p>
-                    </div>
-
-                    <!-- New Delhi Office -->
+                      <!-- New Delhi Office -->
                     <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
                         <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
                             <i class="fas fa-map-pin" style="margin-right: 8px;"></i>New Delhi Office
@@ -256,6 +245,20 @@ function gtag_report_conversion(url) {
                             <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 98719 16980
                         </p>
                     </div>
+
+                    <!-- Corporate Headquarters -->
+                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
+                            <i class="fas fa-building" style="margin-right: 8px;"></i>UAE Office
+                        </h5>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">BC-889265</p>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">26th Floor, Amber Gem Tower, Ajman, UAE</p>
+                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
+                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+971582348005
+                        </p>
+                    </div>
+
+                  
 
                     <!-- Hyderabad Branch -->
                     <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">

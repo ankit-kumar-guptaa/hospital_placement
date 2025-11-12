@@ -42,8 +42,10 @@
         <ul class="list-unstyled">
           <li class="mb-3">
             <i class="fa fa-map-marker-alt me-2" style="color: #1abc9c;"></i>
-            <!-- <span style="color: #dcdde1;">916, Astralis Tower, Supernova, Sector 94, Noida</span> -->
+            <span style="color: #dcdde1;">A-83, Okhla Phase II, New Delhi - 110020</span> <br>
+            <i class="fa fa-map-marker-alt me-2" style="color: #1abc9c;"></i>
             <span style="color: #dcdde1;">BC-889265 26th Floor, Amber Gem Tower, Ajman , UAE</span>
+            
           </li>
           <li class="mb-3">
             <i class="fa fa-envelope me-2" style="color: #1abc9c;"></i>
@@ -52,6 +54,10 @@
             </a>
           </li>
           <li>
+            <i class="fa fa-phone-alt me-2" style="color: #1abc9c;"></i>
+            <a href="tel:+919871916980" style="color: #1abc9c; text-decoration: none; transition: color 0.3s;">
+              +919871916980
+            </a> <br>
             <i class="fa fa-phone-alt me-2" style="color: #1abc9c;"></i>
             <a href="tel:+971582348005" style="color: #1abc9c; text-decoration: none; transition: color 0.3s;">
               +971582348005
