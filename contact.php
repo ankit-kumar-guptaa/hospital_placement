@@ -228,12 +228,75 @@ function gtag_report_conversion(url) {
 <section style="background: linear-gradient(135deg, #eef2f7, #ffffff); padding: 70px 0;" id="contact-form">
     <div class="container" data-aos="fade-up">
         <div class="row justify-content-center">
-            <!-- Left Side: Image -->
+            <!-- Left Side: Our Offices -->
             <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
-                <div style="position: relative; text-align: center;">
-                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-illustration-download-in-svg-png-gif-file-formats--call-logo-laptop-helping-customer-service-pack-network-communication-illustrations-2912018.png" alt="Contact Us" style="width: 100%; border-radius: 15px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);">
-                    <!-- Decorative Elements -->
-                    <div style="position: absolute; top: -20px; left: -20px; width: 150px; height: 150px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(40px);"></div>
+                <div style="background: #ffffff; border-radius: 15px; padding: 30px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-weight: bold; color: #222; margin-bottom: 25px;">Our Offices</h3>
+                    
+                    <!-- Corporate Headquarters -->
+                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
+                            <i class="fas fa-building" style="margin-right: 8px;"></i>Corporate Headquarters
+                        </h5>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">BC-889265</p>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">26th Floor, Amber Gem Tower, Ajman, UAE</p>
+                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
+                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+971582348005
+                        </p>
+                    </div>
+
+                    <!-- New Delhi Office -->
+                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
+                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>New Delhi Office
+                        </h5>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">A-83, Okhla Phase II</p>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">New Delhi - 110020</p>
+                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
+                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 98719 16980
+                        </p>
+                    </div>
+
+                    <!-- Hyderabad Branch -->
+                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
+                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>Hyderabad Branch
+                        </h5>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">eSeva Ln, K P H B Phase 3</p>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Kukatpally, Hyderabad, Telangana 500072</p>
+                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
+                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 83282 06115
+                        </p>
+                    </div>
+
+                    <!-- Pune Branch -->
+                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
+                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>Pune Branch
+                        </h5>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">2nd Floor, River side Business Bay</p>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Plot no. 84, Wellesley Road, Near RTO (Sangam Bridge)</p>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Pune, Maharashtra 411001</p>
+                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
+                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 87889 56738
+                        </p>
+                    </div>
+
+                    <!-- Direct Line & Contact Info -->
+                    <div style="background: #f8f9fa; border-radius: 10px; padding: 15px; margin-top: 20px;">
+                        <p style="color: #222; font-size: 14px; margin-bottom: 10px;">
+                            <i class="fas fa-phone" style="color: #007bff; margin-right: 8px;"></i>
+                            <b>Direct Line:</b> +919211610707
+                        </p>
+                        <p style="color: #222; font-size: 14px; margin-bottom: 10px;">
+                            <i class="fas fa-envelope" style="color: #007bff; margin-right: 8px;"></i>
+                            <b>Email:</b> <a href="mailto:info@hospitalplacement.com" style="color: #007bff; text-decoration: none;">info@hospitalplacement.com</a>
+                        </p>
+                        <p style="color: #222; font-size: 14px; margin-bottom: 0;">
+                            <i class="fas fa-clock" style="color: #007bff; margin-right: 8px;"></i>
+                            <b>Office Hours:</b> Monday - Friday: 9:00 AM - 6:00 PM
+                        </p>
+                    </div>
                 </div>
             </div>
 
