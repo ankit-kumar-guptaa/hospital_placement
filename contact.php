@@ -100,7 +100,7 @@ function gtag_report_conversion(url) {
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Head Office:</b> BC-889265 26th Floor, Amber Gem Tower, Ajman<br> A-83, Okhla Phase II, New Delhi - 110020
+                            <b>Head Office:</b> BC-889265 26th Floor, Amber Gem Tower, Ajman , UAE
                         </li>
                         <li>
                             <i class="fas fa-envelope" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
