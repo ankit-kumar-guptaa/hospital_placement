@@ -96,11 +96,11 @@ function gtag_report_conversion(url) {
                     <ul style="list-style: none; padding: 0; font-size: 18px; color: #555; line-height: 2;">
                         <li>
                             <i class="fas fa-phone-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Phone:</b> +91 98703 64340, 011-40747520
+                            <b>Phone:</b>+971582348005, +91 98703 64340, 011-40747520
                         </li>
                         <li>
                             <i class="fas fa-map-marker-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Head Office:</b> A-83, Okhla Phase II, New Delhi - 110020
+                            <b>Head Office:</b> BC-889265 26th Floor, Amber Gem Tower, Ajman<br> A-83, Okhla Phase II, New Delhi - 110020
                         </li>
                         <li>
                             <i class="fas fa-envelope" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>

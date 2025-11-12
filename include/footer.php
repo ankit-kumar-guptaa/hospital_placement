@@ -42,7 +42,8 @@
         <ul class="list-unstyled">
           <li class="mb-3">
             <i class="fa fa-map-marker-alt me-2" style="color: #1abc9c;"></i>
-            <span style="color: #dcdde1;">916, Astralis Tower, Supernova, Sector 94, Noida</span>
+            <!-- <span style="color: #dcdde1;">916, Astralis Tower, Supernova, Sector 94, Noida</span> -->
+            <span style="color: #dcdde1;">BC-889265 26th Floor, Amber Gem Tower, Ajman , UAE</span>
           </li>
           <li class="mb-3">
             <i class="fa fa-envelope me-2" style="color: #1abc9c;"></i>
@@ -52,8 +53,8 @@
           </li>
           <li>
             <i class="fa fa-phone-alt me-2" style="color: #1abc9c;"></i>
-            <a href="tel:+919870364340" style="color: #1abc9c; text-decoration: none; transition: color 0.3s;">
-              +91 98703 64340
+            <a href="tel:+971582348005" style="color: #1abc9c; text-decoration: none; transition: color 0.3s;">
+              +971582348005
             </a>
           </li>
         </ul>
@@ -83,10 +84,10 @@
 
 
 <div id="sticky-cta">
-    <a href="tel:+919870364340" class="cta-icon call">
+    <a href="tel:+971582348005" class="cta-icon call">
         <i class="fas fa-phone"></i>
     </a>
-    <a href="https://wa.me/+919870364340" class="cta-icon whatsapp">
+    <a href="https://wa.me/+971582348005" class="cta-icon whatsapp">
         <i class="fab fa-whatsapp"></i>
     </a>
 </div>
