@@ -267,9 +267,9 @@ function gtag_report_conversion(url) {
                         </h5>
                         <p style="color: #555; font-size: 14px; margin: 5px 0;">eSeva Ln, K P H B Phase 3</p>
                         <p style="color: #555; font-size: 14px; margin: 5px 0;">Kukatpally, Hyderabad, Telangana 500072</p>
-                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
+                        <!-- <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
                             <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 83282 06115
-                        </p>
+                        </p> -->
                     </div>
 
                     <!-- Pune Branch -->
@@ -280,9 +280,9 @@ function gtag_report_conversion(url) {
                         <p style="color: #555; font-size: 14px; margin: 5px 0;">2nd Floor, River side Business Bay</p>
                         <p style="color: #555; font-size: 14px; margin: 5px 0;">Plot no. 84, Wellesley Road, Near RTO (Sangam Bridge)</p>
                         <p style="color: #555; font-size: 14px; margin: 5px 0;">Pune, Maharashtra 411001</p>
-                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
+                        <!-- <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
                             <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 87889 56738
-                        </p>
+                        </p> -->
                     </div>
 
                     <!-- Hapur Branch -->
