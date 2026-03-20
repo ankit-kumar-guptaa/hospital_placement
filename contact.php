@@ -285,6 +285,15 @@ function gtag_report_conversion(url) {
                         </p>
                     </div>
 
+                    <!-- Hapur Branch -->
+                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
+                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>Hapur Branch
+                        </h5>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Ground Floor Ward 15/136/1, Railway Road, 2</p>
+                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Hapur, Uttar Pradesh</p>
+                    </div>
+
                     <!-- Direct Line & Contact Info -->
                     <div style="background: #f8f9fa; border-radius: 10px; padding: 15px; margin-top: 20px;">
                         <p style="color: #222; font-size: 14px; margin-bottom: 10px;">
