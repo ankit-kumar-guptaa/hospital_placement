@@ -1608,3 +1608,154 @@ body.hp-body{
 
 /* The relocated form card is a page section now, so it gets its own width */
 .hp-formcard--wide{ max-width:760px; }
+
+/* ==========================================================================
+   25b. Form card and its two tabs
+   --------------------------------------------------------------------------
+   Lives inside the modal. Tabs use transitions rather than keyframes: a
+   visitor can flip between "post a requirement" and "register your CV"
+   several times a second.
+   ========================================================================== */
+
+.hp-formcard{
+  background:var(--hp-surface);
+  border:1px solid var(--hp-line);
+  border-radius:var(--hp-r-card);
+  overflow:hidden;
+}
+.hp-formcard__tabs{
+  display:grid; grid-template-columns:1fr 1fr;
+  background:var(--hp-canvas);
+  border-bottom:1px solid var(--hp-line);
+  padding:7px; gap:6px;
+}
+.hp-tab{
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:12px 10px;
+  font-family:var(--hp-font-display);
+  font-size:.9rem; font-weight:600; letter-spacing:-.005em;
+  color:var(--hp-ink-2);
+  background:transparent; border:0;
+  border-radius:var(--hp-r-input);
+  cursor:pointer;
+  transition:background-color var(--hp-t) var(--hp-ease-out),
+             color var(--hp-t) var(--hp-ease-out),
+             box-shadow var(--hp-t) var(--hp-ease-out);
+}
+.hp-tab i{ font-size:.85rem; }
+.hp-tab[aria-selected="true"]{
+  background:var(--hp-surface); color:var(--hp-brand);
+  box-shadow:var(--hp-sh-1);
+}
+@media (hover:hover) and (pointer:fine){
+  .hp-tab:not([aria-selected="true"]):hover{ background:rgba(255,255,255,.65); color:var(--hp-ink); }
+}
+.hp-formcard__body{ padding:22px clamp(18px,2vw,26px) 24px; }
+.hp-formcard__body[hidden]{ display:none !important; }
+.hp-formcard__title{ margin:0 0 4px; }
+.hp-formcard__sub{ margin:0 0 18px; font-size:.875rem; color:var(--hp-muted); }
+
+/* ==========================================================================
+   26. Form modal
+   --------------------------------------------------------------------------
+   The hero's two buttons open this rather than pushing the visitor down the
+   page. Scrim fades, panel rises a little and scales from .97 (never from 0,
+   nothing appears out of nothing). 220ms in, which is the dropdown-to-modal
+   band, on the strong ease-out.
+
+   Without JavaScript the html element keeps its .no-js class and the whole
+   thing renders as an ordinary section instead, so the forms stay reachable.
+   ========================================================================== */
+
+.hp-modal{
+  position:fixed; inset:0; z-index:2000;
+  display:grid; place-items:center;
+  padding:clamp(12px,3vw,32px);
+}
+.hp-modal[hidden]{ display:none !important; }
+
+.hp-modal__scrim{
+  position:absolute; inset:0;
+  background:rgba(12,31,69,.55);
+  backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+  opacity:0;
+  transition:opacity 220ms var(--hp-ease-out);
+}
+.hp-modal__panel{
+  position:relative;
+  width:min(680px,100%);
+  max-height:calc(100dvh - clamp(24px,6vw,64px));
+  overflow-y:auto; overscroll-behavior:contain;
+  padding:clamp(24px,3vw,36px);
+  background:var(--hp-surface);
+  border-radius:var(--hp-r-card);
+  box-shadow:var(--hp-sh-3);
+  opacity:0;
+  transform:translate3d(0,12px,0) scale(.97);
+  transition:opacity 220ms var(--hp-ease-out),
+             transform 220ms var(--hp-ease-out);
+}
+.hp-modal.is-open .hp-modal__scrim{ opacity:1; }
+.hp-modal.is-open .hp-modal__panel{ opacity:1; transform:translate3d(0,0,0) scale(1); }
+
+.hp-modal__x{
+  position:absolute; top:14px; right:14px;
+  display:grid; place-items:center;
+  width:38px; height:38px; padding:0;
+  border:1px solid var(--hp-line);
+  border-radius:50%;
+  background:var(--hp-surface);
+  color:var(--hp-ink-2);
+  font-size:.95rem; cursor:pointer;
+  transition:background-color var(--hp-t) var(--hp-ease-out),
+             color var(--hp-t) var(--hp-ease-out),
+             border-color var(--hp-t) var(--hp-ease-out);
+}
+@media (hover:hover) and (pointer:fine){
+  .hp-modal__x:hover{ background:var(--hp-brand-tint); color:var(--hp-brand); border-color:var(--hp-brand-soft); }
+}
+.hp-modal__title{
+  margin:0 46px 4px 0;
+  font-family:var(--hp-font-display);
+  font-size:clamp(1.3rem,1.15rem + .6vw,1.6rem);
+  font-weight:700; color:var(--hp-ink); letter-spacing:-.02em;
+}
+.hp-modal__sub{ margin:0 0 20px; font-size:.9rem; color:var(--hp-muted); }
+
+/* Inside the dialog the card needs no frame of its own */
+.hp-formcard--plain{
+  max-width:none; margin:0;
+  background:transparent; border:0; border-radius:0; box-shadow:none;
+}
+.hp-formcard--plain .hp-formcard__tabs{
+  background:var(--hp-canvas);
+  border:1px solid var(--hp-line);
+  border-radius:var(--hp-r-input);
+  margin-bottom:20px;
+}
+.hp-formcard--plain .hp-formcard__body{ padding:0; }
+
+/* Page behind the dialog stays put. style.css forces overflow-y on body. */
+html.hp-modal-open, html.hp-modal-open body{ overflow:hidden !important; }
+
+/* --- no-JS fallback: an ordinary section, not a dialog ------------------- */
+html.no-js .hp-modal{
+  position:static; display:block; padding:0;
+  margin-block:clamp(40px,5vw,72px);
+}
+html.no-js .hp-modal[hidden]{ display:block !important; }
+html.no-js .hp-modal__scrim,
+html.no-js .hp-modal__x{ display:none; }
+html.no-js .hp-modal__panel{
+  opacity:1; transform:none;
+  width:min(760px,calc(100% - 2 * var(--hp-gutter)));
+  margin-inline:auto; max-height:none;
+  border:1px solid var(--hp-line);
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hp-modal__scrim,
+  .hp-modal__panel{ transition:opacity 160ms ease; }
+  .hp-modal__panel{ transform:none; }
+  .hp-modal.is-open .hp-modal__panel{ transform:none; }
+}

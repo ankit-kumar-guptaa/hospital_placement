@@ -1,24 +1,35 @@
 <?php
 /**
- * forms.php - the two enquiry forms, lifted out of the hero.
+ * forms.php - both enquiry forms, inside one modal.
  *
- * The redesign brief calls out "two large forms dominate the first screen"
- * as the main problem, so the hero now carries two journey CTAs and both
- * forms live here, anchored at #hire and #find-a-job.
+ * The hero's two buttons ("I am Hiring" / "I am Looking for a Job") and the
+ * header's "Post a Requirement" open this dialog on the matching tab, so the
+ * first screen stays clean while the forms are still one click away.
  *
- * Every field name, id, option value, form action and method below is
- * exactly what the backend expects. Nothing in the forms themselves changed.
+ * Included once by slider.php, so every page carrying the hero also carries
+ * this dialog and the ids inside it stay unique on the page.
+ *
+ * Every field name, id, option value, form action and method below is exactly
+ * what the backend expects. Nothing inside the forms changed.
+ *
+ * Without JavaScript the dialog renders as an ordinary section (see the
+ * html.no-js rules in theme.css), so the forms are never unreachable.
  */
-$hp_pf2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 ?>
-<section class="hp-section hp-section--canvas" id="enquire" aria-labelledby="forms-title">
-  <div class="hp-wrap">
-    <div class="hp-head hp-head--center">
-      <h2 class="hp-h2 hp-rise" id="forms-title">Tell us what you need</h2>
-      <p class="hp-lead hp-rise">Hospitals post a requirement, candidates register once. A consultant replies within one working day.</p>
-    </div>
+<div class="hp-modal" id="hp-formmodal" hidden>
+  <div class="hp-modal__scrim" data-modal-close></div>
 
-    <div class="hp-formcard hp-formcard--wide hp-rise" style="margin-top:40px;">
+  <div class="hp-modal__panel" role="dialog" aria-modal="true"
+       aria-labelledby="hp-modal-title">
+
+    <button type="button" class="hp-modal__x" data-modal-close aria-label="Close">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+
+    <h2 class="hp-modal__title" id="hp-modal-title">Tell us what you need</h2>
+    <p class="hp-modal__sub">A consultant replies within one working day.</p>
+
+    <div class="hp-formcard hp-formcard--plain">
       <div class="hp-formcard__tabs" role="tablist" aria-label="What brings you here">
         <button type="button" class="hp-tab" role="tab" id="hp-tab-employer"
                 aria-controls="hp-employer" aria-selected="true" tabindex="0">
@@ -32,39 +43,37 @@ $hp_pf2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 
       <div class="hp-formcard__body" id="hp-employer" role="tabpanel"
            aria-labelledby="hp-tab-employer">
-        <span class="hp-anchor" id="hire"></span>
-        <h3 class="hp-h3 hp-formcard__title">Find the right healthcare professionals, faster</h3>
         <p class="hp-formcard__sub">Share the role and we will come back with a shortlist you can interview.</p>
 
-            <form action="employer_form_submission.php" method="post" class="employer-form hp-form">
-            <div class="mb-3">
-            <input type="text" id="organization-name" name="organization_name" class="form-control"
-            placeholder="Enter Organization Name" required>
-            </div>
+              <form action="employer_form_submission.php" method="post" class="employer-form hp-form">
+              <div class="mb-3">
+              <input type="text" id="organization-name" name="organization_name" class="form-control"
+              placeholder="Enter Organization Name" required>
+              </div>
 
-            <div class="mb-3">
-            <input type="text" id="contact-name" name="contact_name" class="form-control"
-            placeholder="Enter Contact Name" required>
-            </div>
-            <div class="mb-3">
-            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" required>
-            </div>
-            <div class="mb-3">
-            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number"
-            required>
-            </div>
-            <div class="mb-3">
-            <!-- <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label> -->
-            <textarea id="remarks" name="remarks" class="form-control"
-            placeholder="Remarks (Hiring For / Budget, etc.)" rows="2" required></textarea>
-            </div>
+              <div class="mb-3">
+              <input type="text" id="contact-name" name="contact_name" class="form-control"
+              placeholder="Enter Contact Name" required>
+              </div>
+              <div class="mb-3">
+              <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" required>
+              </div>
+              <div class="mb-3">
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter Phone Number"
+              required>
+              </div>
+              <div class="mb-3">
+              <!-- <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label> -->
+              <textarea id="remarks" name="remarks" class="form-control"
+              placeholder="Remarks (Hiring For / Budget, etc.)" rows="2" required></textarea>
+              </div>
 
-            <!-- reCAPTCHA v3 hidden input -->
-            <input type="hidden" name="g-recaptcha-response" id="employer-recaptcha-response">
+              <!-- reCAPTCHA v3 hidden input -->
+              <input type="hidden" name="g-recaptcha-response" id="employer-recaptcha-response">
 
-            <button style="background-color: #ffcc00;" type="submit" name="submit"
-            class="btn btn-primary w-100">Submit</button>
-            </form>
+              <button style="background-color: #ffcc00;" type="submit" name="submit"
+              class="btn btn-primary w-100">Submit</button>
+              </form>
 
         <p class="hp-form-note">
           <i class="fa-solid fa-lock" aria-hidden="true"></i>
@@ -74,297 +83,295 @@ $hp_pf2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 
       <div class="hp-formcard__body" id="hp-jobseeker" role="tabpanel"
            aria-labelledby="hp-tab-jobseeker" hidden>
-        <span class="hp-anchor" id="find-a-job"></span>
-        <h3 class="hp-h3 hp-formcard__title">Find your next role</h3>
         <p class="hp-formcard__sub">Register once. We match you against live hospital vacancies.</p>
 
-            <form action="backend_job_seeker.php" method="post" class="slider-form hp-form">
-            <!-- Role Selection -->
-            <div class="mb-3">
-            <label for="role" class="form-label">I'm a</label>
-            <select id="role" name="role" class="form-select" required onchange="showFields()">
-            <option value="" disabled selected>Select your role</option>
-            <option value="doctor">Doctor</option>
-            <option value="nurse">Nurse</option>
-            <option value="Pharma">Pharma</option>
-            <option value="Diagnostics">Diagnostics</option>
-            <option value="Administrative">Administrative</option>
-            </select>
-            </div>
+              <form action="backend_job_seeker.php" method="post" class="slider-form hp-form">
+              <!-- Role Selection -->
+              <div class="mb-3">
+              <label for="role" class="form-label">I'm a</label>
+              <select id="role" name="role" class="form-select" required onchange="showFields()">
+              <option value="" disabled selected>Select your role</option>
+              <option value="doctor">Doctor</option>
+              <option value="nurse">Nurse</option>
+              <option value="Pharma">Pharma</option>
+              <option value="Diagnostics">Diagnostics</option>
+              <option value="Administrative">Administrative</option>
+              </select>
+              </div>
 
-            <!-- Dynamic Fields for Doctor (hidden by default) -->
-            <div id="doctor-fields" class="dynamic-fields" style="display: none;">
-            <div class="row mb-3">
-            <div class="col-md-6">
-            <label for="doctor-department" class="form-label">Department</label>
-            <select id="doctor-department" name="department" class="form-select">
-            <option value="" disabled selected>Select Department</option>
-            <option value="Cardiology">Cardiology</option>
-            <option value="Dermatology">Dermatology</option>
-            <option value="ENT">ENT</option>
-            <option value="Gastroenterology">Gastroenterology</option>
-            <option value="General Practitioner">General Practitioner</option>
-            <option value="General surgery">General surgery</option>
-            <option value="Gynaecology">Gynaecology</option>
-            <option value="Others">Others</option>
-            </select>
-            </div>
-            <div class="col-md-6">
-            <label for="doctor-qualification" class="form-label">Qualification</label>
-            <select id="doctor-qualification" name="qualification" class="form-select">
-            <option value="" disabled selected>Select Qualification</option>
-            <option value="MD">MD</option>
-            <option value="MS">MS</option>
-            <option value="MBBS">MBBS</option>
-            <option value="BAMS">BAMS</option>
-            <option value="BDS">BDS</option>
-            <option value="BHMS">BHMS</option>
-            <option value="PhD">PhD</option>
-            <option value="Others">Others</option>
-            </select>
-            </div>
-            </div>
-            </div>
+              <!-- Dynamic Fields for Doctor (hidden by default) -->
+              <div id="doctor-fields" class="dynamic-fields" style="display: none;">
+              <div class="row mb-3">
+              <div class="col-md-6">
+              <label for="doctor-department" class="form-label">Department</label>
+              <select id="doctor-department" name="department" class="form-select">
+              <option value="" disabled selected>Select Department</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Dermatology">Dermatology</option>
+              <option value="ENT">ENT</option>
+              <option value="Gastroenterology">Gastroenterology</option>
+              <option value="General Practitioner">General Practitioner</option>
+              <option value="General surgery">General surgery</option>
+              <option value="Gynaecology">Gynaecology</option>
+              <option value="Others">Others</option>
+              </select>
+              </div>
+              <div class="col-md-6">
+              <label for="doctor-qualification" class="form-label">Qualification</label>
+              <select id="doctor-qualification" name="qualification" class="form-select">
+              <option value="" disabled selected>Select Qualification</option>
+              <option value="MD">MD</option>
+              <option value="MS">MS</option>
+              <option value="MBBS">MBBS</option>
+              <option value="BAMS">BAMS</option>
+              <option value="BDS">BDS</option>
+              <option value="BHMS">BHMS</option>
+              <option value="PhD">PhD</option>
+              <option value="Others">Others</option>
+              </select>
+              </div>
+              </div>
+              </div>
 
-            <!-- Dynamic Fields for Nurse (hidden by default) -->
-            <div id="nurse-fields" class="dynamic-fields" style="display: none;">
-            <div class="row mb-3">
-            <div class="col-md-6">
-            <label for="nurse-department" class="form-label">Department</label>
-            <select id="nurse-department" name="department" class="form-select">
-            <option value="" disabled selected>Select Department</option>
-            <option value="Anaesthesiology">Anaesthesiology</option>
-            <!-- <option value="Critical-care / ICU">Critical-care / ICU</option> -->
-            <option value="Critical-care / ICU">Critical-care / ICU</option>
-            <option value="Cardiology">Cardiology</option>
-            <option value="Geriatrics">Geriatrics</option>
-            <option value="Obstetric & Gynaecological (OB-GYN)">Obstetric & Gynaecological (OB-GYN)
-            </option>
-            <option value="Oncology">Oncology</option>
-            <option value="Paediatrics">Paediatrics</option>
-            <option value="Surgery and transplantation">Surgery and transplantation</option>
-            <option value="Mental Health">Mental Health</option>
-            <option value="Nurse Manager">Nurse Manager</option>
-            <option value="Orthopaedic">Orthopaedic</option>
-            <option value="Travel / Home Care">Travel / Home Care</option>
-            <option value="Neonatal">Neonatal</option>
-            <option value="Others">Others</option>
-            </select>
-            </div>
-            <div class="col-md-6">
-            <label for="nurse-qualification" class="form-label">Qualification</label>
-            <select id="nurse-qualification" name="qualification" class="form-select">
-            <option value="" disabled selected>Select Qualification</option>
-            <option value="B.Sc (N) Distance">B.Sc (N) Distance</option>
-            <option value="B.Sc (N) Post-Basic">B.Sc (N) Post-Basic</option>
-            <option value="B.Sc (N) Basic">B.Sc (N) Basic</option>
-            <option value="ANM (Auxiliary Nursing and Midwifery)">ANM (Auxiliary Nursing and Midwifery)
-            </option>
-            <option value="GNM (General) Nursing and Midwifery">GNM (General) Nursing and Midwifery
-            </option>
-            <option value="Others">Others</option>
-            </select>
-            </div>
-            </div>
-            </div>
+              <!-- Dynamic Fields for Nurse (hidden by default) -->
+              <div id="nurse-fields" class="dynamic-fields" style="display: none;">
+              <div class="row mb-3">
+              <div class="col-md-6">
+              <label for="nurse-department" class="form-label">Department</label>
+              <select id="nurse-department" name="department" class="form-select">
+              <option value="" disabled selected>Select Department</option>
+              <option value="Anaesthesiology">Anaesthesiology</option>
+              <!-- <option value="Critical-care / ICU">Critical-care / ICU</option> -->
+              <option value="Critical-care / ICU">Critical-care / ICU</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Geriatrics">Geriatrics</option>
+              <option value="Obstetric & Gynaecological (OB-GYN)">Obstetric & Gynaecological (OB-GYN)
+              </option>
+              <option value="Oncology">Oncology</option>
+              <option value="Paediatrics">Paediatrics</option>
+              <option value="Surgery and transplantation">Surgery and transplantation</option>
+              <option value="Mental Health">Mental Health</option>
+              <option value="Nurse Manager">Nurse Manager</option>
+              <option value="Orthopaedic">Orthopaedic</option>
+              <option value="Travel / Home Care">Travel / Home Care</option>
+              <option value="Neonatal">Neonatal</option>
+              <option value="Others">Others</option>
+              </select>
+              </div>
+              <div class="col-md-6">
+              <label for="nurse-qualification" class="form-label">Qualification</label>
+              <select id="nurse-qualification" name="qualification" class="form-select">
+              <option value="" disabled selected>Select Qualification</option>
+              <option value="B.Sc (N) Distance">B.Sc (N) Distance</option>
+              <option value="B.Sc (N) Post-Basic">B.Sc (N) Post-Basic</option>
+              <option value="B.Sc (N) Basic">B.Sc (N) Basic</option>
+              <option value="ANM (Auxiliary Nursing and Midwifery)">ANM (Auxiliary Nursing and Midwifery)
+              </option>
+              <option value="GNM (General) Nursing and Midwifery">GNM (General) Nursing and Midwifery
+              </option>
+              <option value="Others">Others</option>
+              </select>
+              </div>
+              </div>
+              </div>
 
-            <!-- Repeat similar structure for other roles (Pharma, Diagnostics, Administrative) -->
-            <div id="pharma-fields" class="dynamic-fields" style="display: none;">
-            <div class="row mb-3">
-            <!-- Department Selection -->
-            <div class="col-md-6">
-            <label for="department" class="form-label">Department</label>
-            <select id="department" name="department" class="form-select">
-            <option value="" disabled selected>Select Department</option>
-            <option value="Clinical">Clinical</option>
-            <option value="Manufacturing">Manufacturing</option>
-            <option value="Marketing">Marketing</option>
-            <option value="Purchasing">Purchasing</option>
-            <option value="Quality">Quality</option>
-            <option value="R&D">R&D</option>
-            <option value="Sales">Sales</option>
-            <option value="Supply Chain & Logistics">Supply Chain & Logistics</option>
-            <option value="Hospital Pharmacist">Hospital Pharmacist</option>
-            <option value="Pharmacist">Pharmacist</option>
-            <option value="Others">Others</option>
-            </select>
-            </div>
+              <!-- Repeat similar structure for other roles (Pharma, Diagnostics, Administrative) -->
+              <div id="pharma-fields" class="dynamic-fields" style="display: none;">
+              <div class="row mb-3">
+              <!-- Department Selection -->
+              <div class="col-md-6">
+              <label for="department" class="form-label">Department</label>
+              <select id="department" name="department" class="form-select">
+              <option value="" disabled selected>Select Department</option>
+              <option value="Clinical">Clinical</option>
+              <option value="Manufacturing">Manufacturing</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Purchasing">Purchasing</option>
+              <option value="Quality">Quality</option>
+              <option value="R&D">R&D</option>
+              <option value="Sales">Sales</option>
+              <option value="Supply Chain & Logistics">Supply Chain & Logistics</option>
+              <option value="Hospital Pharmacist">Hospital Pharmacist</option>
+              <option value="Pharmacist">Pharmacist</option>
+              <option value="Others">Others</option>
+              </select>
+              </div>
 
-            <!-- Qualification Selection -->
-            <div class="col-md-6">
-            <label for="qualification" class="form-label">Qualification</label>
-            <select id="qualification" name="qualification" class="form-select">
-            <option value="" disabled selected>Select Qualification</option>
-            <option value="10th Pass">10th Pass</option>
-            <option value="12th">12th</option>
-            <option value="Graduation">Graduation</option>
-            <option value="Post Graduation">Post Graduation</option>
-            <option value="Others">Others</option>
-            </select>
-            </div>
+              <!-- Qualification Selection -->
+              <div class="col-md-6">
+              <label for="qualification" class="form-label">Qualification</label>
+              <select id="qualification" name="qualification" class="form-select">
+              <option value="" disabled selected>Select Qualification</option>
+              <option value="10th Pass">10th Pass</option>
+              <option value="12th">12th</option>
+              <option value="Graduation">Graduation</option>
+              <option value="Post Graduation">Post Graduation</option>
+              <option value="Others">Others</option>
+              </select>
+              </div>
 
-            </div>
-            </div>
-
-
-
-            <!-- Diagnostics Fields -->
-            <div id="diagnostics-fields" class="dynamic-fields" style="display: none;">
-            <div class="row mb-3">
-            <!-- Department Selection -->
-            <div class="col-md-4">
-            <label for="department" class="form-label">Department</label>
-            <select id="department" name="department" class="form-select">
-            <option value="" disabled selected>Select Department</option>
-            <option value="Audio metrics">Audio metrics</option>
-            <option value="Bronchoscopy">Bronchoscopy</option>
-            <option value="Ecg">Ecg</option>
-            <option value="Echo/tmt">Echo/tmt</option>
-            <option value="Eeg/emg/vep">Eeg/emg/vep</option>
-            <option value="Ercp">Ercp</option>
-            <option value="Pathology">Pathology</option>
-            <option value="Radiology">Radiology</option>
-            <option value="Uroflometric">Uroflometric</option>
-            <option value="Other">Other</option>
-            </select>
-            </div>
-
-            <!-- Qualification Selection -->
-            <div class="col-md-4">
-            <label for="qualification" class="form-label">Qualification</label>
-            <select id="qualification" name="qualification" class="form-select">
-            <option value="" disabled selected>Select Qualification</option>
-            <option value="BOT - Bachelor of Occupational Therapy">BOT - Bachelor of Occupational
-            Therapy</option>
-            <option value="B.Sc (Audiology and Speech Therapy)">B.Sc (Audiology and Speech Therapy)
-            </option>
-            <option value="B.Sc (Ophthalmic Technology)">B.Sc (Ophthalmic Technology)</option>
-            <option value="B.Sc (Radiography)">B.Sc (Radiography)</option>
-            <option value="B.Sc (Nuclear Medicine)">B.Sc (Nuclear Medicine)</option>
-            <option value="B.Sc (Medical Lab Technology)">B.Sc (Medical Lab Technology)</option>
-            <option value="B.Sc in Operation Theatre Technology">B.Sc in Operation Theatre Technology
-            </option>
-            <option value="B.Sc (Respiratory Therapy Technology)">B.Sc (Respiratory Therapy Technology)
-            </option>
-            <option value="B.Sc (Radio Therapy)">B.Sc (Radio Therapy)</option>
-            <option value="B.Sc (Allied Health Services)">B.Sc (Allied Health Services)</option>
-            <option value="Bachelor of Naturopathy & Yogic Science">Bachelor of Naturopathy & Yogic
-            Science</option>
-            <option value="B.Sc in Dialysis Therapy">B.Sc in Dialysis Therapy</option>
-            <option value="B.Sc in Critical Care Technology">B.Sc in Critical Care Technology</option>
-            <option value="Bachelor of Physiotherapy">Bachelor of Physiotherapy</option>
-            <option value="B.Sc Nursing">B.Sc Nursing</option>
-            <option value="Diploma in Physiotherapy">Diploma in Physiotherapy</option>
-            <option value="Diploma in Medical Laboratory Technology">Diploma in Medical Laboratory
-            Technology</option>
-            <option value="Diploma in Dialysis Technology">Diploma in Dialysis Technology</option>
-            <option value="Diploma in Medical Imaging Technology">Diploma in Medical Imaging Technology
-            </option>
-            <option value="Diploma in Anaesthesia">Diploma in Anaesthesia</option>
-            <option value="Diploma in OT Technician">Diploma in OT Technician</option>
-            <option value="Diploma in Nursing Care Assistant">Diploma in Nursing Care Assistant</option>
-            <option value="Diploma in Hear Language and Speech">Diploma in Hear Language and Speech
-            </option>
-            <option value="Diploma in Rural Health Care">Diploma in Rural Health Care</option>
-            <option value="Diploma in Ophthalmic Technology">Diploma in Ophthalmic Technology</option>
-            <option value="Diploma in Dental Hygienist">Diploma in Dental Hygienist</option>
-            <option value="Diploma in Medical Record Technology">Diploma in Medical Record Technology
-            </option>
-            <option value="Diploma in X-Ray Technology">Diploma in X-Ray Technology</option>
-            <option value="MD in Pathology">MD in Pathology</option>
-            <option value="MD in Radiodiagnosis">MD in Radiodiagnosis</option>
-            <option value="MD in Anaesthesia">MD in Anaesthesia</option>
-            <option value="Other">Other</option>
-            </select>
-            </div>
-            </div>
-            </div>
-
-
-            <!-- Administrative Fields -->
-            <div id="administrative-fields" class="dynamic-fields" style="display: none;">
-            <div class="row mb-3">
-            <!-- Department Selection -->
-            <div class="col-md-6">
-            <label for="department" class="form-label">Department</label>
-            <select id="department" name="department" class="form-select">
-            <option value="" disabled selected>Select Department</option>
-            <option value="Purchasing">Purchasing</option>
-            <option value="Accounts">Accounts</option>
-            <option value="Billing">Billing</option>
-            <option value="Housekeeping">Housekeeping</option>
-            <option value="Laundry">Laundry</option>
-            <option value="Mechanical">Mechanical</option>
-            <option value="Maintenance">Maintenance</option>
-            <option value="Central Supply">Central Supply</option>
-            <option value="Waste Management">Waste Management</option>
-            <option value="Central Sterile Supply">Central Sterile Supply</option>
-            <option value="Medical Record">Medical Record</option>
-            <option value="Personnel">Personnel</option>
-            <option value="TPA">TPA</option>
-            <option value="Ward Boy">Ward Boy</option>
-            <option value="IT">IT</option>
-            <option value="Other">Other</option>
-            </select>
-            </div>
-
-            <!-- Qualification Selection -->
-            <div class="col-md-6">
-            <label for="qualification" class="form-label">Qualification</label>
-            <select id="qualification" name="qualification" class="form-select">
-            <option value="" disabled selected>Select Qualification</option>
-            <option value="10th Pass">10th Pass</option>
-            <option value="12th">12th</option>
-            <option value="Graduation">Graduation</option>
-            <option value="Post Graduation">Post Graduation</option>
-            <option value="Other">Other</option>
-            </select>
-            </div>
-            </div>
-            </div>
+              </div>
+              </div>
 
 
 
-            <p class="hp-form-legend">Personal info</p>
-            <div class="personal-info mb-3 row">
-            <div class="col-md-4">
+              <!-- Diagnostics Fields -->
+              <div id="diagnostics-fields" class="dynamic-fields" style="display: none;">
+              <div class="row mb-3">
+              <!-- Department Selection -->
+              <div class="col-md-4">
+              <label for="department" class="form-label">Department</label>
+              <select id="department" name="department" class="form-select">
+              <option value="" disabled selected>Select Department</option>
+              <option value="Audio metrics">Audio metrics</option>
+              <option value="Bronchoscopy">Bronchoscopy</option>
+              <option value="Ecg">Ecg</option>
+              <option value="Echo/tmt">Echo/tmt</option>
+              <option value="Eeg/emg/vep">Eeg/emg/vep</option>
+              <option value="Ercp">Ercp</option>
+              <option value="Pathology">Pathology</option>
+              <option value="Radiology">Radiology</option>
+              <option value="Uroflometric">Uroflometric</option>
+              <option value="Other">Other</option>
+              </select>
+              </div>
 
-            <input type="text" name="name" class="form-control" placeholder="Name" required>
-            </div>
-            <div class="col-md-4">
-            <input type="email" name="email" class="form-control" placeholder="Email" required>
-            </div>
-            <div class="col-md-4">
-            <input type="text" name="phone" class="form-control" placeholder="Phone No" required>
-            </div>
-            </div>
+              <!-- Qualification Selection -->
+              <div class="col-md-4">
+              <label for="qualification" class="form-label">Qualification</label>
+              <select id="qualification" name="qualification" class="form-select">
+              <option value="" disabled selected>Select Qualification</option>
+              <option value="BOT - Bachelor of Occupational Therapy">BOT - Bachelor of Occupational
+              Therapy</option>
+              <option value="B.Sc (Audiology and Speech Therapy)">B.Sc (Audiology and Speech Therapy)
+              </option>
+              <option value="B.Sc (Ophthalmic Technology)">B.Sc (Ophthalmic Technology)</option>
+              <option value="B.Sc (Radiography)">B.Sc (Radiography)</option>
+              <option value="B.Sc (Nuclear Medicine)">B.Sc (Nuclear Medicine)</option>
+              <option value="B.Sc (Medical Lab Technology)">B.Sc (Medical Lab Technology)</option>
+              <option value="B.Sc in Operation Theatre Technology">B.Sc in Operation Theatre Technology
+              </option>
+              <option value="B.Sc (Respiratory Therapy Technology)">B.Sc (Respiratory Therapy Technology)
+              </option>
+              <option value="B.Sc (Radio Therapy)">B.Sc (Radio Therapy)</option>
+              <option value="B.Sc (Allied Health Services)">B.Sc (Allied Health Services)</option>
+              <option value="Bachelor of Naturopathy & Yogic Science">Bachelor of Naturopathy & Yogic
+              Science</option>
+              <option value="B.Sc in Dialysis Therapy">B.Sc in Dialysis Therapy</option>
+              <option value="B.Sc in Critical Care Technology">B.Sc in Critical Care Technology</option>
+              <option value="Bachelor of Physiotherapy">Bachelor of Physiotherapy</option>
+              <option value="B.Sc Nursing">B.Sc Nursing</option>
+              <option value="Diploma in Physiotherapy">Diploma in Physiotherapy</option>
+              <option value="Diploma in Medical Laboratory Technology">Diploma in Medical Laboratory
+              Technology</option>
+              <option value="Diploma in Dialysis Technology">Diploma in Dialysis Technology</option>
+              <option value="Diploma in Medical Imaging Technology">Diploma in Medical Imaging Technology
+              </option>
+              <option value="Diploma in Anaesthesia">Diploma in Anaesthesia</option>
+              <option value="Diploma in OT Technician">Diploma in OT Technician</option>
+              <option value="Diploma in Nursing Care Assistant">Diploma in Nursing Care Assistant</option>
+              <option value="Diploma in Hear Language and Speech">Diploma in Hear Language and Speech
+              </option>
+              <option value="Diploma in Rural Health Care">Diploma in Rural Health Care</option>
+              <option value="Diploma in Ophthalmic Technology">Diploma in Ophthalmic Technology</option>
+              <option value="Diploma in Dental Hygienist">Diploma in Dental Hygienist</option>
+              <option value="Diploma in Medical Record Technology">Diploma in Medical Record Technology
+              </option>
+              <option value="Diploma in X-Ray Technology">Diploma in X-Ray Technology</option>
+              <option value="MD in Pathology">MD in Pathology</option>
+              <option value="MD in Radiodiagnosis">MD in Radiodiagnosis</option>
+              <option value="MD in Anaesthesia">MD in Anaesthesia</option>
+              <option value="Other">Other</option>
+              </select>
+              </div>
+              </div>
+              </div>
 
-            <!-- CAPTCHA Container -->
-            <!-- <div class="mb-3 captcha-container">
 
-            <div class="d-flex align-items-center mb-2">
+              <!-- Administrative Fields -->
+              <div id="administrative-fields" class="dynamic-fields" style="display: none;">
+              <div class="row mb-3">
+              <!-- Department Selection -->
+              <div class="col-md-6">
+              <label for="department" class="form-label">Department</label>
+              <select id="department" name="department" class="form-select">
+              <option value="" disabled selected>Select Department</option>
+              <option value="Purchasing">Purchasing</option>
+              <option value="Accounts">Accounts</option>
+              <option value="Billing">Billing</option>
+              <option value="Housekeeping">Housekeeping</option>
+              <option value="Laundry">Laundry</option>
+              <option value="Mechanical">Mechanical</option>
+              <option value="Maintenance">Maintenance</option>
+              <option value="Central Supply">Central Supply</option>
+              <option value="Waste Management">Waste Management</option>
+              <option value="Central Sterile Supply">Central Sterile Supply</option>
+              <option value="Medical Record">Medical Record</option>
+              <option value="Personnel">Personnel</option>
+              <option value="TPA">TPA</option>
+              <option value="Ward Boy">Ward Boy</option>
+              <option value="IT">IT</option>
+              <option value="Other">Other</option>
+              </select>
+              </div>
 
-            <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
-            style="max-width: 150px; height: auto; margin-right: 10px;">
+              <!-- Qualification Selection -->
+              <div class="col-md-6">
+              <label for="qualification" class="form-label">Qualification</label>
+              <select id="qualification" name="qualification" class="form-select">
+              <option value="" disabled selected>Select Qualification</option>
+              <option value="10th Pass">10th Pass</option>
+              <option value="12th">12th</option>
+              <option value="Graduation">Graduation</option>
+              <option value="Post Graduation">Post Graduation</option>
+              <option value="Other">Other</option>
+              </select>
+              </div>
+              </div>
+              </div>
 
 
-            <button type="button" class="refresh-captcha btn btn-light"
-            style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
-            </div>
+
+              <p class="hp-form-legend">Personal info</p>
+              <div class="personal-info mb-3 row">
+              <div class="col-md-4">
+
+              <input type="text" name="name" class="form-control" placeholder="Name" required>
+              </div>
+              <div class="col-md-4">
+              <input type="email" name="email" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="col-md-4">
+              <input type="text" name="phone" class="form-control" placeholder="Phone No" required>
+              </div>
+              </div>
+
+              <!-- CAPTCHA Container -->
+              <!-- <div class="mb-3 captcha-container">
+
+              <div class="d-flex align-items-center mb-2">
+
+              <img src="captcha.php" alt="CAPTCHA Image" class="captcha-image"
+              style="max-width: 150px; height: auto; margin-right: 10px;">
 
 
-            <div>
-            <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
-            style="max-width: 100%;">
-            </div>
-            </div> -->
-
-            <!-- reCAPTCHA v3 hidden input -->
-            <input type="hidden" name="g-recaptcha-response" id="jobseeker-recaptcha-response">
+              <button type="button" class="refresh-captcha btn btn-light"
+              style="width: 40px; height: 40px; font-size: 16px; padding: 0; line-height: 0; border-radius: 50%; background-color:aliceblue;">🔄</button>
+              </div>
 
 
-            <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>
-            </form>
+              <div>
+              <input type="text" name="captcha" class="form-control" placeholder="Enter Captcha" required
+              style="max-width: 100%;">
+              </div>
+              </div> -->
+
+              <!-- reCAPTCHA v3 hidden input -->
+              <input type="hidden" name="g-recaptcha-response" id="jobseeker-recaptcha-response">
+
+
+              <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>
+              </form>
 
         <p class="hp-form-note">
           <i class="fa-solid fa-lock" aria-hidden="true"></i>
@@ -373,7 +380,7 @@ $hp_pf2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <script>
     // Captcha refresh, kept from the original markup for the commented-out

@@ -237,7 +237,7 @@ echo json_encode(array(
 
   <?php include "include/process.php"; ?>
 
-  <?php include "include/forms.php"; ?>
+  
 
   <?php include "include/solution.php"; ?>
 

@@ -215,11 +215,6 @@
       });
     });
 
-    // Deep link support: /#find-a-job opens the job seeker tab.
-    if (location.hash === '#find-a-job' || location.hash === '#hp-jobseeker') {
-      var jobTab = document.querySelector('.hp-tab[aria-controls="hp-jobseeker"]');
-      if (jobTab) select(jobTab);
-    }
   }
 
   /* ---------------------------------------------------------------------------
@@ -307,58 +302,6 @@
 
 
   /* ---------------------------------------------------------------------------
-     9. Hero slider. Purpose: explanation. It shows who we place instead of
-        asking the visitor to read four more lines, and it fills the column
-        beside the form card.
-        Crossfade on opacity, 900ms; the slow scale on the active slide is a
-        compositor transform. Pauses on hover, focus and a hidden tab, and
-        holds still entirely under reduced motion (the first slide stays up
-        and the pips still work).
-     ------------------------------------------------------------------------ */
-  function initHeroSlider() {
-    var box = document.querySelector('[data-hero-slider]');
-    if (!box) return;
-
-    var slides = all('[data-hero-slide]', box);
-    var pips = all('[data-hero-pip]', box);
-    if (slides.length < 2) return;
-
-    var i = 0, timer = null, paused = false;
-
-    function show(n) {
-      i = (n + slides.length) % slides.length;
-      slides.forEach(function (s, k) { s.classList.toggle('is-on', k === i); });
-      pips.forEach(function (d, k) { d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
-    }
-    function start() {
-      stop();
-      if (reduced.matches || paused) return;
-      timer = setInterval(function () { show(i + 1); }, 5200);
-    }
-    function stop() { clearInterval(timer); timer = null; }
-
-    pips.forEach(function (d, k) {
-      on(d, 'click', function () { show(k); start(); });
-    });
-    ['mouseenter', 'focusin'].forEach(function (ev) {
-      on(box, ev, function () { paused = true; stop(); });
-    });
-    ['mouseleave', 'focusout'].forEach(function (ev) {
-      on(box, ev, function () { paused = false; start(); });
-    });
-    on(document, 'visibilitychange', function () { document.hidden ? stop() : start(); });
-
-    // Only run while the hero is actually on screen.
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (e) {
-        e[0].isIntersecting ? start() : stop();
-      }, { threshold: 0.2 }).observe(box);
-    } else {
-      start();
-    }
-  }
-
-  /* ---------------------------------------------------------------------------
      10. Hero entrance. Purpose: hierarchy. The hero arrives in reading order
          on load rather than all at once, so the eye lands on the headline
          first. Runs once, 70ms apart, and is skipped under reduced motion.
@@ -381,6 +324,91 @@
     });
   }
 
+
+  /* ---------------------------------------------------------------------------
+     11. Form modal. Purpose: spatial consistency. The hero's two buttons and
+         the header CTA open the same dialog on the matching tab, so the first
+         screen stays clean and the form is one click away.
+
+         Focus moves in on open and returns to the trigger on close, Tab is
+         kept inside the panel, Escape closes, and the page behind is locked.
+     ------------------------------------------------------------------------ */
+  function initModal() {
+    var modal = document.getElementById('hp-formmodal');
+    if (!modal) return;
+
+    var panel = modal.querySelector('.hp-modal__panel');
+    var opener = null;
+    var FOCUSABLE = 'a[href],button:not([disabled]),input:not([disabled]),' +
+                    'select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])';
+
+    function focusable() {
+      return all(FOCUSABLE, panel).filter(function (el) {
+        return el.offsetParent !== null || el === document.activeElement;
+      });
+    }
+
+    function open(trigger, tabId) {
+      opener = trigger || null;
+      modal.hidden = false;
+      // Next frame so the transition has a start value to run from.
+      requestAnimationFrame(function () { modal.classList.add('is-open'); });
+      root.classList.add('hp-modal-open');
+
+      if (tabId) {
+        var tab = document.getElementById(tabId);
+        if (tab) tab.click();
+      }
+      var first = focusable()[0];
+      if (first) first.focus({ preventScroll: true });
+    }
+
+    function close() {
+      modal.classList.remove('is-open');
+      root.classList.remove('hp-modal-open');
+      var done = function () {
+        modal.hidden = true;
+        panel.removeEventListener('transitionend', done);
+      };
+      if (reduced.matches) { done(); }
+      else {
+        panel.addEventListener('transitionend', done);
+        setTimeout(done, 400);   // belt and braces if the event never fires
+      }
+      if (opener) { opener.focus({ preventScroll: true }); opener = null; }
+    }
+
+    all('[data-modal-open]').forEach(function (btn) {
+      on(btn, 'click', function (e) {
+        if (btn.getAttribute('data-modal-open') !== 'hp-formmodal') return;
+        e.preventDefault();
+        open(btn, btn.getAttribute('data-modal-tab'));
+      });
+    });
+
+    all('[data-modal-close]', modal).forEach(function (el) {
+      on(el, 'click', close);
+    });
+
+    on(document, 'keydown', function (e) {
+      if (modal.hidden) return;
+      if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+      if (e.key !== 'Tab') return;
+
+      var items = focusable();
+      if (!items.length) return;
+      var first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      else if (!panel.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+    });
+
+    // Landing on /#hire or /#find-a-job opens the dialog on the right tab.
+    if (location.hash === '#hire' || location.hash === '#find-a-job') {
+      open(null, location.hash === '#find-a-job' ? 'hp-tab-jobseeker' : 'hp-tab-employer');
+    }
+  }
+
   function init() {
     initImageFallback();
     initHeader();
@@ -389,8 +417,8 @@
     initTabs();
     initFaq();
     initQuotes();
-    initHeroSlider();
     initHeroEntrance();
+    initModal();
     initReveal();
   }
 

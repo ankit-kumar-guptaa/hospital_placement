@@ -29,6 +29,15 @@ $hp_candidates = array(
     array('hospital-job-consultants-delhi-ncr-india.php','fa-compass',   'Career Guidance',           'Hospital job consultants across Delhi NCR'),
 );
 
+$hp_places = array(
+    array('recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php', 'Delhi NCR', 'India'),
+    array('placement-Agency-in-mumbai.php',     'Mumbai',     'India'),
+    array('placement-Agency-in-hyderabad.php',  'Hyderabad',  'India'),
+    array('placement-Agency-in-chandigarh.php', 'Chandigarh', 'India'),
+    array('placement-Agency-in-kolkata.php',    'Kolkata',    'India'),
+    array('placement-Agency-in-lucknow.php',    'Lucknow',    'India'),
+);
+
 $hp_hospital_files = array();
 foreach ($hp_hospitals as $s) { $hp_hospital_files[] = $s[0]; }
 $hp_candidate_files = array();
@@ -165,7 +174,8 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
         </span>
       </a>
 
-      <a class="hp-btn hp-btn--action hp-btn--sm" href="<?php echo $hp_p ?: '/'; ?>#hire">Post a Requirement</a>
+      <a class="hp-btn hp-btn--action hp-btn--sm" href="<?php echo $hp_p ?: '/'; ?>#hire"
+         data-modal-open="hp-formmodal" data-modal-tab="hp-tab-employer">Post a Requirement</a>
 
       <button type="button" class="hp-burger" aria-expanded="false"
               aria-controls="hp-drawer" aria-label="Open menu">
@@ -221,7 +231,8 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
   </ul>
 
   <div class="hp-drawer__foot">
-    <a class="hp-btn hp-btn--action hp-btn--block" href="<?php echo $hp_p ?: '/'; ?>#hire">Post a Requirement</a>
+    <a class="hp-btn hp-btn--action hp-btn--block" href="<?php echo $hp_p ?: '/'; ?>#hire"
+       data-modal-open="hp-formmodal" data-modal-tab="hp-tab-employer">Post a Requirement</a>
     <a class="hp-btn hp-btn--ghost hp-btn--block" href="<?php echo $hp_p; ?>jobs.php">Explore Jobs</a>
   </div>
 

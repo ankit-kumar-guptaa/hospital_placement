@@ -34,14 +34,16 @@ $hero_lead  = isset($hero_lead)  ? $hero_lead
       <p class="hp-lead hp-hero__lead hp-rise"><?php echo $hero_lead; ?></p>
 
       <div class="hp-choices hp-rise">
-        <a class="hp-choice hp-choice--primary" href="<?php echo $hp_pp; ?>#hire">
+        <a class="hp-choice hp-choice--primary" href="<?php echo $hp_pp; ?>#hire"
+           data-modal-open="hp-formmodal" data-modal-tab="hp-tab-employer">
           <span class="hp-choice__ico"><i class="fa-solid fa-hospital" aria-hidden="true"></i></span>
           <span class="hp-choice__txt">
             <span class="hp-choice__t">I am Hiring</span>
             <span class="hp-choice__s">For Hospitals</span>
           </span>
         </a>
-        <a class="hp-choice" href="<?php echo $hp_pp; ?>#find-a-job">
+        <a class="hp-choice" href="<?php echo $hp_pp; ?>#find-a-job"
+           data-modal-open="hp-formmodal" data-modal-tab="hp-tab-jobseeker">
           <span class="hp-choice__ico"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></span>
           <span class="hp-choice__txt">
             <span class="hp-choice__t">I am Looking for a Job</span>
@@ -54,3 +56,5 @@ $hero_lead  = isset($hero_lead)  ? $hero_lead
 </section>
 
 <?php include __DIR__ . '/statbar.php'; ?>
+
+<?php include __DIR__ . '/forms.php'; ?>
