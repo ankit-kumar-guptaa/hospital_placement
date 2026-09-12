@@ -1,58 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Placement Consultants and Recruitment Agency in Chandigarh</title>
+<?php include 'include/seo.php'; ?>
 
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10893858085');
-</script>
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-      'value': 1.0,
-      'currency': 'INR',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-    <?php include "include/assets.php"?>
 </head>
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
 
-<?php include "include/slider.php"?>
+<?php include "include/page-hero.php"; ?>
 
-<section style="position: relative; background: url('https://www.deccanchronicle.com/h-upload/2024/01/18/1071450-doctors.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Placement Consultants and Recruitment Agency in Chandigarh</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Placement Consultants and Recruitment Agency in Chandigarh</li>
-            </ol>
-        </nav>
-    </div>
-</section>
 
 <section id="introduction" class="py-5 bg-light">
     <div class="container">
@@ -211,7 +168,7 @@ function gtag_report_conversion(url) {
                         <div class="icon mb-3 text-primary">
                             <i class="bi bi-lightning-charge-fill fs-1"></i>
                         </div>
-                        <h4 class="card-title">Proven Expertise</h4>
+                        <h3 class="card-title">Proven Expertise</h3>
                         <p class="card-text">With over a decade of experience, we’ve mastered the art of healthcare recruitment, ensuring your staffing needs are met with precision and efficiency.</p>
                     </div>
                 </div>

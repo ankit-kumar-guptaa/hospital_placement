@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/pages.php';
 /**
  * slider.php - the hero band, rebuilt to the brand deck.
  *
@@ -22,7 +23,8 @@ $hero_lead  = isset($hero_lead)  ? $hero_lead
 <section class="hp-hero" aria-labelledby="hero-title">
 
   <div class="hp-hero__media" aria-hidden="true">
-    <img src="assets/img/hero.png"
+    <img src="/assets/img/hero.png"
+         data-fallback="<?php echo hp_img_fallback('hero_team', 1800); ?>"
          alt="" width="1800" height="1013" fetchpriority="high" decoding="async">
   </div>
 

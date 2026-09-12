@@ -1,62 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+<?php include 'include/seo.php'; ?>
 
      <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10893858085');
-</script>
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-      'value': 1.0,
-      'currency': 'INR',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-    <?php include "include/assets.php"?>
         <!-- Bootstrap CSS -->
 
 </head>
-<body>
+<body class="hp-body">
 
     
 
 
 <?php include "include/header.php"?>
 
-<section style="position: relative; background: url('https://www.deccanchronicle.com/h-upload/2024/01/18/1071450-doctors.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Contact Us</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Contact Us</li>
-            </ol>
-        </nav>
-    </div>
-</section>
+<?php include "include/page-hero.php"; ?>
+
 
 
 
@@ -144,7 +104,7 @@ function gtag_report_conversion(url) {
                 <!-- Branch Card -->
                 <div class="branch-card">
                     <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Kashmir</h5>
+                    <h4 style="font-weight: bold; color: #333;">Kashmir</h4>
                     <p style="color: #555;">Srinagar - 199001</p>
                 </div>
                 <div class="branch-card">
@@ -236,9 +196,9 @@ function gtag_report_conversion(url) {
                     
                       <!-- New Delhi Office -->
                     <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
+                        <h4 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
                             <i class="fas fa-map-pin" style="margin-right: 8px;"></i>New Delhi Office
-                        </h5>
+                        </h4>
                         <p style="color: #555; font-size: 14px; margin: 5px 0;">A-83, Okhla Phase II</p>
                         <p style="color: #555; font-size: 14px; margin: 5px 0;">New Delhi - 110020</p>
                         <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">

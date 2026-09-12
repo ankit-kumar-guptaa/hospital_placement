@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/pages.php';
 /**
  * specializations.php - the five healthcare categories from the brand deck.
  * Replaces the plain-text service list the deck flags as "generic".
@@ -28,7 +29,7 @@ $hp_specs = array(
     <ul class="hp-specs" style="margin-top:44px;">
       <?php foreach ($hp_specs as $sp): ?>
       <li class="hp-rise">
-        <a class="hp-spec" href="<?php echo $hp_ps . $sp[0]; ?>">
+        <a class="hp-spec" href="<?php echo hp_url($sp[0]); ?>">
           <span class="hp-spec__ico hp-spec__ico--<?php echo $sp[2]; ?>">
             <i class="fa-solid <?php echo $sp[1]; ?>" aria-hidden="true"></i>
           </span>

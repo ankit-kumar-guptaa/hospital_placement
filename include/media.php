@@ -117,6 +117,62 @@ function hp_media($key) {
             'alt'   => 'Operating theatre team preparing for a scheduled surgery',
         ),
 
+        /* --- per-page heroes -------------------------------------------- */
+        'contact_hero' => array(
+            'id'    => 'photo-1587560699334-cc4ff634909a',
+            'alts'  => array('photo-1551190822-a9333d879b1f'),
+            'local' => 'assets/img/hero.png',
+            'alt'   => 'Recruitment consultant on a call with a hospital',
+        ),
+        'jobs_hero' => array(
+            'id'    => 'photo-1576091160399-112ba8d25d1d',
+            'alts'  => array('photo-1594824476967-48c8b964273f'),
+            'local' => 'assets/img/home2.jpg',
+            'alt'   => 'Nurse reviewing notes on a hospital ward',
+        ),
+        'svc_doctor' => array(
+            'id'    => 'photo-1622253692010-333f2da6031d',
+            'alts'  => array('photo-1612349317150-e413f6a5b16d'),
+            'local' => 'assets/img/home1.jpg',
+            'alt'   => 'Hospital consultant doctor on a ward round',
+        ),
+        'svc_nurse' => array(
+            'id'    => 'photo-1580281658626-ee379f3cce93',
+            'alts'  => array('photo-1576091160399-112ba8d25d1d'),
+            'local' => 'assets/img/home2.jpg',
+            'alt'   => 'Critical care nurse at a hospital bedside',
+        ),
+        'svc_para' => array(
+            'id'    => 'photo-1579154204601-01588f351e67',
+            'alts'  => array('photo-1582719471384-894fbb16e074'),
+            'local' => 'assets/img/home1.jpg',
+            'alt'   => 'Laboratory technician running hospital diagnostics',
+        ),
+        'svc_specialty' => array(
+            'id'    => 'photo-1551190822-a9333d879b1f',
+            'alts'  => array('photo-1584982751601-97dcc096659c'),
+            'local' => 'assets/img/home2.jpg',
+            'alt'   => 'Surgical team in an operating theatre',
+        ),
+        'svc_permanent' => array(
+            'id'    => 'photo-1584982751601-97dcc096659c',
+            'alts'  => array('photo-1631217868264-e5b90bb7e133'),
+            'local' => 'assets/img/home1.jpg',
+            'alt'   => 'Hospital panel interviewing a shortlisted candidate',
+        ),
+        'svc_temp' => array(
+            'id'    => 'photo-1519494026892-80bbd2d6fd0d',
+            'alts'  => array('photo-1516549655169-df83a0774514'),
+            'local' => 'assets/img/home2.jpg',
+            'alt'   => 'Hospital corridor during a shift changeover',
+        ),
+        'svc_hospitals' => array(
+            'id'    => 'photo-1516549655169-df83a0774514',
+            'alts'  => array('photo-1519494026892-80bbd2d6fd0d'),
+            'local' => 'assets/img/hero.png',
+            'alt'   => 'Hospital department team at work',
+        ),
+
         /* --- locations: India cities already ship with the project ----- */
         'city_delhi'      => array('id' => '', 'local' => 'assets/img/delhi-ncr.jpg',   'alt' => 'Hospital recruitment agency serving Delhi NCR hospitals'),
         'city_mumbai'     => array('id' => '', 'local' => 'assets/img/mumbai.jpg',      'alt' => 'Medical staffing consultants for Mumbai hospitals and clinics'),

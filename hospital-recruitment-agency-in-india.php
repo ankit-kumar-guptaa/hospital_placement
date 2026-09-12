@@ -1,61 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HospitalPlacement.com is a leading hospital recruitment agency in India, providing healthcare staffing solutions for hospitals, clinics, and medical facilities across the country.">
-    <meta name="keywords" content="hospital recruitment agency in India, healthcare staffing solutions, medical recruitment services, hospital staffing agency, healthcare recruitment firm India">
-    <meta name="author" content="HospitalPlacement.com">
-    <title>Hospital Recruitment Agency in India | HospitalPlacement.com</title>
-    <link rel="canonical" href="https://www.hospitalplacement.com/hospital-recruitment-agency-in-india" />
-    <?php include "include/assets.php"?>
+<?php include 'include/seo.php'; ?>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-10893858085');
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-          'value': 1.0,
-          'currency': 'INR',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
 </head>
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
 
-<?php include "include/slider.php"?>
+<?php include "include/page-hero.php"; ?>
 
-<section style="position: relative; background: url('https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Hospital Recruitment Agency in India</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Hospital Recruitment Agency in India</li>
-            </ol>
-        </nav>
-    </div>
-</section>
 
 <section id="introduction" class="py-5 bg-light">
     <div class="container">
@@ -103,7 +57,7 @@
                         <div class="text-primary mb-3">
                             <i class="bi bi-search fs-1"></i>
                         </div>
-                        <h4 class="card-title">Specialized Healthcare Focus</h4>
+                        <h3 class="card-title">Specialized Healthcare Focus</h3>
                         <p class="card-text">Unlike general recruitment agencies, we exclusively focus on healthcare staffing, giving us unparalleled expertise in the medical recruitment field across India.</p>
                     </div>
                 </div>
@@ -179,7 +133,7 @@
                     <div class="timeline-item d-flex" data-aos="fade-up">
                         <div class="timeline-badge bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; z-index: 1;">1</div>
                         <div class="timeline-content ms-4 pb-5">
-                            <h4 class="mb-2">Understanding Your Requirements</h4>
+                            <h3 class="mb-2">Understanding Your Requirements</h3>
                             <p>We begin by thoroughly understanding your specific staffing needs, organizational culture, and expectations.</p>
                         </div>
                     </div>
@@ -244,7 +198,7 @@
                         <p class="card-text">"HospitalPlacement.com has been instrumental in helping us build our medical team. Their understanding of our requirements and ability to find qualified candidates has been exceptional."</p>
                         <div class="d-flex align-items-center mt-3">
                             <div>
-                                <h5 class="mb-0">Dr. Rajesh Kumar</h5>
+                                <h3 class="mb-0">Dr. Rajesh Kumar</h3>
                                 <p class="text-muted mb-0">Medical Director, Apollo Hospitals, Delhi</p>
                             </div>
                         </div>
@@ -264,7 +218,7 @@
                         <p class="card-text">"We've been working with HospitalPlacement.com for over three years now, and they've consistently provided us with high-quality healthcare professionals. Their service is prompt and reliable."</p>
                         <div class="d-flex align-items-center mt-3">
                             <div>
-                                <h5 class="mb-0">Ms. Priya Sharma</h5>
+                                <h4 class="mb-0">Ms. Priya Sharma</h4>
                                 <p class="text-muted mb-0">HR Manager, Fortis Healthcare, Mumbai</p>
                             </div>
                         </div>

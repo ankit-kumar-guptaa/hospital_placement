@@ -1,61 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HospitalPlacement.com offers specialized doctor placement services across India, connecting qualified physicians with leading hospitals and healthcare facilities.">
-    <meta name="keywords" content="doctor placement services, physician recruitment, medical doctor jobs, healthcare recruitment, doctor staffing agency India">
-    <meta name="author" content="HospitalPlacement.com">
-    <title>Doctor Placement Services | Physician Recruitment | HospitalPlacement.com</title>
-    <link rel="canonical" href="https://www.hospitalplacement.com/doctor-placement-services" />
-    <?php include "include/assets.php"?>
+<?php include 'include/seo.php'; ?>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-10893858085');
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-          'value': 1.0,
-          'currency': 'INR',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
 </head>
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
 
-<?php include "include/slider.php"?>
+<?php include "include/page-hero.php"; ?>
 
-<section style="position: relative; background: url('https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Doctor Placement Services</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Doctor Placement Services</li>
-            </ol>
-        </nav>
-    </div>
-</section>
 
 <section id="introduction" class="py-5 bg-light">
     <div class="container">
@@ -98,7 +52,7 @@
                         <div class="text-primary mb-3">
                             <i class="bi bi-briefcase-medical fs-1"></i>
                         </div>
-                        <h4 class="card-title">Permanent Doctor Placement</h4>
+                        <h3 class="card-title">Permanent Doctor Placement</h3>
                         <p class="card-text">We help healthcare facilities find and hire qualified doctors for permanent positions across all medical specialties. Our thorough screening process ensures that you receive candidates who meet your specific requirements and can contribute to your organization's success.</p>
                         <ul class="list-unstyled mt-3">
                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Comprehensive candidate assessment</li>
@@ -176,7 +130,7 @@
                     <div class="icon mb-3 text-primary">
                         <i class="bi bi-heart-pulse fs-1"></i>
                     </div>
-                    <h5>Cardiology</h5>
+                    <h3>Cardiology</h3>
                 </div>
             </div>
             <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
@@ -184,7 +138,7 @@
                     <div class="icon mb-3 text-primary">
                         <i class="bi bi-lungs fs-1"></i>
                     </div>
-                    <h5>Pulmonology</h5>
+                    <h4>Pulmonology</h4>
                 </div>
             </div>
             <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
@@ -246,7 +200,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <img src="https://img.freepik.com/free-photo/doctor-with-his-arms-crossed-white-background_1368-5790.jpg" alt="Doctor Placement Benefits" class="img-fluid rounded shadow">
+                <img src="<?php echo hp_img('svc_doctor', 900); ?>" data-fallback="<?php echo hp_img_fallback('svc_doctor', 900); ?>" loading="lazy" decoding="async" alt="Doctor Placement Benefits" class="img-fluid rounded shadow">
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <h2 class="section-heading">Benefits of Our Doctor Placement Services</h2>
@@ -255,14 +209,14 @@
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Time and Cost Efficiency</h5>
+                            <h3>Time and Cost Efficiency</h3>
                             <p>Our streamlined recruitment process saves you valuable time and resources that would otherwise be spent on advertising, screening, and interviewing candidates.</p>
                         </div>
                     </li>
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Quality Assurance</h5>
+                            <h4>Quality Assurance</h4>
                             <p>All our doctor candidates undergo thorough verification of qualifications, experience, and professional standing to ensure you receive only the highest quality professionals.</p>
                         </div>
                     </li>
@@ -296,6 +250,8 @@
         </div>
     </div>
 </section>
+
+<?php include "include/page-faq.php"; ?>
 
 <?php include "include/footer.php"?>
 

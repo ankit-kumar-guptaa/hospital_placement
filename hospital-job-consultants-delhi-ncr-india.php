@@ -1,61 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HospitalPlacement.com offers specialized hospital job consultancy services in Delhi, NCR, and across India, connecting healthcare professionals with leading medical facilities.">
-    <meta name="keywords" content="hospital job consultants Delhi, medical recruitment NCR, healthcare jobs India, hospital staffing consultants, medical career consultancy">
-    <meta name="author" content="HospitalPlacement.com">
-    <title>Hospital Job Consultants in Delhi/NCR/India | Healthcare Recruitment | HospitalPlacement.com</title>
-    <link rel="canonical" href="https://www.hospitalplacement.com/hospital-job-consultants-delhi-ncr-india" />
-    <?php include "include/assets.php"?>
+<?php include 'include/seo.php'; ?>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-10893858085');
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-          'value': 1.0,
-          'currency': 'INR',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
 </head>
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
 
-<?php include "include/slider.php"?>
+<?php include "include/page-hero.php"; ?>
 
-<section style="position: relative; background: url('https://img.freepik.com/free-photo/delhi-india-skyline_1127-3021.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Hospital Job Consultants in Delhi/NCR/India</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Hospital Job Consultants in Delhi/NCR/India</li>
-            </ol>
-        </nav>
-    </div>
-</section>
 
 <section id="introduction" class="py-5 bg-light">
     <div class="container">
@@ -100,7 +54,7 @@
                         <div class="text-primary mb-3">
                             <i class="bi bi-person-badge fs-1"></i>
                         </div>
-                        <h4 class="card-title">Medical Professional Placement</h4>
+                        <h3 class="card-title">Medical Professional Placement</h3>
                         <p class="card-text">We connect qualified doctors, specialists, and medical officers with leading hospitals and healthcare facilities in Delhi, NCR, and across India. Our extensive network includes opportunities in both public and private healthcare sectors.</p>
                         <ul class="list-unstyled mt-3">
                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Doctor Placement</li>
@@ -204,7 +158,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <img src="https://img.freepik.com/free-photo/india-gate-new-delhi-india_1232-4449.jpg" alt="Delhi NCR Healthcare Market" class="img-fluid rounded shadow">
+                <img src="<?php echo hp_img('city_consultants', 900); ?>" data-fallback="<?php echo hp_img_fallback('city_consultants', 900); ?>" loading="lazy" decoding="async" alt="Delhi NCR Healthcare Market" class="img-fluid rounded shadow">
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <h2 class="section-heading">Our Delhi/NCR Expertise</h2>
@@ -213,14 +167,14 @@
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Local Market Knowledge</h5>
+                            <h3>Local Market Knowledge</h3>
                             <p>Our deep understanding of the Delhi/NCR healthcare market allows us to provide insights into salary benchmarks, career opportunities, and hiring trends specific to this region.</p>
                         </div>
                     </li>
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Extensive Network</h5>
+                            <h4>Extensive Network</h4>
                             <p>We maintain strong relationships with leading hospitals, medical centers, and healthcare facilities throughout Delhi, Gurgaon, Noida, Faridabad, and Ghaziabad, providing access to exclusive opportunities.</p>
                         </div>
                     </li>
@@ -256,7 +210,7 @@
                     <div class="icon mb-3 text-primary">
                         <i class="bi bi-geo-alt fs-1"></i>
                     </div>
-                    <h4>North India</h4>
+                    <h3>North India</h3>
                     <p>Serving healthcare facilities in Punjab, Haryana, Uttar Pradesh, Uttarakhand, Himachal Pradesh, and Jammu & Kashmir.</p>
                 </div>
             </div>
@@ -304,7 +258,7 @@
                         <i class="bi bi-search fs-1"></i>
                     </div>
                     <div>
-                        <h4>Access to Exclusive Opportunities</h4>
+                        <h3>Access to Exclusive Opportunities</h3>
                         <p>Gain access to unadvertised job openings in leading hospitals and healthcare facilities across Delhi, NCR, and India through our extensive network and industry connections.</p>
                     </div>
                 </div>
@@ -359,7 +313,7 @@
                         <i class="bi bi-people fs-1"></i>
                     </div>
                     <div>
-                        <h4>Access to Qualified Candidates</h4>
+                        <h3>Access to Qualified Candidates</h3>
                         <p>Tap into our extensive database of pre-screened healthcare professionals across various specialties and experience levels to find the right talent for your organization.</p>
                     </div>
                 </div>

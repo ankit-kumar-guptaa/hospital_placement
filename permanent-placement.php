@@ -1,59 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Permanent Doctor Placement Services</title>
+<?php include 'include/seo.php'; ?>
 
-
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10893858085');
-</script>
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-      'value': 1.0,
-      'currency': 'INR',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-    <?php include "include/assets.php"?>
 </head>
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
 
+<?php include "include/page-hero.php"; ?>
 
 
-<section style="position: relative; background: url('https://www.deccanchronicle.com/h-upload/2024/01/18/1071450-doctors.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Permanent Doctor Placement Services</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Permanent Doctor Placement Services</li>
-            </ol>
-        </nav>
-    </div>
-</section>
+
 
 
 
@@ -62,12 +20,12 @@ function gtag_report_conversion(url) {
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8">
-                <h1 class="display-4 fw-bold">Permanent Doctor Placement Services</h1>
+                <h2 class="display-4 fw-bold">Permanent Doctor Placement Services</h2>
                 <p class="lead">HospitalPlacement.com specializes in providing comprehensive permanent placement solutions tailored to the unique needs of hospitals, nursing homes, and healthcare facilities. Our experienced team of healthcare recruiters is dedicated to connecting healthcare professionals with rewarding permanent positions that align with their skills, qualifications, and career aspirations.</p>
                 <a href="index.php#service" class="btn btn-light btn-lg mt-3">Explore Our Services</a>
             </div>
             <div class="col-lg-4">
-                <img src="https://media.istockphoto.com/id/178870640/photo/indian-doctors.jpg?s=612x612&w=0&k=20&c=p4ARJUVd9i_SFA7oCTM2lSparjeD_of-fVU2g1vdWHE=" alt="Healthcare Professionals" class="img-fluid rounded shadow" data-aos="zoom-in">
+                <img src="<?php echo hp_img('svc_permanent', 900); ?>" data-fallback="<?php echo hp_img_fallback('svc_permanent', 900); ?>" loading="lazy" decoding="async" alt="Healthcare Professionals" class="img-fluid rounded shadow" data-aos="zoom-in">
             </div>
         </div>
     </div>
@@ -195,5 +153,7 @@ function gtag_report_conversion(url) {
 </section>
 
 
+
+<?php include "include/page-faq.php"; ?>
 
 <?php include "include/footer.php"?>

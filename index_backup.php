@@ -70,7 +70,7 @@ function gtag_report_conversion(url) {
     <?php include "include/header.php"?>
   
 
-    <?php include "include/slider.php"?>
+    <?php include "include/page-hero.php"; ?>
 
 
 

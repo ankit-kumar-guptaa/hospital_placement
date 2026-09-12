@@ -1,61 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HospitalPlacement.com offers comprehensive healthcare recruitment solutions for hospitals across India, connecting facilities with qualified medical professionals.">
-    <meta name="keywords" content="healthcare recruitment, hospital staffing, medical recruitment agency, healthcare hiring, hospital HR solutions">
-    <meta name="author" content="HospitalPlacement.com">
-    <title>Healthcare Recruitment for Hospitals | Medical Staffing Solutions | HospitalPlacement.com</title>
-    <link rel="canonical" href="https://www.hospitalplacement.com/healthcare-recruitment-for-hospitals" />
-    <?php include "include/assets.php"?>
+<?php include 'include/seo.php'; ?>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-10893858085');
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-          'value': 1.0,
-          'currency': 'INR',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
 </head>
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
 
-<?php include "include/slider.php"?>
+<?php include "include/page-hero.php"; ?>
 
-<section style="position: relative; background: url('https://img.freepik.com/free-photo/team-young-specialist-doctors-standing-corridor-hospital_1303-21199.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Healthcare Recruitment for Hospitals</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Healthcare Recruitment for Hospitals</li>
-            </ol>
-        </nav>
-    </div>
-</section>
 
 <section id="introduction" class="py-5 bg-light">
     <div class="container">
@@ -99,7 +53,7 @@
                         <div class="text-primary mb-3">
                             <i class="bi bi-person-badge fs-1"></i>
                         </div>
-                        <h4 class="card-title">Medical Staff Recruitment</h4>
+                        <h3 class="card-title">Medical Staff Recruitment</h3>
                         <p class="card-text">We specialize in recruiting qualified doctors, specialists, and medical officers across all disciplines. Our extensive network includes experienced physicians, surgeons, and specialists ready to join your hospital team.</p>
                         <ul class="list-unstyled mt-3">
                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Specialists & Consultants</li>
@@ -211,7 +165,7 @@
                     <div class="timeline-item" data-aos="fade-up">
                         <div class="timeline-number">1</div>
                         <div class="timeline-content">
-                            <h4>Needs Assessment</h4>
+                            <h3>Needs Assessment</h3>
                             <p>We begin by understanding your specific staffing requirements, organizational culture, and long-term objectives. This includes detailed discussions with your HR team and department heads to identify the ideal candidate profile.</p>
                         </div>
                     </div>
@@ -260,7 +214,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <img src="https://img.freepik.com/free-photo/group-doctors-standing-hospital-corridor_107420-84766.jpg" alt="Healthcare Recruitment Team" class="img-fluid rounded shadow">
+                <img src="<?php echo hp_img('svc_hospitals', 900); ?>" data-fallback="<?php echo hp_img_fallback('svc_hospitals', 900); ?>" loading="lazy" decoding="async" alt="Healthcare Recruitment Team" class="img-fluid rounded shadow">
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <h2 class="section-heading">Why Choose HospitalPlacement.com</h2>
@@ -269,14 +223,14 @@
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Healthcare Industry Expertise</h5>
+                            <h3>Healthcare Industry Expertise</h3>
                             <p>Our team consists of recruitment specialists with deep knowledge of the healthcare sector and its unique staffing challenges.</p>
                         </div>
                     </li>
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Extensive Candidate Network</h5>
+                            <h4>Extensive Candidate Network</h4>
                             <p>We maintain a vast database of pre-screened healthcare professionals across all specialties and experience levels.</p>
                         </div>
                     </li>
@@ -320,7 +274,7 @@
                         <p class="card-text">"HospitalPlacement.com has been instrumental in helping us build our medical team. Their understanding of our requirements and ability to find qualified candidates has significantly reduced our time-to-hire."</p>
                         <div class="d-flex align-items-center mt-4">
                             <div>
-                                <h5 class="mb-0">Dr. Rajesh Kumar</h5>
+                                <h3 class="mb-0">Dr. Rajesh Kumar</h3>
                                 <p class="text-muted mb-0">Medical Director, Apollo Hospital</p>
                             </div>
                         </div>
@@ -340,7 +294,7 @@
                         <p class="card-text">"We've been working with HospitalPlacement.com for our nursing staff requirements, and they consistently deliver high-quality candidates who align with our values and care standards."</p>
                         <div class="d-flex align-items-center mt-4">
                             <div>
-                                <h5 class="mb-0">Ms. Priya Sharma</h5>
+                                <h4 class="mb-0">Ms. Priya Sharma</h4>
                                 <p class="text-muted mb-0">Nursing Superintendent, Max Healthcare</p>
                             </div>
                         </div>
@@ -381,6 +335,8 @@
         </div>
     </div>
 </section>
+
+<?php include "include/page-faq.php"; ?>
 
 <?php include "include/footer.php"?>
 

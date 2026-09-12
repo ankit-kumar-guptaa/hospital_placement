@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/pages.php';
 /**
  * faq.php - questions we are actually asked, plus the FAQPage structured
  * data generated from the same array, so the markup and the schema can
@@ -63,7 +64,7 @@ $hp_faq = array(
 
     <p class="hp-small hp-rise" style="text-align:center; margin-top:34px;">
       Something not covered here?
-      <a class="hp-link" href="<?php echo $hp_p4; ?>contact.php" style="display:inline-flex; vertical-align:baseline;">Ask our team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a class="hp-link" href="<?php echo hp_url('contact.php'); ?>" style="display:inline-flex; vertical-align:baseline;">Ask our team <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
     </p>
   </div>
 </section>

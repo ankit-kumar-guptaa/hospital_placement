@@ -1,33 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
-    <!-- Basic Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- SEO Meta Tags -->
-    <title>Hospital Placement Form - Join Our Healthcare Team</title>
-    <meta name="description" content="Apply for hospital placements. Submit your details and CV for roles like doctors, nurses, lab technicians, and more.">
-    <meta name="keywords" content="hospital placement, healthcare jobs, nursing jobs, doctor jobs, lab technician jobs, hospital recruitment">
-    <meta name="author" content="Your Company Name">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Hospital Placement Form - Join Our Healthcare Team">
-    <meta property="og:description" content="Apply for hospital placements. Submit your details and CV for roles like doctors, nurses, lab technicians, and more.">
-    <meta property="og:image" content="https://yourwebsite.com/images/hospital-placement-og-image.jpg">
-    <meta property="og:url" content="https://yourwebsite.com/hospital-placement-form">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hospital Placement Form - Join Our Healthcare Team">
-    <meta name="twitter:description" content="Apply for hospital placements. Submit your details and CV for roles like doctors, nurses, lab technicians, and more.">
-    <meta name="twitter:image" content="https://yourwebsite.com/images/hospital-placement-twitter-card.jpg">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourwebsite.com/hospital-placement-form">
+<?php include 'include/seo.php'; ?>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -166,36 +141,13 @@
 
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10893858085');
-</script>
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-      'value': 1.0,
-      'currency': 'INR',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
 </head>
 
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
+
+<?php include "include/page-hero.php"; ?>
     <div class="container">
         <h2><i class="fas fa-hospital"></i> Hospital Placement Application Form</h2>
         <form action="process_form.php" method="POST" enctype="multipart/form-data">
@@ -311,8 +263,4 @@ function gtag_report_conversion(url) {
         });
     </script>
 
-    <!-- Header, drawer and reveal behaviour (this page does not include footer.php) -->
-    <script src="/assets/js/theme.js" defer></script>
-</body>
-
-</html>
+<?php include "include/footer.php"; ?>

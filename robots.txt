@@ -4,6 +4,7 @@ Allow: /
 # Admin and server-side endpoints carry no content for search engines
 Disallow: /admin/
 Disallow: /include/
+Disallow: /scripts/
 Disallow: /PHPMailer/
 Disallow: /uploads/
 Disallow: /captcha.php
@@ -15,4 +16,4 @@ Disallow: /save_country.php
 Disallow: /visitor_tracking.php
 Disallow: /thankyou.php
 
-Sitemap: https://hospitalplacement.com/sitemap.xml
+Sitemap: https://www.hospitalplacement.com/sitemap.xml

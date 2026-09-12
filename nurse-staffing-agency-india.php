@@ -1,61 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HospitalPlacement.com is a leading nurse staffing agency in India, providing qualified nursing professionals to hospitals and healthcare facilities nationwide.">
-    <meta name="keywords" content="nurse staffing agency India, nursing recruitment, hire nurses, nursing jobs, healthcare staffing">
-    <meta name="author" content="HospitalPlacement.com">
-    <title>Nurse Staffing Agency India | Nursing Recruitment | HospitalPlacement.com</title>
-    <link rel="canonical" href="https://www.hospitalplacement.com/nurse-staffing-agency-india" />
-    <?php include "include/assets.php"?>
+<?php include 'include/seo.php'; ?>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-10893858085');
-    </script>
-    <script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-          'value': 1.0,
-          'currency': 'INR',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
 </head>
-<body>
+<body class="hp-body">
 
 <?php include "include/header.php"?>
 
-<?php include "include/slider.php"?>
+<?php include "include/page-hero.php"; ?>
 
-<section style="position: relative; background: url('https://img.freepik.com/free-photo/team-nurses-standing-hospital-corridor_107420-84766.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">Nurse Staffing Agency India</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">Nurse Staffing Agency India</li>
-            </ol>
-        </nav>
-    </div>
-</section>
 
 <section id="introduction" class="py-5 bg-light">
     <div class="container">
@@ -100,7 +54,7 @@
                         <div class="text-primary mb-3">
                             <i class="bi bi-person-badge fs-1"></i>
                         </div>
-                        <h4 class="card-title">Permanent Nurse Placement</h4>
+                        <h3 class="card-title">Permanent Nurse Placement</h3>
                         <p class="card-text">We help healthcare facilities find and hire qualified nursing professionals for permanent positions. Our thorough screening process ensures that you receive candidates who meet your specific requirements and can contribute to your organization's success.</p>
                         <ul class="list-unstyled mt-3">
                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Staff Nurses</li>
@@ -212,7 +166,7 @@
                     <div class="icon mb-3 text-primary">
                         <i class="bi bi-heart-pulse fs-1"></i>
                     </div>
-                    <h5>Critical Care Nursing</h5>
+                    <h3>Critical Care Nursing</h3>
                 </div>
             </div>
             <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
@@ -220,7 +174,7 @@
                     <div class="icon mb-3 text-primary">
                         <i class="bi bi-bandaid fs-1"></i>
                     </div>
-                    <h5>Surgical Nursing</h5>
+                    <h4>Surgical Nursing</h4>
                 </div>
             </div>
             <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
@@ -290,7 +244,7 @@
                     <div class="timeline-item" data-aos="fade-up">
                         <div class="timeline-number">1</div>
                         <div class="timeline-content">
-                            <h4>Understanding Your Requirements</h4>
+                            <h3>Understanding Your Requirements</h3>
                             <p>We begin by understanding your specific nursing staffing needs, including required qualifications, experience levels, specialized skills, shift patterns, and cultural fit considerations.</p>
                         </div>
                     </div>
@@ -339,7 +293,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <img src="https://img.freepik.com/free-photo/medium-shot-nurses-hospital_23-2149280275.jpg" alt="Nurse Staffing Benefits" class="img-fluid rounded shadow">
+                <img src="<?php echo hp_img('svc_nurse', 900); ?>" data-fallback="<?php echo hp_img_fallback('svc_nurse', 900); ?>" loading="lazy" decoding="async" alt="Nurse Staffing Benefits" class="img-fluid rounded shadow">
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <h2 class="section-heading">Why Choose HospitalPlacement.com</h2>
@@ -348,14 +302,14 @@
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Nursing Expertise</h5>
+                            <h3>Nursing Expertise</h3>
                             <p>Our team includes recruitment specialists with nursing backgrounds who understand the unique requirements and challenges of healthcare staffing.</p>
                         </div>
                     </li>
                     <li class="d-flex align-items-start mb-3">
                         <span class="text-primary me-2"><i class="bi bi-check-circle-fill"></i></span>
                         <div>
-                            <h5>Extensive Nurse Network</h5>
+                            <h4>Extensive Nurse Network</h4>
                             <p>We maintain a vast database of pre-screened nursing professionals across all specialties and experience levels throughout India.</p>
                         </div>
                     </li>
@@ -389,6 +343,8 @@
         </div>
     </div>
 </section>
+
+<?php include "include/page-faq.php"; ?>
 
 <?php include "include/footer.php"?>
 

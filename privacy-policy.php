@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
-    <?php include "include/assets.php"; ?>
+<?php include 'include/seo.php'; ?>
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
@@ -26,12 +24,14 @@
         }
     </style>
 </head>
-<body>
+<body class="hp-body">
     <?php include "include/header.php"; ?>
+
+<?php include "include/page-hero.php"; ?>
 
     <div class="container mt-5 mb-5">
         <div class="card p-4">
-            <h1 class="text-center font-weight-bold mb-4" data-aos="fade-up">Privacy Policy</h1>
+            <h2 class="text-center font-weight-bold mb-4" data-aos="fade-up">Privacy Policy</h2>
             <p class="text-muted text-center mb-5" data-aos="fade-up" data-aos-delay="100">Last Updated: February 27, 2025</p>
 
             <section class="privacy-section" data-aos="fade-up" data-aos-delay="200">

@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/pages.php';
 // service.php - the two audiences, side by side. Dual panel layout.
 $hp_p2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 ?>
@@ -22,8 +23,8 @@ $hp_p2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> One named consultant from brief to joining date</li>
         </ul>
         <div class="hp-panel__foot">
-          <a class="hp-btn hp-btn--action" href="<?php echo $hp_p2; ?>contact.php">Hire staff</a>
-          <a class="hp-btn hp-btn--onDark" href="<?php echo $hp_p2; ?>healthcare-recruitment-for-hospitals.php">How it works</a>
+          <a class="hp-btn hp-btn--action" href="<?php echo hp_url('contact.php'); ?>">Hire staff</a>
+          <a class="hp-btn hp-btn--onDark" href="<?php echo hp_url('healthcare-recruitment-for-hospitals.php'); ?>">How it works</a>
         </div>
       </article>
 
@@ -38,8 +39,8 @@ $hp_p2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Your CV is never sent to a hospital without your go ahead</li>
         </ul>
         <div class="hp-panel__foot">
-          <a class="hp-btn" href="<?php echo $hp_p2; ?>jobs.php">Browse jobs</a>
-          <a class="hp-btn hp-btn--ghost" href="<?php echo ($hp_p2 ?: '/'); ?>#find-a-job">Register your CV</a>
+          <a class="hp-btn" href="<?php echo hp_url('jobs.php'); ?>">Browse jobs</a>
+          <a class="hp-btn hp-btn--ghost" href="/#find-a-job">Register your CV</a>
         </div>
       </article>
 

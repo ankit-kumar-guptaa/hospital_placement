@@ -1,66 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - HospitalPlacement.com"></title>
-    <meta name="description" content="Learn more about our hospital, our mission, and the services we offer.">
-    <meta name="keywords" content="hospital, healthcare, medical services, about us">
-    <meta name="author" content="HospitalPlacement.com">
+<?php include 'include/seo.php'; ?>
 
      <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10893858085');
-</script>
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-      'value': 1.0,
-      'currency': 'INR',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-    
-    <?php include "include/assets.php"?>
-       
 </head>
-<body>
+<body class="hp-body">
 
     
 
 <?php include "include/header.php"?>
 
+<?php include "include/page-hero.php"; ?>
 
 
-<section style="position: relative; background: url('https://www.deccanchronicle.com/h-upload/2024/01/18/1071450-doctors.jpg') no-repeat center center/cover; padding: 80px 0;">
-    <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);"></div>
-    <div class="container position-relative" data-aos="fade-down">
-        <h1 style="color: #fff; font-weight: bold; font-size: 36px; text-align: center;">About Us</h1>
-        <nav aria-label="breadcrumb" style="margin-top: 20px;">
-            <ol class="breadcrumb justify-content-center" style="background-color: transparent; padding: 0; margin: 0;">
-                <li class="breadcrumb-item">
-                    <a href="index.php" style="text-decoration: none; color: #ffffffcc; font-size: 18px;">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #ffffff; font-size: 18px;">About Us</li>
-            </ol>
-        </nav>
-    </div>
-</section>
+
 
 
 
@@ -70,7 +25,7 @@ function gtag_report_conversion(url) {
 
 <section class="welcome-section">
     <div class="container text-center" data-aos="fade-up">
-        <h1>Welcome to HospitalPlacement.com</h1>
+        <h2>Welcome to HospitalPlacement.com</h2>
         <p>Connecting Healthcare Talent with Leading Organizations Since 2010</p>
     </div>
 </section>
@@ -130,7 +85,7 @@ function gtag_report_conversion(url) {
         <div class="row mt-5 align-items-center">
             <!-- Left Section: Image -->
             <div class="col-md-6" data-aos="zoom-in">
-                <img src="https://www.shutterstock.com/image-photo/group-confident-indian-male-female-600nw-2298543747.jpg" alt="About Us" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                <img src="<?php echo hp_img('about_main', 900); ?>" data-fallback="<?php echo hp_img_fallback('about_main', 900); ?>" loading="lazy" decoding="async" alt="About Us" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
             </div>
             <!-- Right Section: Text -->
             <div class="col-md-6" data-aos="fade-up">
@@ -163,7 +118,7 @@ function gtag_report_conversion(url) {
                 </p>
             </div>
             <div class="col-md-6" data-aos="zoom-in">
-                <img src="https://thumbs.dreamstime.com/b/five-multiethnic-healthcare-workers-uniforms-posing-clinic-office-happy-younger-older-camera-standing-together-portrait-331382784.jpg" alt="Our Team" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                <img src="<?php echo hp_img('about_inset', 900); ?>" data-fallback="<?php echo hp_img_fallback('about_inset', 900); ?>" loading="lazy" decoding="async" alt="Our Team" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
             </div>
         </div>
     </div>

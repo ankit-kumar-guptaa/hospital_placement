@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/pages.php';
 // locations.php - city and country coverage. Internal links to every
 // location landing page, which is where most of this site's search
 // traffic arrives.
@@ -28,7 +29,7 @@ $hp_loc = array(
 
     <div class="hp-places" style="margin-top:44px;">
       <?php foreach ($hp_loc as $l): ?>
-      <a class="hp-place hp-rise" href="<?php echo $hp_p3 . $l['href']; ?>">
+      <a class="hp-place hp-rise" href="<?php echo hp_url($l['href']); ?>">
         <img src="<?php echo hp_img($l['key'], 520); ?>"
              data-fallback="<?php echo hp_img_fallback($l['key']); ?>"
              alt="<?php echo hp_img_alt($l['key']); ?>"

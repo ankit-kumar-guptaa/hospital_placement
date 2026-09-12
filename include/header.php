@@ -2,7 +2,7 @@
 // header.php - site header. Shared by every page.
 // URLs and slugs are unchanged; only the presentation and the grouping of
 // links are new. $hp_p prefixes root links correctly from inside /blog/.
-$hp_p    = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
+require_once __DIR__ . '/pages.php';
 $hp_self = basename($_SERVER['PHP_SELF']);
 $hp_blog = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false);
 
@@ -48,10 +48,12 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 
 <a class="hp-skip" href="#main">Skip to main content</a>
 
+<?php include __DIR__ . '/topbar.php'; ?>
+
 <header class="hp-header" id="main-header">
   <div class="hp-wrap hp-header__bar">
 
-    <a class="hp-logo" href="<?php echo $hp_p ?: '/'; ?>" aria-label="HospitalPlacement.com home">
+    <a class="hp-logo" href="<?php echo hp_url(); ?>" aria-label="HospitalPlacement.com home">
       <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
            alt="HospitalPlacement.com, global healthcare recruitment agency"
            width="119" height="52">
@@ -62,12 +64,12 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 
         <li class="hp-nav__item">
           <a class="hp-nav__link<?php echo (!$hp_blog && ($hp_self === 'index.php')) ? ' is-active' : ''; ?>"
-             href="<?php echo $hp_p ?: '/'; ?>">Home</a>
+             href="<?php echo hp_url(); ?>">Home</a>
         </li>
 
         <li class="hp-nav__item">
           <a class="hp-nav__link<?php echo hp_is('about.php') ? ' is-active' : ''; ?>"
-             href="<?php echo $hp_p; ?>about.php">About Us</a>
+             href="<?php echo hp_url('about.php'); ?>">About Us</a>
         </li>
 
         <li class="hp-nav__item hp-nav__item--has-mega">
@@ -79,7 +81,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             <ul class="hp-mega__grid">
               <?php foreach ($hp_hospitals as $s): ?>
               <li>
-                <a class="hp-mega__link" href="<?php echo $hp_p . $s[0]; ?>">
+                <a class="hp-mega__link" href="<?php echo hp_url($s[0]); ?>">
                   <span class="hp-mega__ico"><i class="fa-solid <?php echo $s[1]; ?>" aria-hidden="true"></i></span>
                   <span>
                     <span class="hp-mega__t"><?php echo $s[2]; ?></span>
@@ -91,7 +93,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             </ul>
             <div class="hp-mega__foot">
               <p>Hiring for a department or a whole new unit?</p>
-              <a class="hp-link" href="<?php echo $hp_p; ?>contact.php">Post a Requirement <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="hp-link" href="<?php echo hp_url('contact.php'); ?>">Post a Requirement <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </li>
@@ -105,7 +107,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             <ul class="hp-mega__grid">
               <?php foreach ($hp_candidates as $s): ?>
               <li>
-                <a class="hp-mega__link" href="<?php echo $hp_p . $s[0]; ?>">
+                <a class="hp-mega__link" href="<?php echo hp_url($s[0]); ?>">
                   <span class="hp-mega__ico"><i class="fa-solid <?php echo $s[1]; ?>" aria-hidden="true"></i></span>
                   <span>
                     <span class="hp-mega__t"><?php echo $s[2]; ?></span>
@@ -117,7 +119,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             </ul>
             <div class="hp-mega__foot">
               <p>Registration is free for candidates.</p>
-              <a class="hp-link" href="<?php echo $hp_p ?: '/'; ?>#find-a-job">Register your CV <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="hp-link" href="<?php echo hp_url(); ?>#find-a-job">Register your CV <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </li>
@@ -131,7 +133,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             <ul class="hp-mega__grid">
               <?php foreach ($hp_places as $s): ?>
               <li>
-                <a class="hp-mega__link" href="<?php echo $hp_p . $s[0]; ?>">
+                <a class="hp-mega__link" href="<?php echo hp_url($s[0]); ?>">
                   <span class="hp-mega__ico"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
                   <span>
                     <span class="hp-mega__t"><?php echo $s[1]; ?></span>
@@ -143,24 +145,24 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             </ul>
             <div class="hp-mega__foot">
               <p>Hiring for hospitals in India, the Gulf and overseas.</p>
-              <a class="hp-link" href="<?php echo $hp_p ?: '/'; ?>#hire">Post a Requirement <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="hp-link" href="/#hire">Post a Requirement <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </li>
 
         <li class="hp-nav__item">
           <a class="hp-nav__link<?php echo hp_is('jobs.php') ? ' is-active' : ''; ?>"
-             href="<?php echo $hp_p; ?>jobs.php">Jobs</a>
+             href="<?php echo hp_url('jobs.php'); ?>">Jobs</a>
         </li>
 
         <li class="hp-nav__item">
           <a class="hp-nav__link<?php echo $hp_blog ? ' is-active' : ''; ?>"
-             href="<?php echo $hp_p; ?>blog/">Blog</a>
+             href="/blog/">Blog</a>
         </li>
 
         <li class="hp-nav__item">
           <a class="hp-nav__link<?php echo hp_is('contact.php') ? ' is-active' : ''; ?>"
-             href="<?php echo $hp_p; ?>contact.php">Contact Us</a>
+             href="<?php echo hp_url('contact.php'); ?>">Contact Us</a>
         </li>
       </ul>
     </nav>
@@ -174,7 +176,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
         </span>
       </a>
 
-      <a class="hp-btn hp-btn--action hp-btn--sm" href="<?php echo $hp_p ?: '/'; ?>#hire"
+      <a class="hp-btn hp-btn--action hp-btn--sm" href="/#hire"
          data-modal-open="hp-formmodal" data-modal-tab="hp-tab-employer">Post a Requirement</a>
 
       <button type="button" class="hp-burger" aria-expanded="false"
@@ -189,8 +191,8 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 
 <div class="hp-drawer" id="hp-drawer">
   <ul class="hp-drawer__list">
-    <li><a class="hp-drawer__link<?php echo (!$hp_blog && $hp_self === 'index.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p ?: '/'; ?>">Home</a></li>
-    <li><a class="hp-drawer__link<?php echo hp_is('about.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>about.php">About Us</a></li>
+    <li><a class="hp-drawer__link<?php echo (!$hp_blog && $hp_self === 'index.php') ? ' is-active' : ''; ?>" href="<?php echo hp_url(); ?>">Home</a></li>
+    <li><a class="hp-drawer__link<?php echo hp_is('about.php') ? ' is-active' : ''; ?>" href="<?php echo hp_url('about.php'); ?>">About Us</a></li>
 
     <li>
       <button type="button" class="hp-drawer__link" aria-expanded="false">
@@ -198,7 +200,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
       </button>
       <div class="hp-drawer__sub"><div>
         <?php foreach ($hp_hospitals as $s): ?>
-        <a href="<?php echo $hp_p . $s[0]; ?>"><?php echo $s[2]; ?></a>
+        <a href="<?php echo hp_url($s[0]); ?>"><?php echo $s[2]; ?></a>
         <?php endforeach; ?>
       </div></div>
     </li>
@@ -209,7 +211,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
       </button>
       <div class="hp-drawer__sub"><div>
         <?php foreach ($hp_candidates as $s): ?>
-        <a href="<?php echo $hp_p . $s[0]; ?>"><?php echo $s[2]; ?></a>
+        <a href="<?php echo hp_url($s[0]); ?>"><?php echo $s[2]; ?></a>
         <?php endforeach; ?>
       </div></div>
     </li>
@@ -220,20 +222,20 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
       </button>
       <div class="hp-drawer__sub"><div>
         <?php foreach ($hp_places as $s): ?>
-        <a href="<?php echo $hp_p . $s[0]; ?>"><?php echo $s[1]; ?></a>
+        <a href="<?php echo hp_url($s[0]); ?>"><?php echo $s[1]; ?></a>
         <?php endforeach; ?>
       </div></div>
     </li>
 
-    <li><a class="hp-drawer__link<?php echo hp_is('jobs.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>jobs.php">Jobs</a></li>
-    <li><a class="hp-drawer__link<?php echo $hp_blog ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>blog/">Blog</a></li>
-    <li><a class="hp-drawer__link<?php echo hp_is('contact.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>contact.php">Contact Us</a></li>
+    <li><a class="hp-drawer__link<?php echo hp_is('jobs.php') ? ' is-active' : ''; ?>" href="<?php echo hp_url('jobs.php'); ?>">Jobs</a></li>
+    <li><a class="hp-drawer__link<?php echo $hp_blog ? ' is-active' : ''; ?>" href="/blog/">Blog</a></li>
+    <li><a class="hp-drawer__link<?php echo hp_is('contact.php') ? ' is-active' : ''; ?>" href="<?php echo hp_url('contact.php'); ?>">Contact Us</a></li>
   </ul>
 
   <div class="hp-drawer__foot">
-    <a class="hp-btn hp-btn--action hp-btn--block" href="<?php echo $hp_p ?: '/'; ?>#hire"
+    <a class="hp-btn hp-btn--action hp-btn--block" href="/#hire"
        data-modal-open="hp-formmodal" data-modal-tab="hp-tab-employer">Post a Requirement</a>
-    <a class="hp-btn hp-btn--ghost hp-btn--block" href="<?php echo $hp_p; ?>jobs.php">Explore Jobs</a>
+    <a class="hp-btn hp-btn--ghost hp-btn--block" href="<?php echo hp_url('jobs.php'); ?>">Explore Jobs</a>
   </div>
 
   <div class="hp-drawer__phones">

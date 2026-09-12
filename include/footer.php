@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/pages.php';
 // footer.php - site footer plus the shared script tail. Every script that was
 // loaded here before is still loaded here, in the same order.
 $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
@@ -30,26 +31,26 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
     <nav aria-labelledby="foot-co">
       <h2 id="foot-co">Company</h2>
       <ul class="hp-fnav">
-        <li><a href="<?php echo $hp_pf ?: '/'; ?>">Home</a></li>
-        <li><a href="<?php echo $hp_pf; ?>about.php">About Us</a></li>
-        <li><a href="<?php echo $hp_pf; ?>solutions.php">Solutions</a></li>
-        <li><a href="<?php echo $hp_pf; ?>jobs.php">Jobs</a></li>
-        <li><a href="<?php echo $hp_pf; ?>blog/">Blog</a></li>
-        <li><a href="<?php echo $hp_pf; ?>contact.php">Contact Us</a></li>
-        <li><a href="<?php echo $hp_pf; ?>privacy-policy.php">Privacy Policy</a></li>
+        <li><a href="<?php echo hp_url(); ?>">Home</a></li>
+        <li><a href="<?php echo hp_url('about.php'); ?>">About Us</a></li>
+        <li><a href="<?php echo hp_url('solutions.php'); ?>">Solutions</a></li>
+        <li><a href="<?php echo hp_url('jobs.php'); ?>">Jobs</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="<?php echo hp_url('contact.php'); ?>">Contact Us</a></li>
+        <li><a href="<?php echo hp_url('privacy-policy.php'); ?>">Privacy Policy</a></li>
       </ul>
     </nav>
 
     <nav aria-labelledby="foot-sv">
       <h2 id="foot-sv">Services</h2>
       <ul class="hp-fnav">
-        <li><a href="<?php echo $hp_pf; ?>doctor-placement-services.php">Doctor Placement</a></li>
-        <li><a href="<?php echo $hp_pf; ?>nurse-staffing-agency-india.php">Nurse Staffing</a></li>
-        <li><a href="<?php echo $hp_pf; ?>paramedical-recruitment-agency.php">Paramedical Recruitment</a></li>
-        <li><a href="<?php echo $hp_pf; ?>specialty-placement.php">Specialty Placements</a></li>
-        <li><a href="<?php echo $hp_pf; ?>permanent-placement.php">Permanent Placement</a></li>
-        <li><a href="<?php echo $hp_pf; ?>temporary-staffing-services.php">Temporary Staffing</a></li>
-        <li><a href="<?php echo $hp_pf; ?>healthcare-recruitment-for-hospitals.php">Recruitment for Hospitals</a></li>
+        <li><a href="<?php echo hp_url('doctor-placement-services.php'); ?>">Doctor Placement</a></li>
+        <li><a href="<?php echo hp_url('nurse-staffing-agency-india.php'); ?>">Nurse Staffing</a></li>
+        <li><a href="<?php echo hp_url('paramedical-recruitment-agency.php'); ?>">Paramedical Recruitment</a></li>
+        <li><a href="<?php echo hp_url('specialty-placement.php'); ?>">Specialty Placements</a></li>
+        <li><a href="<?php echo hp_url('permanent-placement.php'); ?>">Permanent Placement</a></li>
+        <li><a href="<?php echo hp_url('temporary-staffing-services.php'); ?>">Temporary Staffing</a></li>
+        <li><a href="<?php echo hp_url('healthcare-recruitment-for-hospitals.php'); ?>">Recruitment for Hospitals</a></li>
       </ul>
     </nav>
 
@@ -87,9 +88,9 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
     <div class="hp-footer__bot">
       <p>&copy; <?php echo date('Y'); ?> HospitalPlacement.com. All rights reserved.</p>
       <ul class="hp-legal">
-        <li><a href="<?php echo $hp_pf; ?>privacy-policy.php">Privacy Policy</a></li>
-        <li><a href="<?php echo $hp_pf; ?>contact.php">Contact Us</a></li>
-        <li><a href="<?php echo $hp_pf; ?>jobs.php">Current Openings</a></li>
+        <li><a href="<?php echo hp_url('privacy-policy.php'); ?>">Privacy Policy</a></li>
+        <li><a href="<?php echo hp_url('contact.php'); ?>">Contact Us</a></li>
+        <li><a href="<?php echo hp_url('jobs.php'); ?>">Current Openings</a></li>
       </ul>
     </div>
   </div>
