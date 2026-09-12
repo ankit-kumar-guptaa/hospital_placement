@@ -22,8 +22,7 @@ $hero_lead  = isset($hero_lead)  ? $hero_lead
 <section class="hp-hero" aria-labelledby="hero-title">
 
   <div class="hp-hero__media" aria-hidden="true">
-    <img src="<?php echo hp_img('hero_team', 1800); ?>"
-         data-fallback="<?php echo hp_img_fallback('hero_team'); ?>"
+    <img src="assets/img/hero.png"
          alt="" width="1800" height="1013" fetchpriority="high" decoding="async">
   </div>
 
