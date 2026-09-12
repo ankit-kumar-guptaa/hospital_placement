@@ -72,6 +72,8 @@ function gtag_report_conversion(url) {
 
     <?php include "include/slider.php"?>
 
+<?php include "include/forms.php"; ?>
+
 
 
 

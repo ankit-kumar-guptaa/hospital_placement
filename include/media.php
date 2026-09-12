@@ -64,6 +64,18 @@ function hp_media($key) {
             'alt'   => 'Hospital recruitment panel interviewing a shortlisted medical candidate',
         ),
 
+        /* --- hero: the full-bleed photograph behind the headline -------- */
+        'hero_team' => array(
+            'id'    => 'photo-1631217868264-e5b90bb7e133',
+            'local' => 'assets/img/home1.jpg',
+            'alt'   => 'Hospital medical team on a ward',
+        ),
+        'process_bg' => array(
+            'id'    => 'photo-1516549655169-df83a0774514',
+            'local' => 'assets/img/home2.jpg',
+            'alt'   => 'Healthcare professionals in discussion',
+        ),
+
         /* --- hero slider: the five role families we recruit for -------- */
         'hero_doctors' => array(
             'id'    => 'photo-1612349317150-e413f6a5b16d',

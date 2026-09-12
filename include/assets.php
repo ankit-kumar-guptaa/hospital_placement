@@ -28,4 +28,4 @@
 <link rel="stylesheet" href="/assets/css/theme.css">
 
 <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
-<meta name="theme-color" content="#0A6C7C">
+<meta name="theme-color" content="#1D4ED8">

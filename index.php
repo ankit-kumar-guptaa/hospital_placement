@@ -167,7 +167,7 @@ echo json_encode(array(
 
   <?php include "include/slider.php"; ?>
 
-  <?php include "include/trust-rail.php"; ?>
+  <?php include "include/specializations.php"; ?>
 
   <?php include "include/ensure.php"; ?>
 
@@ -235,11 +235,13 @@ echo json_encode(array(
   </section>
 
 
+  <?php include "include/process.php"; ?>
+
+  <?php include "include/forms.php"; ?>
+
   <?php include "include/solution.php"; ?>
 
   <?php include "include/service.php"; ?>
-
-  <?php include "include/counter.php"; ?>
 
   <?php include "include/locations.php"; ?>
 

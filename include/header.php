@@ -12,29 +12,27 @@ function hp_is($files) {
     return in_array($hp_self, (array) $files, true);
 }
 
-$hp_services = array(
-    array('doctor-placement-services.php',            'fa-user-doctor',     'Doctor Placement',            'Consultants, residents and super-specialists'),
-    array('nurse-staffing-agency-india.php',          'fa-user-nurse',      'Nurse Staffing',              'ICU, OT, ward and speciality nursing'),
-    array('paramedical-recruitment-agency.php',       'fa-microscope',      'Paramedical Recruitment',     'Lab, radiology, dialysis and OT technicians'),
-    array('specialty-placement.php',                  'fa-stethoscope',     'Specialty Placements',        'Hard to fill clinical and super-speciality roles'),
-    array('permanent-placement.php',                  'fa-file-signature',  'Permanent Placement',         'Full time hires on a pay on success model'),
-    array('temporary-staffing-services.php',          'fa-clock-rotate-left','Temporary Staffing',         'Locum, contract and short notice cover'),
-    array('healthcare-recruitment-for-hospitals.php', 'fa-hospital',        'Recruitment for Hospitals',   'Whole department and greenfield hiring'),
-    array('hospital-recruitment-agency-in-india.php', 'fa-building-shield', 'Recruitment Agency in India', 'Nationwide hospital hiring coverage'),
+$hp_hospitals = array(
+    array('healthcare-recruitment-for-hospitals.php', 'fa-hospital',         'Recruitment for Hospitals', 'Whole department and greenfield hiring'),
+    array('permanent-placement.php',                  'fa-file-signature',   'Permanent Placement',       'Full time hires on a pay on success model'),
+    array('temporary-staffing-services.php',          'fa-clock-rotate-left','Temporary Staffing',        'Locum, contract and short notice cover'),
+    array('specialty-placement.php',                  'fa-stethoscope',      'Specialty Placements',      'Hard to fill clinical and super-speciality roles'),
+    array('hospital-recruitment-agency-in-india.php', 'fa-building-shield',  'Recruitment Agency',        'Nationwide hospital hiring coverage'),
+    array('solutions.php',                            'fa-diagram-project',  'Our Solutions',             'How we take the hiring cycle off your desk'),
 );
 
-$hp_places = array(
-    array('recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php', 'Delhi NCR',   'India'),
-    array('placement-Agency-in-mumbai.php',      'Mumbai',      'India'),
-    array('placement-Agency-in-hyderabad.php',   'Hyderabad',   'India'),
-    array('placement-Agency-in-chandigarh.php',  'Chandigarh',  'India'),
-    array('placement-Agency-in-kolkata.php',     'Kolkata',     'India'),
-    array('placement-Agency-in-lucknow.php',     'Lucknow',     'India'),
-    array('hospital-job-consultants-delhi-ncr-india.php', 'Hospital Job Consultants, Delhi NCR', 'India'),
+$hp_candidates = array(
+    array('jobs.php',                                 'fa-briefcase',    'Explore Jobs',              'Live vacancies across our client hospitals'),
+    array('doctor-placement-services.php',            'fa-user-doctor',  'Doctor Placement',          'Consultants, residents and super-specialists'),
+    array('nurse-staffing-agency-india.php',          'fa-user-nurse',   'Nurse Staffing',            'ICU, OT, ward and speciality nursing'),
+    array('paramedical-recruitment-agency.php',       'fa-microscope',   'Paramedical Recruitment',   'Lab, radiology, dialysis and OT technicians'),
+    array('hospital-job-consultants-delhi-ncr-india.php','fa-compass',   'Career Guidance',           'Hospital job consultants across Delhi NCR'),
 );
 
-$hp_service_files = array();
-foreach ($hp_services as $s) { $hp_service_files[] = $s[0]; }
+$hp_hospital_files = array();
+foreach ($hp_hospitals as $s) { $hp_hospital_files[] = $s[0]; }
+$hp_candidate_files = array();
+foreach ($hp_candidates as $s) { $hp_candidate_files[] = $s[0]; }
 $hp_place_files = array();
 foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 ?>
@@ -64,13 +62,13 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
         </li>
 
         <li class="hp-nav__item hp-nav__item--has-mega">
-          <button type="button" class="hp-nav__link<?php echo hp_is($hp_service_files) ? ' is-active' : ''; ?>"
+          <button type="button" class="hp-nav__link<?php echo hp_is($hp_hospital_files) ? ' is-active' : ''; ?>"
                   aria-expanded="false" aria-haspopup="true">
-            Services <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            For Hospitals <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
           </button>
           <div class="hp-mega">
             <ul class="hp-mega__grid">
-              <?php foreach ($hp_services as $s): ?>
+              <?php foreach ($hp_hospitals as $s): ?>
               <li>
                 <a class="hp-mega__link" href="<?php echo $hp_p . $s[0]; ?>">
                   <span class="hp-mega__ico"><i class="fa-solid <?php echo $s[1]; ?>" aria-hidden="true"></i></span>
@@ -84,7 +82,33 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             </ul>
             <div class="hp-mega__foot">
               <p>Hiring for a department or a whole new unit?</p>
-              <a class="hp-link" href="<?php echo $hp_p; ?>contact.php">Hire staff <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="hp-link" href="<?php echo $hp_p; ?>contact.php">Post a Requirement <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </li>
+
+        <li class="hp-nav__item hp-nav__item--has-mega">
+          <button type="button" class="hp-nav__link<?php echo hp_is($hp_candidate_files) ? ' is-active' : ''; ?>"
+                  aria-expanded="false" aria-haspopup="true">
+            For Candidates <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="hp-mega">
+            <ul class="hp-mega__grid">
+              <?php foreach ($hp_candidates as $s): ?>
+              <li>
+                <a class="hp-mega__link" href="<?php echo $hp_p . $s[0]; ?>">
+                  <span class="hp-mega__ico"><i class="fa-solid <?php echo $s[1]; ?>" aria-hidden="true"></i></span>
+                  <span>
+                    <span class="hp-mega__t"><?php echo $s[2]; ?></span>
+                    <span class="hp-mega__d"><?php echo $s[3]; ?></span>
+                  </span>
+                </a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+            <div class="hp-mega__foot">
+              <p>Registration is free for candidates.</p>
+              <a class="hp-link" href="<?php echo $hp_p ?: '/'; ?>#find-a-job">Register your CV <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </li>
@@ -110,14 +134,9 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
             </ul>
             <div class="hp-mega__foot">
               <p>Hiring for hospitals in India, the Gulf and overseas.</p>
-              <a class="hp-link" href="<?php echo $hp_p; ?>contact.php">Hire staff <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+              <a class="hp-link" href="<?php echo $hp_p ?: '/'; ?>#hire">Post a Requirement <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
-        </li>
-
-        <li class="hp-nav__item">
-          <a class="hp-nav__link<?php echo hp_is('solutions.php') ? ' is-active' : ''; ?>"
-             href="<?php echo $hp_p; ?>solutions.php">Solutions</a>
         </li>
 
         <li class="hp-nav__item">
@@ -146,7 +165,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
         </span>
       </a>
 
-      <a class="hp-btn hp-btn--action hp-btn--sm" href="<?php echo $hp_p; ?>contact.php">Hire staff</a>
+      <a class="hp-btn hp-btn--action hp-btn--sm" href="<?php echo $hp_p ?: '/'; ?>#hire">Post a Requirement</a>
 
       <button type="button" class="hp-burger" aria-expanded="false"
               aria-controls="hp-drawer" aria-label="Open menu">
@@ -165,10 +184,21 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 
     <li>
       <button type="button" class="hp-drawer__link" aria-expanded="false">
-        Services <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        For Hospitals <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
       </button>
       <div class="hp-drawer__sub"><div>
-        <?php foreach ($hp_services as $s): ?>
+        <?php foreach ($hp_hospitals as $s): ?>
+        <a href="<?php echo $hp_p . $s[0]; ?>"><?php echo $s[2]; ?></a>
+        <?php endforeach; ?>
+      </div></div>
+    </li>
+
+    <li>
+      <button type="button" class="hp-drawer__link" aria-expanded="false">
+        For Candidates <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="hp-drawer__sub"><div>
+        <?php foreach ($hp_candidates as $s): ?>
         <a href="<?php echo $hp_p . $s[0]; ?>"><?php echo $s[2]; ?></a>
         <?php endforeach; ?>
       </div></div>
@@ -185,15 +215,14 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
       </div></div>
     </li>
 
-    <li><a class="hp-drawer__link<?php echo hp_is('solutions.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>solutions.php">Solutions</a></li>
     <li><a class="hp-drawer__link<?php echo hp_is('jobs.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>jobs.php">Jobs</a></li>
     <li><a class="hp-drawer__link<?php echo $hp_blog ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>blog/">Blog</a></li>
     <li><a class="hp-drawer__link<?php echo hp_is('contact.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>contact.php">Contact Us</a></li>
   </ul>
 
   <div class="hp-drawer__foot">
-    <a class="hp-btn hp-btn--action hp-btn--block" href="<?php echo $hp_p; ?>contact.php">Hire staff</a>
-    <a class="hp-btn hp-btn--ghost hp-btn--block" href="<?php echo $hp_p; ?>jobs.php">Browse jobs</a>
+    <a class="hp-btn hp-btn--action hp-btn--block" href="<?php echo $hp_p ?: '/'; ?>#hire">Post a Requirement</a>
+    <a class="hp-btn hp-btn--ghost hp-btn--block" href="<?php echo $hp_p; ?>jobs.php">Explore Jobs</a>
   </div>
 
   <div class="hp-drawer__phones">

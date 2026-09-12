@@ -131,9 +131,12 @@ if (window.AOS) {
 
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // 10000 reads as 10,000 the way the brand deck shows it.
+    const fmt = (n) => n.toLocaleString('en-US');
+
     const animateCounter = (counter) => {
       const target = +counter.getAttribute('data-target');
-      if (reduce) { counter.innerText = target; return; }
+      if (reduce) { counter.innerText = fmt(target); return; }
 
       const start = performance.now();
       const duration = 1100;
@@ -142,9 +145,9 @@ if (window.AOS) {
         const p = Math.min((now - start) / duration, 1);
         // ease-out so the number settles rather than stopping dead
         const eased = 1 - Math.pow(1 - p, 3);
-        counter.innerText = Math.round(target * eased);
+        counter.innerText = fmt(Math.round(target * eased));
         if (p < 1) requestAnimationFrame(step);
-        else counter.innerText = target;
+        else counter.innerText = fmt(target);
       };
       requestAnimationFrame(step);
     };
