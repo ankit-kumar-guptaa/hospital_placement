@@ -22,7 +22,10 @@
         opacity + translateY, 480ms, cubic-bezier(.23,1,.32,1), 60ms stagger.
      ------------------------------------------------------------------------ */
   function initReveal() {
-    var items = all('.hp-rise');
+    var hero = document.querySelector('.hp-hero');
+    var items = all('.hp-rise').filter(function (el) {
+      return !(hero && hero.contains(el));   // the hero runs its own entrance
+    });
     if (!items.length) return;
 
     if (!('IntersectionObserver' in window)) {
@@ -302,6 +305,82 @@
     });
   }
 
+
+  /* ---------------------------------------------------------------------------
+     9. Hero slider. Purpose: explanation. It shows who we place instead of
+        asking the visitor to read four more lines, and it fills the column
+        beside the form card.
+        Crossfade on opacity, 900ms; the slow scale on the active slide is a
+        compositor transform. Pauses on hover, focus and a hidden tab, and
+        holds still entirely under reduced motion (the first slide stays up
+        and the pips still work).
+     ------------------------------------------------------------------------ */
+  function initHeroSlider() {
+    var box = document.querySelector('[data-hero-slider]');
+    if (!box) return;
+
+    var slides = all('[data-hero-slide]', box);
+    var pips = all('[data-hero-pip]', box);
+    if (slides.length < 2) return;
+
+    var i = 0, timer = null, paused = false;
+
+    function show(n) {
+      i = (n + slides.length) % slides.length;
+      slides.forEach(function (s, k) { s.classList.toggle('is-on', k === i); });
+      pips.forEach(function (d, k) { d.setAttribute('aria-current', k === i ? 'true' : 'false'); });
+    }
+    function start() {
+      stop();
+      if (reduced.matches || paused) return;
+      timer = setInterval(function () { show(i + 1); }, 5200);
+    }
+    function stop() { clearInterval(timer); timer = null; }
+
+    pips.forEach(function (d, k) {
+      on(d, 'click', function () { show(k); start(); });
+    });
+    ['mouseenter', 'focusin'].forEach(function (ev) {
+      on(box, ev, function () { paused = true; stop(); });
+    });
+    ['mouseleave', 'focusout'].forEach(function (ev) {
+      on(box, ev, function () { paused = false; start(); });
+    });
+    on(document, 'visibilitychange', function () { document.hidden ? stop() : start(); });
+
+    // Only run while the hero is actually on screen.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (e) {
+        e[0].isIntersecting ? start() : stop();
+      }, { threshold: 0.2 }).observe(box);
+    } else {
+      start();
+    }
+  }
+
+  /* ---------------------------------------------------------------------------
+     10. Hero entrance. Purpose: hierarchy. The hero arrives in reading order
+         on load rather than all at once, so the eye lands on the headline
+         first. Runs once, 70ms apart, and is skipped under reduced motion.
+     ------------------------------------------------------------------------ */
+  function initHeroEntrance() {
+    var hero = document.querySelector('.hp-hero');
+    if (!hero) return;
+
+    var parts = all('.hp-rise', hero);
+    if (!parts.length) return;
+
+    parts.forEach(function (el, n) {
+      el.style.setProperty('--hp-rise-delay', (reduced.matches ? 0 : n * 70) + 'ms');
+    });
+    // Next frame, so the transition has a start value to animate from.
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        parts.forEach(function (el) { el.classList.add('is-in'); });
+      });
+    });
+  }
+
   function init() {
     initImageFallback();
     initHeader();
@@ -310,6 +389,8 @@
     initTabs();
     initFaq();
     initQuotes();
+    initHeroSlider();
+    initHeroEntrance();
     initReveal();
   }
 

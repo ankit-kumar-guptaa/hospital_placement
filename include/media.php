@@ -64,6 +64,28 @@ function hp_media($key) {
             'alt'   => 'Hospital recruitment panel interviewing a shortlisted medical candidate',
         ),
 
+        /* --- hero slider: the five role families we recruit for -------- */
+        'hero_doctors' => array(
+            'id'    => 'photo-1612349317150-e413f6a5b16d',
+            'local' => 'assets/img/home1.jpg',
+            'alt'   => 'Hospital consultants and resident doctors on a ward round',
+        ),
+        'hero_nurses' => array(
+            'id'    => 'photo-1576091160399-112ba8d25d1d',
+            'local' => 'assets/img/home2.jpg',
+            'alt'   => 'Critical care nursing team at work in a hospital ICU',
+        ),
+        'hero_paramedical' => array(
+            'id'    => 'photo-1579154204601-01588f351e67',
+            'local' => 'assets/img/home1.jpg',
+            'alt'   => 'Laboratory and diagnostics technician running hospital samples',
+        ),
+        'hero_theatre' => array(
+            'id'    => 'photo-1551190822-a9333d879b1f',
+            'local' => 'assets/img/home2.jpg',
+            'alt'   => 'Operating theatre team preparing for a scheduled surgery',
+        ),
+
         /* --- locations: India cities already ship with the project ----- */
         'city_delhi'      => array('id' => '', 'local' => 'assets/img/delhi-ncr.jpg',   'alt' => 'Hospital recruitment agency serving Delhi NCR hospitals'),
         'city_mumbai'     => array('id' => '', 'local' => 'assets/img/mumbai.jpg',      'alt' => 'Medical staffing consultants for Mumbai hospitals and clinics'),

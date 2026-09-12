@@ -10,10 +10,20 @@
  * A page may set $hero_eyebrow / $hero_title / $hero_lead before including
  * this file to override the copy. Defaults are the home page copy.
  */
-$hero_eyebrow = isset($hero_eyebrow) ? $hero_eyebrow : 'Medical staffing specialists since 2010';
-$hero_title   = isset($hero_title)   ? $hero_title   : 'Healthcare recruitment across <span class="hp-mark">India and the UAE</span>';
-$hero_lead    = isset($hero_lead)    ? $hero_lead    : 'Doctors, nurses and paramedical staff for hospitals, clinics and nursing homes. ISO 9001:2000 certified, hiring since 2010.';
+$hero_eyebrow = isset($hero_eyebrow) ? $hero_eyebrow : 'Healthcare recruitment worldwide since 2010';
+$hero_title   = isset($hero_title)   ? $hero_title   : 'We staff hospitals <span class="hp-mark">anywhere in the world</span>';
+$hero_lead    = isset($hero_lead)    ? $hero_lead    : 'Doctors, nurses and paramedical teams placed across India, the Gulf and international markets. ISO 9001:2000 certified.';
 $hp_pp        = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
+
+if (!function_exists('hp_img')) { require_once __DIR__ . '/media.php'; }
+
+/* Hero slider: one slide per role family we recruit for. */
+$hero_slides = array(
+  array('key' => 'hero_doctors',     't' => 'Doctors and consultants',   'd' => 'Physicians, surgeons and super-specialists across every major department.'),
+  array('key' => 'hero_nurses',      't' => 'Nursing teams',             'd' => 'ICU, theatre, ward and speciality nursing, from staff nurse to nurse manager.'),
+  array('key' => 'hero_paramedical', 't' => 'Paramedical and diagnostics', 'd' => 'Laboratory, radiology, dialysis and cardiac technicians.'),
+  array('key' => 'hero_theatre',     't' => 'Whole department builds',   'd' => 'New units and greenfield hospitals staffed end to end.'),
+);
 ?>
 
 <section class="hp-hero" aria-labelledby="hero-title">
@@ -32,6 +42,35 @@ $hp_pp        = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
       <div class="hp-hero__cta hp-rise">
         <a class="hp-btn hp-btn--action" href="<?php echo $hp_pp; ?>contact.php">Hire staff</a>
         <a class="hp-btn hp-btn--ghost" href="<?php echo $hp_pp; ?>jobs.php">Browse jobs</a>
+      </div>
+
+      <div class="hp-slider hp-rise" data-hero-slider aria-roledescription="carousel"
+           aria-label="The healthcare roles we recruit for">
+        <?php foreach ($hero_slides as $i => $sl): ?>
+        <div class="hp-slide<?php echo $i === 0 ? ' is-on' : ''; ?>" data-hero-slide
+             role="group" aria-roledescription="slide"
+             aria-label="<?php echo ($i + 1) . ' of ' . count($hero_slides); ?>">
+          <img src="<?php echo hp_img($sl['key'], 1000); ?>"
+               data-fallback="<?php echo hp_img_fallback($sl['key']); ?>"
+               alt="<?php echo hp_img_alt($sl['key']); ?>"
+               width="1000" height="563"
+               <?php echo $i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'; ?> decoding="async">
+          <span class="hp-slide__cap">
+            <span>
+              <span class="hp-slide__t"><?php echo $sl['t']; ?></span>
+              <span class="hp-slide__d"><?php echo $sl['d']; ?></span>
+            </span>
+          </span>
+        </div>
+        <?php endforeach; ?>
+
+        <div class="hp-slider__pips">
+          <?php foreach ($hero_slides as $i => $sl): ?>
+          <button type="button" data-hero-pip
+                  aria-current="<?php echo $i === 0 ? 'true' : 'false'; ?>"
+                  aria-label="Show <?php echo htmlspecialchars($sl['t'], ENT_QUOTES, 'UTF-8'); ?>"></button>
+          <?php endforeach; ?>
+        </div>
       </div>
     </div>
 

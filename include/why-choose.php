@@ -25,7 +25,7 @@
         <span class="hp-reason__n"><i class="fa-solid fa-sliders" aria-hidden="true"></i></span>
         <div>
           <h3>The brief drives the search</h3>
-          <p>A 60 bed nursing home and a tertiary care chain get different searches, different pay benchmarks and different candidates. We do not recycle a longlist.</p>
+          <p>A 60 bed nursing home and an international hospital group get different searches, different pay benchmarks and different candidates. We do not recycle a longlist.</p>
         </div>
       </li>
       <li class="hp-reason hp-rise">

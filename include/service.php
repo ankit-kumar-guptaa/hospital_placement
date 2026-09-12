@@ -14,11 +14,11 @@ $hp_p2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
       <article class="hp-panel hp-panel--dark hp-rise">
         <span class="hp-panel__k">For hospitals and clinics</span>
         <h3>Fill the post, keep the ward running</h3>
-        <p>Give us the role, the city and the salary band. You get a shortlist you can interview, not a pile of CVs to sort.</p>
+        <p>Give us the role, the country and the salary band. You get a shortlist you can interview, not a pile of CVs to sort.</p>
         <ul class="hp-panel__list">
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Permanent, contract and locum hiring under one agreement</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Registration and qualification verified before shortlisting</li>
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Salary benchmarked against your city and speciality</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Salary benchmarked against your market and speciality</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> One named consultant from brief to joining date</li>
         </ul>
         <div class="hp-panel__foot">
@@ -32,9 +32,9 @@ $hp_p2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
         <h3>Move to the role you actually trained for</h3>
         <p>Register once and a consultant who knows your speciality works your case. No spray and pray applications.</p>
         <ul class="hp-panel__list">
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Roles across India and the UAE, updated as hospitals brief us</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Roles in India, the Gulf and international markets, updated as hospitals brief us</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Doctors, nurses, paramedical, pharma, diagnostics and administration</li>
-          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Guidance on documentation before your interview</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Guidance on licensing and documentation for overseas moves</li>
           <li><i class="fa-solid fa-check" aria-hidden="true"></i> Your CV is never sent to a hospital without your go ahead</li>
         </ul>
         <div class="hp-panel__foot">

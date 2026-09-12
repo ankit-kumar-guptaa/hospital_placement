@@ -18,19 +18,19 @@ $hp_faq = array(
   ),
   array(
     'q' => 'Which cities and countries do you cover?',
-    'a' => 'Across India we run dedicated desks for Delhi NCR, Mumbai, Hyderabad, Chandigarh, Kolkata and Lucknow, and we recruit nationwide from our New Delhi office. Our second office in Ajman covers hospital and clinic hiring across the United Arab Emirates.',
+    'a' => 'Across India we run dedicated desks for Delhi NCR, Mumbai, Hyderabad, Chandigarh, Kolkata and Lucknow, and we recruit nationwide from our New Delhi office. Our Ajman office covers the Emirates and the wider Gulf, and we place candidates into international markets from both offices. Tell us the country you are hiring for and we will confirm the desk that handles it.',
   ),
   array(
     'q' => 'How quickly can you send a shortlist?',
     'a' => 'It depends on the role. Ward nursing, administration and most paramedical posts move fastest because we hold pre-screened candidates. Super-speciality consultant and head of department searches take longer because they are head hunted rather than advertised. We commit to a timeline with you when we take the brief, not after.',
   ),
   array(
-    'q' => 'Do you help candidates moving to the UAE?',
-    'a' => 'Yes. Working clinically in the UAE means holding a licence from the health authority for the emirate you will practise in, and each authority sets its own examination and document requirements. Our UAE desk tells you which pathway applies to your qualification, what paperwork to prepare, and coordinates the employer side of the process.',
+    'q' => 'Do you help candidates moving abroad?',
+    'a' => 'Yes, that is a large part of what we do. Practising clinically in another country means holding a licence from that country health authority, and each one sets its own examination and document requirements. We tell you which pathway applies to your qualification, what paperwork to prepare, and we coordinate the employer side of the process.',
   ),
   array(
     'q' => 'Are you certified, and how long have you been doing this?',
-    'a' => 'HospitalPlacement.com is an ISO 9001:2000 certified recruitment consultancy and has worked exclusively in healthcare staffing since 2010, which is ' . $hp_years . ' years of placements across hospitals, nursing homes and diagnostic centres.',
+    'a' => 'HospitalPlacement.com is an ISO 9001:2000 certified recruitment consultancy and has worked exclusively in healthcare staffing since 2010, which is ' . $hp_years . ' years of placements into hospitals, nursing homes and diagnostic centres in India and overseas.',
   ),
   array(
     'q' => 'Do you charge job seekers a placement fee?',

@@ -46,7 +46,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 
     <a class="hp-logo" href="<?php echo $hp_p ?: '/'; ?>" aria-label="HospitalPlacement.com home">
       <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
-           alt="HospitalPlacement.com, healthcare recruitment agency in India and the UAE"
+           alt="HospitalPlacement.com, global healthcare recruitment agency"
            width="119" height="52">
     </a>
 
@@ -109,7 +109,7 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
               <?php endforeach; ?>
             </ul>
             <div class="hp-mega__foot">
-              <p>Now hiring for hospitals and clinics across the UAE.</p>
+              <p>Hiring for hospitals in India, the Gulf and overseas.</p>
               <a class="hp-link" href="<?php echo $hp_p; ?>contact.php">Hire staff <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>

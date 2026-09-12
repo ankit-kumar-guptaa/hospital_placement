@@ -20,10 +20,10 @@ $hp_loc = array(
   <div class="hp-wrap">
     <div class="hp-head">
       <p class="hp-eyebrow hp-rise">
-        <i class="fa-solid fa-earth-asia" aria-hidden="true"></i> Where we work
+        <i class="fa-solid fa-earth-americas" aria-hidden="true"></i> Where we work
       </p>
-      <h2 class="hp-h2 hp-rise" id="locations-title">Hiring desks in India, now open in the UAE</h2>
-      <p class="hp-lead hp-rise">Our consultants know the pay bands, the registration rules and the commute realities of each market. Pick your city to see local roles and local rates.</p>
+      <h2 class="hp-h2 hp-rise" id="locations-title">Hiring desks across India, the Gulf and beyond</h2>
+      <p class="hp-lead hp-rise">We recruit from New Delhi and Ajman for hospitals in India, the Emirates and international markets. Each desk knows its own pay bands, registration rules and notice periods. Pick a market to see local roles and local rates.</p>
     </div>
 
     <div class="hp-places" style="margin-top:44px;">

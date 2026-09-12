@@ -11,8 +11,8 @@ $hp_canonical = 'https://hospitalplacement.com/';
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Healthcare Recruitment Agency in India &amp; UAE | HospitalPlacement.com</title>
-<meta name="description" content="ISO 9001:2000 certified medical recruitment consultancy hiring doctors, nurses, paramedical and hospital admin staff across India and the UAE since 2010. Pay on success.">
+<title>Global Healthcare Recruitment Agency | HospitalPlacement.com</title>
+<meta name="description" content="ISO 9001:2000 certified medical recruitment consultancy placing doctors, nurses, paramedical and hospital admin staff worldwide since 2010. India, the Gulf and international markets. Pay on success.">
 <link rel="canonical" href="<?php echo $hp_canonical; ?>">
 <meta name="robots" content="index, follow, max-image-preview:large">
 
@@ -21,15 +21,15 @@ $hp_canonical = 'https://hospitalplacement.com/';
 <meta property="og:site_name" content="HospitalPlacement.com">
 <meta property="og:locale" content="en_IN">
 <meta property="og:url" content="<?php echo $hp_canonical; ?>">
-<meta property="og:title" content="Healthcare Recruitment Agency in India &amp; UAE | HospitalPlacement.com">
-<meta property="og:description" content="Doctors, nurses, paramedical and hospital administration staff for hospitals, clinics and nursing homes across India and the UAE. ISO 9001:2000 certified, hiring since 2010.">
+<meta property="og:title" content="Global Healthcare Recruitment Agency | HospitalPlacement.com">
+<meta property="og:description" content="Doctors, nurses, paramedical and hospital administration staff for hospitals, clinics and nursing homes worldwide. ISO 9001:2000 certified, recruiting since 2010.">
 <meta property="og:image" content="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 <meta property="og:image:alt" content="HospitalPlacement.com healthcare recruitment">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Healthcare Recruitment Agency in India &amp; UAE">
-<meta name="twitter:description" content="Doctors, nurses, paramedical and hospital administration staff across India and the UAE. ISO 9001:2000 certified, hiring since 2010.">
+<meta name="twitter:title" content="Global Healthcare Recruitment Agency">
+<meta name="twitter:description" content="Doctors, nurses, paramedical and hospital administration staff placed worldwide. ISO 9001:2000 certified, recruiting since 2010.">
 <meta name="twitter:image" content="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
 <!-- Google tag (gtag.js) -->
@@ -71,7 +71,7 @@ echo json_encode(array(
       '@id'         => $hp_canonical . '#organisation',
       'name'        => 'HospitalPlacement.com',
       'url'         => $hp_canonical,
-      'description' => 'Healthcare recruitment consultancy placing doctors, nurses, paramedical, pharma and hospital administration staff with hospitals, clinics and nursing homes across India and the United Arab Emirates.',
+      'description' => 'Healthcare recruitment consultancy placing doctors, nurses, paramedical, pharma and hospital administration staff with hospitals, clinics and nursing homes in India, the Gulf and international markets, from offices in New Delhi and Ajman.',
       'foundingDate'=> '2010',
       'logo'        => 'https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg',
       'image'       => 'https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg',
@@ -80,6 +80,8 @@ echo json_encode(array(
       'areaServed'  => array(
         array('@type' => 'Country', 'name' => 'India'),
         array('@type' => 'Country', 'name' => 'United Arab Emirates'),
+        array('@type' => 'Place',   'name' => 'Gulf Cooperation Council'),
+        array('@type' => 'Place',   'name' => 'Worldwide'),
       ),
       'address' => array(
         array(
@@ -109,7 +111,7 @@ echo json_encode(array(
           '@type'             => 'ContactPoint',
           'contactType'       => 'sales',
           'telephone'         => '+971-58-234-8005',
-          'areaServed'        => 'AE',
+          'areaServed'        => array('AE', 'SA', 'QA', 'OM', 'KW', 'BH'),
           'availableLanguage' => array('English'),
         ),
       ),
@@ -120,6 +122,7 @@ echo json_encode(array(
       'knowsAbout' => array(
         'Doctor recruitment', 'Nurse staffing', 'Paramedical recruitment',
         'Hospital administration hiring', 'Locum and contract medical staffing',
+        'International healthcare recruitment', 'Overseas medical licensing support',
       ),
     ),
 
@@ -136,10 +139,10 @@ echo json_encode(array(
       '@type'      => 'WebPage',
       '@id'        => $hp_canonical . '#webpage',
       'url'        => $hp_canonical,
-      'name'       => 'Healthcare Recruitment Agency in India and the UAE',
+      'name'       => 'Global Healthcare Recruitment Agency',
       'isPartOf'   => array('@id' => $hp_canonical . '#website'),
       'about'      => array('@id' => $hp_canonical . '#organisation'),
-      'description'=> 'Medical and healthcare recruitment services for hospitals, clinics and nursing homes in India and the United Arab Emirates.',
+      'description'=> 'Medical and healthcare recruitment services for hospitals, clinics and nursing homes worldwide, from offices in India and the UAE.',
     ),
 
     array(
@@ -204,9 +207,10 @@ echo json_encode(array(
           shift reality.
         </p>
         <p class="hp-copy hp-rise" style="margin-top:14px;">
-          We work from New Delhi across India, and from Ajman across the United Arab
-          Emirates, which means one team can handle a candidate moving between the two
-          markets without the file being handed around.
+          We work from New Delhi and from Ajman, recruiting for hospitals in India, across
+          the Gulf and in international markets. One team carries a candidate from first
+          call through licensing, visa and joining date, whichever country they are moving
+          to, so the file is never handed around.
         </p>
 
         <ul class="hp-ticks">
@@ -216,7 +220,7 @@ echo json_encode(array(
           </li>
           <li class="hp-rise">
             <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-            <span><b>Permanent, contract and locum</b> hiring on a single agreement, so urgent cover does not need a new contract.</span>
+            <span><b>Permanent, contract and locum</b> hiring on a single agreement, at home or overseas.</span>
           </li>
           <li class="hp-rise">
             <i class="fa-solid fa-circle-check" aria-hidden="true"></i>

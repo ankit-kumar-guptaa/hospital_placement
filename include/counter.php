@@ -25,7 +25,7 @@ $hp_years = (int) date('Y') - 2010;
       </div>
       <div class="hp-stat hp-rise">
         <p class="hp-stat__n"><span class="counter" data-target="2">0</span></p>
-        <p>Countries covered, from New Delhi and from Ajman</p>
+        <p>Offices, New Delhi and Ajman, recruiting worldwide</p>
       </div>
     </div>
   </div>
