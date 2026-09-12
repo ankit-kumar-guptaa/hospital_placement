@@ -20,6 +20,9 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 # Base directory
 RewriteBase /
 
+# Serve the generated sitemap at the canonical /sitemap.xml
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+
 # Prevent direct access to index.php
 RewriteRule ^index\.php$ - [L]
 

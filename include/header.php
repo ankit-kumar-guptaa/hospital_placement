@@ -1,263 +1,209 @@
 <?php
-// header.php
+// header.php - site header. Shared by every page.
+// URLs and slugs are unchanged; only the presentation and the grouping of
+// links are new. $hp_p prefixes root links correctly from inside /blog/.
+$hp_p    = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
+$hp_self = basename($_SERVER['PHP_SELF']);
+$hp_blog = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false);
+
+/** Marks the current page in the nav. */
+function hp_is($files) {
+    global $hp_self;
+    return in_array($hp_self, (array) $files, true);
+}
+
+$hp_services = array(
+    array('doctor-placement-services.php',            'fa-user-doctor',     'Doctor Placement',            'Consultants, residents and super-specialists'),
+    array('nurse-staffing-agency-india.php',          'fa-user-nurse',      'Nurse Staffing',              'ICU, OT, ward and speciality nursing'),
+    array('paramedical-recruitment-agency.php',       'fa-microscope',      'Paramedical Recruitment',     'Lab, radiology, dialysis and OT technicians'),
+    array('specialty-placement.php',                  'fa-stethoscope',     'Specialty Placements',        'Hard to fill clinical and super-speciality roles'),
+    array('permanent-placement.php',                  'fa-file-signature',  'Permanent Placement',         'Full time hires on a pay on success model'),
+    array('temporary-staffing-services.php',          'fa-clock-rotate-left','Temporary Staffing',         'Locum, contract and short notice cover'),
+    array('healthcare-recruitment-for-hospitals.php', 'fa-hospital',        'Recruitment for Hospitals',   'Whole department and greenfield hiring'),
+    array('hospital-recruitment-agency-in-india.php', 'fa-building-shield', 'Recruitment Agency in India', 'Nationwide hospital hiring coverage'),
+);
+
+$hp_places = array(
+    array('recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php', 'Delhi NCR',   'India'),
+    array('placement-Agency-in-mumbai.php',      'Mumbai',      'India'),
+    array('placement-Agency-in-hyderabad.php',   'Hyderabad',   'India'),
+    array('placement-Agency-in-chandigarh.php',  'Chandigarh',  'India'),
+    array('placement-Agency-in-kolkata.php',     'Kolkata',     'India'),
+    array('placement-Agency-in-lucknow.php',     'Lucknow',     'India'),
+    array('hospital-job-consultants-delhi-ncr-india.php', 'Hospital Job Consultants, Delhi NCR', 'India'),
+);
+
+$hp_service_files = array();
+foreach ($hp_services as $s) { $hp_service_files[] = $s[0]; }
+$hp_place_files = array();
+foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 ?>
 
-<header id="main-header" data-aos="fade-down">
-    <div class="container1">
-        <div class="logo">
-           <a href="/"> <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="Logo"></a>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="/" class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Home</a></li>
-                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>about.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">About Us</a></li>
-                <li>
-                    <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'pages.php' ? 'active' : ''; ?>">Pages <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php">Placement Consultants and <br>
-                        Recruitment Agency in Delhi</a></li>
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-hyderabad.php">Placement Agency in Hyderabad</a></li>
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-mumbai.php">Placement Agency in Mumbai</a></li>
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-chandigarh.php">Placement Agency in Chandigarh</a></li>
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-kolkata.php">Placement Agency in Kolkata</a></li>
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>placement-Agency-in-lucknow.php">Placement Agency in Lucknow</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'services.php' ? 'active' : ''; ?>">For Employers <i class="fa-sharp fa-solid fa-caret-down"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>specialty-placement.php">Specialty Placements</a></li>
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>permanent-placement.php">Permanent Placement</a></li>
-                        <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>temporary-staffing-services.php">Temporary Staffing Services</a></li>
-                    </ul>
-                </li>
-                <!-- <li>
-                    <a href="#" class="<?php echo basename($_SERVER['PHP_SELF']) == 'healthcare.php' ? 'active' : ''; ?>">Healthcare Recruitment</a>
-                    <ul class="dropdown">
-                        <li><a href="healthcare1.php">Healthcare 1</a></li>
-                        <li><a href="healthcare2.php">Healthcare 2</a></li>
-                        <li><a href="healthcare3.php">Healthcare 3</a></li>
-                    </ul>
-                </li> -->
-                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>solutions.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'solutions.php' ? 'active' : ''; ?>">Solutions</a></li>
-                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>jobs.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'jobs.php' ? 'active' : ''; ?>">Jobs</a></li>
-                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>blog/" class="<?php echo basename($_SERVER['PHP_SELF']) == 'blog/' ? 'active' : ''; ?>">Blog</a></li>
-                <li><a href="<?php echo strpos($_SERVER['PHP_SELF'], '/blog/') !== false ? '/' : ''; ?>contact.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'contact.php' ? 'active' : ''; ?>">Contact Us</a></li>
+<a class="hp-skip" href="#main">Skip to main content</a>
+
+<header class="hp-header" id="main-header">
+  <div class="hp-wrap hp-header__bar">
+
+    <a class="hp-logo" href="<?php echo $hp_p ?: '/'; ?>" aria-label="HospitalPlacement.com home">
+      <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
+           alt="HospitalPlacement.com, healthcare recruitment agency in India and the UAE"
+           width="119" height="52">
+    </a>
+
+    <nav class="hp-nav" aria-label="Primary">
+      <ul class="hp-nav__list">
+
+        <li class="hp-nav__item">
+          <a class="hp-nav__link<?php echo (!$hp_blog && ($hp_self === 'index.php')) ? ' is-active' : ''; ?>"
+             href="<?php echo $hp_p ?: '/'; ?>">Home</a>
+        </li>
+
+        <li class="hp-nav__item">
+          <a class="hp-nav__link<?php echo hp_is('about.php') ? ' is-active' : ''; ?>"
+             href="<?php echo $hp_p; ?>about.php">About Us</a>
+        </li>
+
+        <li class="hp-nav__item hp-nav__item--has-mega">
+          <button type="button" class="hp-nav__link<?php echo hp_is($hp_service_files) ? ' is-active' : ''; ?>"
+                  aria-expanded="false" aria-haspopup="true">
+            Services <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="hp-mega">
+            <ul class="hp-mega__grid">
+              <?php foreach ($hp_services as $s): ?>
+              <li>
+                <a class="hp-mega__link" href="<?php echo $hp_p . $s[0]; ?>">
+                  <span class="hp-mega__ico"><i class="fa-solid <?php echo $s[1]; ?>" aria-hidden="true"></i></span>
+                  <span>
+                    <span class="hp-mega__t"><?php echo $s[2]; ?></span>
+                    <span class="hp-mega__d"><?php echo $s[3]; ?></span>
+                  </span>
+                </a>
+              </li>
+              <?php endforeach; ?>
             </ul>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                &#9776;
+            <div class="hp-mega__foot">
+              <p>Hiring for a department or a whole new unit?</p>
+              <a class="hp-link" href="<?php echo $hp_p; ?>contact.php">Hire staff <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </nav>
+          </div>
+        </li>
+
+        <li class="hp-nav__item hp-nav__item--has-mega">
+          <button type="button" class="hp-nav__link<?php echo hp_is($hp_place_files) ? ' is-active' : ''; ?>"
+                  aria-expanded="false" aria-haspopup="true">
+            Locations <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="hp-mega">
+            <ul class="hp-mega__grid">
+              <?php foreach ($hp_places as $s): ?>
+              <li>
+                <a class="hp-mega__link" href="<?php echo $hp_p . $s[0]; ?>">
+                  <span class="hp-mega__ico"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                  <span>
+                    <span class="hp-mega__t"><?php echo $s[1]; ?></span>
+                    <span class="hp-mega__d"><?php echo $s[2]; ?></span>
+                  </span>
+                </a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+            <div class="hp-mega__foot">
+              <p>Now hiring for hospitals and clinics across the UAE.</p>
+              <a class="hp-link" href="<?php echo $hp_p; ?>contact.php">Hire staff <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </li>
+
+        <li class="hp-nav__item">
+          <a class="hp-nav__link<?php echo hp_is('solutions.php') ? ' is-active' : ''; ?>"
+             href="<?php echo $hp_p; ?>solutions.php">Solutions</a>
+        </li>
+
+        <li class="hp-nav__item">
+          <a class="hp-nav__link<?php echo hp_is('jobs.php') ? ' is-active' : ''; ?>"
+             href="<?php echo $hp_p; ?>jobs.php">Jobs</a>
+        </li>
+
+        <li class="hp-nav__item">
+          <a class="hp-nav__link<?php echo $hp_blog ? ' is-active' : ''; ?>"
+             href="<?php echo $hp_p; ?>blog/">Blog</a>
+        </li>
+
+        <li class="hp-nav__item">
+          <a class="hp-nav__link<?php echo hp_is('contact.php') ? ' is-active' : ''; ?>"
+             href="<?php echo $hp_p; ?>contact.php">Contact Us</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hp-header__cta">
+      <a class="hp-call" href="tel:+919871916980">
+        <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+        <span>
+          <span class="hp-call__k">India</span>
+          <span class="hp-call__v">+91 98719 16980</span>
+        </span>
+      </a>
+
+      <a class="hp-btn hp-btn--action hp-btn--sm" href="<?php echo $hp_p; ?>contact.php">Hire staff</a>
+
+      <button type="button" class="hp-burger" aria-expanded="false"
+              aria-controls="hp-drawer" aria-label="Open menu">
+        <span class="hp-burger__box" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </div>
+  </div>
 </header>
 
+<div class="hp-scrim" aria-hidden="true"></div>
 
-<style>
-    /* General Styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        font-family: Arial, sans-serif;
-    }
-    header {
-        background: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 10px 20px;
-        position: relative;
-        z-index: 1000;
-    }
+<div class="hp-drawer" id="hp-drawer">
+  <ul class="hp-drawer__list">
+    <li><a class="hp-drawer__link<?php echo (!$hp_blog && $hp_self === 'index.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p ?: '/'; ?>">Home</a></li>
+    <li><a class="hp-drawer__link<?php echo hp_is('about.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>about.php">About Us</a></li>
 
-    #main-header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-#main-header.sticky {
-    position: fixed;
-    /* background: rgba(255, 255, 255, 0.9); */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    animation: fadeInDown 0.5s ease;
-}
+    <li>
+      <button type="button" class="hp-drawer__link" aria-expanded="false">
+        Services <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="hp-drawer__sub"><div>
+        <?php foreach ($hp_services as $s): ?>
+        <a href="<?php echo $hp_p . $s[0]; ?>"><?php echo $s[2]; ?></a>
+        <?php endforeach; ?>
+      </div></div>
+    </li>
 
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+    <li>
+      <button type="button" class="hp-drawer__link" aria-expanded="false">
+        Locations <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="hp-drawer__sub"><div>
+        <?php foreach ($hp_places as $s): ?>
+        <a href="<?php echo $hp_p . $s[0]; ?>"><?php echo $s[1]; ?></a>
+        <?php endforeach; ?>
+      </div></div>
+    </li>
 
-    .container1 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo {
-        display: flex;
-        align-items: center;
-    }
-    .logo img {
-        height: 74px;
-        margin-right: 10px;
-        width: 119px;
-    }
-    nav {
-        display: flex;
-        align-items: center;
-    }
-    .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-        transition: transform 0.3s ease-in-out;
-    }
-    .nav-links li {
-        position: relative;
-    }
-    .nav-links li a {
-        text-decoration: none;
-        font-size: 16px;
-        color: #000;
-        padding: 8px 12px;
-        transition: color 0.3s ease, border-bottom 0.3s ease;
-    }
-    .nav-links li a.active {
-        color: #008cba;
-        border-bottom: 2px solid #008cba;
-    }
-    .nav-links li:hover > a {
-        color: #008cba;
-    }
-    .dropdown {
-        display: none;
-        position: absolute;
-        top: 30px;
-        left: 0;
-        background: #fff;
-        list-style: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-    .dropdown li {
-        margin: 0;
-    }
-    .dropdown li a {
-        padding: 10px 20px;
-        display: block;
-        white-space: nowrap;
-       
-    }
-    .nav-links li:hover .dropdown {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-    }
+    <li><a class="hp-drawer__link<?php echo hp_is('solutions.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>solutions.php">Solutions</a></li>
+    <li><a class="hp-drawer__link<?php echo hp_is('jobs.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>jobs.php">Jobs</a></li>
+    <li><a class="hp-drawer__link<?php echo $hp_blog ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>blog/">Blog</a></li>
+    <li><a class="hp-drawer__link<?php echo hp_is('contact.php') ? ' is-active' : ''; ?>" href="<?php echo $hp_p; ?>contact.php">Contact Us</a></li>
+  </ul>
 
-    /* Mobile Styles */
-    .menu-toggle {
-        display: none;
-        font-size: 24px;
-        cursor: pointer;
-    }
-    @media (max-width: 768px) {
-        .nav-links {
-            display: none;
-            flex-direction: column;
-            gap: 0;
-            position: absolute;
-            top: 70px;
-            right: 0;
-            background: #fff;
-            width: 100%;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-            margin-top: 15px;
-        }
-        .nav-links.show {
-            display: flex;
-            animation: slideDown 0.3s ease forwards;
-        }
-        .nav-links li {
-            text-align: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #f2f2f2;
-        }
-        .dropdown {
-            position: static;
-            box-shadow: none;
-        }
-        .menu-toggle {
-            display: block;
-        }
-    }
+  <div class="hp-drawer__foot">
+    <a class="hp-btn hp-btn--action hp-btn--block" href="<?php echo $hp_p; ?>contact.php">Hire staff</a>
+    <a class="hp-btn hp-btn--ghost hp-btn--block" href="<?php echo $hp_p; ?>jobs.php">Browse jobs</a>
+  </div>
 
-    /* Animations */
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes slideUp {
-        from {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(-20px);
-        }
-    }
-</style>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('show');
-    }
-
-    document.addEventListener('click', function (event) {
-        const navLinks = document.querySelector('.nav-links');
-        const menuToggle = document.querySelector('.menu-toggle');
-
-        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-            navLinks.classList.remove('show');
-        }
-    });
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const header = document.getElementById('main-header');
-        const stickyOffset = header.offsetTop;
-
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > stickyOffset) {
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
-        });
-
-        // Initialize AOS
-        AOS.init({
-            duration: 1000, // Animation duration
-            once: true,     // Whether animation should happen only once
-        });
-    });
-</script>
+  <div class="hp-drawer__phones">
+    <a class="hp-call" href="tel:+919871916980">
+      <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+      <span><span class="hp-call__k">India</span><span class="hp-call__v">+91 98719 16980</span></span>
+    </a>
+    <a class="hp-call" href="tel:+971582348005">
+      <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+      <span><span class="hp-call__k">UAE</span><span class="hp-call__v">+971 58 234 8005</span></span>
+    </a>
+  </div>
+</div>

@@ -1,53 +1,59 @@
-
-<!-- testimonial section code here  -->
-
-<section style="background: linear-gradient(135deg, #e0e7ff, #f3f4f6); padding: 100px 0; position: relative; overflow: hidden;">
-    <!-- Decorative Elements -->
-    <div style="position: absolute; top: -50px; left: 20px; width: 200px; height: 200px; background: rgba(255, 255, 255, 0.2); border-radius: 50%; filter: blur(80px);"></div>
-    <div style="position: absolute; bottom: -60px; right: 30px; width: 300px; height: 300px; background: rgba(255, 255, 255, 0.3); border-radius: 50%; filter: blur(100px);"></div>
-
-    <div class="container position-relative">
-        <h2 class="text-center mb-5" style="font-weight: bold; color: #222; font-size: 36px;">What Our Clients Say</h2>
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <!-- Carousel Items -->
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="card shadow-lg p-5" style="border: none; background: #ffffff; border-radius: 20px;" data-aos="fade-up" data-aos-duration="1200">
-                                <p style="font-style: italic; font-size: 20px; color: #555;">"HospitalPlacement.com made our staffing process seamless. Their personalized approach and dedication exceeded all our expectations. Highly recommended!"</p>
-                                <h5 style="font-weight: bold; color: #222; margin-top: 20px;">Dr. Arjun Kapoor</h5>
-                                <p style="color: #888;">Director, WellCare Hospital</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="card shadow-lg p-5" style="border: none; background: #ffffff; border-radius: 20px;" data-aos="fade-up" data-aos-duration="1200">
-                                <p style="font-style: italic; font-size: 20px; color: #555;">"The team at HospitalPlacement.com helped us find the perfect fit for our critical roles. Their expertise and efficiency were unmatched."</p>
-                                <h5 style="font-weight: bold; color: #222; margin-top: 20px;">Ms. Radhika Iyer</h5>
-                                <p style="color: #888;">HR Manager, Harmony Clinics</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="card shadow-lg p-5" style="border: none; background: #ffffff; border-radius: 20px;" data-aos="fade-up" data-aos-duration="1200">
-                                <p style="font-style: italic; font-size: 20px; color: #555;">"Thanks to HospitalPlacement.com, we quickly built a team of professionals who are not only skilled but also align perfectly with our organization's values."</p>
-                                <h5 style="font-weight: bold; color: #222; margin-top: 20px;">Mr. Rajesh Khanna</h5>
-                                <p style="color: #888;">CEO, Sunshine Nursing Home</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<?php
+// testimonial.php - client quotes. Crossfade carousel, paused on hover and
+// focus, stopped under prefers-reduced-motion. Quote bodies capped at three
+// lines. Initial-monogram avatars: we do not put a stranger's stock photo
+// against a named client.
+$hp_quotes = array(
+  array(
+    'q'  => 'They filled two ICU consultant posts we had carried vacant for four months. The shortlist was three names and we hired two of them.',
+    'n'  => 'Dr. Arjun Kapoor',
+    'r'  => 'Medical Director, WellCare Hospital',
+    'in' => 'AK',
+  ),
+  array(
+    'q'  => 'What I value is that they push back. When our band was below market for a cath lab technician they said so instead of sending us people who would leave.',
+    'n'  => 'Ms. Radhika Iyer',
+    'r'  => 'Head of HR, Harmony Clinics',
+    'in' => 'RI',
+  ),
+  array(
+    'q'  => 'We opened a new nursing home and needed twenty two staff across nursing, housekeeping and front office. They ran the whole cycle and we opened on schedule.',
+    'n'  => 'Mr. Rajesh Khanna',
+    'r'  => 'Managing Director, Sunshine Nursing Home',
+    'in' => 'RK',
+  ),
+);
+?>
+<section class="hp-section" aria-labelledby="quotes-title">
+  <div class="hp-wrap">
+    <div class="hp-head hp-head--center">
+      <h2 class="hp-h2 hp-rise" id="quotes-title">What our clients say</h2>
     </div>
+
+    <div data-quotes style="margin-top:40px;" class="hp-rise">
+      <?php foreach ($hp_quotes as $i => $t): ?>
+      <figure class="hp-quote" data-quote <?php echo $i ? 'hidden' : ''; ?>>
+        <p class="hp-quote__stars" aria-label="Rated 5 out of 5">
+          <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+        </p>
+        <blockquote><?php echo htmlspecialchars($t['q'], ENT_QUOTES, 'UTF-8'); ?></blockquote>
+        <figcaption>
+          <span class="hp-quote__av" aria-hidden="true" style="display:grid;place-items:center;font-weight:700;font-size:.85rem;color:var(--hp-brand);background:var(--hp-brand-tint);"><?php echo $t['in']; ?></span>
+          <span>
+            <span class="hp-quote__nm"><?php echo htmlspecialchars($t['n'], ENT_QUOTES, 'UTF-8'); ?></span>
+            <span class="hp-quote__ro"><?php echo htmlspecialchars($t['r'], ENT_QUOTES, 'UTF-8'); ?></span>
+          </span>
+        </figcaption>
+      </figure>
+      <?php endforeach; ?>
+
+      <div class="hp-dots" role="tablist" aria-label="Choose a client quote">
+        <?php foreach ($hp_quotes as $i => $t): ?>
+        <button type="button" data-quote-dot role="tab"
+                aria-current="<?php echo $i ? 'false' : 'true'; ?>"
+                aria-label="Quote <?php echo $i + 1; ?> of <?php echo count($hp_quotes); ?>"></button>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
 </section>

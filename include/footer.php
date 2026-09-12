@@ -1,242 +1,178 @@
-<footer class="footer py-5" style="background: linear-gradient(135deg, #2c3e50, #34495e); overflow: hidden;">
-  <div class="container">
-    <div class="row text-light">
-      <!-- Logo and About Section -->
-      <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg" alt="HospitalPlacement Logo" class="mb-3" style="width: 180px;">
-        <p style="color: #dcdde1; line-height: 1.8;">
-          HospitalPlacement.com is your trusted partner in medical recruitment, offering seamless staffing solutions for healthcare facilities nationwide. Bridging talent with opportunity since 2010.
-        </p>
-      </div>
+<?php
+// footer.php - site footer plus the shared script tail. Every script that was
+// loaded here before is still loaded here, in the same order.
+$hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
+?>
 
-      <!-- Quick Links Section -->
-      <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="200">
-        <h5 class="fw-bold text-uppercase mb-3" style="color: #ecf0f1;">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2">
-            <a href="index.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
-              <i class="fa fa-home me-2"></i>Home
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="solutions.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
-              <i class="fa fa-briefcase me-2"></i>solutions
-            </a>
-          </li>
-          <li class="mb-2">
-            <a href="about.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
-              <i class="fa fa-info-circle me-2"></i>About Us
-            </a>
-          </li>
-          <li>
-            <a href="contact.php" class="text-decoration-none" style="color: #1abc9c; transition: color 0.3s;">
-              <i class="fa fa-phone me-2"></i>Contact
-            </a>
-          </li>
-        </ul>
-      </div>
+<footer class="hp-footer">
+  <div class="hp-wrap hp-footer__top">
 
-      <!-- Contact Info Section -->
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-        <h5 class="fw-bold text-uppercase mb-3" style="color: #ecf0f1;">Contact Us</h5>
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            <i class="fa fa-map-marker-alt me-2" style="color: #1abc9c;"></i>
-            <span style="color: #dcdde1;">A-83, Okhla Phase II, New Delhi - 110020</span> <br>
-            <i class="fa fa-map-marker-alt me-2" style="color: #1abc9c;"></i>
-            <span style="color: #dcdde1;">BC-889265 26th Floor, Amber Gem Tower, Ajman , UAE</span>
-            
-          </li>
-          <li class="mb-3">
-            <i class="fa fa-envelope me-2" style="color: #1abc9c;"></i>
-            <a href="mailto:info@hospitalplacement.com" style="color: #1abc9c; text-decoration: none; transition: color 0.3s;">
-              info@hospitalplacement.com
-            </a>
-          </li>
-          <li>
-            <i class="fa fa-phone-alt me-2" style="color: #1abc9c;"></i>
-            <a href="tel:+919871916980" style="color: #1abc9c; text-decoration: none; transition: color 0.3s;">
-              +919871916980
-            </a> <br>
-            <i class="fa fa-phone-alt me-2" style="color: #1abc9c;"></i>
-            <a href="tel:+971582348005" style="color: #1abc9c; text-decoration: none; transition: color 0.3s;">
-              +971582348005
-            </a>
-          </li>
-        </ul>
+    <div>
+      <img class="hp-footer__logo"
+           src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
+           alt="HospitalPlacement.com" width="120" height="56" loading="lazy">
+      <p class="hp-footer__about">
+        A healthcare recruitment consultancy working only in medical staffing since 2010.
+        ISO 9001:2000 certified, placing doctors, nurses, paramedical and hospital
+        administration staff across India and the United Arab Emirates.
+      </p>
+      <div class="hp-social" style="margin-top:22px;">
+        <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw==" aria-label="HospitalPlacement on Instagram" rel="noopener">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/posts/hospital-placement_healthcare-facts-hospitalplacement-activity-7289623509473861632-Grtu?utm_source=share&utm_medium=member_android&rcm=ACoAADP699QBNUaBQI6EsjAd4G-1BINWmnVfT6g" aria-label="HospitalPlacement on LinkedIn" rel="noopener">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
       </div>
     </div>
 
-    <hr class="text-muted my-4" style="border-color: rgba(236, 240, 241, 0.2);">
+    <nav aria-labelledby="foot-co">
+      <h2 id="foot-co">Company</h2>
+      <ul class="hp-fnav">
+        <li><a href="<?php echo $hp_pf ?: '/'; ?>">Home</a></li>
+        <li><a href="<?php echo $hp_pf; ?>about.php">About Us</a></li>
+        <li><a href="<?php echo $hp_pf; ?>solutions.php">Solutions</a></li>
+        <li><a href="<?php echo $hp_pf; ?>jobs.php">Jobs</a></li>
+        <li><a href="<?php echo $hp_pf; ?>blog/">Blog</a></li>
+        <li><a href="<?php echo $hp_pf; ?>contact.php">Contact Us</a></li>
+        <li><a href="<?php echo $hp_pf; ?>privacy-policy.php">Privacy Policy</a></li>
+      </ul>
+    </nav>
 
-    <!-- Footer Bottom -->
-    <div class="d-flex flex-column flex-md-row align-items-center">
-      <!-- Copyright Text (Always Centered) -->
-      <div class="flex-grow-1 text-center">
-        <p class="mb-2 text-white mb-md-0">© 2025 HospitalPlacement.com. All rights reserved.</p>
+    <nav aria-labelledby="foot-sv">
+      <h2 id="foot-sv">Services</h2>
+      <ul class="hp-fnav">
+        <li><a href="<?php echo $hp_pf; ?>doctor-placement-services.php">Doctor Placement</a></li>
+        <li><a href="<?php echo $hp_pf; ?>nurse-staffing-agency-india.php">Nurse Staffing</a></li>
+        <li><a href="<?php echo $hp_pf; ?>paramedical-recruitment-agency.php">Paramedical Recruitment</a></li>
+        <li><a href="<?php echo $hp_pf; ?>specialty-placement.php">Specialty Placements</a></li>
+        <li><a href="<?php echo $hp_pf; ?>permanent-placement.php">Permanent Placement</a></li>
+        <li><a href="<?php echo $hp_pf; ?>temporary-staffing-services.php">Temporary Staffing</a></li>
+        <li><a href="<?php echo $hp_pf; ?>healthcare-recruitment-for-hospitals.php">Recruitment for Hospitals</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <h2>Talk to us</h2>
+      <div class="hp-office">
+        <div class="hp-office__row">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>
+            <span class="hp-office__k">India</span>
+            <span class="hp-office__v">A-83, Okhla Phase II, New Delhi 110020</span>
+            <span class="hp-office__v"><a href="tel:+919871916980">+91 98719 16980</a></span>
+          </span>
+        </div>
+        <div class="hp-office__row">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>
+            <span class="hp-office__k">United Arab Emirates</span>
+            <span class="hp-office__v">BC-889265, 26th Floor, Amber Gem Tower, Ajman</span>
+            <span class="hp-office__v"><a href="tel:+971582348005">+971 58 234 8005</a></span>
+          </span>
+        </div>
+        <div class="hp-office__row">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>
+            <span class="hp-office__k">Email</span>
+            <span class="hp-office__v"><a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a></span>
+          </span>
+        </div>
       </div>
-      <!-- Social Icons (Right-Aligned on Medium Screens and Up) -->
-      <div class="mt-2 mt-md-0">
-        <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw==" class="text-light me-3" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/posts/hospital-placement_healthcare-facts-hospitalplacement-activity-7289623509473861632-Grtu?utm_source=share&utm_medium=member_android&rcm=ACoAADP699QBNUaBQI6EsjAd4G-1BINWmnVfT6g" class="text-light" style="font-size: 18px; color: #1abc9c; transition: color 0.3s;">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
+    </div>
+  </div>
+
+  <div class="hp-wrap">
+    <div class="hp-footer__bot">
+      <p>&copy; <?php echo date('Y'); ?> HospitalPlacement.com. All rights reserved.</p>
+      <ul class="hp-legal">
+        <li><a href="<?php echo $hp_pf; ?>privacy-policy.php">Privacy Policy</a></li>
+        <li><a href="<?php echo $hp_pf; ?>contact.php">Contact Us</a></li>
+        <li><a href="<?php echo $hp_pf; ?>jobs.php">Current Openings</a></li>
+      </ul>
     </div>
   </div>
 </footer>
 
-
-<div id="sticky-cta">
-    <a href="tel:+971582348005" class="cta-icon call">
-        <i class="fas fa-phone"></i>
-    </a>
-    <a href="https://wa.me/+971582348005" class="cta-icon whatsapp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+<div class="hp-dock">
+  <a class="hp-dock__wa" href="https://wa.me/+971582348005" rel="noopener">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Chat on WhatsApp</span>
+  </a>
+  <a class="hp-dock__tel" href="tel:+919871916980">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i><span>Call our India office</span>
+  </a>
 </div>
-
-
-<style>
-  #sticky-cta {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 9999;
-}
-
-.cta-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    background-color: #007bff; /* Default blue color */
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-/* Vibrate effect for call icon */
-.cta-icon.call {
-    animation: vibrate 0.5s infinite alternate;
-}
-
-/* Hover effect for better visibility */
-.cta-icon:hover {
-    background-color:rgb(231, 236, 241); /* Darker blue on hover */
-    transform: scale(1.1); /* Slight scale on hover */
-}
-
-/* Custom color for WhatsApp icon */
-.cta-icon.whatsapp {
-    background-color: #25d366;
-}
-
-/* Hover effect for WhatsApp */
-.cta-icon.whatsapp:hover {
-    background-color: #128c7e; /* Darker WhatsApp green */
-}
-
-/* Vibrating animation */
-@keyframes vibrate {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(4px); }
-}
-
-</style>
-
-<!-- Include Cookie Consent Popup -->
-
-
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-//  AOS.init({
-//         duration: 800, // Animation duration in ms
-//         easing: 'ease-in-out', // Animation easing
-//         once: true // Animation happens only once
-//     });
-
-AOS.init({
-        duration: 1000, // Animation duration in ms
-        easing: 'ease-in-out', // Animation easing
-        once: true, // Animation happens only once
-        offset: 100, // Trigger animation when 200px above the section's center
-        anchorPlacement: 'top-center', // Animations trigger when the top of the section is near the center of the viewport
+// AOS still drives the data-aos attributes on the pages that use them.
+// The redesigned sections use the lighter IntersectionObserver reveal in
+// theme.js instead, so nothing is animated twice.
+if (window.AOS) {
+    AOS.init({
+        duration: 700,
+        easing: 'ease-out',
+        once: true,
+        offset: 80,
+        disable: function () {
+            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        }
     });
+}
 </script>
 
-<!-- <script src="https://recruitment-chatbot.greencarcarpool.com/script/chatbot.js"></script> -->
 <script>
+  // Count-up for the .counter elements in the stat band.
   document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll('.counter');
+    if (!counters.length) return;
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const animateCounter = (counter) => {
       const target = +counter.getAttribute('data-target');
-      const speed = 200;
+      if (reduce) { counter.innerText = target; return; }
 
-      const updateCount = () => {
-        const current = +counter.innerText;
-        const increment = Math.ceil(target / speed);
+      const start = performance.now();
+      const duration = 1100;
 
-        if (current < target) {
-          counter.innerText = current + increment;
-          setTimeout(updateCount, 10);
-        } else {
-          counter.innerText = target;
-        }
+      const step = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        // ease-out so the number settles rather than stopping dead
+        const eased = 1 - Math.pow(1 - p, 3);
+        counter.innerText = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(step);
+        else counter.innerText = target;
       };
-
-      updateCount();
+      requestAnimationFrame(step);
     };
 
-    const observeCounters = () => {
-      counters.forEach(counter => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              animateCounter(entry.target);
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.5 });
-
-        observer.observe(counter);
-      });
-    };
-
-    observeCounters();
+    counters.forEach(counter => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      observer.observe(counter);
+    });
   });
 </script>
 
-
-
-<script src="../assets/script.js"></script>
-
+<script src="/assets/script.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js" async></script> -->
-<!-- <script src="https://recruitment-chatbot.greencarcarpool.com/assets/js/chatbot-widget.js"></script> -->
-
-<!-- <script src="http://localhost/recruitment-chatbot/assets/js/chatbot-widget.js"></script> -->
 
 <!-- Bootstrap JS (Optional for some features like modals, dropdowns, etc.) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Google reCAPTCHA v3 integration -->
-<script src="../assets/js/recaptcha.js"></script>
+<script src="/assets/js/recaptcha.js"></script>
+
+<!-- Redesigned theme behaviour: reveal, nav, drawer, hero tabs, FAQ, quotes -->
+<script src="/assets/js/theme.js" defer></script>
 </body>
 </html>

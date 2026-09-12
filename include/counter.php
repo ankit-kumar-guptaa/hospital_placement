@@ -1,42 +1,31 @@
+<?php
+// counter.php - placement numbers as a dark stat band, no card containers.
+// The .counter class and data-target attribute drive the count-up script
+// that already lives in footer.php.
+$hp_years = (int) date('Y') - 2010;
+?>
+<section class="hp-section hp-band" aria-labelledby="numbers-title">
+  <div class="hp-wrap">
+    <h2 class="hp-h2 hp-rise" id="numbers-title" style="color:#fff; max-width:22ch; margin-bottom:40px;">
+      The record behind the shortlist
+    </h2>
 
-<!-- counter section code -->
-<section class="counter-section py-5 bg-light">
-  <div class="container">
-    <div class="row text-center">
-      <!-- Single Counter -->
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="counter-box">
-          <i class="fa fa-users fa-3x text-primary mb-3"></i>
-          <h2 class="counter text-primary fw-bold" data-target="240">0</h2>
-          <p class="text-muted">Happy Clients</p>
-        </div>
+    <div class="hp-band__grid">
+      <div class="hp-stat hp-rise">
+        <p class="hp-stat__n"><span class="counter" data-target="240">0</span><sup>+</sup></p>
+        <p>Hospitals, clinics and nursing homes we have hired for</p>
       </div>
-
-      <!-- Single Counter -->
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="counter-box">
-          <i class="fa fa-briefcase fa-3x text-success mb-3"></i>
-          <h2 class="counter text-success fw-bold" data-target="640">0</h2>
-          <p class="text-muted">Successful Placements</p>
-        </div>
+      <div class="hp-stat hp-rise">
+        <p class="hp-stat__n"><span class="counter" data-target="640">0</span><sup>+</sup></p>
+        <p>Medical professionals placed into permanent and contract posts</p>
       </div>
-
-      <!-- Single Counter -->
-      <!-- <div class="col-md-3 mb-4 mb-md-0">
-        <div class="counter-box">
-          <i class="fa fa-hospital-alt fa-3x text-danger mb-3"></i>
-          <h2 class="counter text-danger fw-bold" data-target="150">0</h2>
-          <p class="text-muted">Partner Hospitals</p>
-        </div>
-      </div> -->
-
-      <!-- Single Counter -->
-      <div class="col-md-4">
-        <div class="counter-box">
-          <i class="fa fa-award fa-3x text-warning mb-3"></i>
-          <h2 class="counter text-warning fw-bold" data-target="15">0</h2>
-          <p class="text-muted">Years of Excellence</p>
-        </div>
+      <div class="hp-stat hp-rise">
+        <p class="hp-stat__n"><span class="counter" data-target="<?php echo $hp_years; ?>">0</span></p>
+        <p>Years recruiting for healthcare, every year since 2010</p>
+      </div>
+      <div class="hp-stat hp-rise">
+        <p class="hp-stat__n"><span class="counter" data-target="2">0</span></p>
+        <p>Countries covered, from New Delhi and from Ajman</p>
       </div>
     </div>
   </div>

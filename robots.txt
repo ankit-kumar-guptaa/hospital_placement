@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Admin and server-side endpoints carry no content for search engines
+Disallow: /admin/
+Disallow: /include/
+Disallow: /PHPMailer/
+Disallow: /uploads/
+Disallow: /captcha.php
+Disallow: /process_form.php
+Disallow: /contactFormBackend.php
+Disallow: /employer_form_submission.php
+Disallow: /backend_job_seeker.php
+Disallow: /save_country.php
+Disallow: /visitor_tracking.php
+Disallow: /thankyou.php
+
+Sitemap: https://hospitalplacement.com/sitemap.xml
