@@ -1,32 +1,39 @@
 <?php
 require 'visitor_tracking.php';
+require_once __DIR__ . '/include/media.php';
+
+$hp_years = (int) date('Y') - 2010;
+$hp_canonical = 'https://hospitalplacement.com/';
 ?>
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Placement - Best Medical Recruitment Services</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="HospitalPlacement.com offers top-tier medical and healthcare recruitment services nationwide. ISO 9001:2000 certified, we connect talent with leading healthcare institutions."> <!-- Added meta description -->
-    <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
+<title>Healthcare Recruitment Agency in India &amp; UAE | HospitalPlacement.com</title>
+<meta name="description" content="ISO 9001:2000 certified medical recruitment consultancy hiring doctors, nurses, paramedical and hospital admin staff across India and the UAE since 2010. Pay on success.">
+<link rel="canonical" href="<?php echo $hp_canonical; ?>">
+<meta name="robots" content="index, follow, max-image-preview:large">
 
-  <!-- Google tag (gtag.js) -->
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HospitalPlacement.com">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="<?php echo $hp_canonical; ?>">
+<meta property="og:title" content="Healthcare Recruitment Agency in India &amp; UAE | HospitalPlacement.com">
+<meta property="og:description" content="Doctors, nurses, paramedical and hospital administration staff for hospitals, clinics and nursing homes across India and the UAE. ISO 9001:2000 certified, hiring since 2010.">
+<meta property="og:image" content="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
+<meta property="og:image:alt" content="HospitalPlacement.com healthcare recruitment">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Healthcare Recruitment Agency in India &amp; UAE">
+<meta name="twitter:description" content="Doctors, nurses, paramedical and hospital administration staff across India and the UAE. ISO 9001:2000 certified, hiring since 2010.">
+<meta name="twitter:image" content="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
+
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10893858085"></script>
-
-<style>
-    .message {
-        animation: fadeIn 0.5s ease-in;
-    }
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-</style>
-
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -51,139 +58,195 @@ function gtag_report_conversion(url) {
 }
 </script>
 
-<?php include 'include/assets.php'?>
+<?php include 'include/assets.php'; ?>
 
-<style>
-    @media screen and (max-width: 576px){
-    .homeimg img{
-      height: 248px !important;
-    }
-  }
-</style>
+<script type="application/ld+json">
+<?php
+echo json_encode(array(
+  '@context' => 'https://schema.org',
+  '@graph'   => array(
 
+    array(
+      '@type'       => 'EmploymentAgency',
+      '@id'         => $hp_canonical . '#organisation',
+      'name'        => 'HospitalPlacement.com',
+      'url'         => $hp_canonical,
+      'description' => 'Healthcare recruitment consultancy placing doctors, nurses, paramedical, pharma and hospital administration staff with hospitals, clinics and nursing homes across India and the United Arab Emirates.',
+      'foundingDate'=> '2010',
+      'logo'        => 'https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg',
+      'image'       => 'https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg',
+      'email'       => 'info@hospitalplacement.com',
+      'telephone'   => '+91-98719-16980',
+      'areaServed'  => array(
+        array('@type' => 'Country', 'name' => 'India'),
+        array('@type' => 'Country', 'name' => 'United Arab Emirates'),
+      ),
+      'address' => array(
+        array(
+          '@type'           => 'PostalAddress',
+          'streetAddress'   => 'A-83, Okhla Phase II',
+          'addressLocality' => 'New Delhi',
+          'postalCode'      => '110020',
+          'addressCountry'  => 'IN',
+        ),
+        array(
+          '@type'           => 'PostalAddress',
+          'streetAddress'   => 'BC-889265, 26th Floor, Amber Gem Tower',
+          'addressLocality' => 'Ajman',
+          'addressCountry'  => 'AE',
+        ),
+      ),
+      'contactPoint' => array(
+        array(
+          '@type'             => 'ContactPoint',
+          'contactType'       => 'sales',
+          'telephone'         => '+91-98719-16980',
+          'email'             => 'info@hospitalplacement.com',
+          'areaServed'        => 'IN',
+          'availableLanguage' => array('English', 'Hindi'),
+        ),
+        array(
+          '@type'             => 'ContactPoint',
+          'contactType'       => 'sales',
+          'telephone'         => '+971-58-234-8005',
+          'areaServed'        => 'AE',
+          'availableLanguage' => array('English'),
+        ),
+      ),
+      'sameAs' => array(
+        'https://www.instagram.com/hospital_placement',
+        'https://www.linkedin.com/company/hospital-placement',
+      ),
+      'knowsAbout' => array(
+        'Doctor recruitment', 'Nurse staffing', 'Paramedical recruitment',
+        'Hospital administration hiring', 'Locum and contract medical staffing',
+      ),
+    ),
 
+    array(
+      '@type'     => 'WebSite',
+      '@id'       => $hp_canonical . '#website',
+      'url'       => $hp_canonical,
+      'name'      => 'HospitalPlacement.com',
+      'publisher' => array('@id' => $hp_canonical . '#organisation'),
+      'inLanguage'=> 'en',
+    ),
+
+    array(
+      '@type'      => 'WebPage',
+      '@id'        => $hp_canonical . '#webpage',
+      'url'        => $hp_canonical,
+      'name'       => 'Healthcare Recruitment Agency in India and the UAE',
+      'isPartOf'   => array('@id' => $hp_canonical . '#website'),
+      'about'      => array('@id' => $hp_canonical . '#organisation'),
+      'description'=> 'Medical and healthcare recruitment services for hospitals, clinics and nursing homes in India and the United Arab Emirates.',
+    ),
+
+    array(
+      '@type' => 'BreadcrumbList',
+      '@id'   => $hp_canonical . '#breadcrumb',
+      'itemListElement' => array(
+        array('@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $hp_canonical),
+      ),
+    ),
+
+  ),
+), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+?>
+</script>
 
 </head>
-<body>
-   
+<body class="hp-body">
 
-    <?php include "include/header.php"?>
+<?php include "include/header.php"; ?>
 
-    <?php include "include/slider.php"?>
+<main id="main">
+
+  <?php include "include/slider.php"; ?>
+
+  <?php include "include/trust-rail.php"; ?>
+
+  <?php include "include/ensure.php"; ?>
 
 
+  <!-- Who we are. The one image plus text split on this page. -->
+  <section class="hp-section" aria-labelledby="about-title">
+    <div class="hp-wrap hp-split">
 
-
-    <!-- <section class="container py-5">
-    <div class="row">
-        <div class="col-md-12">
-            
-            <p class="content">
-                <strong>HospitalPlacement.com</strong> is your trusted recruitment consulting firm, serving the healthcare industry nationwide since <span class="highlight">2010</span>.
-                We’re an <span class="highlight">ISO 9001:2000</span> certified organization specializing in providing comprehensive staffing solutions for hospitals, nursing homes, and healthcare facilities.
-            </p>
-            <p class="content">
-                Our proven track record connects top-tier talent with leading healthcare institutions. We’re dedicated to facilitating seamless staffing processes and fostering long-term partnerships.
-            </p>
-        </div>
-    </div>
-</section> -->
-
-    
-<section class="hospital-placement-section py-5" data-aos="fade-up">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Left Column with Images -->
-      <div class="col-12 col-md-6 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
-        <div class="homeimg position-relative">
-          <img src="assets/img/home1.jpg" 
-               alt="Healthcare Professional" 
-               class="img-fluid rounded shadow w-75 position-absolute top-0 start-0" 
-               data-aos="fade-up" 
-               data-aos-delay="200"
-               style="height: 380px;">
-          <img src="assets/img/home2.jpg" 
-               alt="Nurse in Clinic" 
-               class="img-fluid rounded shadow w-75 position-absolute bottom-0 end-0" 
-               data-aos="fade-up" 
-               data-aos-delay="300"
-               style="height: 360px;">
+      <div class="hp-split__media">
+        <div class="hp-collage">
+          <img class="hp-collage__a"
+               src="<?php echo hp_img('about_main', 760); ?>"
+               data-fallback="<?php echo hp_img_fallback('about_main'); ?>"
+               alt="<?php echo hp_img_alt('about_main'); ?>"
+               width="760" height="950" fetchpriority="high" decoding="async">
+          <img class="hp-collage__b"
+               src="<?php echo hp_img('about_inset', 460); ?>"
+               data-fallback="<?php echo hp_img_fallback('about_inset'); ?>"
+               alt="<?php echo hp_img_alt('about_inset'); ?>"
+               width="460" height="460" loading="lazy" decoding="async">
+          <p class="hp-collage__badge">
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <b>ISO 9001:2000 certified</b>
+          </p>
         </div>
       </div>
 
-      <!-- Right Column with Content -->
-      <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <h6 class="text-danger fw-bold" data-aos="fade-up" data-aos-delay="200">GET YOUR BEST MEDICAL EMPLOYEE</h6>
-        <h2 class="fw-bold mb-4" data-aos="fade-up" data-aos-delay="300">
-          Best Medical and Healthcare Recruitment Services
+      <div>
+        <h2 class="hp-h2 hp-rise" id="about-title">
+          A recruitment firm that only ever worked in <span class="hp-mark">healthcare</span>
         </h2>
-        <p class="text-muted" data-aos="fade-up" data-aos-delay="400">
-          HospitalPlacement.com is your trusted recruitment consulting firm, serving the healthcare industry nationwide since 2010. We’re an ISO 9001:2000 certified organization specializing in providing comprehensive staffing solutions for hospitals, nursing homes, and healthcare facilities.
+        <p class="hp-copy hp-rise" style="margin-top:18px;">
+          HospitalPlacement.com has recruited for hospitals, nursing homes and diagnostic
+          centres since 2010, and nothing else. That focus is the whole point: our
+          consultants read a clinical brief the way your medical superintendent reads it,
+          so the shortlist arrives already filtered for registration, speciality and
+          shift reality.
         </p>
-        <ul class="list-unstyled mb-4">
-          <li class="d-flex align-items-center mb-2" data-aos="fade-up" data-aos-delay="500">
-            <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <span class="text-secondary">Make improvements in your workplace productivity.</span>
+        <p class="hp-copy hp-rise" style="margin-top:14px;">
+          We work from New Delhi across India, and from Ajman across the United Arab
+          Emirates, which means one team can handle a candidate moving between the two
+          markets without the file being handed around.
+        </p>
+
+        <ul class="hp-ticks">
+          <li class="hp-rise">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <span><b>Five role families</b> under one desk: doctors, nurses, paramedical and diagnostics, pharma, and hospital administration.</span>
           </li>
-          <li class="d-flex align-items-center" data-aos="fade-up" data-aos-delay="600">
-            <i class="bi bi-check-circle-fill text-success me-2"></i>
-            <span class="text-secondary">Think Recruitment, Think Different.</span>
+          <li class="hp-rise">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <span><b>Permanent, contract and locum</b> hiring on a single agreement, so urgent cover does not need a new contract.</span>
+          </li>
+          <li class="hp-rise">
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            <span><b><?php echo $hp_years; ?> years of placement data</b> behind every salary benchmark we give you.</span>
           </li>
         </ul>
-        <a href="about.php" class="btn btn-primary px-4 py-2 shadow" data-aos="fade-up" data-aos-delay="700">READ MORE</a>
+
+        <a class="hp-link hp-rise" href="about.php">More about how we work <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
 
+  <?php include "include/solution.php"; ?>
 
-<section class="ensure-section">
-    <h2>WE ENSURE YOU GET</h2>
-    <div class="divider"></div>
-    <div class="features-container">
-        <div class="feature-card" id="feature1">
-            <i class="fas fa-users fa-3x"></i>
-            <p>Right People</p>
-        </div>
-        <div class="feature-card" id="feature2">
-            <i class="fas fa-cogs fa-3x"></i>
-            <p>Right Skills</p>
-        </div>
-        <div class="feature-card" id="feature3">
-            <i class="fas fa-thumbs-up fa-3x"></i>
-            <p>Right Behavior</p>
-        </div>
-        <div class="feature-card" id="feature4">
-            <i class="fas fa-map-marker-alt fa-3x"></i>
-            <p>Right Place</p>
-        </div>
-        <div class="feature-card" id="feature5">
-            <!-- <i class="fas fa-rupee fa-3x"></i> -->
-            <i class="fa-solid fa-indian-rupee-sign fa-3x"></i>
-            <p>Right Cost</p>
-        </div>
-    </div>
-</section>
+  <?php include "include/service.php"; ?>
 
+  <?php include "include/counter.php"; ?>
 
+  <?php include "include/locations.php"; ?>
 
+  <?php include "include/why-choose.php"; ?>
 
+  <?php include "include/testimonial.php"; ?>
 
+  <?php include "include/faq.php"; ?>
 
+  <?php include "include/cta.php"; ?>
 
+</main>
 
-<?php include "include/solution.php"?>
-
-
-
-
-<?php include "include/why-choose.php"?>
-
-<?php include "include/service.php"?>
-
-<?php include "include/counter.php"?>
-
-<?php include "include/testimonial.php"?>
-
-<?php include "include/footer.php"?>
+<?php include "include/footer.php"; ?>

@@ -1,57 +1,48 @@
-<!-- our services sectionand our approach section -->
+<?php
+// service.php - the two audiences, side by side. Dual panel layout.
+$hp_p2 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
+?>
+<section id="service" class="hp-section hp-section--canvas" aria-labelledby="audiences-title">
+  <div class="hp-wrap">
+    <div class="hp-head hp-head--center">
+      <h2 class="hp-h2 hp-rise" id="audiences-title">Two sides of the same desk</h2>
+      <p class="hp-lead hp-rise">The same consultant who briefs the hospital also briefs the candidate. That is why our shortlists hold.</p>
+    </div>
 
-<section id="service" class="recruitment-placement-approach py-5" style="background-color: #f9f9f9;">
-  <div class="container text-center" data-aos="fade-up">
-    <!-- Header -->
-    <h6 class="text-success fw-bold" style="letter-spacing: 1px;" data-aos="fade-up" data-aos-delay="100">OUR SERVICES</h6>
-    <h2 class="fw-bold text-dark mb-3" data-aos="fade-up" data-aos-delay="200">Why Choose Our <span class="text-success">Recruitment and Placement Consultancy</span></h2>
-    <p class="text-muted mb-5" style="font-size: 1.1rem;" data-aos="fade-up" data-aos-delay="300">
-      We provide seamless recruitment and placement solutions, bridging the gap between employers and professionals for successful careers and efficient hiring.
-    </p>
+    <div class="hp-duo" style="margin-top:44px;">
 
-    <!-- Features Section -->
-    <div class="row justify-content-center">
-      <!-- Feature 1 -->
-      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-        <div class="feature-box p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
-          <div class="icon-wrapper position-relative mx-auto mb-3">
-            <i class="fas fa-briefcase fa-3x" style="color: #6c63ff;"></i>
-            <!-- <div class="circle-label" style="background-color: #6c63ff; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">01</div> -->
-          </div>
-          <h4 class="text-dark">Recruitment Services</h4>
-          <p class="text-muted" style="font-size: 0.95rem;">
-            End-to-end recruitment solutions to connect businesses with the right talent efficiently and professionally.
-          </p>
+      <article class="hp-panel hp-panel--dark hp-rise">
+        <span class="hp-panel__k">For hospitals and clinics</span>
+        <h3>Fill the post, keep the ward running</h3>
+        <p>Give us the role, the city and the salary band. You get a shortlist you can interview, not a pile of CVs to sort.</p>
+        <ul class="hp-panel__list">
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Permanent, contract and locum hiring under one agreement</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Registration and qualification verified before shortlisting</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Salary benchmarked against your city and speciality</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> One named consultant from brief to joining date</li>
+        </ul>
+        <div class="hp-panel__foot">
+          <a class="hp-btn hp-btn--action" href="<?php echo $hp_p2; ?>contact.php">Hire staff</a>
+          <a class="hp-btn hp-btn--onDark" href="<?php echo $hp_p2; ?>healthcare-recruitment-for-hospitals.php">How it works</a>
         </div>
-      </div>
+      </article>
 
-      <!-- Feature 2 -->
-      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="500">
-        <div class="feature-box p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
-          <div class="icon-wrapper position-relative mx-auto mb-3">
-            <i class="fas fa-users fa-3x" style="color: #ff6f61;"></i>
-            <!-- <div class="circle-label" style="background-color: #ff6f61; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">02</div> -->
-          </div>
-          <h4 class="text-dark">Placement Services</h4>
-          <p class="text-muted" style="font-size: 0.95rem;">
-            Matching talented individuals with the right opportunities to create win-win solutions for all stakeholders.
-          </p>
+      <article class="hp-panel hp-rise">
+        <span class="hp-panel__k">For medical professionals</span>
+        <h3>Move to the role you actually trained for</h3>
+        <p>Register once and a consultant who knows your speciality works your case. No spray and pray applications.</p>
+        <ul class="hp-panel__list">
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Roles across India and the UAE, updated as hospitals brief us</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Doctors, nurses, paramedical, pharma, diagnostics and administration</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Guidance on documentation before your interview</li>
+          <li><i class="fa-solid fa-check" aria-hidden="true"></i> Your CV is never sent to a hospital without your go ahead</li>
+        </ul>
+        <div class="hp-panel__foot">
+          <a class="hp-btn" href="<?php echo $hp_p2; ?>jobs.php">Browse jobs</a>
+          <a class="hp-btn hp-btn--ghost" href="<?php echo ($hp_p2 ?: '/'); ?>#find-a-job">Register your CV</a>
         </div>
-      </div>
+      </article>
 
-      <!-- Feature 3 -->
-      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="600">
-        <div class="feature-box p-4 shadow-sm rounded" style="background-color: #ffffff; border: 1px solid #eaeaea;">
-          <div class="icon-wrapper position-relative mx-auto mb-3">
-            <i class="fas fa-handshake fa-3x" style="color: #4caf50;"></i>
-            <!-- <div class="circle-label" style="background-color: #4caf50; color: #ffffff; font-size: 0.9rem; position: absolute; top: -10px; right: -10px; border-radius: 50%; padding: 5px 10px;">03</div> -->
-          </div>
-          <h4 class="text-dark">Job Placement Consultancy</h4>
-          <p class="text-muted" style="font-size: 0.95rem;">
-            Personalized guidance and expert support to help professionals achieve their career aspirations.
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>

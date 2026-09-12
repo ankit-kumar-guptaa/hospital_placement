@@ -1,73 +1,47 @@
-<!-- why choose us section code here  -->
-<section class="why-choose-us-section py-5">
-  <div class="container">
-    <!-- Section Heading -->
-    <div class="row text-center mb-5">
-      <div class="col-md-12">
-        <h2 class="fw-bold ">Why Choose HospitalPlacement.com for Your Healthcare Staffing Needs?</h2>
-        <div class="divider mb-4"></div>
-      </div>
+<?php // why-choose.php - reasons, as a two column numbered list. Sparse rules, no cards. ?>
+<section class="hp-section hp-section--canvas" aria-labelledby="why-title">
+  <div class="hp-wrap">
+    <div class="hp-head">
+      <h2 class="hp-h2 hp-rise" id="why-title">Why hospitals keep the number</h2>
+      <p class="hp-lead hp-rise">Healthcare hiring is not general recruitment with a stethoscope on the brochure. These are the five things clients say they stay for.</p>
     </div>
 
-    <!-- Row for feature boxes -->
-    <div class="row">
-      <!-- Specialized Expertise -->
-      <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-up">
-          <i class="fa fa-user-md fa-4x  mb-3"></i>
-          <h3 class="fw-bold text-muted">Specialized Expertise</h3>
-          <p class="text-muted">
-            As a recruitment consulting firm focused on healthcare, we possess in-depth industry knowledge and insights, addressing the unique staffing challenges faced by hospitals and nursing homes.
-          </p>
+    <ul class="hp-reasons" style="margin-top:48px;">
+      <li class="hp-reason hp-rise">
+        <span class="hp-reason__n"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></span>
+        <div>
+          <h3>We only do healthcare</h3>
+          <p>Our consultants know what an ICU sister actually does and why a cath lab technician is not interchangeable with a radiographer. That shows up in the shortlist.</p>
         </div>
-      </div>
-
-      <!-- Extensive Candidate Network -->
-      <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-down">
-          <i class="fa fa-users fa-4x  mb-3"></i>
-          <h3 class="fw-bold text-muted">Extensive Candidate Network</h3>
-          <p class="text-muted">
-            We have access to an extensive network of healthcare professionals with diverse skills, from nurses to allied health professionals, ensuring top-tier talent for every need.
-          </p>
+      </li>
+      <li class="hp-reason hp-rise">
+        <span class="hp-reason__n"><i class="fa-solid fa-users-line" aria-hidden="true"></i></span>
+        <div>
+          <h3>A candidate base we built ourselves</h3>
+          <p>Doctors, nurses, paramedical, pharma, diagnostics and administration, added one placement at a time rather than bought as a database.</p>
         </div>
-      </div>
-
-      <!-- Tailored Recruitment Strategies -->
-      <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-up">
-          <i class="fa fa-cogs fa-4x  mb-3"></i>
-          <h3 class="fw-bold text-muted">Tailored Recruitment Strategies</h3>
-          <p class="text-muted">
-            We tailor our recruitment strategies to match candidates with positions aligned with their skills, qualifications, and aspirations, ensuring a perfect fit for your facility.
-          </p>
+      </li>
+      <li class="hp-reason hp-rise">
+        <span class="hp-reason__n"><i class="fa-solid fa-sliders" aria-hidden="true"></i></span>
+        <div>
+          <h3>The brief drives the search</h3>
+          <p>A 60 bed nursing home and a tertiary care chain get different searches, different pay benchmarks and different candidates. We do not recycle a longlist.</p>
         </div>
-      </div>
-    </div>
-
-    <!-- Row for feature boxes (2) -->
-    <div class="row justify-content-center">
-      <!-- Comprehensive Screening Process -->
-      <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-down">
-          <i class="fa fa-check-circle fa-4x  mb-3"></i>
-          <h3 class="fw-bold text-muted">Comprehensive Screening Process</h3>
-          <p class="text-muted">
-            We conduct thorough screening and credentialing, ensuring that each candidate meets the highest standards of competence, professionalism, and compliance.
-          </p>
+      </li>
+      <li class="hp-reason hp-rise">
+        <span class="hp-reason__n"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></span>
+        <div>
+          <h3>Screening before you see a CV</h3>
+          <p>Registration status, qualification documents and real experience are checked first, so your panel spends its time on judgement rather than verification.</p>
         </div>
-      </div>
-
-      <!-- Dedicated Account Management -->
-      <div class="col-md-4 mb-4">
-        <div class="feature-box p-4 shadow-sm rounded" data-aos="fade-up">
-          <i class="fa fa-headset fa-4x  mb-3"></i>
-          <h3 class="fw-bold text-muted">Dedicated Account Management</h3>
-          <p class="text-muted">
-            Our account managers provide personalized support throughout the staffing process, offering guidance and post-placement assistance for a seamless experience.
-          </p>
+      </li>
+      <li class="hp-reason hp-rise">
+        <span class="hp-reason__n"><i class="fa-solid fa-headset" aria-hidden="true"></i></span>
+        <div>
+          <h3>One consultant, start to finish</h3>
+          <p>The person who took your brief runs your search, handles the offer and checks in after the joining date. No handover, no repeating yourself.</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>

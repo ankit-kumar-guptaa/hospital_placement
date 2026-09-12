@@ -35,6 +35,12 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+    <!-- Typeface + design system, so the shared header and footer match the rest of the site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/theme.css">
+
     <!-- Custom CSS -->
     <style>
         body {
@@ -304,6 +310,9 @@ function gtag_report_conversion(url) {
             captchaImage.src = 'captcha.php?' + Date.now(); // Append a timestamp to prevent caching
         });
     </script>
+
+    <!-- Header, drawer and reveal behaviour (this page does not include footer.php) -->
+    <script src="/assets/js/theme.js" defer></script>
 </body>
 
 </html>
