@@ -53,9 +53,10 @@
    cost is zero extra bytes, and the icons now match the ones the header,
    hero and footer use, which a second family would not have done.
    ========================================================================== */
-.bi{
+.bi {
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;                 /* the free set only ships solid */
+  font-weight: 900;
+  /* the free set only ships solid */
   font-style: normal;
   font-variant: normal;
   line-height: 1;
@@ -64,59 +65,263 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.bi-activity::before{ content:"\f83e"; }               /* wave-square */
-.bi-alarm-fill::before{ content:"\f0f3"; }             /* bell */
-.bi-bandaid::before{ content:"\f462"; }                /* bandage */
-.bi-brain::before{ content:"\f5dc"; }                  /* brain */
-.bi-briefcase-fill::before{ content:"\f0b1"; }         /* briefcase */
-.bi-briefcase-medical::before{ content:"\f469"; }      /* briefcase-medical */
-.bi-building::before{ content:"\f1ad"; }               /* building */
-.bi-capsule::before{ content:"\f46b"; }                /* capsules */
-.bi-check-circle-fill::before{ content:"\f058"; }      /* circle-check */
-.bi-clipboard2-pulse::before{ content:"\f481"; }       /* notes-medical */
-.bi-clock::before{ content:"\f017"; }                  /* clock */
-.bi-clock-history::before{ content:"\f1da"; }          /* clock-rotate-left */
-.bi-currency-exchange::before{ content:"\e528"; }      /* money-bill-transfer */
-.bi-droplet::before{ content:"\f043"; }                /* droplet */
-.bi-ear::before{ content:"\f2a2"; }                    /* ear-listen */
-.bi-eye::before{ content:"\f06e"; }                    /* eye */
-.bi-eyeglasses::before{ content:"\f530"; }             /* glasses */
-.bi-file-earmark-text::before{ content:"\f15c"; }      /* file-lines */
-.bi-flask::before{ content:"\f0c3"; }                  /* flask */
-.bi-gear-fill::before{ content:"\f013"; }              /* gear */
-.bi-gender-ambiguous::before{ content:"\f228"; }       /* venus-mars */
-.bi-gender-female::before{ content:"\f221"; }          /* venus */
-.bi-geo-alt::before{ content:"\f3c5"; }                /* location-dot */
-.bi-globe::before{ content:"\f0ac"; }                  /* globe */
-.bi-graph-up::before{ content:"\f201"; }               /* chart-line */
-.bi-graph-up-arrow::before{ content:"\e098"; }         /* arrow-trend-up */
-.bi-heart::before{ content:"\f004"; }                  /* heart */
-.bi-heart-pulse::before{ content:"\f21e"; }            /* heart-pulse */
-.bi-hospital::before{ content:"\f0f8"; }               /* hospital */
-.bi-hospital-fill::before{ content:"\f0f8"; }          /* hospital */
-.bi-hourglass-split::before{ content:"\f252"; }        /* hourglass-half */
-.bi-lightning-charge-fill::before{ content:"\f0e7"; }  /* bolt */
-.bi-lungs::before{ content:"\f604"; }                  /* lungs */
-.bi-people::before{ content:"\f0c0"; }                 /* users */
-.bi-people-fill::before{ content:"\f0c0"; }            /* users */
-.bi-person::before{ content:"\f007"; }                 /* user */
-.bi-person-badge::before{ content:"\f2c1"; }           /* id-badge */
-.bi-person-badge-fill::before{ content:"\f2c2"; }      /* id-card */
-.bi-person-check::before{ content:"\f4fc"; }           /* user-check */
-.bi-person-wheelchair::before{ content:"\f193"; }      /* wheelchair */
-.bi-radioactive::before{ content:"\f7b9"; }            /* radiation */
-.bi-search::before{ content:"\f002"; }                 /* magnifying-glass */
-.bi-shield-check::before{ content:"\f3ed"; }           /* shield-halved */
-.bi-star-fill::before{ content:"\f005"; }
+
+.bi-activity::before {
+  content: "\f83e";
+}
+
+/* wave-square */
+.bi-alarm-fill::before {
+  content: "\f0f3";
+}
+
+/* bell */
+.bi-bandaid::before {
+  content: "\f462";
+}
+
+/* bandage */
+.bi-brain::before {
+  content: "\f5dc";
+}
+
+/* brain */
+.bi-briefcase-fill::before {
+  content: "\f0b1";
+}
+
+/* briefcase */
+.bi-briefcase-medical::before {
+  content: "\f469";
+}
+
+/* briefcase-medical */
+.bi-building::before {
+  content: "\f1ad";
+}
+
+/* building */
+.bi-capsule::before {
+  content: "\f46b";
+}
+
+/* capsules */
+.bi-check-circle-fill::before {
+  content: "\f058";
+}
+
+/* circle-check */
+.bi-clipboard2-pulse::before {
+  content: "\f481";
+}
+
+/* notes-medical */
+.bi-clock::before {
+  content: "\f017";
+}
+
+/* clock */
+.bi-clock-history::before {
+  content: "\f1da";
+}
+
+/* clock-rotate-left */
+.bi-currency-exchange::before {
+  content: "\e528";
+}
+
+/* money-bill-transfer */
+.bi-droplet::before {
+  content: "\f043";
+}
+
+/* droplet */
+.bi-ear::before {
+  content: "\f2a2";
+}
+
+/* ear-listen */
+.bi-eye::before {
+  content: "\f06e";
+}
+
+/* eye */
+.bi-eyeglasses::before {
+  content: "\f530";
+}
+
+/* glasses */
+.bi-file-earmark-text::before {
+  content: "\f15c";
+}
+
+/* file-lines */
+.bi-flask::before {
+  content: "\f0c3";
+}
+
+/* flask */
+.bi-gear-fill::before {
+  content: "\f013";
+}
+
+/* gear */
+.bi-gender-ambiguous::before {
+  content: "\f228";
+}
+
+/* venus-mars */
+.bi-gender-female::before {
+  content: "\f221";
+}
+
+/* venus */
+.bi-geo-alt::before {
+  content: "\f3c5";
+}
+
+/* location-dot */
+.bi-globe::before {
+  content: "\f0ac";
+}
+
+/* globe */
+.bi-graph-up::before {
+  content: "\f201";
+}
+
+/* chart-line */
+.bi-graph-up-arrow::before {
+  content: "\e098";
+}
+
+/* arrow-trend-up */
+.bi-heart::before {
+  content: "\f004";
+}
+
+/* heart */
+.bi-heart-pulse::before {
+  content: "\f21e";
+}
+
+/* heart-pulse */
+.bi-hospital::before {
+  content: "\f0f8";
+}
+
+/* hospital */
+.bi-hospital-fill::before {
+  content: "\f0f8";
+}
+
+/* hospital */
+.bi-hourglass-split::before {
+  content: "\f252";
+}
+
+/* hourglass-half */
+.bi-lightning-charge-fill::before {
+  content: "\f0e7";
+}
+
+/* bolt */
+.bi-lungs::before {
+  content: "\f604";
+}
+
+/* lungs */
+.bi-people::before {
+  content: "\f0c0";
+}
+
+/* users */
+.bi-people-fill::before {
+  content: "\f0c0";
+}
+
+/* users */
+.bi-person::before {
+  content: "\f007";
+}
+
+/* user */
+.bi-person-badge::before {
+  content: "\f2c1";
+}
+
+/* id-badge */
+.bi-person-badge-fill::before {
+  content: "\f2c2";
+}
+
+/* id-card */
+.bi-person-check::before {
+  content: "\f4fc";
+}
+
+/* user-check */
+.bi-person-wheelchair::before {
+  content: "\f193";
+}
+
+/* wheelchair */
+.bi-radioactive::before {
+  content: "\f7b9";
+}
+
+/* radiation */
+.bi-search::before {
+  content: "\f002";
+}
+
+/* magnifying-glass */
+.bi-shield-check::before {
+  content: "\f3ed";
+}
+
+/* shield-halved */
+.bi-star-fill::before {
+  content: "\f005";
+}
 
 /* Names used by the pages rewritten during the redesign. */
-.bi-arrow-right::before{    content:"\f061"; }   /* arrow-right */
-.bi-check-lg::before{       content:"\f00c"; }   /* check */
-.bi-envelope::before{       content:"\f0e0"; }   /* envelope */
-.bi-envelope-fill::before{  content:"\f0e0"; }   /* envelope */
-.bi-geo-alt-fill::before{   content:"\f3c5"; }   /* location-dot */
-.bi-phone-fill::before{     content:"\f095"; }   /* phone */
-.bi-telephone-fill::before{ content:"\f095"; }   /* phone */              /* star */
+.bi-arrow-right::before {
+  content: "\f061";
+}
+
+/* arrow-right */
+.bi-check-lg::before {
+  content: "\f00c";
+}
+
+/* check */
+.bi-envelope::before {
+  content: "\f0e0";
+}
+
+/* envelope */
+.bi-envelope-fill::before {
+  content: "\f0e0";
+}
+
+/* envelope */
+.bi-geo-alt-fill::before {
+  content: "\f3c5";
+}
+
+/* location-dot */
+.bi-phone-fill::before {
+  content: "\f095";
+}
+
+/* phone */
+.bi-telephone-fill::before {
+  content: "\f095";
+}
+
+/* phone */
+/* star */
 
 
 /* ==========================================================================
@@ -133,42 +338,52 @@
    wide screens and tightens on a phone.
    ========================================================================== */
 .hp-body section,
-.hp-body .privacy-section{ position: relative; }
+.hp-body .privacy-section {
+  position: relative;
+}
 
 .hp-body section.py-5,
-.hp-body .py-5{
-  padding-top:    clamp(52px, 6.4vw, 104px) !important;
+.hp-body .py-5 {
+  padding-top: clamp(52px, 6.4vw, 104px) !important;
   padding-bottom: clamp(52px, 6.4vw, 104px) !important;
 }
 
-.hp-body .bg-light{ background-color: var(--hp-canvas) !important; }
-.hp-body .bg-white{ background-color: var(--hp-surface) !important; }
+.hp-body .bg-light {
+  background-color: var(--hp-canvas) !important;
+}
+
+.hp-body .bg-white {
+  background-color: var(--hp-surface) !important;
+}
 
 /* A very low contrast wash so a tinted band has depth without a border.
    Two soft pools rather than one flat fill: the eye reads it as light, not
    as a coloured box. */
-.hp-body section.bg-light::before{
+.hp-body section.bg-light::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(58% 62% at 12% 0%,  rgba(59,130,246,.09), transparent 62%),
-    radial-gradient(48% 56% at 92% 100%, rgba(29,78,216,.06), transparent 60%);
+    radial-gradient(58% 62% at 12% 0%, rgba(59, 130, 246, .09), transparent 62%),
+    radial-gradient(48% 56% at 92% 100%, rgba(29, 78, 216, .06), transparent 60%);
 }
-.hp-body section.bg-light > *{ position: relative; }
+
+.hp-body section.bg-light>* {
+  position: relative;
+}
 
 /* The band immediately below the page hero carries a little more air, so
    the hero does not feel glued to the first paragraph. */
-.hp-body .hp-pagehero + section.py-5{
+.hp-body .hp-pagehero+section.py-5 {
   padding-top: clamp(60px, 7.4vw, 120px) !important;
 }
 
 /* Bootstrap's container is 1320px at the top breakpoint, wider than the
    header and hero. Matching them keeps every edge on the page aligned. */
-.hp-body .container{
+.hp-body .container {
   max-width: calc(var(--hp-max) + var(--hp-gutter) * 2);
-  padding-left:  var(--hp-gutter);
+  padding-left: var(--hp-gutter);
   padding-right: var(--hp-gutter);
 }
 
@@ -184,7 +399,7 @@
    enough for the mark to read as deliberate. Putting it on every heading
    would turn it into wallpaper.
    ========================================================================== */
-.hp-body .section-heading{
+.hp-body .section-heading {
   font-family: var(--hp-font-display);
   font-weight: 700;
   font-size: clamp(26px, 3.1vw, 40px);
@@ -195,14 +410,15 @@
   max-width: 22ch;
   text-wrap: balance;
 }
+
 .hp-body .text-center .section-heading,
-.hp-body .text-center > .section-heading{
+.hp-body .text-center>.section-heading {
   max-width: 780px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hp-body .section-subheading{
+.hp-body .section-subheading {
   font-size: clamp(15px, 1.15vw, 17.5px);
   line-height: 1.62;
   color: var(--hp-muted) !important;
@@ -210,12 +426,13 @@
   margin: 0;
   max-width: 64ch;
 }
-.hp-body .text-center .section-subheading{
+
+.hp-body .text-center .section-subheading {
   margin-left: auto;
   margin-right: auto;
 }
 
-.hp-body section.bg-light .text-center .section-heading::after{
+.hp-body section.bg-light .text-center .section-heading::after {
   content: "";
   display: block;
   width: 34px;
@@ -226,7 +443,9 @@
 }
 
 /* The heading block wants more room beneath it than Bootstrap's mb-5. */
-.hp-body .text-center.mb-5{ margin-bottom: clamp(34px, 3.6vw, 56px) !important; }
+.hp-body .text-center.mb-5 {
+  margin-bottom: clamp(34px, 3.6vw, 56px) !important;
+}
 
 
 /* ==========================================================================
@@ -237,27 +456,31 @@
    comfortable end of the readable range for this size, and the leading is
    opened to 1.72.
    ========================================================================== */
-.hp-body .container > p,
-.hp-body .container > div > p,
-.hp-body .container [data-aos] > p{
+.hp-body .container>p,
+.hp-body .container>div>p,
+.hp-body .container [data-aos]>p {
   font-size: clamp(15.5px, 1.08vw, 17px);
   line-height: 1.72;
   color: var(--hp-ink-2);
   max-width: 78ch;
   margin-bottom: 1.15em;
 }
-.hp-body .text-center > p,
-.hp-body .text-center p{ margin-left: auto; margin-right: auto; }
+
+.hp-body .text-center>p,
+.hp-body .text-center p {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* A band of running copy with no grid in it: centre the measure, rather than
    leaving 400px of empty space down the right of a wide screen. */
-.hp-body .container:not(:has(.row)):not(:has(.hp-ctaband__act)) > [data-aos]:not(.text-center){
+.hp-body .container:not(:has(.row)):not(:has(.hp-ctaband__act))>[data-aos]:not(.text-center) {
   max-width: 84ch;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hp-body .lead{
+.hp-body .lead {
   font-size: clamp(17px, 1.35vw, 20px);
   line-height: 1.6;
   color: var(--hp-ink-2);
@@ -267,7 +490,7 @@
 
 /* Headings inside the copy, so a long page still has a visible spine. */
 .hp-body .container h3:not(.card-title):not(.hp-faq__q):not([class*="hp-"]),
-.hp-body .container h4:not(.card-title):not([class*="hp-"]){
+.hp-body .container h4:not(.card-title):not([class*="hp-"]) {
   font-family: var(--hp-font-display);
   color: var(--hp-ink);
   letter-spacing: -.015em;
@@ -275,15 +498,18 @@
   margin: clamp(26px, 2.6vw, 40px) 0 12px;
   text-wrap: balance;
 }
-.hp-body .container h3:not(.card-title):not(.hp-faq__q):not([class*="hp-"]){
+
+.hp-body .container h3:not(.card-title):not(.hp-faq__q):not([class*="hp-"]) {
   font-size: clamp(20px, 1.75vw, 25px);
   font-weight: 700;
 }
-.hp-body .container h4:not(.card-title):not([class*="hp-"]){
+
+.hp-body .container h4:not(.card-title):not([class*="hp-"]) {
   font-size: clamp(17.5px, 1.4vw, 20px);
   font-weight: 600;
 }
-.hp-body .container h5:not([class*="hp-"]){
+
+.hp-body .container h5:not([class*="hp-"]) {
   font-family: var(--hp-font-display);
   font-size: 16.5px;
   font-weight: 600;
@@ -291,20 +517,32 @@
   margin: 22px 0 10px;
 }
 
-.hp-body li h3, .hp-body li h4, .hp-body li h5,
-.hp-body .hp-panel > h3:first-child,
-.hp-body .highlight-box > h3:first-child,
-.hp-body .card h3:first-child, .hp-body .card h4:first-child{
+.hp-body li h3,
+.hp-body li h4,
+.hp-body li h5,
+.hp-body .hp-panel>h3:first-child,
+.hp-body .highlight-box>h3:first-child,
+.hp-body .card h3:first-child,
+.hp-body .card h4:first-child {
   margin-top: 0 !important;
 }
 
-.hp-body strong{ color: var(--hp-ink); font-weight: 600; }
-.hp-body .text-muted{ color: var(--hp-muted) !important; }
-.hp-body .fw-bold{ color: var(--hp-ink); }
+.hp-body strong {
+  color: var(--hp-ink);
+  font-weight: 600;
+}
+
+.hp-body .text-muted {
+  color: var(--hp-muted) !important;
+}
+
+.hp-body .fw-bold {
+  color: var(--hp-ink);
+}
 
 /* Bootstrap's display sizes are set for a marketing page with nothing else
    on it. Brought into our scale so they cannot outshout an h1. */
-.hp-body .display-4{
+.hp-body .display-4 {
   font-family: var(--hp-font-display);
   font-size: clamp(28px, 3.4vw, 44px);
   font-weight: 700;
@@ -326,26 +564,32 @@
    No 1px grey outline anywhere. Separation comes from the surface being a
    shade brighter than the band it sits on, plus that shadow.
    ========================================================================== */
-.hp-body .card{
+.hp-body .card {
   background: var(--hp-card);
   border: 0;
   border-radius: var(--hp-r-card);
   box-shadow: var(--hp-sh-1);
   overflow: hidden;
   transition: transform var(--hp-t) var(--hp-ease-out),
-              box-shadow var(--hp-t) var(--hp-ease-out);
+    box-shadow var(--hp-t) var(--hp-ease-out);
 }
+
 .hp-body .card.shadow-sm,
-.hp-body .card.shadow{ box-shadow: var(--hp-sh-1) !important; }
+.hp-body .card.shadow {
+  box-shadow: var(--hp-sh-1) !important;
+}
 
 /* On the tinted bands a white card needs no extra help to separate, so the
    shadow is pulled back and the surface does the work. */
-.hp-body .bg-light .card{ background: var(--hp-surface); }
+.hp-body .bg-light .card {
+  background: var(--hp-surface);
+}
 
-.hp-body .card-body{
+.hp-body .card-body {
   padding: clamp(20px, 2.2vw, 30px);
 }
-.hp-body .card-header{
+
+.hp-body .card-header {
   background: var(--hp-brand-tint);
   border: 0;
   padding: 16px clamp(20px, 2.2vw, 30px);
@@ -355,7 +599,7 @@
   color: var(--hp-brand-deep);
 }
 
-.hp-body .card-title{
+.hp-body .card-title {
   font-family: var(--hp-font-display);
   font-size: clamp(17.5px, 1.35vw, 20px);
   font-weight: 650;
@@ -365,26 +609,30 @@
   margin: 0 0 10px;
   text-wrap: balance;
 }
-.hp-body .card-text{
+
+.hp-body .card-text {
   font-size: 15.25px;
   line-height: 1.68;
   color: var(--hp-ink-2);
   margin: 0;
 }
-.hp-body .card-text + *{ margin-top: 16px; }
+
+.hp-body .card-text+* {
+  margin-top: 16px;
+}
 
 /* Lift on hover, but only where there is a real cursor to hover with. On a
    touch screen a hover rule either never fires or sticks after a tap. */
-@media (hover: hover) and (pointer: fine){
-  .hp-body .card:hover{
+@media (hover: hover) and (pointer: fine) {
+  .hp-body .card:hover {
     transform: translateY(-3px);
     box-shadow: var(--hp-sh-2) !important;
   }
 }
 
 /* A card that is a link should say so on focus as clearly as on hover. */
-.hp-body .card:focus-within{
-  box-shadow: var(--hp-sh-2), 0 0 0 3px rgba(29,78,216,.28) !important;
+.hp-body .card:focus-within {
+  box-shadow: var(--hp-sh-2), 0 0 0 3px rgba(29, 78, 216, .28) !important;
 }
 
 
@@ -399,11 +647,11 @@
    The glyph is styled into the tile directly, so no wrapper element and no
    markup change is needed.
    ========================================================================== */
-.hp-body .card-body > .text-primary,
-.hp-body .card-body > .text-success,
-.hp-body .card-body > .text-warning,
-.hp-body .card-body > .icon,
-.hp-body .icon-container{
+.hp-body .card-body>.text-primary,
+.hp-body .card-body>.text-success,
+.hp-body .card-body>.text-warning,
+.hp-body .card-body>.icon,
+.hp-body .icon-container {
   display: block;
   line-height: 1;
 }
@@ -413,7 +661,7 @@
 .hp-body .card-body .fa-solid.fs-1,
 .hp-body .card-body .fa-3x,
 .hp-body .icon-container .bi,
-.hp-body .icon-container .fa-solid{
+.hp-body .icon-container .fa-solid {
   display: inline-grid;
   place-items: center;
   width: 52px;
@@ -422,17 +670,18 @@
   font-size: 21px !important;
   color: var(--hp-brand) !important;
   background: linear-gradient(150deg, var(--hp-brand-tint), #F2F7FE);
-  box-shadow: inset 0 0 0 1px rgba(29,78,216,.07);
+  box-shadow: inset 0 0 0 1px rgba(29, 78, 216, .07);
   transition: transform var(--hp-t) var(--hp-ease-out),
-              background var(--hp-t) var(--hp-ease-out);
+    background var(--hp-t) var(--hp-ease-out);
 }
 
 /* The tile warms slightly with the card, which ties the two together
    instead of animating two separate things. */
-@media (hover: hover) and (pointer: fine){
+@media (hover: hover) and (pointer: fine) {
+
   .hp-body .card:hover .bi.fs-1,
   .hp-body .card:hover .fa-3x,
-  .hp-body .card:hover .fa-solid.fs-1{
+  .hp-body .card:hover .fa-solid.fs-1 {
     background: linear-gradient(150deg, #DBE8FD, var(--hp-brand-tint));
     transform: scale(1.04);
   }
@@ -441,10 +690,22 @@
 /* Colour utilities retoned to the palette. Bootstrap's own blue and green
    belong to Bootstrap, not to this brand, and two blues on one page is the
    sort of detail that quietly cheapens everything around it. */
-.hp-body .text-primary{ color: var(--hp-brand) !important; }
-.hp-body .text-success{ color: var(--hp-brand) !important; }
-.hp-body .text-warning{ color: #C2841B !important; }   /* ratings only */
-.hp-body .bg-primary{ background: var(--hp-brand) !important; }
+.hp-body .text-primary {
+  color: var(--hp-brand) !important;
+}
+
+.hp-body .text-success {
+  color: var(--hp-brand) !important;
+}
+
+.hp-body .text-warning {
+  color: #C2841B !important;
+}
+
+/* ratings only */
+.hp-body .bg-primary {
+  background: var(--hp-brand) !important;
+}
 
 
 /* ==========================================================================
@@ -455,7 +716,7 @@
    aligned with the first line of text rather than sitting on the baseline,
    and with the text hanging in a proper indent when it wraps to two lines.
    ========================================================================== */
-.hp-body .container .list-unstyled li{
+.hp-body .container .list-unstyled li {
   position: relative;
   padding-left: 28px;
   font-size: 15.25px;
@@ -463,17 +724,21 @@
   color: var(--hp-ink-2);
   margin-bottom: 10px;
 }
-.hp-body .container .list-unstyled li:last-child{ margin-bottom: 0; }
+
+.hp-body .container .list-unstyled li:last-child {
+  margin-bottom: 0;
+}
 
 /* Some lists are written as a flex row: a span holding the tick, then a
    block of heading and copy. Those lay themselves out, so the hanging
    indent is dropped and only the tick is restyled. */
-.hp-body .container .list-unstyled li.d-flex{
+.hp-body .container .list-unstyled li.d-flex {
   padding-left: 0;
   gap: 12px;
   margin-bottom: 20px;
 }
-.hp-body .container .list-unstyled li.d-flex > span:first-child{
+
+.hp-body .container .list-unstyled li.d-flex>span:first-child {
   flex: 0 0 auto;
   display: grid;
   place-items: center;
@@ -485,9 +750,10 @@
   color: var(--hp-brand) !important;
   background: var(--hp-brand-tint);
 }
-.hp-body .container .list-unstyled li.d-flex > div > h3,
-.hp-body .container .list-unstyled li.d-flex > div > h4,
-.hp-body .container .list-unstyled li.d-flex > div > h5{
+
+.hp-body .container .list-unstyled li.d-flex>div>h3,
+.hp-body .container .list-unstyled li.d-flex>div>h4,
+.hp-body .container .list-unstyled li.d-flex>div>h5 {
   font-family: var(--hp-font-display);
   font-size: 16.5px !important;
   font-weight: 650;
@@ -495,7 +761,8 @@
   color: var(--hp-ink);
   margin: 0 0 6px !important;
 }
-.hp-body .container .list-unstyled li.d-flex > div > p{
+
+.hp-body .container .list-unstyled li.d-flex>div>p {
   font-size: 15px;
   line-height: 1.66;
   color: var(--hp-ink-2);
@@ -503,9 +770,9 @@
   max-width: 62ch;
 }
 
-.hp-body .container .list-unstyled li > .bi:first-child,
-.hp-body .container .list-unstyled li > .fa-solid:first-child,
-.hp-body .container .list-unstyled li > .fas:first-child{
+.hp-body .container .list-unstyled li>.bi:first-child,
+.hp-body .container .list-unstyled li>.fa-solid:first-child,
+.hp-body .container .list-unstyled li>.fas:first-child {
   position: absolute;
   left: 0;
   top: .18em;
@@ -522,11 +789,12 @@
 
 /* A plain bulleted list, where one was authored, gets the same treatment
    in a lighter key. */
-.hp-body .container ul:not(.list-unstyled):not(.nav):not([class*="hp-"]){
+.hp-body .container ul:not(.list-unstyled):not(.nav):not([class*="hp-"]) {
   padding-left: 0;
   list-style: none;
 }
-.hp-body .container ul:not(.list-unstyled):not(.nav):not([class*="hp-"]) > li{
+
+.hp-body .container ul:not(.list-unstyled):not(.nav):not([class*="hp-"])>li {
   position: relative;
   padding-left: 22px;
   font-size: 15.5px;
@@ -534,7 +802,8 @@
   color: var(--hp-ink-2);
   margin-bottom: 9px;
 }
-.hp-body .container ul:not(.list-unstyled):not(.nav):not([class*="hp-"]) > li::before{
+
+.hp-body .container ul:not(.list-unstyled):not(.nav):not([class*="hp-"])>li::before {
   content: "";
   position: absolute;
   left: 4px;
@@ -545,22 +814,24 @@
   background: var(--hp-brand-soft);
 }
 
-.hp-body .container ol:not([class*="hp-"]){
+.hp-body .container ol:not([class*="hp-"]) {
   padding-left: 20px;
   color: var(--hp-ink-2);
 }
-.hp-body .container ol:not([class*="hp-"]) > li{
+
+.hp-body .container ol:not([class*="hp-"])>li {
   font-size: 15.5px;
   line-height: 1.7;
   margin-bottom: 9px;
   padding-left: 6px;
 }
-.hp-body .container ol:not([class*="hp-"]) > li::marker{
+
+.hp-body .container ol:not([class*="hp-"])>li::marker {
   color: var(--hp-brand);
   font-weight: 600;
 }
 
-.hp-body .list-group-item{
+.hp-body .list-group-item {
   border: 0;
   border-radius: var(--hp-r-input) !important;
   background: var(--hp-surface);
@@ -579,7 +850,7 @@
    A grid of single word tiles: icon over label, four across. Read as a set,
    so they are quieter than a card and only lift a little.
    ========================================================================== */
-.hp-body .specialty-item{
+.hp-body .specialty-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -592,10 +863,14 @@
   border-radius: var(--hp-r-tile);
   box-shadow: var(--hp-sh-1);
   transition: transform var(--hp-t) var(--hp-ease-out),
-              box-shadow var(--hp-t) var(--hp-ease-out);
+    box-shadow var(--hp-t) var(--hp-ease-out);
 }
-.hp-body .specialty-item .icon{ margin: 0 !important; }
-.hp-body .specialty-item .bi{
+
+.hp-body .specialty-item .icon {
+  margin: 0 !important;
+}
+
+.hp-body .specialty-item .bi {
   display: grid;
   place-items: center;
   width: 46px;
@@ -605,9 +880,10 @@
   color: var(--hp-brand) !important;
   background: linear-gradient(150deg, var(--hp-brand-tint), #F2F7FE);
 }
+
 .hp-body .specialty-item h3,
 .hp-body .specialty-item h4,
-.hp-body .specialty-item h5{
+.hp-body .specialty-item h5 {
   font-family: var(--hp-font-display);
   font-size: 15px !important;
   font-weight: 600;
@@ -616,8 +892,9 @@
   margin: 0 !important;
   text-wrap: balance;
 }
-@media (hover: hover) and (pointer: fine){
-  .hp-body .specialty-item:hover{
+
+@media (hover: hover) and (pointer: fine) {
+  .hp-body .specialty-item:hover {
     transform: translateY(-3px);
     box-shadow: var(--hp-sh-2);
   }
@@ -631,35 +908,41 @@
    fades out at the last step, so the sequence has a visible start and end
    rather than a line that simply stops.
    ========================================================================== */
-.hp-body .timeline{
+.hp-body .timeline {
   max-width: 760px;
   margin-inline: auto;
 }
-.hp-body .timeline-item{
+
+.hp-body .timeline-item {
   position: relative;
   align-items: flex-start;
 }
-.hp-body .timeline-item::before{
+
+.hp-body .timeline-item::before {
   content: "";
   position: absolute;
   left: 25px;
   top: 50px;
   bottom: -6px;
   width: 2px;
-  background: linear-gradient(180deg, var(--hp-brand-tint), rgba(230,239,253,0));
+  background: linear-gradient(180deg, var(--hp-brand-tint), rgba(230, 239, 253, 0));
 }
-.hp-body .timeline-item:last-child::before{ display: none; }
 
-.hp-body .timeline-badge{
+.hp-body .timeline-item:last-child::before {
+  display: none;
+}
+
+.hp-body .timeline-badge {
   flex: 0 0 auto;
   font-family: var(--hp-font-display);
   font-size: 17px;
   font-weight: 700;
   color: var(--hp-on-action) !important;
   background: linear-gradient(150deg, var(--hp-brand), var(--hp-brand-deep)) !important;
-  box-shadow: 0 4px 14px rgba(29,78,216,.26);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, .26);
 }
-.hp-body .timeline-number{
+
+.hp-body .timeline-number {
   display: grid;
   place-items: center;
   width: 46px;
@@ -671,41 +954,47 @@
   font-weight: 700;
   color: var(--hp-on-action);
   background: linear-gradient(150deg, var(--hp-brand), var(--hp-brand-deep));
-  box-shadow: 0 4px 14px rgba(29,78,216,.26);
+  box-shadow: 0 4px 14px rgba(29, 78, 216, .26);
 }
+
 .hp-body .timeline-content h3,
-.hp-body .timeline-content h4{
+.hp-body .timeline-content h4 {
   font-family: var(--hp-font-display);
   font-size: clamp(17px, 1.35vw, 19.5px) !important;
   font-weight: 650;
   color: var(--hp-ink);
   margin: 6px 0 8px !important;
 }
-.hp-body .timeline-content p{
+
+.hp-body .timeline-content p {
   font-size: 15.25px;
   line-height: 1.68;
   color: var(--hp-ink-2);
   margin: 0;
 }
+
 /* The last step's content carries the trailing pb-5 the markup gives every
    step, which left a gap under the sequence. */
-.hp-body .timeline-item:last-child .timeline-content{ padding-bottom: 0 !important; }
+.hp-body .timeline-item:last-child .timeline-content {
+  padding-bottom: 0 !important;
+}
 
 
 /* ==========================================================================
    10. Panels, callouts and quotes
    ========================================================================== */
 .hp-body .highlight-box,
-.hp-body .hp-panel{
+.hp-body .hp-panel {
   position: relative;
-  background: var(--hp-surface);
+  /* background: var(--hp-surface); */
   border-radius: var(--hp-r-card);
   box-shadow: var(--hp-sh-1);
   padding: clamp(22px, 2.4vw, 32px) clamp(22px, 2.4vw, 34px);
   overflow: hidden;
 }
+
 .hp-body .highlight-box::before,
-.hp-body .hp-panel::before{
+.hp-body .hp-panel::before {
   content: "";
   position: absolute;
   left: 0;
@@ -714,12 +1003,15 @@
   width: 4px;
   background: linear-gradient(180deg, var(--hp-brand), var(--hp-brand-soft));
 }
-.hp-body .highlight-box > :last-child,
-.hp-body .hp-panel > :last-child{ margin-bottom: 0; }
+
+.hp-body .highlight-box> :last-child,
+.hp-body .hp-panel> :last-child {
+  margin-bottom: 0;
+}
 
 /* A tinted note, for the aside that is worth reading but is not the point
    of the section. */
-.hp-body .hp-note{
+.hp-body .hp-note {
   background: var(--hp-brand-tint);
   border-radius: var(--hp-r-tile);
   padding: 16px 20px;
@@ -729,7 +1021,7 @@
 }
 
 .hp-body blockquote,
-.hp-body .article-quote{
+.hp-body .article-quote {
   position: relative;
   margin: clamp(26px, 3vw, 40px) 0;
   padding: 4px 0 4px 26px;
@@ -741,8 +1033,9 @@
   color: var(--hp-ink);
   max-width: 56ch;
 }
+
 .hp-body blockquote::before,
-.hp-body .article-quote::before{
+.hp-body .article-quote::before {
   content: "";
   position: absolute;
   left: 0;
@@ -766,29 +1059,38 @@
 .hp-body .benefit-card,
 .hp-body .solution-card,
 .hp-body .branch-card,
-.hp-body .related-post{
+.hp-body .related-post {
   height: 100%;
   background: var(--hp-surface);
   border: 0;
   border-radius: var(--hp-r-card);
   box-shadow: var(--hp-sh-1);
   transition: transform var(--hp-t) var(--hp-ease-out),
-              box-shadow var(--hp-t) var(--hp-ease-out);
+    box-shadow var(--hp-t) var(--hp-ease-out);
 }
-@media (hover: hover) and (pointer: fine){
+
+@media (hover: hover) and (pointer: fine) {
+
   .hp-body .benefit-card:hover,
   .hp-body .solution-card:hover,
   .hp-body .branch-card:hover,
-  .hp-body .related-post:hover{
+  .hp-body .related-post:hover {
     transform: translateY(-3px);
     box-shadow: var(--hp-sh-2);
   }
 }
 
-.hp-body .benefit-card{ padding: clamp(20px, 2.2vw, 28px) !important; gap: 4px; }
-.hp-body .benefit-card .icon{ flex: 0 0 auto; }
+.hp-body .benefit-card {
+  padding: clamp(20px, 2.2vw, 28px) !important;
+  gap: 4px;
+}
+
+.hp-body .benefit-card .icon {
+  flex: 0 0 auto;
+}
+
 .hp-body .benefit-card h3,
-.hp-body .benefit-card h4{
+.hp-body .benefit-card h4 {
   font-family: var(--hp-font-display);
   font-size: clamp(17px, 1.3vw, 19px) !important;
   font-weight: 650;
@@ -796,20 +1098,25 @@
   color: var(--hp-ink);
   margin: 2px 0 8px !important;
 }
-.hp-body .benefit-card p{
+
+.hp-body .benefit-card p {
   font-size: 15.25px;
   line-height: 1.68;
   color: var(--hp-ink-2);
   margin: 0;
 }
 
-.hp-body .solution-card{
+.hp-body .solution-card {
   padding: clamp(22px, 2.4vw, 30px);
   text-align: left;
 }
-.hp-body .solution-card .icon-container{ margin-bottom: 16px; }
+
+.hp-body .solution-card .icon-container {
+  margin-bottom: 16px;
+}
+
 .hp-body .solution-card h3,
-.hp-body .solution-card h4{
+.hp-body .solution-card h4 {
   font-family: var(--hp-font-display);
   font-size: clamp(17px, 1.35vw, 19.5px) !important;
   font-weight: 650;
@@ -817,14 +1124,15 @@
   color: var(--hp-ink);
   margin: 0 0 9px !important;
 }
-.hp-body .solution-card p{
+
+.hp-body .solution-card p {
   font-size: 15.25px;
   line-height: 1.68;
   color: var(--hp-ink-2);
   margin: 0;
 }
 
-.hp-body .branch-card{
+.hp-body .branch-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -834,8 +1142,9 @@
   padding: 22px 16px;
   min-height: 148px;
 }
+
 .hp-body .branch-card .fa-solid,
-.hp-body .branch-card .fas{
+.hp-body .branch-card .fas {
   display: grid;
   place-items: center;
   width: 42px;
@@ -846,15 +1155,17 @@
   color: var(--hp-brand) !important;
   background: var(--hp-brand-tint);
 }
+
 .hp-body .branch-card h4,
-.hp-body .branch-card h5{
+.hp-body .branch-card h5 {
   font-family: var(--hp-font-display);
   font-size: 16px !important;
   font-weight: 650 !important;
   color: var(--hp-ink) !important;
   margin: 0 !important;
 }
-.hp-body .branch-card p{
+
+.hp-body .branch-card p {
   font-size: 13.75px !important;
   line-height: 1.5;
   color: var(--hp-muted) !important;
@@ -865,15 +1176,17 @@
    Five addresses in one column. Separated by space and a small tinted marker
    rather than by a rule between each one, because five rules in a column is
    a table of contents, not a list of places. */
-.hp-body .hp-addrlist{
+.hp-body .hp-addrlist {
   display: grid;
   gap: 22px;
 }
-.hp-body .hp-addr{
+
+.hp-body .hp-addr {
   position: relative;
   padding-left: 16px;
 }
-.hp-body .hp-addr::before{
+
+.hp-body .hp-addr::before {
   content: "";
   position: absolute;
   left: 0;
@@ -883,7 +1196,8 @@
   border-radius: 2px;
   background: var(--hp-brand-tint);
 }
-.hp-body .hp-addr__t{
+
+.hp-body .hp-addr__t {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -893,42 +1207,71 @@
   color: var(--hp-ink) !important;
   margin: 0 0 7px !important;
 }
-.hp-body .hp-addr__t .bi{
+
+.hp-body .hp-addr__t .bi {
   font-size: 13px;
   color: var(--hp-brand);
 }
-.hp-body .hp-addr p{
+
+.hp-body .hp-addr p {
   font-size: 14.25px;
   line-height: 1.55;
   color: var(--hp-muted);
   margin: 0 0 2px;
   max-width: none;
 }
-.hp-body .hp-addr__tel{ margin-top: 6px !important; }
-.hp-body .hp-addr__tel a{
+
+.hp-body .hp-addr__tel {
+  margin-top: 6px !important;
+}
+
+.hp-body .hp-addr__tel a {
   font-weight: 600;
   color: var(--hp-brand) !important;
   text-decoration: none;
 }
-.hp-body .hp-addr__tel a:hover{ color: var(--hp-brand-deep) !important; }
 
-.hp-body .hp-note p{ margin-bottom: 8px; max-width: none; }
-.hp-body .hp-note .bi{ color: var(--hp-brand); margin-right: 6px; }
-.hp-body .hp-note a{ color: var(--hp-brand-deep) !important; font-weight: 600; }
+.hp-body .hp-addr__tel a:hover {
+  color: var(--hp-brand-deep) !important;
+}
+
+.hp-body .hp-note p {
+  margin-bottom: 8px;
+  max-width: none;
+}
+
+.hp-body .hp-note .bi {
+  color: var(--hp-brand);
+  margin-right: 6px;
+}
+
+.hp-body .hp-note a {
+  color: var(--hp-brand-deep) !important;
+  font-weight: 600;
+}
 
 /* The enquiry card is the conversion point on the page, so it carries one
    step more elevation than the card it sits beside. */
-.hp-body .hp-contactcard{ box-shadow: var(--hp-sh-2) !important; }
+.hp-body .hp-contactcard {
+  box-shadow: var(--hp-sh-2) !important;
+}
 
 /* A heading inside a card should not inherit the centred band's accent rule
    or its full section spacing. */
-.hp-body .card .section-heading{
+.hp-body .card .section-heading {
   font-size: clamp(23px, 2.2vw, 29px);
   margin-bottom: 10px;
   max-width: none;
 }
-.hp-body .card .section-heading::after{ display: none; }
-.hp-body .card .section-subheading{ font-size: 15px; max-width: none; }
+
+.hp-body .card .section-heading::after {
+  display: none;
+}
+
+.hp-body .card .section-subheading {
+  font-size: 15px;
+  max-width: none;
+}
 
 /* --- the closing band ----------------------------------------------------
    Fourteen pages ended on a flat lavender fill with a Bootstrap blue button
@@ -936,27 +1279,31 @@
    before the footer and the last chance to ask for the enquiry, so it now
    carries the deep end of the brand ramp: dark enough to close the page,
    with the same soft pools of light the tinted bands use. */
-.hp-body .hp-ctaband{
+.hp-body .hp-ctaband {
   position: relative;
   overflow: hidden;
   padding-block: clamp(56px, 6.6vw, 96px);
   background: linear-gradient(135deg, var(--hp-brand-deep) 0%, var(--hp-brand-night) 100%);
   color: var(--hp-on-dark);
 }
-.hp-body .hp-ctaband::before{
+
+.hp-body .hp-ctaband::before {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(46% 72% at 12% 8%,  rgba(96,165,250,.24), transparent 62%),
-    radial-gradient(40% 64% at 88% 96%, rgba(59,130,246,.20), transparent 60%);
+    radial-gradient(46% 72% at 12% 8%, rgba(96, 165, 250, .24), transparent 62%),
+    radial-gradient(40% 64% at 88% 96%, rgba(59, 130, 246, .20), transparent 60%);
 }
-.hp-body .hp-ctaband > *{ position: relative; }
+
+.hp-body .hp-ctaband>* {
+  position: relative;
+}
 
 .hp-body .hp-ctaband h2,
 .hp-body .hp-ctaband h3,
-.hp-body .hp-ctaband .section-heading{
+.hp-body .hp-ctaband .section-heading {
   font-family: var(--hp-font-display);
   font-size: clamp(25px, 3vw, 38px) !important;
   font-weight: 700;
@@ -967,57 +1314,70 @@
   margin: 0 auto 14px !important;
   text-wrap: balance;
 }
+
 .hp-body .hp-ctaband p,
 .hp-body .hp-ctaband .lead,
-.hp-body .hp-ctaband .section-subheading{
+.hp-body .hp-ctaband .section-subheading {
   font-size: clamp(15.5px, 1.2vw, 18px) !important;
   line-height: 1.6;
-  color: rgba(242,246,253,.84) !important;
+  color: rgba(242, 246, 253, .84) !important;
   max-width: 62ch;
   margin: 0 auto 26px;
 }
-.hp-body .hp-ctaband .section-heading::after{ display: none; }
+
+.hp-body .hp-ctaband .section-heading::after {
+  display: none;
+}
 
 /* The buttons on a dark band invert: the primary becomes the white one,
    because white on navy is the strongest pairing available here. */
-.hp-body .hp-ctaband__act{
+.hp-body .hp-ctaband__act {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
 }
-.hp-body .hp-ctaband .btn-primary{
+
+.hp-body .hp-ctaband .btn-primary {
   background: #fff;
   color: var(--hp-brand-deep);
-  box-shadow: 0 3px 10px rgba(4,14,36,.28), 0 14px 34px rgba(4,14,36,.24);
+  box-shadow: 0 3px 10px rgba(4, 14, 36, .28), 0 14px 34px rgba(4, 14, 36, .24);
 }
+
 .hp-body .hp-ctaband .btn-primary:hover,
-.hp-body .hp-ctaband .btn-primary:focus-visible{
+.hp-body .hp-ctaband .btn-primary:focus-visible {
   background: #EFF5FF;
   color: var(--hp-brand-night);
 }
+
 .hp-body .hp-ctaband .btn-outline-primary,
 .hp-body .hp-ctaband .btn-outline-light,
 .hp-body .hp-ctaband .btn-secondary,
-.hp-body .hp-ctaband .btn-light{
-  background: rgba(255,255,255,.08);
+.hp-body .hp-ctaband .btn-light {
+  background: rgba(255, 255, 255, .08);
   color: #fff;
-  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.38);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .38);
 }
+
 .hp-body .hp-ctaband .btn-outline-primary:hover,
 .hp-body .hp-ctaband .btn-outline-light:hover,
 .hp-body .hp-ctaband .btn-secondary:hover,
-.hp-body .hp-ctaband .btn-light:hover{
-  background: rgba(255,255,255,.16);
+.hp-body .hp-ctaband .btn-light:hover {
+  background: rgba(255, 255, 255, .16);
   color: #fff;
-  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.6);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .6);
 }
-.hp-body .hp-ctaband .btn:focus-visible{
-  box-shadow: 0 0 0 3px rgba(255,255,255,.5), 0 0 0 6px rgba(255,255,255,.18);
+
+.hp-body .hp-ctaband .btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .5), 0 0 0 6px rgba(255, 255, 255, .18);
 }
+
 /* The pages that had no wrapper around their two buttons used a flex utility
    on the row instead, so that gets the same centring. */
-.hp-body .hp-ctaband .d-flex{ flex-wrap: wrap; gap: 12px; }
+.hp-body .hp-ctaband .d-flex {
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
 
 /* ==========================================================================
@@ -1028,7 +1388,7 @@
    the wrapper scrolls rather than the page when the table is wider than a
    phone. assets/js/theme.js adds that wrapper.
    ========================================================================== */
-.hp-body .hp-tablewrap{
+.hp-body .hp-tablewrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   margin: clamp(20px, 2.4vw, 30px) 0;
@@ -1036,7 +1396,8 @@
   box-shadow: var(--hp-sh-1);
   background: var(--hp-surface);
 }
-.hp-body .table{
+
+.hp-body .table {
   width: 100%;
   margin: 0;
   border-collapse: separate;
@@ -1044,12 +1405,14 @@
   font-size: 15px;
   color: var(--hp-ink-2);
 }
-.hp-body .table > :not(caption) > * > *{
+
+.hp-body .table> :not(caption)>*>* {
   border: 0;
   box-shadow: none;
   padding: 14px 18px;
 }
-.hp-body .table thead th{
+
+.hp-body .table thead th {
   background: var(--hp-brand-tint);
   color: var(--hp-brand-deep);
   font-family: var(--hp-font-display);
@@ -1059,14 +1422,24 @@
   text-transform: uppercase;
   white-space: nowrap;
 }
-.hp-body .table tbody tr + tr > *{ border-top: 1px solid var(--hp-line-soft) !important; }
-.hp-body .table-striped > tbody > tr:nth-of-type(odd) > *{
+
+.hp-body .table tbody tr+tr>* {
+  border-top: 1px solid var(--hp-line-soft) !important;
+}
+
+.hp-body .table-striped>tbody>tr:nth-of-type(odd)>* {
   background: transparent;
   color: inherit;
 }
-.hp-body .table-striped > tbody > tr:nth-of-type(even) > *{ background: #FAFCFF; }
+
+.hp-body .table-striped>tbody>tr:nth-of-type(even)>* {
+  background: #FAFCFF;
+}
+
 .hp-body .table td strong,
-.hp-body .table th{ color: var(--hp-ink); }
+.hp-body .table th {
+  color: var(--hp-ink);
+}
 
 
 /* ==========================================================================
@@ -1077,7 +1450,7 @@
    which is what makes a button look like it is sitting on the page instead
    of stamped onto it.
    ========================================================================== */
-.hp-body .btn{
+.hp-body .btn {
   font-family: var(--hp-font-display);
   font-weight: 600;
   font-size: 15px;
@@ -1087,72 +1460,86 @@
   border: 0;
   text-transform: none;
   transition: transform var(--hp-t-fast) var(--hp-ease-out),
-              box-shadow var(--hp-t) var(--hp-ease-out),
-              background-color var(--hp-t) var(--hp-ease-out);
+    box-shadow var(--hp-t) var(--hp-ease-out),
+    background-color var(--hp-t) var(--hp-ease-out);
 }
-.hp-body .btn-lg{ padding: 14px 30px; font-size: 16px; }
 
-.hp-body .btn-primary{
+.hp-body .btn-lg {
+  padding: 14px 30px;
+  font-size: 16px;
+}
+
+.hp-body .btn-primary {
   background: var(--hp-action);
   color: var(--hp-on-action);
-  box-shadow: 0 2px 6px rgba(29,78,216,.2), 0 10px 24px rgba(29,78,216,.16);
+  box-shadow: 0 2px 6px rgba(29, 78, 216, .2), 0 10px 24px rgba(29, 78, 216, .16);
 }
+
 .hp-body .btn-primary:hover,
-.hp-body .btn-primary:focus-visible{
+.hp-body .btn-primary:focus-visible {
   background: var(--hp-action-deep);
   color: var(--hp-on-action);
-  box-shadow: 0 3px 8px rgba(18,53,127,.24), 0 14px 30px rgba(18,53,127,.2);
+  box-shadow: 0 3px 8px rgba(18, 53, 127, .24), 0 14px 30px rgba(18, 53, 127, .2);
 }
-.hp-body .btn-primary:active{ transform: translateY(1px); }
+
+.hp-body .btn-primary:active {
+  transform: translateY(1px);
+}
 
 .hp-body .btn-outline-primary,
-.hp-body .btn-outline-light{
+.hp-body .btn-outline-light {
   background: transparent;
   color: var(--hp-brand);
-  box-shadow: inset 0 0 0 1.5px rgba(29,78,216,.34);
+  box-shadow: inset 0 0 0 1.5px rgba(29, 78, 216, .34);
 }
+
 .hp-body .btn-outline-primary:hover,
-.hp-body .btn-outline-light:hover{
+.hp-body .btn-outline-light:hover {
   background: var(--hp-brand-tint);
   color: var(--hp-brand-deep);
-  box-shadow: inset 0 0 0 1.5px rgba(29,78,216,.5);
+  box-shadow: inset 0 0 0 1.5px rgba(29, 78, 216, .5);
 }
 
 .hp-body .btn-secondary,
-.hp-body .btn-light{
+.hp-body .btn-light {
   background: var(--hp-brand-tint);
   color: var(--hp-brand-deep);
 }
-.hp-body .btn-secondary:hover,
-.hp-body .btn-light:hover{ background: #D9E7FD; color: var(--hp-brand-deep); }
 
-.hp-body .btn:focus-visible{
+.hp-body .btn-secondary:hover,
+.hp-body .btn-light:hover {
+  background: #D9E7FD;
+  color: var(--hp-brand-deep);
+}
+
+.hp-body .btn:focus-visible {
   outline: 0;
-  box-shadow: 0 0 0 3px rgba(29,78,216,.3), 0 0 0 6px rgba(29,78,216,.12);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, .3), 0 0 0 6px rgba(29, 78, 216, .12);
 }
 
 /* Inline links in copy: underlined, because an underline is how a link is
    recognised, but with the underline held away from the letterforms. */
 .hp-body .container p a:not(.btn),
 .hp-body .card-text a:not(.btn),
-.hp-body .container li a:not(.btn):not(.nav-link){
+.hp-body .container li a:not(.btn):not(.nav-link) {
   color: var(--hp-brand);
   text-decoration: underline;
-  text-decoration-color: rgba(29,78,216,.32);
+  text-decoration-color: rgba(29, 78, 216, .32);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
   transition: text-decoration-color var(--hp-t) var(--hp-ease-out),
-              color var(--hp-t) var(--hp-ease-out);
+    color var(--hp-t) var(--hp-ease-out);
 }
+
 .hp-body .container p a:not(.btn):hover,
 .hp-body .card-text a:not(.btn):hover,
-.hp-body .container li a:not(.btn):not(.nav-link):hover{
+.hp-body .container li a:not(.btn):not(.nav-link):hover {
   color: var(--hp-brand-deep);
   text-decoration-color: var(--hp-brand);
 }
 
 .hp-body .back-btn,
-.hp-body .share-link{
+.hp-body .share-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1166,10 +1553,14 @@
   background: var(--hp-brand-tint);
   transition: background var(--hp-t) var(--hp-ease-out);
 }
-.hp-body .back-btn:hover,
-.hp-body .share-link:hover{ background: #D9E7FD; color: var(--hp-brand-deep); }
 
-.hp-body .tag{
+.hp-body .back-btn:hover,
+.hp-body .share-link:hover {
+  background: #D9E7FD;
+  color: var(--hp-brand-deep);
+}
+
+.hp-body .tag {
   display: inline-block;
   font-size: 12.5px;
   font-weight: 600;
@@ -1187,35 +1578,39 @@
    14. Figures and images
    ========================================================================== */
 .hp-body .container img.img-fluid,
-.hp-body .container img.rounded{
+.hp-body .container img.rounded {
   border-radius: var(--hp-r-card) !important;
   box-shadow: var(--hp-sh-2);
 }
-.hp-body .container img.rounded-circle{
+
+.hp-body .container img.rounded-circle {
   border-radius: 50% !important;
   box-shadow: var(--hp-sh-1);
 }
+
 /* Reserve the space an image will occupy, so the copy beside it does not
    jump when the photograph arrives, and crop it to a fixed ratio so the row
    height never depends on the aspect the source file happens to have. One
    portrait photograph would otherwise leave 400px of dead space beside its
    paragraph. */
-.hp-body .container img.img-fluid{
+.hp-body .container img.img-fluid {
   display: block;
   width: 100%;
   height: auto;
   background: var(--hp-brand-tint);
 }
-.hp-body .row [class*="col-"] > img.img-fluid,
-.hp-body .row [class*="col-"] > a > img.img-fluid{
+
+.hp-body .row [class*="col-"]>img.img-fluid,
+.hp-body .row [class*="col-"]>a>img.img-fluid {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
 /* A diagram has to be read, not cropped, so anything the page marks as one
    keeps its own proportions. */
 .hp-body img.img-fluid[alt*="process" i],
 .hp-body img.img-fluid[alt*="methodolog" i],
-.hp-body .text-center > img.img-fluid{
+.hp-body .text-center>img.img-fluid {
   aspect-ratio: auto;
   object-fit: contain;
 }
@@ -1230,7 +1625,7 @@
    Bootstrap's flat glow, and the input sits on a tint so an empty field is
    visible as a field.
    ========================================================================== */
-.hp-body .form-label{
+.hp-body .form-label {
   display: block;
   font-family: var(--hp-font-display);
   font-size: 13px;
@@ -1239,8 +1634,9 @@
   color: var(--hp-ink);
   margin-bottom: 7px;
 }
+
 .hp-body .form-control,
-.hp-body .form-select{
+.hp-body .form-select {
   width: 100%;
   font-family: var(--hp-font);
   font-size: 15px !important;
@@ -1251,22 +1647,37 @@
   padding: 12px 14px !important;
   box-shadow: none;
   transition: border-color var(--hp-t) var(--hp-ease-out),
-              background var(--hp-t) var(--hp-ease-out),
-              box-shadow var(--hp-t) var(--hp-ease-out);
+    background var(--hp-t) var(--hp-ease-out),
+    box-shadow var(--hp-t) var(--hp-ease-out);
 }
-.hp-body .form-control::placeholder{ color: #93A2B8; }
+
+.hp-body .form-control::placeholder {
+  color: #93A2B8;
+}
+
 .hp-body .form-control:hover,
-.hp-body .form-select:hover{ border-color: #C6D6EE; }
+.hp-body .form-select:hover {
+  border-color: #C6D6EE;
+}
+
 .hp-body .form-control:focus,
-.hp-body .form-select:focus{
+.hp-body .form-select:focus {
   outline: 0;
   background: var(--hp-surface);
   border-color: var(--hp-brand);
-  box-shadow: 0 0 0 3px rgba(29,78,216,.14);
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, .14);
 }
-.hp-body textarea.form-control{ min-height: 118px; resize: vertical; }
-.hp-body .form-group{ margin-bottom: 16px; }
-.hp-body .form-privacy{
+
+.hp-body textarea.form-control {
+  min-height: 118px;
+  resize: vertical;
+}
+
+.hp-body .form-group {
+  margin-bottom: 16px;
+}
+
+.hp-body .form-privacy {
   font-size: 12.75px;
   line-height: 1.55;
   color: var(--hp-muted);
@@ -1276,11 +1687,13 @@
    Two pages that are mostly one long block: the jobs form and the privacy
    policy. Both were hand styled with their own stylesheet, their own copy of
    Bootstrap and their own colours. They read from the design system now. */
-.hp-body .hp-applycard{ box-shadow: var(--hp-sh-2) !important; }
+.hp-body .hp-applycard {
+  box-shadow: var(--hp-sh-2) !important;
+}
 
 /* A label above each group of fields, so a twenty field form reads as four
    short steps rather than one wall of inputs. */
-.hp-body .hp-formgroup__t{
+.hp-body .hp-formgroup__t {
   font-family: var(--hp-font-display);
   font-size: 12.5px !important;
   font-weight: 700;
@@ -1292,45 +1705,56 @@
 }
 
 .hp-body .hp-upload,
-.hp-body .hp-captcha{
+.hp-body .hp-captcha {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
 }
-.hp-body .hp-upload #custom-text{
+
+.hp-body .hp-upload #custom-text {
   font-size: 14px;
   color: var(--hp-muted);
 }
-.hp-body .hp-captcha img{
+
+.hp-body .hp-captcha img {
   border-radius: var(--hp-r-input);
   background: var(--hp-brand-tint);
 }
-.hp-body #captcha-error{
+
+.hp-body #captcha-error {
   display: block;
   font-size: 12.5px;
   margin-top: 6px;
   color: #B42318 !important;
 }
-.hp-body .text-danger{ color: #B42318 !important; }   /* 4.9:1 on white */
+
+.hp-body .text-danger {
+  color: #B42318 !important;
+}
+
+/* 4.9:1 on white */
 
 /* A legal page is a document, not a marketing band: one readable column,
    numbered sections, no cards. */
-.hp-body .hp-doc{
+.hp-body .hp-doc {
   max-width: 78ch;
   margin-inline: auto;
 }
-.hp-body .hp-doc > h2:first-of-type{
+
+.hp-body .hp-doc>h2:first-of-type {
   font-family: var(--hp-font-display);
   font-size: clamp(24px, 2.6vw, 34px);
   font-weight: 700;
   letter-spacing: -.02em;
   color: var(--hp-ink);
 }
-.hp-body .privacy-section{
+
+.hp-body .privacy-section {
   margin-bottom: clamp(26px, 2.8vw, 40px);
 }
-.hp-body .privacy-section h2{
+
+.hp-body .privacy-section h2 {
   font-family: var(--hp-font-display);
   font-size: clamp(18px, 1.5vw, 21px) !important;
   font-weight: 650;
@@ -1340,8 +1764,9 @@
   padding-bottom: 10px;
   border-bottom: 2px solid var(--hp-brand-tint);
 }
+
 .hp-body .privacy-section p,
-.hp-body .privacy-section li{
+.hp-body .privacy-section li {
   font-size: 15.5px;
   line-height: 1.74;
   color: var(--hp-ink-2);
@@ -1352,13 +1777,14 @@
    16. Tabs, pills and accordions
    ========================================================================== */
 .hp-body .nav-tabs,
-.hp-body .nav-pills{
+.hp-body .nav-pills {
   border: 0;
   gap: 8px;
   margin-bottom: 22px;
 }
+
 .hp-body .nav-tabs .nav-link,
-.hp-body .nav-pills .nav-link{
+.hp-body .nav-pills .nav-link {
   border: 0;
   border-radius: var(--hp-r-pill);
   font-family: var(--hp-font-display);
@@ -1368,16 +1794,17 @@
   background: var(--hp-brand-tint);
   padding: 10px 18px;
   transition: background var(--hp-t) var(--hp-ease-out),
-              color var(--hp-t) var(--hp-ease-out);
-}
-.hp-body .nav-tabs .nav-link.active,
-.hp-body .nav-pills .nav-link.active{
-  color: var(--hp-on-action);
-  background: var(--hp-action);
-  box-shadow: 0 3px 10px rgba(29,78,216,.24);
+    color var(--hp-t) var(--hp-ease-out);
 }
 
-.hp-body .accordion-item{
+.hp-body .nav-tabs .nav-link.active,
+.hp-body .nav-pills .nav-link.active {
+  color: var(--hp-on-action);
+  background: var(--hp-action);
+  box-shadow: 0 3px 10px rgba(29, 78, 216, .24);
+}
+
+.hp-body .accordion-item {
   border: 0;
   border-radius: var(--hp-r-tile) !important;
   background: var(--hp-surface);
@@ -1385,7 +1812,8 @@
   margin-bottom: 12px;
   overflow: hidden;
 }
-.hp-body .accordion-button{
+
+.hp-body .accordion-button {
   font-family: var(--hp-font-display);
   font-size: 16px;
   font-weight: 600;
@@ -1394,12 +1822,17 @@
   box-shadow: none;
   padding: 17px 20px;
 }
-.hp-body .accordion-button:not(.collapsed){
+
+.hp-body .accordion-button:not(.collapsed) {
   color: var(--hp-brand-deep);
   background: var(--hp-brand-tint);
 }
-.hp-body .accordion-button:focus{ box-shadow: 0 0 0 3px rgba(29,78,216,.2); }
-.hp-body .accordion-body{
+
+.hp-body .accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, .2);
+}
+
+.hp-body .accordion-body {
   font-size: 15.25px;
   line-height: 1.7;
   color: var(--hp-ink-2);
@@ -1413,7 +1846,7 @@
    The blog carries its own stylesheet, loaded after this one, so these rules
    only fill in what it leaves undefined and never fight it.
    ========================================================================== */
-.hp-body .article-title{
+.hp-body .article-title {
   font-family: var(--hp-font-display);
   font-size: clamp(28px, 3.6vw, 44px);
   font-weight: 700;
@@ -1422,7 +1855,8 @@
   color: var(--hp-ink);
   text-wrap: balance;
 }
-.hp-body .article-meta{
+
+.hp-body .article-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1430,23 +1864,31 @@
   font-size: 13.5px;
   color: var(--hp-muted);
 }
-.hp-body .article-content > p{
+
+.hp-body .article-content>p {
   font-size: clamp(16px, 1.15vw, 17.5px);
   line-height: 1.78;
   color: var(--hp-ink-2);
   max-width: 72ch;
 }
-.hp-body .article-callout{
+
+.hp-body .article-callout {
   background: var(--hp-brand-tint);
   border-radius: var(--hp-r-card);
   padding: clamp(20px, 2.2vw, 28px);
   margin: clamp(24px, 2.8vw, 36px) 0;
   color: var(--hp-brand-deep);
 }
-.hp-body .article-callout > :last-child{ margin-bottom: 0; }
 
-.hp-body .related-post{ padding: 20px; }
-.hp-body .related-title{
+.hp-body .article-callout> :last-child {
+  margin-bottom: 0;
+}
+
+.hp-body .related-post {
+  padding: 20px;
+}
+
+.hp-body .related-title {
   font-family: var(--hp-font-display);
   font-size: 16px;
   font-weight: 650;
@@ -1454,9 +1896,13 @@
   color: var(--hp-ink);
   margin: 0 0 8px;
 }
-.hp-body .related-date{ font-size: 13px; color: var(--hp-muted); }
 
-.hp-body .newsletter-box{
+.hp-body .related-date {
+  font-size: 13px;
+  color: var(--hp-muted);
+}
+
+.hp-body .newsletter-box {
   position: relative;
   overflow: hidden;
   background: linear-gradient(140deg, var(--hp-brand-deep), var(--hp-brand-night));
@@ -1464,7 +1910,8 @@
   padding: clamp(26px, 3vw, 44px);
   color: var(--hp-on-dark);
 }
-.hp-body .newsletter-box .newsletter-badge{
+
+.hp-body .newsletter-box .newsletter-badge {
   display: inline-block;
   font-size: 12px;
   font-weight: 650;
@@ -1473,14 +1920,19 @@
   color: var(--hp-brand-aqua);
   margin-bottom: 10px;
 }
+
 .hp-body .newsletter-box h2,
-.hp-body .newsletter-box h3{
+.hp-body .newsletter-box h3 {
   font-family: var(--hp-font-display);
   color: #fff;
   letter-spacing: -.02em;
 }
-.hp-body .newsletter-box p{ color: rgba(242,246,253,.82); }
-.hp-body .btn-subscribe{
+
+.hp-body .newsletter-box p {
+  color: rgba(242, 246, 253, .82);
+}
+
+.hp-body .btn-subscribe {
   background: #fff;
   color: var(--hp-brand-deep);
   border-radius: var(--hp-r-pill);
@@ -1502,94 +1954,199 @@
    page mid-scroll. The no-js class on <html> is removed by theme.js, so
    with scripting off everything is simply visible.
    ========================================================================== */
-html.no-js .hp-body [data-aos]{ opacity: 1; transform: none; }
+html.no-js .hp-body [data-aos] {
+  opacity: 1;
+  transform: none;
+}
 
-.hp-body [data-aos]{
+.hp-body [data-aos] {
   opacity: 0;
   transform: translate3d(0, 18px, 0);
   transition: opacity 620ms var(--hp-ease-out),
-              transform 620ms var(--hp-ease-out);
+    transform 620ms var(--hp-ease-out);
   /* No will-change here on purpose. A long page can hold forty of these, and
      promoting forty layers up front costs more than the paint it saves. */
 }
-.hp-body [data-aos="fade-right"]{ transform: translate3d(-22px, 0, 0); }
-.hp-body [data-aos="fade-left"] { transform: translate3d(22px, 0, 0); }
-.hp-body [data-aos="fade-down"] { transform: translate3d(0, -18px, 0); }
-.hp-body [data-aos="zoom-in"]   { transform: scale(.965); }
-.hp-body [data-aos="fade"]      { transform: none; }
 
-.hp-body [data-aos].is-in{
+.hp-body [data-aos="fade-right"] {
+  transform: translate3d(-22px, 0, 0);
+}
+
+.hp-body [data-aos="fade-left"] {
+  transform: translate3d(22px, 0, 0);
+}
+
+.hp-body [data-aos="fade-down"] {
+  transform: translate3d(0, -18px, 0);
+}
+
+.hp-body [data-aos="zoom-in"] {
+  transform: scale(.965);
+}
+
+.hp-body [data-aos="fade"] {
+  transform: none;
+}
+
+.hp-body [data-aos].is-in {
   opacity: 1;
   transform: none;
 }
 
 /* A grid of cards reveals as a group, each a beat behind the last. The
    delay is capped so a twelve item grid never leaves the reader waiting. */
-.hp-body [data-aos-delay="50"] { transition-delay:  50ms; }
-.hp-body [data-aos-delay="100"]{ transition-delay:  80ms; }
-.hp-body [data-aos-delay="150"]{ transition-delay: 120ms; }
-.hp-body [data-aos-delay="200"]{ transition-delay: 160ms; }
-.hp-body [data-aos-delay="250"]{ transition-delay: 200ms; }
-.hp-body [data-aos-delay="300"]{ transition-delay: 240ms; }
-.hp-body [data-aos-delay="350"]{ transition-delay: 270ms; }
-.hp-body [data-aos-delay="400"]{ transition-delay: 300ms; }
-.hp-body [data-aos-delay="450"]{ transition-delay: 320ms; }
-.hp-body [data-aos-delay="500"]{ transition-delay: 340ms; }
+.hp-body [data-aos-delay="50"] {
+  transition-delay: 50ms;
+}
+
+.hp-body [data-aos-delay="100"] {
+  transition-delay: 80ms;
+}
+
+.hp-body [data-aos-delay="150"] {
+  transition-delay: 120ms;
+}
+
+.hp-body [data-aos-delay="200"] {
+  transition-delay: 160ms;
+}
+
+.hp-body [data-aos-delay="250"] {
+  transition-delay: 200ms;
+}
+
+.hp-body [data-aos-delay="300"] {
+  transition-delay: 240ms;
+}
+
+.hp-body [data-aos-delay="350"] {
+  transition-delay: 270ms;
+}
+
+.hp-body [data-aos-delay="400"] {
+  transition-delay: 300ms;
+}
+
+.hp-body [data-aos-delay="450"] {
+  transition-delay: 320ms;
+}
+
+.hp-body [data-aos-delay="500"] {
+  transition-delay: 340ms;
+}
 
 
 
 /* ==========================================================================
    19. Narrow screens, reduced motion and print
    ========================================================================== */
-@media (max-width: 991.98px){
-  .hp-body .section-heading{ max-width: none; }
-  .hp-body .benefit-card{ gap: 14px; }
+@media (max-width: 991.98px) {
+  .hp-body .section-heading {
+    max-width: none;
+  }
+
+  .hp-body .benefit-card {
+    gap: 14px;
+  }
 }
 
-@media (max-width: 575.98px){
-  .hp-body .card-body{ padding: 18px; }
+@media (max-width: 575.98px) {
+  .hp-body .card-body {
+    padding: 18px;
+  }
+
   .hp-body .card-body .bi.fs-1,
-  .hp-body .card-body .fa-3x{ width: 46px; height: 46px; font-size: 18px !important; }
-  .hp-body .specialty-item{ min-height: 116px; padding: 16px 10px !important; }
-  .hp-body .specialty-item .bi{ width: 40px; height: 40px; font-size: 17px !important; }
+  .hp-body .card-body .fa-3x {
+    width: 46px;
+    height: 46px;
+    font-size: 18px !important;
+  }
+
+  .hp-body .specialty-item {
+    min-height: 116px;
+    padding: 16px 10px !important;
+  }
+
+  .hp-body .specialty-item .bi {
+    width: 40px;
+    height: 40px;
+    font-size: 17px !important;
+  }
+
   .hp-body .specialty-item h3,
   .hp-body .specialty-item h4,
-  .hp-body .specialty-item h5{ font-size: 13.5px !important; }
-  .hp-body .timeline-item::before{ left: 21px; top: 44px; }
-  .hp-body .timeline-badge{ width: 42px !important; height: 42px !important; font-size: 15px; }
-  .hp-body .timeline-content{ margin-left: 16px !important; }
-  .hp-body .btn{ width: auto; }
+  .hp-body .specialty-item h5 {
+    font-size: 13.5px !important;
+  }
+
+  .hp-body .timeline-item::before {
+    left: 21px;
+    top: 44px;
+  }
+
+  .hp-body .timeline-badge {
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 15px;
+  }
+
+  .hp-body .timeline-content {
+    margin-left: 16px !important;
+  }
+
+  .hp-body .btn {
+    width: auto;
+  }
+
   /* The tick lists carry the most text on a phone: a touch more leading. */
-  .hp-body .container .list-unstyled li{ line-height: 1.65; }
+  .hp-body .container .list-unstyled li {
+    line-height: 1.65;
+  }
 }
 
 /* Someone who has asked their system to reduce motion gets the finished
    layout immediately. Nothing moves, nothing fades, nothing is hidden. */
-@media (prefers-reduced-motion: reduce){
-  .hp-body [data-aos]{
+@media (prefers-reduced-motion: reduce) {
+  .hp-body [data-aos] {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
   }
+
   .hp-body .card,
   .hp-body .benefit-card,
   .hp-body .solution-card,
   .hp-body .branch-card,
   .hp-body .specialty-item,
-  .hp-body .btn{ transition: none; }
+  .hp-body .btn {
+    transition: none;
+  }
+
   .hp-body .card:hover,
   .hp-body .benefit-card:hover,
   .hp-body .solution-card:hover,
   .hp-body .branch-card:hover,
-  .hp-body .specialty-item:hover{ transform: none; }
+  .hp-body .specialty-item:hover {
+    transform: none;
+  }
 }
 
-@media print{
-  .hp-body [data-aos]{ opacity: 1 !important; transform: none !important; }
+@media print {
+  .hp-body [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .hp-body .card,
   .hp-body .specialty-item,
   .hp-body .benefit-card,
   .hp-body .solution-card,
-  .hp-body .branch-card{ box-shadow: none; outline: 1px solid #ccc; }
-  .hp-body section.bg-light::before{ display: none; }
+  .hp-body .branch-card {
+    box-shadow: none;
+    outline: 1px solid #ccc;
+  }
+
+  .hp-body section.bg-light::before {
+    display: none;
+  }
 }

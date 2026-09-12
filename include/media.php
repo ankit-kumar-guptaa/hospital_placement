@@ -63,8 +63,8 @@ function hp_media($key) {
 
         /* --- home page ------------------------------------------------- */
         'about_main' => array(
-            'id'    => 'photo-1622253692010-333f2da6031d',
-            'local' => 'assets/img/home1.jpg',
+            'id'    => '',
+            'local' => 'assets/img/about.png',
             'alt'   => 'Hospital consultant doctor reviewing a patient chart on a ward round',
         ),
         'about_inset' => array(

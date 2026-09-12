@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $title = "Top Healthcare Recruitment Challenges and Solutions in 2025";
 $category = "Healthcare Recruitment";
 $date = "September 10, 2025";
@@ -15,10 +15,10 @@ $featured_image = "../assets/img/blog/healthcare-recruitment.jpg";
     <title><?php echo $title; ?> | Hospital Placement</title>
     <link rel="stylesheet" href="blog-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <?php include('../include/assets.php'); ?>
+    <?php include __DIR__ . '/../include/assets.php'; ?>
 </head>
 <body>
-    <?php include('../include/header.php'); ?>
+    <?php include __DIR__ . '/../include/header.php'; ?>
 
     <main class="blog-post">
         <div class="container">
@@ -127,7 +127,7 @@ $featured_image = "../assets/img/blog/healthcare-recruitment.jpg";
         </div>
     </main>
 
-    <?php include('../include/footer.php'); ?>
+    <?php include __DIR__ . '/../include/footer.php'; ?>
 
     <script>
         // Smooth scrolling for anchor links

@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Include database connection if needed for dynamic content
-// include "../include/db.php";
+// include __DIR__ . '/../include/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
     <!-- Include common assets -->
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     
     <!-- Blog-specific CSS -->
     <link rel="stylesheet" href="blog-styles.css">
@@ -89,7 +89,7 @@
                     <blockquote>
                         "Our international recruitment initiative has transformed our ability to provide culturally appropriate care to our diverse patient population. Patients consistently report higher satisfaction when they can communicate with providers who understand their cultural context."
                     </blockquote>
-                    <cite>— Dr. Elizabeth Chen, Chief Medical Officer, Metropolitan University Hospital</cite>
+                    <cite>â€” Dr. Elizabeth Chen, Chief Medical Officer, Metropolitan University Hospital</cite>
                 </div>
 
                 <h3>3. Accessing Specialized Expertise</h3>
@@ -227,7 +227,7 @@
                     <blockquote>
                         "Working with a specialized international recruitment partner transformed our approach. Their expertise in navigating regulatory requirements reduced our time-to-hire by over 40% while ensuring candidates were fully prepared for UK practice."
                     </blockquote>
-                    <cite>— Sarah Williams, Director of Workforce, NHS Foundation Trust</cite>
+                    <cite>â€” Sarah Williams, Director of Workforce, NHS Foundation Trust</cite>
                 </div>
 
                 <h3>3. Develop a Compelling International Employer Value Proposition</h3>
@@ -335,7 +335,7 @@
                     <blockquote>
                         "Our retention rate for international nurses improved from 68% to 94% at the two-year mark after implementing our comprehensive integration program. The investment in proper support pays tremendous dividends in stability and performance."
                     </blockquote>
-                    <cite>— Amanda Roberts, Chief Nursing Officer, St. Mary's Hospital</cite>
+                    <cite>â€” Amanda Roberts, Chief Nursing Officer, St. Mary's Hospital</cite>
                 </div>
 
                 <h2>Measuring Success and Continuous Improvement</h2>
@@ -352,9 +352,9 @@
                 <p>Regular feedback from international staff provides invaluable insights for program improvement. Structured interviews at key milestones (3, 6, and 12 months) can identify both successful elements and areas needing enhancement.</p>
 
                 <h2>Conclusion: Building a Sustainable International Recruitment Capability</h2>
-                <p>International medical recruitment is no longer just an emergency solution for staffing shortages—it has become an essential strategic capability for forward-thinking healthcare organizations. By developing comprehensive approaches to international recruitment, assessment, and integration, healthcare employers can build diverse, skilled teams that enhance clinical capabilities and patient care.</p>
+                <p>International medical recruitment is no longer just an emergency solution for staffing shortagesâ€”it has become an essential strategic capability for forward-thinking healthcare organizations. By developing comprehensive approaches to international recruitment, assessment, and integration, healthcare employers can build diverse, skilled teams that enhance clinical capabilities and patient care.</p>
                 
-                <p>While the process involves complexity and investment, the returns—in terms of workforce stability, diversity of expertise, and reduced dependency on temporary staffing—make international recruitment an invaluable component of modern healthcare workforce strategy.</p>
+                <p>While the process involves complexity and investment, the returnsâ€”in terms of workforce stability, diversity of expertise, and reduced dependency on temporary staffingâ€”make international recruitment an invaluable component of modern healthcare workforce strategy.</p>
                 
                 <p>Organizations that develop expertise in this area gain significant competitive advantages in addressing both current staffing challenges and future workforce needs in an increasingly global healthcare landscape.</p>
 
@@ -432,6 +432,6 @@
     </section>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
 </body>
 </html>

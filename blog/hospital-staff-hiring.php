@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>How to Easily Get the Right Hospital Staff | hospitalplacement.com</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap">
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     <style>
      
 
@@ -224,7 +224,7 @@
     </style>
 </head>
 <body>
-    <?php include "../include/header.php"?>
+    <?php include __DIR__ . '/../include/header.php';?>
     <div class="decorative-shape shape-1"></div>
     <div class="decorative-shape shape-2"></div>
 
@@ -243,7 +243,7 @@
 
     <div class="container">
         <article class="article-content">
-            <p>Hiring the right hospital staff has traditionally been a complex and time-consuming process for healthcare administrators. However, with <a href="https://hospitalplacement.com">hospitalplacement.com</a>, this challenge is a thing of the past. Our platform offers a one-stop solution for recruiting radiologists, surgeons, nurses, and administrative personnel, tailored to the unique needs of every healthcare facility—be it a small clinic or a large hospital.</p>
+            <p>Hiring the right hospital staff has traditionally been a complex and time-consuming process for healthcare administrators. However, with <a href="https://hospitalplacement.com">hospitalplacement.com</a>, this challenge is a thing of the past. Our platform offers a one-stop solution for recruiting radiologists, surgeons, nurses, and administrative personnel, tailored to the unique needs of every healthcare facilityâ€”be it a small clinic or a large hospital.</p>
 
             <div class="highlight-box">
                 <p><strong>Our Edge:</strong> Over 10,000 verified healthcare professionals are part of our network, ensuring you find the perfect match every time.</p>
@@ -251,7 +251,7 @@
 
             <p>Our advanced matching algorithm evaluates job requirements, candidate qualifications, and experience to deliver the best fits. Hospitals across India trust us to assemble their teams swiftly, minimizing downtime and elevating patient care standards. We provide end-to-end support, from posting job listings to onboarding, ensuring a smooth transition for both employers and employees.</p>
 
-            <p>What makes us stand out is our intuitive interface and extensive network of verified candidates. Employers can browse profiles, schedule interviews, and hire—all within a single platform. For job seekers, we offer career advice and placement opportunities. Whether you need specialists for emergency services or support staff for daily operations, <a href="https://hospitalplacement.com">hospitalplacement.com</a> has you covered.</p>
+            <p>What makes us stand out is our intuitive interface and extensive network of verified candidates. Employers can browse profiles, schedule interviews, and hireâ€”all within a single platform. For job seekers, we offer career advice and placement opportunities. Whether you need specialists for emergency services or support staff for daily operations, <a href="https://hospitalplacement.com">hospitalplacement.com</a> has you covered.</p>
 
             <p>Transform your hiring process today! Visit <a href="https://hospitalplacement.com">hospitalplacement.com</a> and build a world-class healthcare team with ease.</p>
 
@@ -259,4 +259,4 @@
         </article>
     </div>
 
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>

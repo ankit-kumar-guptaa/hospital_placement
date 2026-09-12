@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Set page title and meta description
 $pageTitle = "Reducing Healthcare Staff Turnover: Evidence-Based Retention Strategies";
 $metaDescription = "Discover proven, evidence-based strategies to reduce healthcare staff turnover, improve retention rates, and create a stable workforce environment that benefits both your facility and patients.";
@@ -13,7 +13,7 @@ $metaDescription = "Discover proven, evidence-based strategies to reduce healthc
     <meta name="description" content="<?php echo $metaDescription; ?>">
     
     <!-- Include common assets (CSS, fonts, etc.) -->
-    <?php include "../include/assets.php"; ?>
+    <?php include __DIR__ . '/../include/assets.php'; ?>
     
     <!-- Blog-specific styles -->
     <link rel="stylesheet" href="blog-styles.css">
@@ -336,7 +336,7 @@ $metaDescription = "Discover proven, evidence-based strategies to reduce healthc
     </section>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
     
     <!-- Custom Blog JavaScript -->
     <script>

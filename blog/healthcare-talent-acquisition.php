@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Set page title and meta description
 $pageTitle = "Healthcare Talent Acquisition: Advanced Strategies for Modern Hospitals";
 $metaDescription = "Discover advanced healthcare talent acquisition strategies that modern hospitals can implement to attract, engage, and retain top medical professionals in today's competitive market.";
@@ -13,7 +13,7 @@ $metaDescription = "Discover advanced healthcare talent acquisition strategies t
     <meta name="description" content="<?php echo $metaDescription; ?>">
     
     <!-- Include common assets (CSS, fonts, etc.) -->
-    <?php include "../include/assets.php"; ?>
+    <?php include __DIR__ . '/../include/assets.php'; ?>
     
     <!-- Blog-specific styles -->
     <link rel="stylesheet" href="blog-styles.css">
@@ -75,7 +75,7 @@ $metaDescription = "Discover advanced healthcare talent acquisition strategies t
                 </ul>
                 
                 <blockquote>
-                    <p>"Strategic workforce planning isn't just about filling immediate vacancies—it's about ensuring your organization has the right talent mix to deliver exceptional patient care for years to come."</p>
+                    <p>"Strategic workforce planning isn't just about filling immediate vacanciesâ€”it's about ensuring your organization has the right talent mix to deliver exceptional patient care for years to come."</p>
                 </blockquote>
                 
                 <h3>2. Employer Brand Development</h3>
@@ -244,7 +244,7 @@ $metaDescription = "Discover advanced healthcare talent acquisition strategies t
     </section>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
     
     <!-- Custom Blog JavaScript -->
     <script>

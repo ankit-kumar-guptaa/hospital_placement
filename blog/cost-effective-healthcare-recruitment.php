@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Include database connection if needed for dynamic content
-// include "../include/db.php";
+// include __DIR__ . '/../include/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
     <!-- Include common assets -->
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     
     <!-- Blog-specific CSS -->
     <link rel="stylesheet" href="blog-styles.css">
@@ -89,7 +89,7 @@
                     <blockquote>
                         "We reduced our average cost-per-hire by 32% by eliminating ineffective job boards and reallocating those resources to channels that our data showed were producing our highest-quality candidates."
                     </blockquote>
-                    <cite>— Jennifer Martinez, Director of Talent Acquisition, Northwestern Memorial Hospital</cite>
+                    <cite>â€” Jennifer Martinez, Director of Talent Acquisition, Northwestern Memorial Hospital</cite>
                 </div>
 
                 <h3>2. Develop a Compelling Employer Brand</h3>
@@ -114,7 +114,7 @@
                 <p>These initiatives require relatively modest investments but yield substantial returns in recruitment efficiency and effectiveness.</p>
 
                 <h3>3. Build Strategic Talent Pipelines</h3>
-                <p>Reactive recruitment—waiting until positions are vacant to begin searching—is inherently expensive. Proactive pipeline development reduces costs by:</p>
+                <p>Reactive recruitmentâ€”waiting until positions are vacant to begin searchingâ€”is inherently expensive. Proactive pipeline development reduces costs by:</p>
                 
                 <ul>
                     <li>Shortening time-to-fill for critical positions</li>
@@ -183,7 +183,7 @@
                     <blockquote>
                         "We shifted 60% of our recruitment advertising budget to performance-based models and saw a 45% increase in qualified applicants while reducing our overall advertising spend by 28%."
                     </blockquote>
-                    <cite>— Michael Thompson, Recruitment Marketing Manager, Intermountain Healthcare</cite>
+                    <cite>â€” Michael Thompson, Recruitment Marketing Manager, Intermountain Healthcare</cite>
                 </div>
 
                 <h2>Strategic Partnerships for Cost-Effective Recruitment</h2>
@@ -239,7 +239,7 @@
                 <p>Regular analysis of these metrics enables data-driven decisions about recruitment resource allocation and process improvements.</p>
 
                 <h2>Conclusion: A Strategic Approach to Recruitment Investment</h2>
-                <p>Cost-effective healthcare recruitment isn't about minimizing spending—it's about maximizing the return on your recruitment investment. By understanding the full spectrum of recruitment costs, implementing strategic approaches to talent acquisition, optimizing process efficiency, and developing the right external partnerships, healthcare organizations can significantly improve recruitment outcomes while controlling costs.</p>
+                <p>Cost-effective healthcare recruitment isn't about minimizing spendingâ€”it's about maximizing the return on your recruitment investment. By understanding the full spectrum of recruitment costs, implementing strategic approaches to talent acquisition, optimizing process efficiency, and developing the right external partnerships, healthcare organizations can significantly improve recruitment outcomes while controlling costs.</p>
                 
                 <p>In today's challenging healthcare labor market, organizations that view recruitment as a strategic investment rather than an administrative expense gain a significant competitive advantage in attracting and retaining the talent needed to deliver exceptional patient care.</p>
 
@@ -317,6 +317,6 @@
     </section>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
 </body>
 </html>

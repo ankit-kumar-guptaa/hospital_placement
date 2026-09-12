@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Include database connection if needed for dynamic content
-// include "../include/db.php";
+// include __DIR__ . '/../include/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
     <!-- Include common assets -->
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     
     <!-- Blog-specific CSS -->
     <link rel="stylesheet" href="blog-styles.css">
@@ -96,7 +96,7 @@
                     <div class="content-box quote-box">
                         <blockquote>
                             <p>"Our implementation of predictive analytics reduced our agency staffing costs by 28% in the first year while simultaneously improving our nurse-to-patient ratios. The ability to anticipate staffing needs three to six months in advance has transformed our recruitment strategy."</p>
-                            <cite>— Chief Nursing Officer, 500-bed Urban Hospital</cite>
+                            <cite>â€” Chief Nursing Officer, 500-bed Urban Hospital</cite>
                         </blockquote>
                     </div>
                     
@@ -110,7 +110,7 @@
                         <li><strong>Deliver specialized training:</strong> VR enables safe practice of complex procedures without patient risk</li>
                     </ul>
                     
-                    <p>Organizations implementing VR in their recruitment processes report higher candidate satisfaction, improved job fit, and reduced early turnover—a critical advantage in specialties with high training investments.</p>
+                    <p>Organizations implementing VR in their recruitment processes report higher candidate satisfaction, improved job fit, and reduced early turnoverâ€”a critical advantage in specialties with high training investments.</p>
                     
                     <h2>4. Blockchain for Credential Verification</h2>
                     <p>Credential verification remains one of the most time-consuming aspects of healthcare recruitment. Blockchain technology is streamlining this process by creating secure, immutable records of professional qualifications, licenses, certifications, and employment history.</p>
@@ -182,11 +182,11 @@
                     <p>Organizations that take a strategic, measured approach to digital transformation typically see faster adoption and stronger results than those attempting wholesale changes.</p>
                     
                     <h2>Conclusion: The Future of Healthcare Recruitment</h2>
-                    <p>Digital transformation in healthcare recruitment isn't simply about adopting new technologies—it's about fundamentally rethinking how healthcare organizations attract, evaluate, hire, and retain talent in an increasingly competitive landscape.</p>
+                    <p>Digital transformation in healthcare recruitment isn't simply about adopting new technologiesâ€”it's about fundamentally rethinking how healthcare organizations attract, evaluate, hire, and retain talent in an increasingly competitive landscape.</p>
                     
                     <p>The most successful organizations will be those that view digital recruitment tools not as replacements for human judgment but as enhancements that allow recruitment professionals to focus on the high-value, relationship-building aspects of their roles.</p>
                     
-                    <p>As healthcare continues to face unprecedented staffing challenges, digital transformation offers a powerful path forward—one that promises more efficient processes, better candidate experiences, improved matching of talent to roles, and ultimately, enhanced patient care.</p>
+                    <p>As healthcare continues to face unprecedented staffing challenges, digital transformation offers a powerful path forwardâ€”one that promises more efficient processes, better candidate experiences, improved matching of talent to roles, and ultimately, enhanced patient care.</p>
                     
                     <div class="content-box cta-box">
                         <h3>How Hospital Placement Can Help</h3>
@@ -309,7 +309,7 @@
     </main>
 
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
     
     <!-- Custom Blog JavaScript -->
     <script>

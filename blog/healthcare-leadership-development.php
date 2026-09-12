@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Include database connection if needed
-// include "../include/db.php";
+// include __DIR__ . '/../include/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,14 @@
     <meta name="keywords" content="healthcare leadership, hospital management, medical leadership development, healthcare executive recruitment, clinical leadership">
     
     <!-- Include common assets -->
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     
     <!-- Blog-specific CSS -->
     <link rel="stylesheet" href="blog-styles.css">
 </head>
 <body>
     <!-- Include Header -->
-    <?php include "../include/header.php"?>
+    <?php include __DIR__ . '/../include/header.php';?>
     
     <!-- Article Header -->
     <header class="article-header">
@@ -36,7 +36,7 @@
     
     <!-- Article Content -->
     <article class="article-content">
-        <p>In today's complex healthcare environment, effective leadership is more critical than ever. Healthcare organizations face unprecedented challenges—from navigating payment reform and managing workforce shortages to implementing new technologies and improving patient experience. The quality of leadership directly impacts clinical outcomes, financial performance, staff engagement, and organizational resilience. This article explores strategies for building, developing, and sustaining high-performing healthcare leadership teams.</p>
+        <p>In today's complex healthcare environment, effective leadership is more critical than ever. Healthcare organizations face unprecedented challengesâ€”from navigating payment reform and managing workforce shortages to implementing new technologies and improving patient experience. The quality of leadership directly impacts clinical outcomes, financial performance, staff engagement, and organizational resilience. This article explores strategies for building, developing, and sustaining high-performing healthcare leadership teams.</p>
         
         <div class="highlight-box">
             <p><strong>Leadership Impact:</strong> Research consistently shows that healthcare organizations with strong leadership teams demonstrate better clinical outcomes, higher staff retention rates, improved financial performance, and greater adaptability to industry changes.</p>
@@ -171,6 +171,6 @@
     </article>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
 </body>
 </html>

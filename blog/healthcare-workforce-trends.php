@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Include database connection if needed
-// include "../include/db.php";
+// include __DIR__ . '/../include/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,14 @@
     <meta name="keywords" content="healthcare workforce trends, medical staffing, healthcare recruitment, hospital staffing challenges, healthcare labor market, nursing shortage, healthcare jobs 2025">
     
     <!-- Include common assets -->
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     
     <!-- Blog-specific CSS -->
     <link rel="stylesheet" href="blog-styles.css">
 </head>
 <body>
     <!-- Include Header -->
-    <?php include "../include/header.php"?>
+    <?php include __DIR__ . '/../include/header.php';?>
     
     <!-- Article Header -->
     <header class="article-header">
@@ -223,7 +223,7 @@
             <li><strong>Strategic partnerships</strong> - Collaborating with education, technology, and staffing partners</li>
         </ul>
         
-        <p>The healthcare workforce landscape of 2025 presents significant challenges but also opportunities for innovation. Organizations that take a strategic, data-driven approach to workforce issues—while prioritizing flexibility, well-being, and inclusion—will be best positioned to deliver high-quality care in this dynamic environment.</p>
+        <p>The healthcare workforce landscape of 2025 presents significant challenges but also opportunities for innovation. Organizations that take a strategic, data-driven approach to workforce issuesâ€”while prioritizing flexibility, well-being, and inclusionâ€”will be best positioned to deliver high-quality care in this dynamic environment.</p>
         
         <p>At Hospital Placement, we specialize in helping healthcare organizations navigate these complex workforce challenges. Our deep understanding of healthcare recruitment trends and access to qualified candidates across all healthcare professions enables us to develop customized staffing solutions. Contact us to discuss how we can support your organization's workforce needs in this evolving landscape.</p>
         
@@ -231,6 +231,6 @@
     </article>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
 </body>
 </html>

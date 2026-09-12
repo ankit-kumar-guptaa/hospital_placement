@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Include database connection if needed
-// include "../include/db.php";
+// include __DIR__ . '/../include/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,14 @@
     <meta name="keywords" content="nurse retention, healthcare staffing, nursing workforce, hospital management, nurse satisfaction, reduce nurse turnover">
     
     <!-- Include common assets -->
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     
     <!-- Blog-specific CSS -->
     <link rel="stylesheet" href="blog-styles.css">
 </head>
 <body>
     <!-- Include Header -->
-    <?php include "../include/header.php"?>
+    <?php include __DIR__ . '/../include/header.php';?>
     
     <!-- Article Header -->
     <header class="article-header">
@@ -158,6 +158,6 @@
     </article>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
 </body>
 </html>

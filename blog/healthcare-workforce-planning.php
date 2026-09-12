@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Set page title and meta description
 $pageTitle = "Healthcare Workforce Planning: Future-Proofing Your Medical Staffing Strategy";
 $metaDescription = "Learn how strategic healthcare workforce planning can help your organization anticipate future staffing needs, address skill gaps, and maintain optimal patient care despite industry challenges.";
@@ -13,7 +13,7 @@ $metaDescription = "Learn how strategic healthcare workforce planning can help y
     <meta name="description" content="<?php echo $metaDescription; ?>">
     
     <!-- Include common assets (CSS, fonts, etc.) -->
-    <?php include "../include/assets.php"; ?>
+    <?php include __DIR__ . '/../include/assets.php'; ?>
     
     <!-- Blog-specific styles -->
     <link rel="stylesheet" href="blog-styles.css">
@@ -43,7 +43,7 @@ $metaDescription = "Learn how strategic healthcare workforce planning can help y
             </div>
             
             <div class="article-body">
-                <p class="lead">In today's rapidly evolving healthcare landscape, reactive staffing approaches are increasingly insufficient. Healthcare organizations that thrive are those that implement strategic workforce planning—a systematic process that aligns staffing resources with long-term organizational objectives while anticipating future challenges. This article explores how healthcare employers can develop robust workforce planning strategies to ensure clinical excellence and operational stability.</p>
+                <p class="lead">In today's rapidly evolving healthcare landscape, reactive staffing approaches are increasingly insufficient. Healthcare organizations that thrive are those that implement strategic workforce planningâ€”a systematic process that aligns staffing resources with long-term organizational objectives while anticipating future challenges. This article explores how healthcare employers can develop robust workforce planning strategies to ensure clinical excellence and operational stability.</p>
                 
                 <h2>The Critical Need for Strategic Workforce Planning in Healthcare</h2>
                 
@@ -58,10 +58,10 @@ $metaDescription = "Learn how strategic healthcare workforce planning can help y
                     <li><strong>Economic pressures:</strong> Tightening margins require optimal workforce utilization</li>
                 </ul>
                 
-                <p>Organizations without robust workforce planning find themselves in perpetual crisis mode—reacting to shortages, struggling with recruitment, and facing quality challenges that could have been anticipated and prevented.</p>
+                <p>Organizations without robust workforce planning find themselves in perpetual crisis modeâ€”reacting to shortages, struggling with recruitment, and facing quality challenges that could have been anticipated and prevented.</p>
                 
                 <blockquote>
-                    <p>"The most successful healthcare organizations don't just respond to workforce challenges—they anticipate them through systematic planning that aligns with their strategic objectives."</p>
+                    <p>"The most successful healthcare organizations don't just respond to workforce challengesâ€”they anticipate them through systematic planning that aligns with their strategic objectives."</p>
                 </blockquote>
                 
                 <h2>Core Components of Healthcare Workforce Planning</h2>
@@ -387,7 +387,7 @@ $metaDescription = "Learn how strategic healthcare workforce planning can help y
     </section>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
     
     <!-- Custom Blog JavaScript -->
     <script>

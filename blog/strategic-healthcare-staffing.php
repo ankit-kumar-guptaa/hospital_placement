@@ -1,6 +1,6 @@
-<?php
+﻿<?php
 // Include database connection if needed for dynamic content
-// include "../include/db.php";
+// include __DIR__ . '/../include/db.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
     <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
 
     <!-- Include common assets -->
-    <?php include "../include/assets.php"?>
+    <?php include __DIR__ . '/../include/assets.php';?>
     
     <!-- Blog-specific CSS -->
     <link rel="stylesheet" href="blog-styles.css">
@@ -73,7 +73,7 @@
                 </div>
 
                 <h2>Strategic Workforce Planning for Healthcare Facilities</h2>
-                <p>Effective healthcare staffing begins with strategic workforce planning—a systematic process that aligns your staffing approach with both current operational needs and future organizational goals.</p>
+                <p>Effective healthcare staffing begins with strategic workforce planningâ€”a systematic process that aligns your staffing approach with both current operational needs and future organizational goals.</p>
 
                 <h3>1. Conduct Comprehensive Workforce Analysis</h3>
                 <p>Start by thoroughly analyzing your current staffing situation. This includes evaluating:</p>
@@ -103,7 +103,7 @@
                     <blockquote>
                         "The most successful healthcare organizations view staffing not as a cost center but as a strategic investment in quality care and organizational sustainability."
                     </blockquote>
-                    <cite>— Dr. Rajesh Sharma, Chief Medical Officer, Apollo Hospitals</cite>
+                    <cite>â€” Dr. Rajesh Sharma, Chief Medical Officer, Apollo Hospitals</cite>
                 </div>
 
                 <h2>Building a Compelling Employer Value Proposition</h2>
@@ -196,7 +196,7 @@
                     <blockquote>
                         "The most sustainable approach to healthcare staffing combines strategic internal development with targeted external partnerships. Neither approach alone is sufficient in today's complex healthcare environment."
                     </blockquote>
-                    <cite>— Maria Chen, VP of Talent Acquisition, Cleveland Clinic</cite>
+                    <cite>â€” Maria Chen, VP of Talent Acquisition, Cleveland Clinic</cite>
                 </div>
 
                 <h2>Measuring and Optimizing Staffing Effectiveness</h2>
@@ -217,7 +217,7 @@
                 
                 <p>By combining thoughtful workforce planning, compelling employer value propositions, innovative technologies, and strategic partnerships, healthcare facilities can develop staffing models that not only address current challenges but also create sustainable competitive advantages in the ongoing competition for top medical talent.</p>
                 
-                <p>The most successful healthcare employers recognize that their greatest asset is their people—and they invest accordingly in finding, developing, and retaining the professionals who make excellence in patient care possible.</p>
+                <p>The most successful healthcare employers recognize that their greatest asset is their peopleâ€”and they invest accordingly in finding, developing, and retaining the professionals who make excellence in patient care possible.</p>
 
                 <div class="article-cta">
                     <h3>Need Expert Guidance on Healthcare Staffing?</h3>
@@ -293,6 +293,6 @@
     </section>
     
     <!-- Include Footer -->
-    <?php include "../include/footer.php"?>
+    <?php include __DIR__ . '/../include/footer.php';?>
 </body>
 </html>
