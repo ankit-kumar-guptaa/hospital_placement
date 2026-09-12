@@ -287,13 +287,19 @@
      ------------------------------------------------------------------------ */
   function initImageFallback() {
     all('img[data-fallback]').forEach(function (img) {
+      // An ordered list: alternate photos first, the local file last. Each
+      // failure walks one step down, so one moved CDN file never shows as a
+      // broken image.
+      var queue = (img.getAttribute('data-fallback') || '')
+        .split(',').map(function (s) { return s.trim(); })
+        .filter(Boolean);
+
       function swap() {
-        var fb = img.getAttribute('data-fallback');
-        img.removeAttribute('data-fallback');
-        if (fb && img.getAttribute('src') !== fb) {
-          img.removeAttribute('srcset');
-          img.src = fb;
-        }
+        var next = queue.shift();
+        if (!next) { img.removeAttribute('data-fallback'); return; }
+        if (next === img.getAttribute('src')) { swap(); return; }
+        img.removeAttribute('srcset');
+        img.src = next;
       }
       if (img.complete && img.naturalWidth === 0) swap();
       on(img, 'error', swap);

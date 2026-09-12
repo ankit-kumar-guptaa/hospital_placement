@@ -684,7 +684,10 @@ body.hp-body{
   position:relative;
   isolation:isolate;
   display:flex; align-items:center;
-  min-height:clamp(460px, 62vh, 640px);
+  /* Matched to the deck: its hero band is 0.261 of the page width, which is
+     375px at 1440. 26vw reproduces that, floored for small screens and
+     capped so it does not balloon on very wide ones. */
+  min-height:clamp(330px, 26vw, 440px);
   background:var(--hp-canvas);
   overflow:hidden;
 }
@@ -710,18 +713,18 @@ body.hp-body{
 }
 
 .hp-hero__inner{ position:relative; z-index:1; width:100%; }
-.hp-hero__copy{ max-width:min(680px, 62%); padding-block:clamp(36px,5vw,60px); }
+.hp-hero__copy{ max-width:min(680px, 62%); padding-block:clamp(20px,2.4vw,34px); }
 
 .hp-hero__h1{
-  margin:0 0 18px;
-  font-size:clamp(2.1rem, 1.05rem + 3.5vw, 3.5rem);
+  margin:0 0 14px;
+  font-size:clamp(2rem, 1.05rem + 3.2vw, 3.25rem);
   line-height:1.1;
   letter-spacing:-.03em;
   color:var(--hp-ink);
 }
 .hp-hero__lead{
-  margin:0 0 30px;
-  max-width:46ch;
+  margin:0 0 24px;
+  max-width:44ch;
   font-size:clamp(1rem, .96rem + .28vw, 1.14rem);
   color:var(--hp-ink-2);
 }
@@ -796,7 +799,7 @@ body.hp-body{
 
 @media (max-width:900px){
   .hp-hero{ min-height:0; }
-  .hp-hero__copy{ max-width:100%; padding-block:clamp(40px,7vw,64px); }
+  .hp-hero__copy{ max-width:100%; padding-block:clamp(36px,6vw,56px); }
   .hp-hero__media img{ object-position:64% 26%; }
   /* The photo now sits behind the type, so the scrim has to carry it. */
   .hp-hero__media::after{

@@ -27,14 +27,28 @@ function hp_img($key, $w = 1000) {
     $m = hp_media($key);
     if (!$m) return hp_base() . 'assets/img/home1.jpg';
     if (HP_LOCAL_MEDIA || empty($m['id'])) return hp_base() . $m['local'];
-    return 'https://images.unsplash.com/' . $m['id']
+    return hp_cdn($m['id'], $w);
+}
+
+function hp_cdn($id, $w) {
+    return 'https://images.unsplash.com/' . $id
          . '?auto=format&fit=crop&w=' . (int) $w . '&q=72';
 }
 
-/** Local stand-in, emitted as data-fallback on every remote <img>. */
-function hp_img_fallback($key) {
+/**
+ * Ordered fallback list for data-fallback: any alternate photos first, then
+ * the local stand-in. theme.js walks it on error, so a single moved CDN file
+ * never shows as a broken image.
+ */
+function hp_img_fallback($key, $w = 1000) {
     $m = hp_media($key);
-    return hp_base() . ($m ? $m['local'] : 'assets/img/home1.jpg');
+    if (!$m) return hp_base() . 'assets/img/home1.jpg';
+    $out = array();
+    if (!HP_LOCAL_MEDIA && !empty($m['alts'])) {
+        foreach ($m['alts'] as $id) { $out[] = hp_cdn($id, $w); }
+    }
+    $out[] = hp_base() . $m['local'];
+    return implode(',', $out);
 }
 
 /** SEO alt text. Descriptive, never keyword-stuffed, never empty. */
@@ -66,9 +80,14 @@ function hp_media($key) {
 
         /* --- hero: the full-bleed photograph behind the headline -------- */
         'hero_team' => array(
-            'id'    => 'photo-1631217868264-e5b90bb7e133',
+            'id'    => 'photo-1582750433449-648ed127bb54',
+            'alts'  => array(
+                'photo-1622253692010-333f2da6031d',
+                'photo-1594824476967-48c8b964273f',
+                'photo-1631217868264-e5b90bb7e133',
+            ),
             'local' => 'assets/img/home1.jpg',
-            'alt'   => 'Hospital medical team on a ward',
+            'alt'   => 'Hospital doctor in a bright ward corridor with colleagues behind',
         ),
         'process_bg' => array(
             'id'    => 'photo-1516549655169-df83a0774514',
