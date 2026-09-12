@@ -53,8 +53,10 @@ foreach ($pages as $file => $p) {
     }
 }
 
-/* A directory index, such as /blog/. */
-foreach (array($path . '/index.php', $path . '.php') as $try) {
+/* Generic fallback, matching rule 7 in .htaccess: /some-page serves
+   some-page.php when it exists, so a new page needs no config at all.
+   Also covers a directory index such as /blog/. */
+foreach (array($path . '.php', $path . '/index.php') as $try) {
     if (file_exists(__DIR__ . '/' . $try)) { require __DIR__ . '/' . $try; return; }
 }
 

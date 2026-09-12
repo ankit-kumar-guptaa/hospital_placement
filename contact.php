@@ -2,333 +2,247 @@
 <html lang="en" class="no-js">
 <head>
 <?php include 'include/seo.php'; ?>
-
-     <link rel="icon" type="image/png" href="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg">
-
-        <!-- Bootstrap CSS -->
-
 </head>
 <body class="hp-body">
-
-    
-
 
 <?php include "include/header.php"?>
 
 <?php include "include/page-hero.php"; ?>
 
 
+<!-- ===== How to reach us =================================================
+     Three channels first, because most visitors arrive wanting one of the
+     three and nothing else. The form sits in the next section for everyone
+     who would rather write than call.
+     ==================================================================== -->
+<section id="reach-us" class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-heading">Contact Doctor Placement Agency</h2>
+            <p class="section-subheading">
+                We are committed to providing excellent support for all your staffing needs.
+                Whether you have a question or need assistance, feel free to reach out to us anytime.
+            </p>
+        </div>
 
-
-
-<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 70px 0; position: relative; overflow: hidden;">
-    <!-- Decorative Elements -->
-    <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(60px);"></div>
-    <div style="position: absolute; bottom: -60px; right: -60px; width: 200px; height: 200px; background: rgba(0, 123, 255, 0.1); border-radius: 50%; filter: blur(80px);"></div>
-
-    <div class="container" data-aos="fade-up">
-        <!-- Title -->
-        <h2 class="text-center" style="font-weight: bold; color: #222; font-size: 38px; margin-bottom: 20px;">
-            Contact Doctor Placement Agency
-        </h2>
-        <p class="text-center" style="font-size: 18px; color: #555; line-height: 1.8; max-width: 800px; margin: 0 auto;">
-            We are committed to providing excellent support for all your staffing needs. Whether you have a question or need assistance, 
-            feel free to reach out to us anytime!
-        </p>
-    </div>
-
-    <!-- Call-to-Action -->
-    <div class="text-center mt-5" data-aos="zoom-in">
-        <a href="#contact-form" class="btn btn-primary" style="padding: 12px 30px; font-size: 18px; border-radius: 30px; background-color: #007bff; border: none; text-transform: uppercase; box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);">
-            Get in Touch
-        </a>
-    </div>
-</section>
-
-
-<section style="background: linear-gradient(135deg, #f3f6fa, #ffffff); padding: 50px 0;">
-    <div class="container" data-aos="fade-up">
-        <div class="row">
-            <!-- Contact Details -->
-            <div class="col-md-6 mb-4">
-                <div style="background: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); padding: 30px;">
-                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px;">Get in Touch</h3>
-                    <ul style="list-style: none; padding: 0; font-size: 18px; color: #555; line-height: 2;">
-                        <li>
-                            <i class="fas fa-phone-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Phone:</b>+91 98703 64340, 011-40747520, +971582348005
-                        </li>
-                        <li>
-                            <i class="fas fa-map-marker-alt" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                                                       <b>Office:</b> A-83, Okhla Phase II, New Delhi - 110020
-
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Email:</b> info@hospitalplacement.com
-                        </li>
-                    </ul>
+        <div class="row gy-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="text-primary mb-3"><i class="bi bi-phone-fill fs-1"></i></div>
+                        <h3 class="card-title">Call us</h3>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+919870364340">+91 98703 64340</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+911140747520">011 4074 7520</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+971582348005">+971 58 234 8005</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- Opening Hours -->
-            <div class="col-md-6">
-                <div style="background: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); padding: 30px;">
-                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px;">Opening Hours</h3>
-                    <ul style="list-style: none; padding: 0; font-size: 18px; color: #555; line-height: 2;">
-                        <li>
-                            <i class="far fa-clock" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Monday to Friday:</b> 9:30 am – 7:30 pm
-                        </li>
-                        <li>
-                            <i class="far fa-clock" style="color: #007bff; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Saturday:</b> 9:30 am – 6:00 pm
-                        </li>
-                        <li>
-                            <i class="fas fa-times-circle" style="color: #ff4d4d; font-size: 20px; margin-right: 10px;"></i>
-                            <b>Sunday:</b> Closed
-                        </li>
-                    </ul>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="text-primary mb-3"><i class="bi bi-envelope-fill fs-1"></i></div>
+                        <h3 class="card-title">Email us</h3>
+                        <p class="card-text">
+                            Send your requirement or your CV and a consultant replies the same
+                            working day.
+                        </p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="text-primary mb-3"><i class="bi bi-clock fs-1"></i></div>
+                        <h3 class="card-title">Opening hours</h3>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="bi bi-check-circle-fill"></i> Monday to Friday: 9:30 am to 7:30 pm</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Saturday: 9:30 am to 6:00 pm</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Sunday: closed</li>
+                        </ul>
+                        <p class="card-text mt-3">
+                            Head office: A-83, Okhla Phase II, New Delhi 110020.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Branches Section with Cards -->
-<section style="background: linear-gradient(135deg, #eef2f7, #ffffff); padding: 100px 0; overflow: hidden;">
-    <div class="container" data-aos="fade-up">
-        <h3 class="text-center" style="font-weight: bold; color: #222; margin-bottom: 40px;">Our Branches Across India</h3>
-        <div class="slider-container" style="position: relative; overflow: hidden; width: 100%;">
-            <div class="slider-track">
-                <!-- Branch Card -->
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h4 style="font-weight: bold; color: #333;">Kashmir</h4>
-                    <p style="color: #555;">Srinagar - 199001</p>
-                </div>
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Delhi</h5>
-                    <p style="color: #555;">Badarpur - 110044</p>
-                </div>
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Andhra Pradesh</h5>
-                    <p style="color: #555;">Rajahmundry - 533103</p>
-                </div>
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Maharashtra</h5>
-                    <p style="color: #555;">Durgapur - 442404</p>
-                </div>
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Uttar Pradesh</h5>
-                    <p style="color: #555;">Noida - 201309</p>
-                </div>
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Punjab</h5>
-                    <p style="color: #555;">Hoshiarpur - 144208</p>
-                </div>
-                <!-- Duplicate Cards for Infinite Scrolling -->
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Kashmir</h5>
-                    <p style="color: #555;">Srinagar - 199001</p>
-                </div>
-                <div class="branch-card">
-                    <i class="fas fa-map-marker-alt" style="font-size: 30px; color: #007bff; margin-bottom: 10px;"></i>
-                    <h5 style="font-weight: bold; color: #333;">Delhi</h5>
-                    <p style="color: #555;">Badarpur - 110044</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- CSS for Smooth Slider -->
-<style>
-    .slider-container {
-        max-width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-    }
+<!-- ===== Offices and the enquiry form ====================================
+     The pair sits in one band so the reader can see who they are writing to
+     while they write. The form markup, its field names and its action are
+     unchanged from the version this replaced.
+     ==================================================================== -->
+<section id="contact-form" class="py-5 bg-light">
+    <div class="container">
+        <div class="row gy-4 justify-content-center">
 
-    .slider-track {
-        display: flex;
-        animation: scroll 15s linear infinite;
-    }
-
-    .branch-card {
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        text-align: center;
-        flex: 0 0 25%;
-        margin-right: 15px;
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-    .branch-card h5 {
-        margin-bottom: 10px;
-    }
-</style>
-
-<!-- Contact Form -->
-<section style="background: linear-gradient(135deg, #eef2f7, #ffffff); padding: 70px 0;" id="contact-form">
-    <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
-            <!-- Left Side: Our Offices -->
-            <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
-                <div style="background: #ffffff; border-radius: 15px; padding: 30px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-weight: bold; color: #222; margin-bottom: 25px;">Our Offices</h3>
-                    
-                      <!-- New Delhi Office -->
-                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h4 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
-                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>New Delhi Office
-                        </h4>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">A-83, Okhla Phase II</p>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">New Delhi - 110020</p>
-                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
-                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 98719 16980
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h2 class="section-heading">Our offices</h2>
+                        <p class="section-subheading mb-4">
+                            Five offices in India and one in the Gulf, so there is a consultant
+                            in your time zone.
                         </p>
-                    </div>
 
-                    <!-- Corporate Headquarters -->
-                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
-                            <i class="fas fa-building" style="margin-right: 8px;"></i>UAE Office
-                        </h5>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">BC-889265</p>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">26th Floor, Amber Gem Tower, Ajman, UAE</p>
-                        <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
-                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+971582348005
-                        </p>
-                    </div>
+                        <div class="hp-addrlist">
+                            <div class="hp-addr">
+                                <h3 class="hp-addr__t"><i class="bi bi-geo-alt" aria-hidden="true"></i> New Delhi Office</h3>
+                                <p>A-83, Okhla Phase II</p>
+                                <p>New Delhi 110020</p>
+                                <p class="hp-addr__tel"><a href="tel:+919871916980">+91 98719 16980</a></p>
+                            </div>
+                            <div class="hp-addr">
+                                <h3 class="hp-addr__t"><i class="bi bi-building" aria-hidden="true"></i> UAE Office</h3>
+                                <p>BC-889265</p>
+                                <p>26th Floor, Amber Gem Tower, Ajman, UAE</p>
+                                <p class="hp-addr__tel"><a href="tel:+971582348005">+971 58 234 8005</a></p>
+                            </div>
+                            <div class="hp-addr">
+                                <h3 class="hp-addr__t"><i class="bi bi-geo-alt" aria-hidden="true"></i> Hyderabad Branch</h3>
+                                <p>eSeva Ln, K P H B Phase 3</p>
+                                <p>Kukatpally, Hyderabad, Telangana 500072</p>
+                            </div>
+                            <div class="hp-addr">
+                                <h3 class="hp-addr__t"><i class="bi bi-geo-alt" aria-hidden="true"></i> Pune Branch</h3>
+                                <p>2nd Floor, River side Business Bay</p>
+                                <p>Plot no. 84, Wellesley Road, near RTO (Sangam Bridge)</p>
+                                <p>Pune, Maharashtra 411001</p>
+                            </div>
+                            <div class="hp-addr">
+                                <h3 class="hp-addr__t"><i class="bi bi-geo-alt" aria-hidden="true"></i> Hapur Branch</h3>
+                                <p>Ground Floor Ward 15/136/1, Railway Road, 2</p>
+                                <p>Hapur, Uttar Pradesh</p>
+                            </div>
+                        </div>
 
-                  
-
-                    <!-- Hyderabad Branch -->
-                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
-                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>Hyderabad Branch
-                        </h5>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">eSeva Ln, K P H B Phase 3</p>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Kukatpally, Hyderabad, Telangana 500072</p>
-                        <!-- <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
-                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 83282 06115
-                        </p> -->
-                    </div>
-
-                    <!-- Pune Branch -->
-                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
-                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>Pune Branch
-                        </h5>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">2nd Floor, River side Business Bay</p>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Plot no. 84, Wellesley Road, Near RTO (Sangam Bridge)</p>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Pune, Maharashtra 411001</p>
-                        <!-- <p style="color: #007bff; font-weight: bold; font-size: 14px; margin-top: 8px;">
-                            <i class="fas fa-phone" style="margin-right: 5px;"></i>+91 87889 56738
-                        </p> -->
-                    </div>
-
-                    <!-- Hapur Branch -->
-                    <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
-                        <h5 style="font-weight: bold; color: #007bff; margin-bottom: 10px;">
-                            <i class="fas fa-map-pin" style="margin-right: 8px;"></i>Hapur Branch
-                        </h5>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Ground Floor Ward 15/136/1, Railway Road, 2</p>
-                        <p style="color: #555; font-size: 14px; margin: 5px 0;">Hapur, Uttar Pradesh</p>
-                    </div>
-
-                    <!-- Direct Line & Contact Info -->
-                    <div style="background: #f8f9fa; border-radius: 10px; padding: 15px; margin-top: 20px;">
-                        <p style="color: #222; font-size: 14px; margin-bottom: 10px;">
-                            <i class="fas fa-phone" style="color: #007bff; margin-right: 8px;"></i>
-                            <b>Direct Line:</b> +919211610707
-                        </p>
-                        <p style="color: #222; font-size: 14px; margin-bottom: 10px;">
-                            <i class="fas fa-envelope" style="color: #007bff; margin-right: 8px;"></i>
-                            <b>Email:</b> <a href="mailto:info@hospitalplacement.com" style="color: #007bff; text-decoration: none;">info@hospitalplacement.com</a>
-                        </p>
-                        <p style="color: #222; font-size: 14px; margin-bottom: 0;">
-                            <i class="fas fa-clock" style="color: #007bff; margin-right: 8px;"></i>
-                            <b>Office Hours:</b> Monday - Friday: 9:00 AM - 6:00 PM
-                        </p>
+                        <div class="hp-note mt-4">
+                            <p class="mb-2"><i class="bi bi-phone-fill" aria-hidden="true"></i> <strong>Direct line:</strong> <a href="tel:+919211610707">+91 92116 10707</a></p>
+                            <p class="mb-2"><i class="bi bi-envelope-fill" aria-hidden="true"></i> <strong>Email:</strong> <a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a></p>
+                            <p class="mb-0"><i class="bi bi-clock" aria-hidden="true"></i> <strong>Office hours:</strong> Monday to Friday, 9:00 am to 6:00 pm</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Form -->
             <div class="col-lg-6" data-aos="fade-left">
-                <div style="background: #ffffff; border-radius: 15px; padding: 25px; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);">
-                    <h3 style="font-weight: bold; color: #222; margin-bottom: 20px; text-align: center;">Contact Us</h3>
-                    <p style="font-size: 15px; color: #555; margin-bottom: 25px; text-align: center;">
-                        Let us know how we can help you. Please fill out the form below.
-                    </p>
-                    <form action="contactFormBackend.php" method="post"> 
-    <!-- Name -->
-    <div class="form-floating mb-3">
-        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" style="padding: 12px; font-size: 14px; border-radius: 8px;">
-        <label for="name">Your Name</label>
-    </div>
-    <!-- Email -->
-    <div class="form-floating mb-3">
-        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" style="padding: 12px; font-size: 14px; border-radius: 8px;">
-        <label for="email">Your Email</label>
-    </div>
-    <!-- Phone -->
-    <div class="form-floating mb-3">
-        <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number" style="padding: 12px; font-size: 14px; border-radius: 8px;">
-        <label for="phone">Phone Number</label>
-    </div>
-    <!-- Message -->
-    <div class="form-floating mb-3">
-        <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="4" style="padding: 12px; font-size: 14px; border-radius: 8px;"></textarea>
-        <label for="message">Your Message</label>
-    </div>
-    <!-- reCAPTCHA v3 hidden input -->
-    <input type="hidden" name="g-recaptcha-response" id="contact-recaptcha-response">
-    <!-- Submit Button -->
-    <div class="text-center">
-        <button type="submit" name="submit" class="btn btn-primary" style="padding: 12px 40px; font-size: 16px; border-radius: 20px; background: linear-gradient(135deg, #0069d9, #0056b3); border: none; text-transform: uppercase; color: #fff; transition: all 0.3s;">
-            Send Message
-        </button>
-    </div>
-</form>
+                <div class="card h-100 border-0 shadow-sm hp-contactcard">
+                    <div class="card-body">
+                        <h2 class="section-heading">Contact us</h2>
+                        <p class="section-subheading mb-4">
+                            Let us know how we can help you. Please fill out the form below.
+                        </p>
 
+                        <form action="contactFormBackend.php" method="post">
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="email">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="phone">Phone Number</label>
+                                <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="message">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="4"></textarea>
+                            </div>
+                            <!-- reCAPTCHA v3 hidden input -->
+                            <input type="hidden" name="g-recaptcha-response" id="contact-recaptcha-response">
+                            <div class="d-flex flex-wrap align-items-center gap-3 mt-4">
+                                <button type="submit" name="submit" class="btn btn-primary btn-lg">
+                                    Send Message
+                                </button>
+                                <span class="form-privacy">
+                                    <i class="bi bi-shield-check" aria-hidden="true"></i>
+                                    Your details stay confidential and are never shared without your consent.
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== Branch network ==================================================
+     This was an auto scrolling marquee with every card duplicated to fake
+     the loop. A static grid reads the addresses faster, drops the duplicate
+     copy, and does not move under a reader who did not ask it to.
+     ==================================================================== -->
+<section id="branches" class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="section-heading">Our branches across India</h2>
+            <p class="section-subheading">
+                Local presence in six states, which is how candidate shortlists reach a
+                hospital in days rather than weeks.
+            </p>
+        </div>
+
+        <div class="row gy-4 justify-content-center">
+            <div class="col-md-4 col-6" data-aos="fade-up">
+                <div class="branch-card">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Kashmir</h3>
+                    <p>Srinagar 199001</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="branch-card">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Delhi</h3>
+                    <p>Badarpur 110044</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="branch-card">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Andhra Pradesh</h3>
+                    <p>Rajahmundry 533103</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="250">
+                <div class="branch-card">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Maharashtra</h3>
+                    <p>Durgapur 442404</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="branch-card">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Uttar Pradesh</h3>
+                    <p>Noida 201309</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="350">
+                <div class="branch-card">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    <h3>Punjab</h3>
+                    <p>Hoshiarpur 144208</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php include "include/page-faq.php"; ?>
 
 <?php include "include/footer.php"?>

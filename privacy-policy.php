@@ -2,35 +2,15 @@
 <html lang="en" class="no-js">
 <head>
 <?php include 'include/seo.php'; ?>
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
-        }
-        .privacy-section {
-            margin-bottom: 2rem;
-        }
-        .privacy-section h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 0.5rem;
-            color: #343a40;
-        }
-        .card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
 <body class="hp-body">
     <?php include "include/header.php"; ?>
 
 <?php include "include/page-hero.php"; ?>
 
-    <div class="container mt-5 mb-5">
-        <div class="card p-4">
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="hp-doc">
             <h2 class="text-center font-weight-bold mb-4" data-aos="fade-up">Privacy Policy</h2>
             <p class="text-muted text-center mb-5" data-aos="fade-up" data-aos-delay="100">Last Updated: February 27, 2025</p>
 
@@ -139,18 +119,6 @@
             </section>
         </div>
     </div>
+</section>
 
-    <?php include "include/footer.php"; ?>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-    </script>
-</body>
-</html>
+<?php include "include/footer.php"; ?>

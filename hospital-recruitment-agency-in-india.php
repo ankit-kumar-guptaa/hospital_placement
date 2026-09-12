@@ -249,7 +249,7 @@
     </div>
 </section>
 
-<section id="cta" class="py-5" style="background-color: #e0e7ff;">
+<section id="cta" class="hp-ctaband">
     <div class="container text-center" data-aos="fade-up">
         <h2 class="mb-4">Ready to Find the Perfect Healthcare Professionals for Your Organization?</h2>
         <p class="lead mb-4">Partner with India's leading hospital recruitment agency and access top medical talent.</p>
@@ -258,6 +258,3 @@
 </section>
 
 <?php include "include/footer.php"?>
-
-</body>
-</html>

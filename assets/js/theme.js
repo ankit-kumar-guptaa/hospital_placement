@@ -415,6 +415,61 @@
     }
   }
 
+  /* ---------------------------------------------------------------------------
+     11. Content reveal on the inner pages. Those pages were authored with AOS
+         attributes; the library is gone and these attributes are read here
+         instead, against the rules in assets/css/content.css.
+
+         Same discipline as initReveal: one IntersectionObserver, transform and
+         opacity only, and each element released once and then forgotten.
+     ------------------------------------------------------------------------ */
+  function initContentReveal() {
+    var hero = document.querySelector('.hp-hero');
+    var items = all('[data-aos]').filter(function (el) {
+      return !(hero && hero.contains(el));
+    });
+    if (!items.length) return;
+
+    // Reduced motion, or a browser without the observer: show everything now.
+    if (reduced.matches || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-in'); });
+      return;
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.filter(function (e) { return e.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; })
+        .forEach(function (entry, i) {
+          var el = entry.target;
+          // An authored delay is already in the stylesheet. Anything without
+          // one is staggered by its place in this batch, capped so a wide grid
+          // does not keep the reader waiting on the last card.
+          if (!el.hasAttribute('data-aos-delay')) {
+            el.style.transitionDelay = Math.min(i * 70, 350) + 'ms';
+          }
+          el.classList.add('is-in');
+          io.unobserve(el);
+        });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+
+    items.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------------------------------------------------------------------------
+     12. A table wider than the screen should scroll inside its own frame, not
+         push the whole page sideways. The wrapper is added here because the
+         pages write a bare <table> and there is no need for them to change.
+     ------------------------------------------------------------------------ */
+  function initTableWrap() {
+    all('table').forEach(function (t) {
+      if (t.closest('.hp-tablewrap') || t.closest('.hp-modal')) return;
+      var w = document.createElement('div');
+      w.className = 'hp-tablewrap';
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    });
+  }
+
   function init() {
     initImageFallback();
     initHeader();
@@ -426,6 +481,8 @@
     initHeroEntrance();
     initModal();
     initReveal();
+    initTableWrap();
+    initContentReveal();
   }
 
   if (document.readyState === 'loading') {

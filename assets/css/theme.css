@@ -179,7 +179,7 @@ body.hp-body{
 .hp-eyebrow i{ font-size:.8rem; }
 
 .hp-head{ max-width:64ch; }
-.hp-head--center{ margin-inline:auto; text-align:center; }
+.hp-head--center{ max-width:min(820px,100%); margin-inline:auto; text-align:center; }
 .hp-head .hp-lead{ margin-top:16px; }
 .hp-head--center .hp-lead{ margin-inline:auto; }
 
@@ -892,13 +892,13 @@ body.hp-body{
              box-shadow .35s var(--hp-ease-out),
              transform .35s var(--hp-ease-out);
 }
-/* gradient accent bar on top — always visible */
+/* gradient accent bar on top, always visible */
 .hp-chip::before{
   content:""; position:absolute; inset:0 0 auto 0; height:3.5px;
   background:linear-gradient(90deg, var(--hp-brand), var(--hp-brand-soft), var(--hp-brand-aqua));
   border-radius:var(--hp-r-card) var(--hp-r-card) 0 0;
 }
-/* icon — big, bold, glowing */
+/* icon: big, bold, glowing */
 .hp-chip__ico{
   display:grid; place-items:center;
   width:72px; height:72px; border-radius:50%;

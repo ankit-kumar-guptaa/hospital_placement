@@ -191,10 +191,10 @@
 </section>
 
 
-<section style="background: #e0e7ff; padding: 80px 0;">
+<section class="hp-ctaband">
     <div class="container text-center" data-aos="fade-up">
-        <h2 style="font-weight: bold; color: #222; font-size: 36px;">Get in Touch</h2>
-        <p style="font-size: 18px; color: #555;">Start your recruitment journey with us today. We’re here to help you find the right talent for your healthcare organization in Lucknow.</p>
+        <h2>Get in Touch</h2>
+        <p>Start your recruitment journey with us today. We’re here to help you find the right talent for your healthcare organization in Lucknow.</p>
         <a href="#contact" class="btn btn-primary mt-4">Contact Us</a>
     </div>
 </section>

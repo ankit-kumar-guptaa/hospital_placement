@@ -1,146 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-
 <head>
 <?php include 'include/seo.php'; ?>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- Typeface + design system, so the shared header and footer match the rest of the site -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/theme.css">
-
-    <!-- Custom CSS -->
-    <style>
-        body {
-            background-color: #f0f8ff; /* Light blue background for a hospital theme */
-            font-family: 'Arial', sans-serif;
-        }
-
-        .container {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            color: #007bff; /* Blue color for headings */
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .form-control, .form-select {
-            border-radius: 25px;
-            padding: 10px 20px;
-            border: 1px solid #ced4da;
-            font-size: 14px;
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
-        .form-control:focus, .form-select:focus {
-            border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-        }
-
-        .btn-primary, .btn-success {
-            border-radius: 25px;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px 20px;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-
-        .btn-success {
-            background-color: #28a745;
-            border: none;
-        }
-
-        .btn-success:hover {
-            background-color: #218838;
-        }
-
-        #custom-button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            padding: 10px 20px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #custom-button:hover {
-            background-color: #0056b3;
-        }
-
-        #custom-text {
-            font-size: 14px;
-            color: #6c757d;
-            margin-left: 10px;
-        }
-
-        .text-danger {
-            font-size: 12px;
-            margin-top: 5px;
-        }
-
-        .input-group {
-            margin-bottom: 15px;
-        }
-
-        .input-group img {
-            border-radius: 10px;
-        }
-
-        .input-group button {
-            border-radius: 25px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            .form-control, .form-select {
-                font-size: 12px;
-                padding: 8px 15px;
-            }
-
-            .btn-primary, .btn-success {
-                font-size: 14px;
-                padding: 8px 15px;
-            }
-        }
-    </style>
-
-
-
 </head>
 
 <body class="hp-body">
@@ -148,119 +9,160 @@
 <?php include "include/header.php"?>
 
 <?php include "include/page-hero.php"; ?>
+
+<!-- ===== Application form ================================================
+     The page used to load a second copy of Bootstrap, a second Font Awesome,
+     a second webfont and a second copy of theme.css on top of the shared head,
+     then override all of it with its own stylesheet. All of that is gone: the
+     form is the same form, with the same action, field names, options and
+     required flags, dressed by the design system like every other page.
+     ==================================================================== -->
+<section id="apply" class="py-5 bg-light">
     <div class="container">
-        <h2><i class="fas fa-hospital"></i> Hospital Placement Application Form</h2>
-        <form action="process_form.php" method="POST" enctype="multipart/form-data">
-            <div class="row g-3">
-                <!-- Personal Details -->
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="firstName" placeholder="First Name*" required>
-                </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="lastName" placeholder="Last Name*" required>
-                </div>
-                <div class="col-md-4">
-                    <select name="gender" class="form-select" required>
-                        <option value="" selected disabled>Select Gender*</option>
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
-                        <option value="O">Other</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <input type="date" class="form-control" name="dateOfBirth" placeholder="Date of Birth*" required>
-                </div>
-                <div class="col-md-4">
-                    <input type="email" class="form-control" name="email" placeholder="Email ID*" required>
-                </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="phone" placeholder="Phone Number*" required>
-                </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card border-0 shadow-sm hp-applycard" data-aos="fade-up">
+                    <div class="card-body">
 
-                <!-- Address Details -->
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="address" placeholder="Address*" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="city" placeholder="City*" required>
-                </div>
+                        <h2 class="section-heading">Hospital placement application form</h2>
+                        <p class="section-subheading mb-4">
+                            One form, and your profile reaches the consultants recruiting for your
+                            speciality. Everything marked with an asterisk is required.
+                        </p>
 
-                <!-- Professional Details -->
-                <div class="col-md-4">
-                    <select name="role" class="form-select" required>
-                        <option value="" selected disabled>Select Role*</option>
-                        <option value="Doctor">Doctor</option>
-                        <option value="Nurse">Nurse</option>
-                        <option value="Lab Technician">Lab Technician</option>
-                        <option value="Receptionist">Receptionist</option>
-                        <option value="Ward Boy">Ward Boy</option>
-                        <option value="Pharmacist">Pharmacist</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="qualification" placeholder="Qualification*" required>
-                </div>
-                <div class="col-md-4">
-                    <input type="text" class="form-control" name="experience" placeholder="Experience (in years)*" required>
-                </div>
+                        <form action="process_form.php" method="POST" enctype="multipart/form-data">
+                            <div class="row g-3">
 
-                <!-- Skills and Certifications -->
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="skills" placeholder="Skills (e.g., Patient Care, CPR, etc.)*" required>
-                </div>
-                <div class="col-md-6">
-                    <input type="text" class="form-control" name="certifications" placeholder="Certifications (if any)">
-                </div>
+                                <div class="col-12">
+                                    <h3 class="hp-formgroup__t">About you</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="firstName" placeholder="First Name*" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="lastName" placeholder="Last Name*" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="gender" class="form-select" required>
+                                        <option value="" selected disabled>Select Gender*</option>
+                                        <option value="M">Male</option>
+                                        <option value="F">Female</option>
+                                        <option value="O">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="dateOfBirth">Date of birth*</label>
+                                    <input type="date" id="dateOfBirth" class="form-control" name="dateOfBirth" placeholder="Date of Birth*" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="email">Email*</label>
+                                    <input type="email" id="email" class="form-control" name="email" placeholder="Email ID*" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label" for="phone">Phone*</label>
+                                    <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone Number*" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="address" placeholder="Address*" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="city" placeholder="City*" required>
+                                </div>
 
-                <!-- Upload CV -->
-                <div class="col-md-12">
-                    <div class="d-flex align-items-center">
-                        <input type="file" id="upload_cv" name="upload_cv" class="form-control d-none" accept=".doc, .pdf, .docx" required>
-                        <button type="button" id="custom-button" class="btn btn-primary me-2">Upload CV*</button>
-                        <span id="custom-text">No file chosen, yet.</span>
+                                <div class="col-12 mt-4">
+                                    <h3 class="hp-formgroup__t">Your professional details</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="role" class="form-select" required>
+                                        <option value="" selected disabled>Select Role*</option>
+                                        <option value="Doctor">Doctor</option>
+                                        <option value="Nurse">Nurse</option>
+                                        <option value="Lab Technician">Lab Technician</option>
+                                        <option value="Receptionist">Receptionist</option>
+                                        <option value="Ward Boy">Ward Boy</option>
+                                        <option value="Pharmacist">Pharmacist</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="qualification" placeholder="Qualification*" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="experience" placeholder="Experience (in years)*" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="skills" placeholder="Skills (e.g., Patient Care, CPR, etc.)*" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="certifications" placeholder="Certifications (if any)">
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <h3 class="hp-formgroup__t">Your CV</h3>
+                                </div>
+                                <div class="col-12">
+                                    <div class="hp-upload">
+                                        <input type="file" id="upload_cv" name="upload_cv" class="form-control d-none" accept=".doc, .pdf, .docx" required>
+                                        <button type="button" id="custom-button" class="btn btn-secondary">
+                                            <i class="fa-solid fa-paperclip" aria-hidden="true"></i> Upload CV*
+                                        </button>
+                                        <span id="custom-text">No file chosen, yet.</span>
+                                    </div>
+                                    <p class="form-privacy mt-2">Accepted formats: PDF, DOC and DOCX.</p>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <h3 class="hp-formgroup__t">One last check</h3>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="captcha-input">Enter CAPTCHA*</label>
+                                    <div class="hp-captcha">
+                                        <img src="captcha.php" alt="CAPTCHA verification code" id="captcha-image" width="150" height="50">
+                                        <button type="button" id="refresh-captcha" class="btn btn-secondary">
+                                            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Refresh
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control mt-2" id="captcha-input" name="captcha" placeholder="Enter CAPTCHA*" required>
+                                    <span id="captcha-error" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <div class="d-flex flex-wrap align-items-center gap-3">
+                                        <button type="submit" class="btn btn-primary btn-lg">
+                                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit Application
+                                        </button>
+                                        <span class="form-privacy">
+                                            <i class="bi bi-shield-check" aria-hidden="true"></i>
+                                            Your CV goes only to our recruitment team. No listing fee, ever.
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
                     </div>
-                </div>
-
-                <!-- CAPTCHA -->
-                <div class="col-md-12">
-                    <label for="captcha-input">Enter CAPTCHA*</label>
-                    <div class="input-group">
-                        <img src="captcha.php" alt="CAPTCHA" id="captcha-image" class="img-fluid" style="width: 150px; height: 50px;">
-                        <button type="button" id="refresh-captcha" class="btn btn-outline-secondary ms-2">
-                            <i class="fas fa-sync-alt"></i> Refresh
-                        </button>
-                    </div>
-                    <input type="text" class="form-control mt-2" id="captcha-input" name="captcha" placeholder="Enter CAPTCHA*" required>
-                    <span id="captcha-error" class="text-danger"></span>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="col-12">
-                    <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Submit Application</button>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
+</section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('custom-button').addEventListener('click', function () {
+        document.getElementById('upload_cv').click();
+    });
 
-    <!-- Custom Scripts -->
-    <script>
-        document.getElementById('custom-button').addEventListener('click', function () {
-            document.getElementById('upload_cv').click();
-        });
+    document.getElementById('upload_cv').addEventListener('change', function () {
+        const fileName = this.files[0]?.name || "No file chosen, yet.";
+        document.getElementById('custom-text').textContent = fileName;
+    });
 
-        document.getElementById('upload_cv').addEventListener('change', function () {
-            const fileName = this.files[0]?.name || "No file chosen, yet.";
-            document.getElementById('custom-text').textContent = fileName;
-        });
+    document.getElementById('refresh-captcha').addEventListener('click', function () {
+        const captchaImage = document.getElementById('captcha-image');
+        captchaImage.src = 'captcha.php?' + Date.now(); // Append a timestamp to prevent caching
+    });
+</script>
 
-        document.getElementById('refresh-captcha').addEventListener('click', function () {
-            const captchaImage = document.getElementById('captcha-image');
-            captchaImage.src = 'captcha.php?' + Date.now(); // Append a timestamp to prevent caching
-        });
-    </script>
+<?php include "include/page-faq.php"; ?>
 
 <?php include "include/footer.php"; ?>

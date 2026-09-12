@@ -179,17 +179,6 @@
         </div>
     </div>
 
-    <?php include "include/footer.php"?>
-
-    <!-- AOS Script for Animations -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
-
     <!-- Countdown Script -->
     <script>
         let seconds = 5;
@@ -205,5 +194,5 @@
             }
         }, 1000);
     </script>
-</body>
-</html>
+
+<?php include "include/footer.php"?>

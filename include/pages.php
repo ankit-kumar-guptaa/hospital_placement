@@ -38,7 +38,7 @@ function hp_pages() {
     'index.php' => array(
       'route' => '', 'kw' => 'healthcare recruitment agency',
       'title' => 'Global Healthcare Recruitment Agency | ' . HP_BRAND,
-      'desc'  => 'ISO 9001:2000 certified healthcare recruitment agency placing doctors, nurses and paramedical staff with hospitals in India, the Gulf, the USA and Europe since 2010.',
+      'desc'  => 'ISO 9001:2000 certified healthcare recruitment agency placing doctors, nurses and paramedical staff with hospitals in India, the Gulf, the USA and Europe.',
       'h1'    => 'Healthcare Recruitment<br>Made <span class="hp-mark">Simple.</span>',
       'lead'  => 'Connecting hospitals with the right healthcare professionals, and helping candidates find the right opportunities.',
       'img'   => 'hero_team', 'crumb' => 'Home', 'type' => 'EmploymentAgency', 'group' => 'home',
@@ -48,7 +48,7 @@ function hp_pages() {
     'about.php' => array(
       'route' => 'about', 'kw' => 'healthcare recruitment company',
       'title' => 'About Us | Healthcare Recruitment Company Since 2010',
-      'desc'  => 'HospitalPlacement.com is an ISO 9001:2000 certified healthcare recruitment company working only in medical staffing since 2010, from offices in New Delhi and Ajman.',
+      'desc'  => 'ISO 9001:2000 certified healthcare recruitment company, working only in medical staffing since 2010 from offices in New Delhi and Ajman.',
       'h1'    => 'A healthcare recruitment company, and nothing else',
       'lead'  => 'HospitalPlacement.com has recruited only for healthcare since 2010, placing clinical and hospital administration staff worldwide from our New Delhi and Ajman offices.',
       'img'   => 'about_main', 'crumb' => 'About Us', 'type' => 'AboutPage', 'group' => 'company',
@@ -315,4 +315,19 @@ function hp_url($file = '') {
 function hp_abs($file = '') {
     return HP_SITE . hp_url($file);
 }
+}
+
+/**
+ * Keep .htaccess in step with the registry, with nobody having to remember.
+ *
+ * The rules above are the only place routes are defined, so the moment this
+ * file changes the Apache rules are stale. Rather than leave that to a build
+ * step somebody has to run, the first page load after an edit rewrites them.
+ * It compares modification times, so on every other request this costs a stat
+ * and nothing else, and it stays silent when the document root is read only,
+ * because the site still has to serve.
+ */
+if (PHP_SAPI !== 'cli' && !defined('HP_NO_HTACCESS_SYNC')) {
+    require_once __DIR__ . '/htaccess.php';
+    hp_htaccess_sync(dirname(__DIR__));
 }

@@ -106,23 +106,11 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-// AOS still drives the data-aos attributes on the pages that use them.
-// The redesigned sections use the lighter IntersectionObserver reveal in
-// theme.js instead, so nothing is animated twice.
-if (window.AOS) {
-    AOS.init({
-        duration: 700,
-        easing: 'ease-out',
-        once: true,
-        offset: 80,
-        disable: function () {
-            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        }
-    });
-}
-</script>
+<!-- AOS used to run here. The data-aos attributes on the pages are now read
+     by the reveal in assets/js/theme.js, which uses an IntersectionObserver
+     instead of a scroll listener and animates only transform and opacity.
+     That removed a 15KB render blocking library and the flash of unstyled
+     content it caused before it booted. -->
 
 <script>
   // Count-up for the .counter elements in the stat band.

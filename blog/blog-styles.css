@@ -48,8 +48,67 @@
     /* Enhanced gradient colors */
     --gradient-blue: linear-gradient(135deg, #0056b3, #0088cc);
     --gradient-teal: linear-gradient(135deg, #00a0a0, #00c2c2);
-    --gradient-primary: linear-gradient(135deg, #0056b3, #00a0a0);
-    --gradient-accent: linear-gradient(135deg, #dc3545, #ff5252);
+}
+
+/* ---------------------------------------------------------------------------
+   Mapped onto the site design system (assets/css/theme.css).
+
+   The values above are kept as a record of what the blog used to be, and as a
+   fallback if theme.css is ever not loaded on a blog page. Everything below
+   overrides them with the site's own tokens, so the blog inherits one palette,
+   one type scale and one elevation language instead of a second set.
+   ------------------------------------------------------------------------ */
+:root {
+    --primary-blue:        var(--hp-brand);
+    --primary-blue-light:  var(--hp-brand-tint);
+    --primary-blue-dark:   var(--hp-brand-deep);
+
+    /* One accent, as the rest of the site has. The old teal and red become
+       shades of the brand blue rather than two extra hues. */
+    --secondary-teal:       var(--hp-brand-soft);
+    --secondary-teal-light: var(--hp-brand-tint);
+    --accent-red:           var(--hp-brand);
+    --accent-hover:         var(--hp-brand-deep);
+
+    --text-dark:  var(--hp-ink);
+    --text-gray:  var(--hp-ink-2);
+    --text-light: var(--hp-muted);
+    --text-muted: var(--hp-muted);
+
+    --gray-100: var(--hp-line-soft);
+    --gray-200: var(--hp-line-soft);
+    --gray-300: var(--hp-line);
+    --gray-400: var(--hp-line);
+    --gray-500: var(--hp-muted);
+
+    --background-light: var(--hp-canvas);
+    --background-alt:   var(--hp-line-soft);
+
+    --border-radius:    var(--hp-r-card);
+    --border-radius-lg: var(--hp-r-card);
+    --border-radius-sm: var(--hp-r-input);
+
+    /* Shadows tinted to the page hue rather than to black. */
+    --box-shadow:    var(--hp-sh-1);
+    --box-shadow-lg: var(--hp-sh-2);
+    --box-shadow-sm: var(--hp-sh-1);
+
+    --transition:      all var(--hp-t) var(--hp-ease-out);
+    --transition-fast: all var(--hp-t-fast) var(--hp-ease-out);
+    --transition-slow: all var(--hp-t-slow) var(--hp-ease-out);
+
+    /* Merriweather and Inter were never actually loaded on these pages, so
+       the headings were falling back to Georgia and the body to the system
+       stack. Both now use the two faces the site does load. */
+    --font-primary: var(--hp-font);
+    --font-heading: var(--hp-font-display);
+
+    --gradient-blue: linear-gradient(135deg, var(--hp-brand-deep), var(--hp-brand));
+    --gradient-teal: linear-gradient(135deg, var(--hp-brand), var(--hp-brand-soft));
+    /* The hero ran blue into teal, which is where the blog's cyan look came
+       from. It now uses the same navy ramp as the site's dark bands. */
+    --gradient-primary: linear-gradient(135deg, var(--hp-brand-deep) 0%, var(--hp-brand-night) 100%);
+    --gradient-accent:  linear-gradient(135deg, var(--hp-brand) 0%, var(--hp-brand-deep) 100%);
 }
 
 /* Base Styles */
@@ -172,7 +231,7 @@ h3 { font-size: 1.5rem; }
 
 p {
     margin-bottom: 1rem;
-    color: var(--text-muted);
+    color: var(--text-gray);   /* was --text-muted: 2.1:1 on white, unreadable */
 }
 
 a {

@@ -404,7 +404,7 @@
     </div>
 </section>
 
-<section id="cta" class="py-5" style="background-color: #e0e7ff;">
+<section id="cta" class="hp-ctaband">
     <div class="container text-center" data-aos="fade-up">
         <h2 class="mb-4">Looking for Qualified Paramedical Professionals?</h2>
         <p class="lead mb-4">Partner with HospitalPlacement.com for all your paramedical staffing needs.</p>
@@ -418,6 +418,3 @@
 <?php include "include/page-faq.php"; ?>
 
 <?php include "include/footer.php"?>
-
-</body>
-</html>

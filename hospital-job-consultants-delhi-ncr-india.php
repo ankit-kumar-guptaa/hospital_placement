@@ -355,7 +355,7 @@
     </div>
 </section>
 
-<section id="cta" class="py-5" style="background-color: #e0e7ff;">
+<section id="cta" class="hp-ctaband">
     <div class="container text-center" data-aos="fade-up">
         <h2 class="mb-4">Ready to Partner with Delhi's Leading Hospital Job Consultants?</h2>
         <p class="lead mb-4">Whether you're a healthcare professional seeking career opportunities or a hospital looking for qualified staff, HospitalPlacement.com is your trusted partner.</p>
@@ -367,6 +367,3 @@
 </section>
 
 <?php include "include/footer.php"?>
-
-</body>
-</html>

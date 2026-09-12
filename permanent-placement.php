@@ -15,17 +15,21 @@
 
 
 
-<!-- Hero Section -->
-<section class="hero-section bg-primary text-white py-5" data-aos="fade-up">
+<!-- ===== Intro ===========================================================
+     This was a second hero in solid brand blue, sitting directly under the
+     page hero and repeating it. It is an opening section now, so the page has
+     one hero and one introduction rather than two competing banners.
+     ==================================================================== -->
+<section id="introduction" class="py-5 bg-light">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8">
-                <h2 class="display-4 fw-bold">Permanent Doctor Placement Services</h2>
-                <p class="lead">HospitalPlacement.com specializes in providing comprehensive permanent placement solutions tailored to the unique needs of hospitals, nursing homes, and healthcare facilities. Our experienced team of healthcare recruiters is dedicated to connecting healthcare professionals with rewarding permanent positions that align with their skills, qualifications, and career aspirations.</p>
-                <a href="index.php#service" class="btn btn-light btn-lg mt-3">Explore Our Services</a>
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-7" data-aos="fade-right">
+                <h2 class="section-heading">Permanent doctor placement services</h2>
+                <p>HospitalPlacement.com specializes in providing comprehensive permanent placement solutions tailored to the unique needs of hospitals, nursing homes, and healthcare facilities. Our experienced team of healthcare recruiters is dedicated to connecting healthcare professionals with rewarding permanent positions that align with their skills, qualifications, and career aspirations.</p>
+                <a href="<?php echo hp_url(); ?>#service" class="btn btn-primary btn-lg mt-3">Explore Our Services</a>
             </div>
-            <div class="col-lg-4">
-                <img src="<?php echo hp_img('svc_permanent', 900); ?>" data-fallback="<?php echo hp_img_fallback('svc_permanent', 900); ?>" loading="lazy" decoding="async" alt="Healthcare Professionals" class="img-fluid rounded shadow" data-aos="zoom-in">
+            <div class="col-lg-5" data-aos="fade-left">
+                <img src="<?php echo hp_img('svc_permanent', 900); ?>" data-fallback="<?php echo hp_img_fallback('svc_permanent', 900); ?>" loading="lazy" decoding="async" width="900" height="675" alt="Consultants placed into permanent hospital posts" class="img-fluid rounded">
             </div>
         </div>
     </div>
@@ -144,10 +148,10 @@
 
 
 
-<section style="background: #e0e7ff; padding: 80px 0;">
+<section class="hp-ctaband">
     <div class="container text-center" data-aos="fade-up">
-        <h2 style="font-weight: bold; color: #222; font-size: 36px;">Get in Touch</h2>
-        <p style="font-size: 18px; color: #555;">Start your recruitment journey with us today. We’re here to help you find the right talent for your healthcare organization.</p>
+        <h2>Get in Touch</h2>
+        <p>Start your recruitment journey with us today. We’re here to help you find the right talent for your healthcare organization.</p>
         <a href="contact.php" class="btn btn-primary mt-4">Contact Us</a>
     </div>
 </section>

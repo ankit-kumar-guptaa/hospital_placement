@@ -71,7 +71,7 @@
               <!-- reCAPTCHA v3 hidden input -->
               <input type="hidden" name="g-recaptcha-response" id="employer-recaptcha-response">
 
-              <button style="background-color: #ffcc00;" type="submit" name="submit"
+              <button type="submit" name="submit"
               class="btn btn-primary w-100">Submit</button>
               </form>
 
@@ -370,7 +370,7 @@
               <input type="hidden" name="g-recaptcha-response" id="jobseeker-recaptcha-response">
 
 
-              <button type="submit" name="submit" class="btn btn-warning w-100">Submit</button>
+              <button type="submit" name="submit" class="btn btn-primary w-100">Submit</button>
               </form>
 
         <p class="hp-form-note">
