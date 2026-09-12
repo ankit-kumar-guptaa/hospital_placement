@@ -1,5 +1,5 @@
 <?php
-// require 'visitor_tracking.php';
+require 'visitor_tracking.php';
 require_once __DIR__ . '/include/media.php';
 
 $hp_years = (int) date('Y') - 2010;
