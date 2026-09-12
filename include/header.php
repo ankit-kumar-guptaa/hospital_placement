@@ -168,13 +168,13 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
     </nav>
 
     <div class="hp-header__cta">
-      <a class="hp-call" href="tel:+919871916980">
+      <!-- <a class="hp-call" href="tel:+919871916980">
         <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
         <span>
           <span class="hp-call__k">India</span>
           <span class="hp-call__v">+91 98719 16980</span>
         </span>
-      </a>
+      </a> -->
 
       <a class="hp-btn hp-btn--action hp-btn--sm" href="/#hire"
          data-modal-open="hp-formmodal" data-modal-tab="hp-tab-employer">Post a Requirement</a>
@@ -240,9 +240,9 @@ foreach ($hp_places as $s) { $hp_place_files[] = $s[0]; }
 
   <div class="hp-drawer__phones">
     <a class="hp-call" href="tel:+919871916980">
-      <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+      <!-- <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
       <span><span class="hp-call__k">India</span><span class="hp-call__v">+91 98719 16980</span></span>
-    </a>
+    </a> -->
     <a class="hp-call" href="tel:+971582348005">
       <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
       <span><span class="hp-call__k">UAE</span><span class="hp-call__v">+971 58 234 8005</span></span>

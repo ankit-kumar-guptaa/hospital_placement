@@ -1935,7 +1935,7 @@ body.hp-body {
 
 .hp-panel--dark {
   background:
-    radial-gradient(620px 320px at 100% -10%, rgba(96, 165, 250, .38), transparent 68%),
+    radial-gradient(ellipse 620px 320px at 100% -10%, rgba(96, 165, 250, .38), transparent 68%),
     linear-gradient(150deg, var(--hp-brand-deep) 0%, var(--hp-brand-night) 100%);
   border-color: var(--hp-brand-night);
 }
@@ -2029,8 +2029,8 @@ body.hp-body {
 
 .hp-band {
   background:
-    radial-gradient(760px 360px at 10% -10%, rgba(96, 165, 250, .30), transparent 66%),
-    radial-gradient(560px 300px at 96% 110%, rgba(59, 130, 246, .12), transparent 64%),
+    radial-gradient(ellipse 760px 360px at 10% -10%, rgba(96, 165, 250, .30), transparent 66%),
+    radial-gradient(ellipse 560px 300px at 96% 110%, rgba(59, 130, 246, .12), transparent 64%),
     linear-gradient(140deg, var(--hp-brand-deep) 0%, var(--hp-brand-night) 100%);
   color: var(--hp-on-dark);
 }
@@ -2427,8 +2427,8 @@ body.hp-body {
   border-radius: var(--hp-r-card);
   padding: clamp(34px, 5vw, 68px);
   background:
-    radial-gradient(680px 340px at 88% 6%, rgba(96, 165, 250, .40), transparent 66%),
-    radial-gradient(480px 260px at 10% 100%, rgba(59, 130, 246, .14), transparent 64%),
+    radial-gradient(ellipse 680px 340px at 88% 6%, rgba(96, 165, 250, .40), transparent 66%),
+    radial-gradient(ellipse 480px 260px at 10% 100%, rgba(59, 130, 246, .14), transparent 64%),
     linear-gradient(145deg, var(--hp-brand-deep) 0%, var(--hp-brand-night) 100%);
   text-align: center;
 }
@@ -3009,7 +3009,7 @@ body.hp-body {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(720px 340px at 8% 0%, rgba(59, 130, 246, .42), transparent 66%),
+    radial-gradient(ellipse 720px 340px at 8% 0%, rgba(59, 130, 246, .42), transparent 66%),
     linear-gradient(150deg, rgba(18, 53, 127, .95) 0%, rgba(12, 31, 69, .97) 100%);
 }
 
