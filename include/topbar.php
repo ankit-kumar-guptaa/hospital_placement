@@ -33,10 +33,10 @@ $hp_markets = array(
     </nav>
 
     <div class="hp-topbar__contact">
-      <!-- <a href="tel:+919871916980">
+      <a href="tel:+919870364340">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        <span class="hp-topbar__cc">India</span> +91 98719 16980
-      </a> -->
+        <!-- <span class="hp-topbar__cc">India</span> --> +91 98703 64340
+      </a>
       <!-- <a href="tel:+971582348005">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
         <span class="hp-topbar__cc">UAE</span> +971 58 234 8005

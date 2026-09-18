@@ -9,9 +9,8 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
   <div class="hp-wrap hp-footer__top">
 
     <div>
-      <img class="hp-footer__logo"
-           src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
-           alt="HospitalPlacement.com" width="120" height="56" loading="lazy">
+      <img class="hp-footer__logo" src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
+        alt="HospitalPlacement.com" width="120" height="56" loading="lazy">
       <p class="hp-footer__about">
         A healthcare recruitment consultancy working only in medical staffing since 2010.
         ISO 9001:2000 certified, placing doctors, nurses, paramedical and hospital
@@ -19,10 +18,12 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
         markets, from our offices in New Delhi and Ajman.
       </p>
       <div class="hp-social" style="margin-top:22px;">
-        <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw==" aria-label="HospitalPlacement on Instagram" rel="noopener">
+        <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw=="
+          aria-label="HospitalPlacement on Instagram" rel="noopener">
           <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
-        <a href="https://www.linkedin.com/posts/hospital-placement_healthcare-facts-hospitalplacement-activity-7289623509473861632-Grtu?utm_source=share&utm_medium=member_android&rcm=ACoAADP699QBNUaBQI6EsjAd4G-1BINWmnVfT6g" aria-label="HospitalPlacement on LinkedIn" rel="noopener">
+        <a href="https://www.linkedin.com/posts/hospital-placement_healthcare-facts-hospitalplacement-activity-7289623509473861632-Grtu?utm_source=share&utm_medium=member_android&rcm=ACoAADP699QBNUaBQI6EsjAd4G-1BINWmnVfT6g"
+          aria-label="HospitalPlacement on LinkedIn" rel="noopener">
           <i class="fab fa-linkedin-in" aria-hidden="true"></i>
         </a>
       </div>
@@ -50,7 +51,8 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
         <li><a href="<?php echo hp_url('specialty-placement.php'); ?>">Specialty Placements</a></li>
         <li><a href="<?php echo hp_url('permanent-placement.php'); ?>">Permanent Placement</a></li>
         <li><a href="<?php echo hp_url('temporary-staffing-services.php'); ?>">Temporary Staffing</a></li>
-        <li><a href="<?php echo hp_url('healthcare-recruitment-for-hospitals.php'); ?>">Recruitment for Hospitals</a></li>
+        <li><a href="<?php echo hp_url('healthcare-recruitment-for-hospitals.php'); ?>">Recruitment for Hospitals</a>
+        </li>
       </ul>
     </nav>
 
@@ -62,7 +64,7 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
           <span>
             <span class="hp-office__k">India</span>
             <span class="hp-office__v">A-83, Okhla Phase II, New Delhi 110020</span>
-            <span class="hp-office__v"><a href="tel:+919871916980">+91 98719 16980</a></span>
+            <span class="hp-office__v"><a href="tel:+919870364340">+91 98703 64340</a></span>
           </span>
         </div>
         <div class="hp-office__row">
@@ -100,7 +102,7 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
   <a class="hp-dock__wa" href="https://wa.me/+971582348005" rel="noopener">
     <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Chat on WhatsApp</span>
   </a>
-  <a class="hp-dock__tel" href="tel:+919871916980">
+  <a class="hp-dock__tel" href="tel:+919870364340">
     <i class="fa-solid fa-phone" aria-hidden="true"></i><span>Call our India office</span>
   </a>
 </div>
@@ -168,4 +170,5 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 <!-- Redesigned theme behaviour: reveal, nav, drawer, hero tabs, FAQ, quotes -->
 <script src="/assets/js/theme.js" defer></script>
 </body>
+
 </html>
