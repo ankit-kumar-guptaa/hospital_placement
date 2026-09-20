@@ -3,22 +3,15 @@
  * topbar.php - the market strip above the header.
  *
  * India, UAE, USA and Europe are the four markets we recruit into, so they
- * sit at the very top of every page. Each one jumps to the coverage section
- * on the India page, which is where the market detail and the city links
- * live, so the strip adds internal links rather than dead anchors.
+ * sit at the very top of every page. Each one now opens that market's own
+ * landing page rather than dropping the visitor on the contact form: the
+ * strip names four countries, so it owes the visitor four countries.
  *
- * The India city pages stay in the header's Locations menu untouched: they
- * are the pages that rank, and moving them would cost that.
+ * The list is read from include/markets.php, which is the same source the
+ * header menu and the home page band read, so the strip cannot name a market
+ * the site has no page for.
  */
-if (!function_exists('hp_url'))
-  require_once __DIR__ . '/pages.php';
-
-$hp_markets = array(
-  array('India', 'fa-location-dot', hp_url('hospital-recruitment-agency-in-india.php')),
-  array('UAE', 'fa-location-dot', hp_url('contact.php')),
-  array('USA', 'fa-location-dot', hp_url('contact.php')),
-  array('Europe', 'fa-location-dot', hp_url('contact.php')),
-);
+require_once __DIR__ . '/markets.php';
 ?>
 <div class="hp-topbar">
   <div class="hp-wrap hp-topbar__in">
@@ -26,8 +19,8 @@ $hp_markets = array(
     <nav class="hp-topbar__markets" aria-label="Markets we recruit in">
       <span class="hp-topbar__k">Hiring in</span>
       <ul>
-        <?php foreach ($hp_markets as $m): ?>
-          <li><a href="<?php echo $m[2]; ?>"><?php echo $m[0]; ?></a></li>
+        <?php foreach (hp_markets() as $hp_tb): ?>
+          <li><a href="<?php echo hp_url($hp_tb['file']); ?>"><?php echo htmlspecialchars($hp_tb['name'], ENT_QUOTES, 'UTF-8'); ?></a></li>
         <?php endforeach; ?>
       </ul>
     </nav>
@@ -35,12 +28,8 @@ $hp_markets = array(
     <div class="hp-topbar__contact">
       <a href="tel:+919870364340">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        <!-- <span class="hp-topbar__cc">India</span> --> +91 98703 64340
+        +91 98703 64340
       </a>
-      <!-- <a href="tel:+971582348005">
-        <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        <span class="hp-topbar__cc">UAE</span> +971 58 234 8005
-      </a> -->
       <a href="mailto:info@hospitalplacement.com" class="hp-topbar__mail">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
         info@hospitalplacement.com

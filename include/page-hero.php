@@ -26,7 +26,10 @@ if ($p['group'] === 'hospitals') {
     $trail[] = array('Locations', hp_url('hospital-recruitment-agency-in-india.php'));
 }
 ?>
-<section class="hp-pagehero" aria-labelledby="page-title">
+<!-- id="main" is the skip link's target. It lives here rather than on each
+     page because every page that is not the home page opens with this hero,
+     and without it the first link on the page went nowhere. -->
+<section class="hp-pagehero" id="main" tabindex="-1" aria-labelledby="page-title">
 
   <div class="hp-pagehero__media" aria-hidden="true">
     <img src="<?php echo hp_img($p['img'], 1600); ?>"

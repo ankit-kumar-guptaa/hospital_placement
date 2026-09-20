@@ -12,6 +12,7 @@ header('Content-Type: application/xml; charset=utf-8');
 /* changefreq and priority per nav group */
 $w = array(
   'home'      => array('weekly',  '1.0'),
+  'markets'   => array('monthly', '0.9'),
   'hospitals' => array('monthly', '0.9'),
   'locations' => array('monthly', '0.8'),
   'company'   => array('monthly', '0.7'),

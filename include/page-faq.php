@@ -13,7 +13,14 @@ if (!$p || empty($p['faq'])) return;
 <section class="hp-section hp-section--canvas" aria-labelledby="pfaq-title">
   <div class="hp-wrap">
     <div class="hp-head hp-head--center">
-      <h2 class="hp-h2 hp-rise" id="pfaq-title">Questions we are asked about <?php echo htmlspecialchars($p['kw'], ENT_QUOTES, 'UTF-8'); ?></h2>
+      <h2 class="hp-h2 hp-rise" id="pfaq-title"><?php
+        /* The target keyword makes a clumsy heading on pages whose keyword is
+           a place ("...about healthcare recruitment agency in uae"), so a page
+           may name its own. */
+        echo !empty($p['faq_title'])
+          ? htmlspecialchars($p['faq_title'], ENT_QUOTES, 'UTF-8')
+          : 'Questions we are asked about ' . htmlspecialchars($p['kw'], ENT_QUOTES, 'UTF-8');
+      ?></h2>
     </div>
 
     <div class="hp-faq" style="margin-top:36px;">

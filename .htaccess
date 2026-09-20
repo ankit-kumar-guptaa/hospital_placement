@@ -27,7 +27,7 @@ ErrorDocument 504     /cgi-sys/504_def.html
 
 # The include files are fragments, not pages: no direct HTTP access.
 # Guarded by module so it cannot 500 the site on older Apache.
-<FilesMatch "^(db|pages|seo|media|htaccess|assets|header|footer|page-hero|page-faq|topbar|forms|statbar|specializations|process|solution|service|counter|testimonial|why-choose|ensure|locations|faq|cta|slider|skeleton-loader|cookie-consent)\.php$">
+<FilesMatch "^(db|pages|markets|market-page|market-nav|seo|media|htaccess|assets|header|footer|page-hero|page-faq|topbar|forms|statbar|specializations|process|solution|service|counter|testimonial|why-choose|ensure|faq|cta|slider|skeleton-loader|cookie-consent)\.php$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
@@ -86,6 +86,12 @@ RewriteCond %{THE_REQUEST} "\s/+healthcare-recruitment-for-hospitals.php[\s?]" [
 RewriteRule ^ /healthcare-recruitment-for-hospitals [R=301,L]
 RewriteCond %{THE_REQUEST} "\s/+hospital-recruitment-agency-in-india.php[\s?]" [NC]
 RewriteRule ^ /hospital-recruitment-agency-in-india [R=301,L]
+RewriteCond %{THE_REQUEST} "\s/+healthcare-recruitment-agency-in-uae.php[\s?]" [NC]
+RewriteRule ^ /healthcare-recruitment-agency-in-uae [R=301,L]
+RewriteCond %{THE_REQUEST} "\s/+healthcare-recruitment-agency-in-usa.php[\s?]" [NC]
+RewriteRule ^ /healthcare-recruitment-agency-in-usa [R=301,L]
+RewriteCond %{THE_REQUEST} "\s/+healthcare-recruitment-agency-in-europe.php[\s?]" [NC]
+RewriteRule ^ /healthcare-recruitment-agency-in-europe [R=301,L]
 RewriteCond %{THE_REQUEST} "\s/+recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php[\s?]" [NC]
 RewriteRule ^ /recruitment-agency-in-delhi-ncr [R=301,L]
 RewriteCond %{THE_REQUEST} "\s/+hospital-job-consultants-delhi-ncr-india.php[\s?]" [NC]
@@ -123,6 +129,9 @@ RewriteRule ^permanent-placement$ permanent-placement.php [L,NC]
 RewriteRule ^temporary-staffing-services$ temporary-staffing-services.php [L,NC]
 RewriteRule ^healthcare-recruitment-for-hospitals$ healthcare-recruitment-for-hospitals.php [L,NC]
 RewriteRule ^hospital-recruitment-agency-in-india$ hospital-recruitment-agency-in-india.php [L,NC]
+RewriteRule ^healthcare-recruitment-agency-in-uae$ healthcare-recruitment-agency-in-uae.php [L,NC]
+RewriteRule ^healthcare-recruitment-agency-in-usa$ healthcare-recruitment-agency-in-usa.php [L,NC]
+RewriteRule ^healthcare-recruitment-agency-in-europe$ healthcare-recruitment-agency-in-europe.php [L,NC]
 RewriteRule ^recruitment-agency-in-delhi-ncr$ recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php [L,NC]
 RewriteRule ^hospital-job-consultants-delhi-ncr$ hospital-job-consultants-delhi-ncr-india.php [L,NC]
 RewriteRule ^placement-agency-in-mumbai$ placement-Agency-in-mumbai.php [L,NC]

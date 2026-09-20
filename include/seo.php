@@ -31,6 +31,28 @@ if (!$hp_p) {
     );
 }
 
+/**
+ * Where the Service on this page is offered.
+ *
+ * A city page serves its city, a country landing page serves the countries
+ * its market covers, and everything else serves the four markets we work in.
+ * Read from include/markets.php so the schema cannot disagree with the page.
+ */
+if (!function_exists('hp_area_served')) {
+function hp_area_served($p) {
+    if (!empty($p['city'])) return array('@type' => 'City', 'name' => $p['city']);
+    if (!empty($p['market'])) {
+        require_once __DIR__ . '/markets.php';
+        $mk = hp_market($p['market']);
+        if ($mk && !empty($mk['area'])) return $mk['area'];
+    }
+    return array(array('@type' => 'Country', 'name' => 'India'),
+                 array('@type' => 'Country', 'name' => 'United Arab Emirates'),
+                 array('@type' => 'Country', 'name' => 'United States'),
+                 array('@type' => 'Place',   'name' => 'Europe'));
+}
+}
+
 $hp_canon = hp_abs($hp_file);
 $hp_title = $hp_p['title'];
 $hp_desc  = $hp_p['desc'];
@@ -209,12 +231,7 @@ if ($hp_p['type'] === 'Service') {
       'description' => $hp_p['desc'],
       'serviceType' => ucfirst($hp_p['kw']),
       'provider' => array('@id' => HP_SITE . '/#organisation'),
-      'areaServed' => !empty($hp_p['city'])
-          ? array('@type' => 'City', 'name' => $hp_p['city'])
-          : array(array('@type' => 'Country', 'name' => 'India'),
-                  array('@type' => 'Country', 'name' => 'United Arab Emirates'),
-                  array('@type' => 'Country', 'name' => 'United States'),
-                  array('@type' => 'Place',   'name' => 'Europe')),
+      'areaServed' => hp_area_served($hp_p),
       'audience' => array('@type' => 'Audience', 'audienceType' => 'Hospitals, clinics and nursing homes'),
       'url' => $hp_canon,
     );

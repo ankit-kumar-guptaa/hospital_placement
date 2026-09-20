@@ -3,6 +3,7 @@
 // URLs and slugs are unchanged; only the presentation and the grouping of
 // links are new. $hp_p prefixes root links correctly from inside /blog/.
 require_once __DIR__ . '/pages.php';
+require_once __DIR__ . '/markets.php';
 $hp_self = basename($_SERVER['PHP_SELF']);
 $hp_blog = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false);
 
@@ -18,7 +19,6 @@ $hp_hospitals = array(
   array('permanent-placement.php', 'fa-file-signature', 'Permanent Placement', 'Full time hires on a pay on success model'),
   array('temporary-staffing-services.php', 'fa-clock-rotate-left', 'Temporary Staffing', 'Locum, contract and short notice cover'),
   array('specialty-placement.php', 'fa-stethoscope', 'Specialty Placements', 'Hard to fill clinical and super-speciality roles'),
-  array('hospital-recruitment-agency-in-india.php', 'fa-building-shield', 'Recruitment Agency', 'Nationwide hospital hiring coverage'),
   array('solutions.php', 'fa-diagram-project', 'Our Solutions', 'How we take the hiring cycle off your desk'),
 );
 
@@ -30,14 +30,15 @@ $hp_candidates = array(
   array('hospital-job-consultants-delhi-ncr-india.php', 'fa-compass', 'Career Guidance', 'Hospital job consultants across Delhi NCR'),
 );
 
-$hp_places = array(
-  array('recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy.php', 'Delhi NCR', 'India'),
-  array('placement-Agency-in-mumbai.php', 'Mumbai', 'India'),
-  array('placement-Agency-in-hyderabad.php', 'Hyderabad', 'India'),
-  array('placement-Agency-in-chandigarh.php', 'Chandigarh', 'India'),
-  array('placement-Agency-in-kolkata.php', 'Kolkata', 'India'),
-  array('placement-Agency-in-lucknow.php', 'Lucknow', 'India'),
-);
+/* Locations is the four markets now, not six Indian cities. The cities sat
+   here while India was the only market with pages; they live on the India
+   landing page, which is where somebody looking for Mumbai actually is. The
+   menu still counts them as current, so opening a city page highlights
+   Locations rather than leaving the nav with nothing lit. */
+$hp_places = array();
+foreach (hp_markets() as $mk) {
+  $hp_places[] = array($mk['file'], $mk['name'], $mk['blurb'], $mk['icon']);
+}
 
 $hp_hospital_files = array();
 foreach ($hp_hospitals as $s) {
@@ -50,6 +51,10 @@ foreach ($hp_candidates as $s) {
 $hp_place_files = array();
 foreach ($hp_places as $s) {
   $hp_place_files[] = $s[0];
+}
+/* A city page is under Locations even though it is no longer listed in it. */
+foreach (hp_india_cities() as $f => $c) {
+  $hp_place_files[] = $f;
 }
 ?>
 
@@ -142,7 +147,7 @@ foreach ($hp_places as $s) {
               <?php foreach ($hp_places as $s): ?>
                 <li>
                   <a class="hp-mega__link" href="<?php echo hp_url($s[0]); ?>">
-                    <span class="hp-mega__ico"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                    <span class="hp-mega__ico"><i class="fa-solid <?php echo $s[3]; ?>" aria-hidden="true"></i></span>
                     <span>
                       <span class="hp-mega__t"><?php echo $s[1]; ?></span>
                       <span class="hp-mega__d"><?php echo $s[2]; ?></span>
@@ -152,8 +157,8 @@ foreach ($hp_places as $s) {
               <?php endforeach; ?>
             </ul>
             <div class="hp-mega__foot">
-              <p>Hiring for hospitals in India, the Gulf and overseas.</p>
-              <a class="hp-link" href="/#hire">Post a Requirement <i class="fa-solid fa-arrow-right"
+              <p>Looking for a city in India?</p>
+              <a class="hp-link" href="<?php echo hp_url('hospital-recruitment-agency-in-india.php'); ?>#cities">All six India city desks <i class="fa-solid fa-arrow-right"
                   aria-hidden="true"></i></a>
             </div>
           </div>
@@ -237,6 +242,9 @@ foreach ($hp_places as $s) {
         <div>
           <?php foreach ($hp_places as $s): ?>
             <a href="<?php echo hp_url($s[0]); ?>"><?php echo $s[1]; ?></a>
+          <?php endforeach; ?>
+          <?php foreach (hp_india_cities() as $hp_dc_file => $hp_dc): ?>
+            <a href="<?php echo hp_url($hp_dc_file); ?>" class="hp-drawer__sublink"><?php echo $hp_dc['city']; ?></a>
           <?php endforeach; ?>
         </div>
       </div>

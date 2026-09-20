@@ -20,6 +20,15 @@
  *   crumb     breadcrumb label
  *   type      schema.org type for the page's primary entity
  *   group     nav grouping, used for related links
+ *
+ * Optional keys
+ *   alias     an earlier route spelling, 301'd to the current one
+ *   faq       questions for page-faq.php and the FAQPage in seo.php
+ *   faq_title the FAQ heading, where the target keyword makes a poor one
+ *   market    key in include/markets.php; makes this a country landing page
+ *   city      the city a location page covers, used in its Service schema
+ *   india_city  this is one of the India city desks, so it is listed on the
+ *               India landing page, in the Locations menu and in the footer
  */
 
 if (!defined('HP_SITE')) {
@@ -184,13 +193,91 @@ function hp_pages() {
               'a' => 'No. Many hospitals use us only for the posts their own team cannot reach, and keep routine hiring in house. Both arrangements work on the same terms.'),
       ),
     ),
+    /* ------------------------------------------------------------- markets
+       The four markets named in the topbar. Each is a landing page rather
+       than a link to the contact form, and each one carries what actually
+       differs between markets: who registers a clinician, which exam stands
+       in the way, and how long the route really takes. The content for all
+       four lives in include/markets.php. */
     'hospital-recruitment-agency-in-india.php' => array(
       'route' => 'hospital-recruitment-agency-in-india', 'kw' => 'hospital recruitment agency in india',
       'title' => 'Hospital Recruitment Agency in India | Nationwide',
-      'desc'  => 'Hospital recruitment agency covering India nationwide from New Delhi, placing doctors, nurses, paramedical and administration staff since 2010.',
+      'desc'  => 'Hospital recruitment agency covering India nationwide from New Delhi, with city desks for Delhi NCR, Mumbai, Hyderabad, Chandigarh, Kolkata and Lucknow.',
       'h1'    => 'Hospital recruitment agency in India',
-      'lead'  => 'We recruit for hospitals across India from our New Delhi office, with dedicated desks for Delhi NCR, Mumbai, Hyderabad, Chandigarh, Kolkata and Lucknow.',
-      'img'   => 'city_delhi', 'crumb' => 'Recruitment Agency in India', 'type' => 'Service', 'group' => 'hospitals',
+      'lead'  => 'We recruit for hospitals across India from our New Delhi office, with named desks on Delhi NCR, Mumbai, Hyderabad, Chandigarh, Kolkata and Lucknow.',
+      'img'   => 'city_delhi', 'crumb' => 'India', 'type' => 'Service', 'group' => 'markets',
+      'market' => 'india',
+      'faq_title' => 'Questions hospitals in India ask us',
+      'faq' => array(
+        array('q' => 'Which Indian cities do you recruit in?',
+              'a' => 'We run named desks on Delhi NCR, Mumbai, Hyderabad, Chandigarh and the Tricity, Kolkata and Lucknow, and recruit nationwide from New Delhi for hospitals outside those cities. Each city desk holds its own pay bands and its own candidates.'),
+        array('q' => 'How quickly can an Indian hospital fill a post through you?',
+              'a' => 'Two to six weeks is typical, and the limit is almost always the candidate\'s notice period rather than the search. There is no licensing exam and no visa step inside India, so nothing sits in a queue.'),
+        array('q' => 'Do you verify medical and nursing council registration?',
+              'a' => 'Yes. State medical council registration for doctors and state nursing council registration for nurses is verified, along with the qualification documents and the last-held position, before a CV reaches your panel.'),
+        array('q' => 'What does it cost an Indian hospital to hire through you?',
+              'a' => 'Permanent hiring is billed on success: no retainer and no listing fee, with the fee falling due once your candidate joins and clears the guarantee period agreed in writing before the search starts.'),
+      ),
+    ),
+    'healthcare-recruitment-agency-in-uae.php' => array(
+      'route' => 'healthcare-recruitment-agency-in-uae', 'kw' => 'healthcare recruitment agency in uae',
+      'title' => 'Healthcare Recruitment Agency in UAE | DHA, DOH, MOHAP',
+      'desc'  => 'Healthcare recruitment agency for the UAE, with our own Ajman office running DataFlow verification, Prometric licensing and visa through to the joining date.',
+      'h1'    => 'Healthcare recruitment agency for the UAE',
+      'lead'  => 'Hiring in the Emirates is a licensing problem before it is a search problem, so we run DataFlow, the Prometric exam and the visa from our own office in Ajman.',
+      'img'   => 'city_uae', 'crumb' => 'UAE', 'type' => 'Service', 'group' => 'markets',
+      'market' => 'uae',
+      'faq_title' => 'Questions we are asked about hiring in the UAE',
+      'faq' => array(
+        array('q' => 'Which UAE authority will license my staff?',
+              'a' => 'It depends on the emirate the post is in. DHA licenses Dubai, DOH licenses Abu Dhabi and Al Ain, and MOHAP licenses Ajman, Sharjah, Ras Al Khaimah, Fujairah and Umm Al Quwain. A licence is issued by one authority and does not automatically carry across to another.'),
+        array('q' => 'What is DataFlow and why do files fail it?',
+              'a' => 'DataFlow is primary source verification: it goes back to the issuing university and the previous employer directly rather than accepting the candidate\'s copies. Files fail when a university will not respond, when an experience letter lacks the detail the authority wants, or when a name differs across documents. We pre-check all three before submitting.'),
+        array('q' => 'How long does UAE licensing and visa take?',
+              'a' => 'Eight to sixteen weeks is typical from a signed offer to a joining date, and most of that is verification, the exam and visa processing rather than the search itself.'),
+        array('q' => 'Do you recruit for the rest of the Gulf as well?',
+              'a' => 'Yes. We place into Saudi Arabia, Qatar, Oman, Kuwait and Bahrain. Each has its own health authority and its own exam, so tell us the country by name and we will confirm that route rather than assume the UAE one applies.'),
+      ),
+    ),
+    'healthcare-recruitment-agency-in-usa.php' => array(
+      'route' => 'healthcare-recruitment-agency-in-usa', 'kw' => 'healthcare recruitment agency in usa',
+      'title' => 'Healthcare Recruitment Agency for the USA | NCLEX &amp; Visa',
+      'desc'  => 'Healthcare recruitment for the USA: CGFNS evaluation, NCLEX-RN, state board licensure and VisaScreen, with an honest read on visa timelines from the first call.',
+      'h1'    => 'Healthcare recruitment for the United States',
+      'lead'  => 'The licensing is passable and the visa is the wall, so we say which category you are in at the first call and keep the file ready for the day the date becomes current.',
+      'img'   => 'svc_hospitals', 'crumb' => 'USA', 'type' => 'Service', 'group' => 'markets',
+      'market' => 'usa',
+      'faq_title' => 'Questions we are asked about working in the USA',
+      'faq' => array(
+        array('q' => 'What does an Indian nurse need to work in the USA?',
+              'a' => 'A CGFNS or equivalent credentials evaluation, a pass in the NCLEX-RN, a licence from the board of nursing in the state you will work in, and a VisaScreen certificate. Then an employer petition on an employment-based immigrant visa, which is the step that carries the wait.'),
+        array('q' => 'How long does the US route actually take?',
+              'a' => 'Twelve months is the best case once licensing is clear. When the employment-based priority date for your country is retrogressed it takes considerably longer, and no agency can shorten that. We tell you which category you are in before you spend anything.'),
+        array('q' => 'What do doctors need instead?',
+              'a' => 'ECFMG certification, which means the USMLE sequence and the English requirement, then a residency position through the match for most international medical graduates. It is a longer and more competitive route than the nursing one.'),
+        array('q' => 'Do you charge candidates for US placement?',
+              'a' => 'Our placement fee is paid by the employer. Statutory costs the candidate owes directly, such as examination, evaluation and visa fees, are paid by the candidate to those bodies, and we set them out in writing before you start.'),
+      ),
+    ),
+    'healthcare-recruitment-agency-in-europe.php' => array(
+      'route' => 'healthcare-recruitment-agency-in-europe', 'kw' => 'healthcare recruitment agency in europe',
+      'title' => 'Healthcare Recruitment for Europe | NMC, NMBI &amp; Germany',
+      'desc'  => 'Healthcare recruitment for the UK, Ireland, Germany and Malta: NMC and GMC registration, OET and IELTS, CBT and OSCE, and German recognition routes.',
+      'h1'    => 'Healthcare recruitment for Europe',
+      'lead'  => 'Europe is not one market and language is the gate, so we sequence the English or German score first and build the registration file behind it.',
+      'img'   => 'svc_specialty', 'crumb' => 'Europe', 'type' => 'Service', 'group' => 'markets',
+      'market' => 'europe',
+      'faq_title' => 'Questions we are asked about working in Europe',
+      'faq' => array(
+        array('q' => 'What English score does the UK register ask for?',
+              'a' => 'The NMC accepts IELTS at 7.0 overall with no element below 6.5, or OET at grade B, with some flexibility on combining sittings. The GMC sets its own equivalent requirement for doctors. The score is the gate: the register will not progress an application without it.'),
+        array('q' => 'What are the CBT and the OSCE?',
+              'a' => 'The computer-based test is the theory part of NMC registration and is sat from India. The OSCE is the practical examination and is taken in the United Kingdom after arrival, which is why employers usually sponsor it and provide preparation.'),
+        array('q' => 'Can I work in Germany without German?',
+              'a' => 'No. Qualification recognition will not proceed without B2 German, and most states expect a professional language examination on top of it. Anyone telling you otherwise is selling you a course rather than a job.'),
+        array('q' => 'How long does the European route take?',
+              'a' => 'Four to nine months is typical, and the spread is almost entirely the language score. Candidates who already hold IELTS or OET move at the fast end of that range.'),
+      ),
     ),
 
     /* ------------------------------------------------------------ location */
@@ -201,7 +288,8 @@ function hp_pages() {
       'h1'    => 'Recruitment agency in Delhi and placement consultants for Delhi NCR',
       'lead'  => 'Our head office is in Okhla, New Delhi, and Delhi NCR is the market we know best: its pay bands, its notice periods and its commute realities.',
       'img'   => 'city_delhi', 'crumb' => 'Delhi NCR', 'type' => 'Service', 'group' => 'locations',
-      'city'  => 'Delhi NCR', 'alias' => 'recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy',
+      'city'  => 'Delhi NCR', 'india_city' => true,
+      'alias' => 'recruitment-agency-in-delhi-and-placement-consultants-in-delhi-ncr-job-placement-consultacy',
     ),
     'hospital-job-consultants-delhi-ncr-india.php' => array(
       'route' => 'hospital-job-consultants-delhi-ncr', 'kw' => 'hospital job consultants delhi ncr',
@@ -218,7 +306,7 @@ function hp_pages() {
       'desc'  => 'Healthcare placement agency in Mumbai supplying doctors, nurses and paramedical staff to hospitals, nursing homes and diagnostic centres across MMR.',
       'h1'    => 'Placement agency in Mumbai for hospital staffing',
       'lead'  => 'We recruit for hospitals across Mumbai and the wider MMR, benchmarking every offer against what the city actually pays for that speciality.',
-      'img'   => 'city_mumbai', 'crumb' => 'Mumbai', 'type' => 'Service', 'group' => 'locations', 'city' => 'Mumbai',
+      'img'   => 'city_mumbai', 'crumb' => 'Mumbai', 'type' => 'Service', 'group' => 'locations', 'city' => 'Mumbai', 'india_city' => true,
     ),
     'placement-Agency-in-hyderabad.php' => array(
       'route' => 'placement-agency-in-hyderabad', 'kw' => 'placement agency in hyderabad',
@@ -226,7 +314,7 @@ function hp_pages() {
       'desc'  => 'Healthcare placement agency in Hyderabad supplying doctors, nurses and paramedical staff to hospitals and diagnostic centres across the city.',
       'h1'    => 'Placement agency in Hyderabad for hospital staffing',
       'lead'  => 'We recruit for hospitals across Hyderabad and Secunderabad, from single consultant posts to whole nursing establishments.',
-      'img'   => 'city_hyderabad', 'crumb' => 'Hyderabad', 'type' => 'Service', 'group' => 'locations', 'city' => 'Hyderabad',
+      'img'   => 'city_hyderabad', 'crumb' => 'Hyderabad', 'type' => 'Service', 'group' => 'locations', 'city' => 'Hyderabad', 'india_city' => true,
     ),
     'placement-Agency-in-chandigarh.php' => array(
       'route' => 'placement-agency-in-chandigarh', 'kw' => 'placement agency in chandigarh',
@@ -234,7 +322,7 @@ function hp_pages() {
       'desc'  => 'Healthcare placement agency covering Chandigarh, Mohali and Panchkula, supplying doctors, nurses and paramedical staff to hospitals across the Tricity.',
       'h1'    => 'Placement agency in Chandigarh and the Tricity',
       'lead'  => 'We cover Chandigarh, Mohali and Panchkula as one market, which is how candidates there actually think about a commute.',
-      'img'   => 'city_chandigarh', 'crumb' => 'Chandigarh', 'type' => 'Service', 'group' => 'locations', 'city' => 'Chandigarh',
+      'img'   => 'city_chandigarh', 'crumb' => 'Chandigarh', 'type' => 'Service', 'group' => 'locations', 'city' => 'Chandigarh', 'india_city' => true,
     ),
     'placement-Agency-in-kolkata.php' => array(
       'route' => 'placement-agency-in-kolkata', 'kw' => 'placement agency in kolkata',
@@ -242,7 +330,7 @@ function hp_pages() {
       'desc'  => 'Healthcare placement agency in Kolkata supplying doctors, nurses and paramedical staff to hospitals, nursing homes and diagnostic centres.',
       'h1'    => 'Placement agency in Kolkata for hospital staffing',
       'lead'  => 'We recruit for hospitals and nursing homes across Kolkata and Howrah, including the speciality posts that stay open longest.',
-      'img'   => 'city_kolkata', 'crumb' => 'Kolkata', 'type' => 'Service', 'group' => 'locations', 'city' => 'Kolkata',
+      'img'   => 'city_kolkata', 'crumb' => 'Kolkata', 'type' => 'Service', 'group' => 'locations', 'city' => 'Kolkata', 'india_city' => true,
     ),
     'placement-Agency-in-lucknow.php' => array(
       'route' => 'placement-agency-in-lucknow', 'kw' => 'placement agency in lucknow',
@@ -250,7 +338,7 @@ function hp_pages() {
       'desc'  => 'Healthcare placement agency in Lucknow supplying doctors, nurses and paramedical staff to hospitals and nursing homes across Uttar Pradesh.',
       'h1'    => 'Placement agency in Lucknow for hospital staffing',
       'lead'  => 'We recruit for hospitals in Lucknow and across Uttar Pradesh, where relocation willingness matters as much as the qualification.',
-      'img'   => 'city_lucknow', 'crumb' => 'Lucknow', 'type' => 'Service', 'group' => 'locations', 'city' => 'Lucknow',
+      'img'   => 'city_lucknow', 'crumb' => 'Lucknow', 'type' => 'Service', 'group' => 'locations', 'city' => 'Lucknow', 'india_city' => true,
     ),
     );
     return $p;

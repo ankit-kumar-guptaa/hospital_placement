@@ -94,7 +94,10 @@ $hp_years = (int) date('Y') - 2010;
 
   <?php include "include/service.php"; ?>
 
-  <?php include "include/locations.php"; ?>
+  <!-- The home page speaks to all four markets. The India city tiles that
+       used to sit here now live on the India landing page, which is where a
+       visitor looking for Mumbai is actually going. -->
+  <?php include "include/market-nav.php"; ?>
 
   <?php include "include/why-choose.php"; ?>
 

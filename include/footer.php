@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/pages.php';
+require_once __DIR__ . '/markets.php';
 // footer.php - site footer plus the shared script tail. Every script that was
 // loaded here before is still loaded here, in the same order.
 $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
@@ -53,6 +54,21 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
         <li><a href="<?php echo hp_url('temporary-staffing-services.php'); ?>">Temporary Staffing</a></li>
         <li><a href="<?php echo hp_url('healthcare-recruitment-for-hospitals.php'); ?>">Recruitment for Hospitals</a>
         </li>
+      </ul>
+    </nav>
+
+    <nav aria-labelledby="foot-mk">
+      <h2 id="foot-mk">Where we hire</h2>
+      <ul class="hp-fnav">
+        <?php foreach (hp_markets() as $hp_fm): ?>
+          <li><a href="<?php echo hp_url($hp_fm['file']); ?>"><?php echo htmlspecialchars($hp_fm['name'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+        <?php endforeach; ?>
+      </ul>
+      <h2 class="hp-fnav__k">India city desks</h2>
+      <ul class="hp-fnav">
+        <?php foreach (hp_india_cities() as $hp_fc_file => $hp_fc): ?>
+          <li><a href="<?php echo hp_url($hp_fc_file); ?>"><?php echo htmlspecialchars($hp_fc['city'], ENT_QUOTES, 'UTF-8'); ?></a></li>
+        <?php endforeach; ?>
       </ul>
     </nav>
 
