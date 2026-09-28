@@ -20,13 +20,15 @@ require_once __DIR__ . '/pages.php';
  * A page may set $hero_eyebrow / $hero_title / $hero_lead before including
  * this file to override the copy. Defaults are the home page copy.
  */
-if (!function_exists('hp_img')) { require_once __DIR__ . '/media.php'; }
+if (!function_exists('hp_img')) {
+  require_once __DIR__ . '/media.php';
+}
 
-$hp_pp      = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
+$hp_pp = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 $hero_title = isset($hero_title) ? $hero_title
-            : 'Healthcare Recruitment<br>Made <span class="hp-mark">Simple.</span>';
-$hero_lead  = isset($hero_lead)  ? $hero_lead
-            : 'Connecting hospitals with the right healthcare professionals, and helping candidates find the right opportunities.';
+  : 'Healthcare Recruitment<br>Made <span class="hp-mark">Simple.</span>';
+$hero_lead = isset($hero_lead) ? $hero_lead
+  : 'Connecting hospitals with the right healthcare professionals, and helping candidates find the right opportunities.';
 
 /* The three reasons to come to us rather than post the job yourself. Each is a
    claim plus the sentence that backs it up, because an unexplained claim on a
@@ -36,21 +38,29 @@ $hero_lead  = isset($hero_lead)  ? $hero_lead
    Deliberately not the placement numbers: those are in the stat bar directly
    below, and saying them twice on one screen makes both say less. */
 $hero_points = isset($hero_points) ? $hero_points : array(
-    array('fa-bolt', 'Shortlists in days, not weeks',
-          'A live bench in every speciality, so the first names reach you inside a week.'),
-    array('fa-shield-halved', 'Checked before you see a CV',
-          'Registration, qualifications, documents and references, verified up front.'),
-    array('fa-hand-holding-heart', 'Free for candidates, always',
-          'Hospitals pay our fee. The people we place never pay us anything.'),
+  array(
+    'fa-bolt',
+    'Shortlists in days, not weeks',
+    'A live bench in every speciality, so the first names reach you inside a week.'
+  ),
+  array(
+    'fa-shield-halved',
+    'Checked before you see a CV',
+    'Registration, qualifications, documents and references, verified up front.'
+  ),
+  array(
+    'fa-hand-holding-heart',
+    'Free for candidates, always',
+    'Hospitals pay our fee. The people we place never pay us anything.'
+  ),
 );
 ?>
 
 <section class="hp-hero" aria-labelledby="hero-title">
 
   <div class="hp-hero__media" aria-hidden="true">
-    <img src="/assets/img/hero.png"
-         data-fallback="<?php echo hp_img_fallback('hero_team', 1800); ?>"
-         alt="" width="1800" height="1013" fetchpriority="high" decoding="async">
+    <img src="/assets/img/hero.png" data-fallback="<?php echo hp_img_fallback('hero_team', 1800); ?>" alt=""
+      width="1800" height="1013" fetchpriority="high" decoding="async">
   </div>
 
   <div class="hp-wrap hp-hero__inner">
@@ -59,7 +69,7 @@ $hero_points = isset($hero_points) ? $hero_points : array(
 
       <p class="hp-hero__eyebrow hp-rise">
         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        <span>ISO 9001:2000 certified</span>
+        <!-- <span>ISO 9001:2000 certified</span> -->
         <span class="hp-hero__eyebrow-more">recruiting for healthcare since 2010</span>
       </p>
 
@@ -69,19 +79,20 @@ $hero_points = isset($hero_points) ? $hero_points : array(
 
       <ul class="hp-hero__points hp-rise">
         <?php foreach ($hero_points as $pt): ?>
-        <li>
-          <span class="hp-hero__point-ico"><i class="fa-solid <?php echo $pt[0]; ?>" aria-hidden="true"></i></span>
-          <span class="hp-hero__point-txt">
-            <strong><?php echo $pt[1]; ?></strong>
-            <span><?php echo $pt[2]; ?></span>
-          </span>
-        </li>
+          <li>
+            <span class="hp-hero__point-ico"><i class="fa-solid <?php echo $pt[0]; ?>" aria-hidden="true"></i></span>
+            <span class="hp-hero__point-txt">
+              <strong><?php echo $pt[1]; ?></strong>
+              <span><?php echo $pt[2]; ?></span>
+            </span>
+          </li>
         <?php endforeach; ?>
       </ul>
 
       <p class="hp-hero__markets hp-rise">
         <span class="hp-hero__markets-k">Recruiting into</span>
-        <span class="hp-hero__markets-v">India <i aria-hidden="true">&middot;</i> UAE <i aria-hidden="true">&middot;</i> USA <i aria-hidden="true">&middot;</i> Europe</span>
+        <span class="hp-hero__markets-v">India <i aria-hidden="true">&middot;</i> UAE <i aria-hidden="true">&middot;</i>
+          USA <i aria-hidden="true">&middot;</i> Europe</span>
       </p>
     </div>
 
