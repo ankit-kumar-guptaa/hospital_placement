@@ -320,7 +320,8 @@
     if (!parts.length) return;
 
     parts.forEach(function (el, n) {
-      el.style.setProperty('--hp-rise-delay', (reduced.matches ? 0 : n * 70) + 'ms');
+      el.style.setProperty('--hp-rise-delay',
+        (reduced.matches ? 0 : Math.min(n * 60, 240)) + 'ms');
     });
     // Next frame, so the transition has a start value to animate from.
     requestAnimationFrame(function () {
@@ -339,6 +340,35 @@
          Focus moves in on open and returns to the trigger on close, Tab is
          kept inside the panel, Escape closes, and the page behind is locked.
      ------------------------------------------------------------------------ */
+  /* ---------------------------------------------------------------------------
+     Where the form already is. On the home page the card is in the hero, so
+     there is no dialog to open: a [data-modal-open] link scrolls to the card
+     and switches it to the tab that was asked for. Inner pages keep the
+     dialog, and this does nothing there.
+     ------------------------------------------------------------------------ */
+  function initInlineFormLinks() {
+    var card = document.getElementById('hp-heroform');
+    if (!card || document.getElementById('hp-formmodal')) return;
+
+    all('[data-modal-open]').forEach(function (link) {
+      on(link, 'click', function (e) {
+        e.preventDefault();
+        var tab = document.getElementById(link.getAttribute('data-modal-tab') || 'hp-tab-employer');
+        if (tab) tab.click();
+
+        card.scrollIntoView({
+          block: 'center',
+          behavior: reduced.matches ? 'auto' : 'smooth'
+        });
+
+        // Focus the tab rather than the first field: jumping the caret into a
+        // text input also opens the keyboard on a phone, before the visitor
+        // has seen what they landed on.
+        if (tab) tab.focus({ preventScroll: true });
+      });
+    });
+  }
+
   function initModal() {
     var modal = document.getElementById('hp-formmodal');
     if (!modal) return;
@@ -480,6 +510,7 @@
     initQuotes();
     initHeroEntrance();
     initModal();
+    initInlineFormLinks();
     initReveal();
     initTableWrap();
     initContentReveal();

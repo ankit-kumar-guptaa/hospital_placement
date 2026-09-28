@@ -1208,23 +1208,22 @@ body.hp-body {
 }
 
 /* ==========================================================================
-   8. Hero  (rebuilt to the brand deck)
+   8. Hero  (two columns: the pitch on the left, the form on the right)
    --------------------------------------------------------------------------
-   A full-bleed healthcare photograph with the copy held on a light scrim to
-   its left, one headline, one value line and the two journey CTAs. No form
-   here: the deck's first finding is that two large forms were dominating the
-   first screen, so both moved to include/forms.php.
+   The deck's finding was that two stacked forms were dominating the first
+   screen. The answer is not to hide the form, it is to give it one column and
+   half the width: the left says why, the right lets you start. The two
+   journeys from the deck survive as the card's tabs.
+
+   The photograph stays, but its job changed. It is no longer a portrait with
+   type beside it, it is a backdrop: washed back far enough that a white card
+   can sit on it, with a pool of light placed under the card so its edge reads
+   without a border.
    ========================================================================== */
 
 .hp-hero {
   position: relative;
   isolation: isolate;
-  display: flex;
-  align-items: center;
-  /* Matched to the deck: its hero band is 0.261 of the page width, which is
-     375px at 1440. 26vw reproduces that, floored for small screens and
-     capped so it does not balloon on very wide ones. */
-  min-height: clamp(330px, 26vw, 440px);
   background: var(--hp-canvas);
   overflow: hidden;
 }
@@ -1239,50 +1238,159 @@ body.hp-body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 28%;
+  /* Pulled left of centre: the right third is under the card now, so the
+     faces belong in the gap between the two columns. */
+  object-position: 38% 26%;
   display: block;
 }
 
-/* Two scrims: a horizontal one that clears the left column for type, and a
-   soft vertical one so the stat bar below meets a light edge. */
+/* Three washes. A pool of light under the card so it lifts off the photo
+   without needing an outline, a diagonal that clears the left column for
+   type, and a soft top and bottom so the header and the stat bar below both
+   meet a light edge rather than a hard cut. */
 .hp-hero__media::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(96deg,
-      rgba(244, 248, 254, .99) 0%,
-      rgba(244, 248, 254, .97) 34%,
-      rgba(244, 248, 254, .82) 50%,
-      rgba(244, 248, 254, .28) 64%,
-      rgba(244, 248, 254, 0) 76%),
-    linear-gradient(180deg, rgba(244, 248, 254, .55) 0%, rgba(244, 248, 254, 0) 26%);
+    radial-gradient(112% 86% at 80% 48%,
+      rgba(244, 248, 254, .93) 0%,
+      rgba(244, 248, 254, .70) 34%,
+      rgba(244, 248, 254, .26) 60%,
+      rgba(244, 248, 254, 0) 100%),
+    linear-gradient(97deg,
+      rgba(244, 248, 254, .93) 0%,
+      rgba(244, 248, 254, .88) 26%,
+      rgba(244, 248, 254, .66) 44%,
+      rgba(244, 248, 254, .34) 60%,
+      rgba(244, 248, 254, .16) 100%),
+    linear-gradient(180deg,
+      rgba(244, 248, 254, .58) 0%,
+      rgba(244, 248, 254, .06) 24%,
+      rgba(244, 248, 254, .06) 72%,
+      rgba(244, 248, 254, .55) 100%);
 }
 
 .hp-hero__inner {
   position: relative;
   z-index: 1;
   width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 462px);
+  gap: clamp(26px, 3.6vw, 66px);
+  align-items: center;
+  padding-block: clamp(32px, 4vw, 60px);
 }
 
 .hp-hero__copy {
-  max-width: min(680px, 62%);
-  padding-block: clamp(20px, 2.4vw, 34px);
+  max-width: 560px;
+}
+
+/* --- the left column ---------------------------------------------------- */
+
+.hp-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 18px;
+  padding: 7px 14px 7px 11px;
+  border-radius: var(--hp-r-pill);
+  background: rgba(255, 255, 255, .78);
+  box-shadow: inset 0 0 0 1px rgba(29, 78, 216, .13);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .005em;
+  color: var(--hp-brand-deep);
+}
+
+.hp-hero__eyebrow i {
+  font-size: .82rem;
+  color: var(--hp-brand);
+}
+
+/* The middot carries wide side bearings at this size, which reads as a gap
+   rather than as a separator. Pulled in and lightened. */
+.hp-hero__eyebrow span[aria-hidden="true"] {
+  margin-inline: -2px;
+  color: var(--hp-brand-soft);
 }
 
 .hp-hero__h1 {
   margin: 0 0 14px;
-  font-size: clamp(2rem, 1.05rem + 3.2vw, 3.25rem);
-  line-height: 1.1;
-  letter-spacing: -.03em;
+  font-size: clamp(1.9rem, 1rem + 2.75vw, 2.95rem);
+  line-height: 1.08;
+  letter-spacing: -.032em;
   color: var(--hp-ink);
 }
 
 .hp-hero__lead {
-  margin: 0 0 24px;
-  max-width: 44ch;
-  font-size: clamp(1rem, .96rem + .28vw, 1.14rem);
+  margin: 0 0 22px;
+  max-width: 42ch;
+  font-size: clamp(1rem, .96rem + .26vw, 1.11rem);
   color: var(--hp-ink-2);
+}
+
+.hp-hero__points {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: grid;
+  gap: 11px;
+}
+
+.hp-hero__points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: .9375rem;
+  line-height: 1.45;
+  color: var(--hp-ink);
+  font-weight: 500;
+}
+
+.hp-hero__points i {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  margin-top: .1em;
+  border-radius: 50%;
+  font-size: .62rem;
+  color: #fff;
+  background: var(--hp-brand);
+  box-shadow: 0 2px 6px rgba(29, 78, 216, .28);
+}
+
+.hp-hero__markets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  margin: 0;
+  font-size: .8125rem;
+}
+
+.hp-hero__markets-k {
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-size: .68rem;
+  /* One step darker than the muted token: this label sits on a photograph,
+     and muted measured 4.49:1 against the lightest part of it. */
+  color: var(--hp-ink-2);
+}
+
+.hp-hero__markets-v {
+  font-family: var(--hp-font-display);
+  font-weight: 600;
+  color: var(--hp-ink);
+}
+
+.hp-hero__markets-v i {
+  font-style: normal;
+  color: var(--hp-brand-soft);
+  padding-inline: 3px;
 }
 
 /* --- the two journey CTAs ------------------------------------------------
@@ -1402,24 +1510,54 @@ body.hp-body {
   transform: translateY(1px);
 }
 
-@media (max-width:900px) {
-  .hp-hero {
-    min-height: 0;
+/* Below the two column breakpoint the card moves under the copy. It keeps a
+   readable width rather than stretching to the full container, because a
+   1000px wide form reads as a page, not as a card. */
+@media (max-width:1040px) {
+  .hp-hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(26px, 4vw, 40px);
+    padding-block: clamp(32px, 5vw, 52px);
   }
 
   .hp-hero__copy {
-    max-width: 100%;
-    padding-block: clamp(36px, 6vw, 56px);
+    max-width: 640px;
+  }
+
+  .hp-heroform {
+    /* Stacked under the copy, so it lines up with the copy rather than
+       hanging off the right edge of the container. */
+    justify-self: start;
+    width: 100%;
+    max-width: 560px;
   }
 
   .hp-hero__media img {
-    object-position: 64% 26%;
+    object-position: 60% 24%;
   }
 
-  /* The photo now sits behind the type, so the scrim has to carry it. */
+  /* The photo now sits behind everything, so the scrim has to carry it. */
   .hp-hero__media::after {
     background: linear-gradient(180deg,
-        rgba(244, 248, 254, .96) 0%, rgba(244, 248, 254, .90) 52%, rgba(244, 248, 254, .66) 100%);
+        rgba(244, 248, 254, .93) 0%,
+        rgba(244, 248, 254, .87) 46%,
+        rgba(244, 248, 254, .80) 100%);
+  }
+}
+
+@media (max-width:560px) {
+  .hp-hero__eyebrow {
+    font-size: .72rem;
+    padding: 6px 12px 6px 10px;
+  }
+
+  /* One line in the pill, or it wraps into an odd two line badge. */
+  .hp-hero__eyebrow-more {
+    display: none;
+  }
+
+  .hp-hero__points li {
+    font-size: .9rem;
   }
 }
 
@@ -3247,6 +3385,190 @@ body.hp-body {
   margin: 0 0 18px;
   font-size: .875rem;
   color: var(--hp-muted);
+}
+
+/* ==========================================================================
+   25c. The hero form card
+   --------------------------------------------------------------------------
+   Same markup as the dialog, a different job. This one sits on a photograph
+   on the first screen, so it needs to read as a solid object: no outline, a
+   wide soft shadow tinted to the page hue, and a hairline of white inside the
+   edge so it catches light the way a real card would.
+   ========================================================================== */
+
+.hp-heroform {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+}
+
+/* A faint brand glow under the card, so the corner nearest the photograph
+   does not go flat against a busy patch of it. */
+.hp-heroform::before {
+  content: "";
+  position: absolute;
+  inset: -14px -10px -18px;
+  z-index: -1;
+  border-radius: 30px;
+  background: radial-gradient(60% 60% at 50% 40%, rgba(29, 78, 216, .16), transparent 72%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.hp-formcard--hero {
+  border: 0;
+  border-radius: 20px;
+  background: var(--hp-surface);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, .9),
+    0 1px 2px rgba(18, 35, 63, .06),
+    0 10px 26px rgba(18, 35, 63, .12),
+    0 30px 64px rgba(18, 35, 63, .16);
+}
+
+.hp-formcard--hero .hp-formcard__body {
+  padding: 20px clamp(16px, 1.7vw, 24px) 22px;
+}
+
+.hp-formcard--hero .hp-formcard__sub {
+  margin-bottom: 15px;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: var(--hp-muted);
+}
+
+/* The form is the first screen's main action, so its fields are a little
+   tighter than the dialog's: the whole card has to stay in view. */
+.hp-formcard--hero .hp-form .mb-3 {
+  margin-bottom: 11px !important;
+}
+
+.hp-formcard--hero .hp-form .form-control,
+.hp-formcard--hero .hp-form .form-select {
+  padding-block: 11px;
+}
+
+.hp-formcard--hero .hp-form textarea.form-control {
+  min-height: 74px;
+}
+
+.hp-formcard--hero .hp-form-note {
+  margin-top: 13px;
+  font-size: .76rem;
+}
+
+/* --- the two journey tabs ------------------------------------------------
+   The deck's two entry points, now doing double duty as the card's tab strip.
+   Icon tile, then a two line label, so the choice reads at a glance from the
+   top of the page rather than needing to be read word by word.             */
+
+.hp-formcard__tabs--journey {
+  padding: 8px;
+  gap: 8px;
+  background: var(--hp-canvas);
+}
+
+.hp-tab__ico {
+  display: inline-grid;
+  place-items: center;
+}
+
+.hp-tab--journey {
+  justify-content: flex-start;
+  gap: 9px;
+  /* Equal height whichever label wraps, so the selected pill and the one
+     beside it always read as the same object. */
+  min-height: 58px;
+  padding: 9px 11px;
+  text-align: left;
+  border-radius: 13px;
+  /* An unselected tab still has to look pressable, so it keeps a faint
+     surface of its own rather than sitting as bare text on the strip. */
+  background: rgba(255, 255, 255, .55);
+}
+
+.hp-tab--journey .hp-tab__ico {
+  flex: 0 0 auto;
+  width: 31px;
+  height: 31px;
+  border-radius: 9px;
+  font-size: .82rem;
+  color: var(--hp-brand);
+  background: var(--hp-brand-tint);
+  transition: background-color var(--hp-t) var(--hp-ease-out),
+    color var(--hp-t) var(--hp-ease-out);
+}
+
+.hp-tab--journey .hp-tab__txt {
+  min-width: 0;
+}
+
+.hp-tab--journey .hp-tab__t {
+  display: block;
+  font-family: var(--hp-font-display);
+  font-size: .875rem;
+  font-weight: 650;
+  line-height: 1.22;
+  letter-spacing: -.012em;
+  /* Two short lines rather than one long line and one orphan word. */
+  text-wrap: balance;
+}
+
+.hp-tab--journey .hp-tab__s {
+  display: block;
+  margin-top: 2px;
+  font-size: .72rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--hp-muted);
+}
+
+.hp-tab--journey[aria-selected="true"] {
+  background: var(--hp-surface);
+  color: var(--hp-ink);
+  box-shadow: 0 1px 2px rgba(18, 35, 63, .06), 0 6px 16px rgba(18, 35, 63, .10);
+}
+
+.hp-tab--journey[aria-selected="true"] .hp-tab__ico {
+  background: var(--hp-brand);
+  color: #fff;
+}
+
+.hp-tab--journey[aria-selected="true"] .hp-tab__t {
+  color: var(--hp-brand-deep);
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .hp-tab--journey:not([aria-selected="true"]):hover .hp-tab__ico {
+    background: #D9E7FD;
+  }
+}
+
+/* The label wraps on a narrow card rather than being clipped. */
+@media (max-width:420px) {
+  .hp-formcard__tabs--journey {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hp-tab--journey {
+    padding: 10px;
+  }
+}
+
+/* With scripting off nothing can switch the tabs, so the strip goes and both
+   forms show one after the other. Each is an ordinary POST form, so both stay
+   usable: a candidate is never left looking at the employer form with no way
+   to reach their own. */
+html.no-js .hp-formcard__tabs {
+  display: none;
+}
+
+html.no-js .hp-formcard__body[hidden] {
+  display: block !important;
+}
+
+html.no-js .hp-formcard__body + .hp-formcard__body {
+  border-top: 1px solid var(--hp-line);
 }
 
 /* ==========================================================================

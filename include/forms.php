@@ -1,21 +1,32 @@
 <?php
 /**
- * forms.php - both enquiry forms, inside one modal.
+ * forms.php - both enquiry forms, rendered either inside the hero or inside
+ * a modal, from one copy of the markup.
  *
- * The hero's two buttons ("I am Hiring" / "I am Looking for a Job") and the
- * header's "Post a Requirement" open this dialog on the matching tab, so the
- * first screen stays clean while the forms are still one click away.
+ * Set $hp_form_mode = 'inline' before including this file and it renders the
+ * form card on its own, which is what the home page hero does: the card sits
+ * in the right column of the first screen so a visitor can start without
+ * clicking anything.
  *
- * Included once by slider.php, so every page carrying the hero also carries
- * this dialog and the ids inside it stay unique on the page.
+ * Leave it unset (or 'modal') and the same card comes wrapped in the dialog
+ * the inner pages use, opened by their two hero buttons and by the header's
+ * "Post a Requirement".
  *
- * Every field name, id, option value, form action and method below is exactly
- * what the backend expects. Nothing inside the forms changed.
+ * Only ever included ONCE per page, because the field ids below are the ones
+ * the backend and showFields() expect and they have to stay unique.
+ *
+ * Every field name, id, option value, form action and method is exactly what
+ * the backend expects. Nothing inside the forms themselves changed.
  *
  * Without JavaScript the dialog renders as an ordinary section (see the
  * html.no-js rules in theme.css), so the forms are never unreachable.
  */
+$hp_form_inline = (isset($hp_form_mode) && $hp_form_mode === 'inline');
 ?>
+<?php if ($hp_form_inline): ?>
+<div class="hp-heroform hp-rise" id="hp-heroform">
+  <div class="hp-formcard hp-formcard--hero">
+<?php else: ?>
 <div class="hp-modal" id="hp-formmodal" hidden>
   <div class="hp-modal__scrim" data-modal-close></div>
 
@@ -30,14 +41,34 @@
     <p class="hp-modal__sub">A consultant replies within one working day.</p>
 
     <div class="hp-formcard hp-formcard--plain">
-      <div class="hp-formcard__tabs" role="tablist" aria-label="What brings you here">
-        <button type="button" class="hp-tab" role="tab" id="hp-tab-employer"
+<?php endif; ?>
+      <div class="hp-formcard__tabs<?php echo $hp_form_inline ? ' hp-formcard__tabs--journey' : ''; ?>"
+           role="tablist" aria-label="What brings you here">
+        <button type="button" class="hp-tab<?php echo $hp_form_inline ? ' hp-tab--journey' : ''; ?>"
+                role="tab" id="hp-tab-employer"
                 aria-controls="hp-employer" aria-selected="true" tabindex="0">
-          <i class="fa-solid fa-hospital" aria-hidden="true"></i> Post a requirement
+          <span class="hp-tab__ico"><i class="fa-solid fa-hospital" aria-hidden="true"></i></span>
+          <?php if ($hp_form_inline): ?>
+          <span class="hp-tab__txt">
+            <span class="hp-tab__t">I am Hiring</span>
+            <span class="hp-tab__s">For Hospitals</span>
+          </span>
+          <?php else: ?>
+          <span class="hp-tab__txt">Post a requirement</span>
+          <?php endif; ?>
         </button>
-        <button type="button" class="hp-tab" role="tab" id="hp-tab-jobseeker"
+        <button type="button" class="hp-tab<?php echo $hp_form_inline ? ' hp-tab--journey' : ''; ?>"
+                role="tab" id="hp-tab-jobseeker"
                 aria-controls="hp-jobseeker" aria-selected="false" tabindex="-1">
-          <i class="fa-solid fa-user-doctor" aria-hidden="true"></i> Register your CV
+          <span class="hp-tab__ico"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></span>
+          <?php if ($hp_form_inline): ?>
+          <span class="hp-tab__txt">
+            <span class="hp-tab__t">I am Looking for a Job</span>
+            <span class="hp-tab__s">For Candidates</span>
+          </span>
+          <?php else: ?>
+          <span class="hp-tab__txt">Register your CV</span>
+          <?php endif; ?>
         </button>
       </div>
 
@@ -379,8 +410,12 @@
         </p>
       </div>
     </div>
+<?php if ($hp_form_inline): ?>
+  </div>
+<?php else: ?>
   </div>
 </div>
+<?php endif; ?>
 
 <script>
     // Captcha refresh, kept from the original markup for the commented-out
