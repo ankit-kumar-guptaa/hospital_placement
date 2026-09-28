@@ -28,13 +28,20 @@ $hero_title = isset($hero_title) ? $hero_title
 $hero_lead  = isset($hero_lead)  ? $hero_lead
             : 'Connecting hospitals with the right healthcare professionals, and helping candidates find the right opportunities.';
 
-/* Three things worth knowing before someone fills a form in. Deliberately not
-   the placement numbers: those are in the stat bar directly below, and saying
-   them twice on one screen makes both say less. */
+/* The three reasons to come to us rather than post the job yourself. Each is a
+   claim plus the sentence that backs it up, because an unexplained claim on a
+   landing page reads as filler, and because three one-line ticks left this
+   column far shorter than the card beside it.
+
+   Deliberately not the placement numbers: those are in the stat bar directly
+   below, and saying them twice on one screen makes both say less. */
 $hero_points = isset($hero_points) ? $hero_points : array(
-    'Shortlists in days, not weeks',
-    'Credentials verified before a CV reaches you',
-    'Free for candidates, always',
+    array('fa-bolt', 'Shortlists in days, not weeks',
+          'A live bench in every speciality, so the first names reach you inside a week.'),
+    array('fa-shield-halved', 'Checked before you see a CV',
+          'Registration, qualifications, documents and references, verified up front.'),
+    array('fa-hand-holding-heart', 'Free for candidates, always',
+          'Hospitals pay our fee. The people we place never pay us anything.'),
 );
 ?>
 
@@ -52,7 +59,8 @@ $hero_points = isset($hero_points) ? $hero_points : array(
 
       <p class="hp-hero__eyebrow hp-rise">
         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        ISO 9001:2000 certified<span class="hp-hero__eyebrow-more"> <span aria-hidden="true">&middot;</span> recruiting for healthcare</span> since 2010
+        <span>ISO 9001:2000 certified</span>
+        <span class="hp-hero__eyebrow-more">recruiting for healthcare since 2010</span>
       </p>
 
       <h1 class="hp-h1 hp-hero__h1 hp-rise" id="hero-title"><?php echo $hero_title; ?></h1>
@@ -61,7 +69,13 @@ $hero_points = isset($hero_points) ? $hero_points : array(
 
       <ul class="hp-hero__points hp-rise">
         <?php foreach ($hero_points as $pt): ?>
-        <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><?php echo $pt; ?></span></li>
+        <li>
+          <span class="hp-hero__point-ico"><i class="fa-solid <?php echo $pt[0]; ?>" aria-hidden="true"></i></span>
+          <span class="hp-hero__point-txt">
+            <strong><?php echo $pt[1]; ?></strong>
+            <span><?php echo $pt[2]; ?></span>
+          </span>
+        </li>
         <?php endforeach; ?>
       </ul>
 

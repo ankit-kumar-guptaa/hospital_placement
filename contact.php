@@ -145,20 +145,20 @@
 
                         <form action="contactFormBackend.php" method="post">
                             <div class="mb-3">
-                                <label class="form-label" for="contact-name">Your Name</label>
-                                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Your Name">
+                                <label class="form-label" for="cf-name">Your Name</label>
+                                <input type="text" id="cf-name" name="name" class="form-control" placeholder="Your Name">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="contact-email">Your Email</label>
-                                <input type="email" id="contact-email" name="email" class="form-control" placeholder="Your Email">
+                                <label class="form-label" for="cf-email">Your Email</label>
+                                <input type="email" id="cf-email" name="email" class="form-control" placeholder="Your Email">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="contact-phone">Phone Number</label>
-                                <input type="text" id="contact-phone" name="phone" class="form-control" placeholder="Phone Number">
+                                <label class="form-label" for="cf-phone">Phone Number</label>
+                                <input type="text" id="cf-phone" name="phone" class="form-control" placeholder="Phone Number">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label" for="contact-message">Your Message</label>
-                                <textarea id="contact-message" name="message" class="form-control" placeholder="Your Message" rows="4"></textarea>
+                                <label class="form-label" for="cf-message">Your Message</label>
+                                <textarea id="cf-message" name="message" class="form-control" placeholder="Your Message" rows="4"></textarea>
                             </div>
                             <!-- reCAPTCHA v3 hidden input -->
                             <input type="hidden" name="g-recaptcha-response" id="contact-recaptcha-response">

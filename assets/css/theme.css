@@ -1228,6 +1228,28 @@ body.hp-body {
   overflow: hidden;
 }
 
+/* A fine dot grid over the left half, faded out before it reaches the card.
+   The washed photograph goes very pale on that side, and a flat pale field is
+   the thing that makes a hero look unfinished. This gives it a surface
+   without putting anything on it that has to be read.
+
+   ::after rather than ::before so it paints over the photograph: both sit at
+   z-index 0, so the later one in the box's own order wins, and the content
+   above them is at z-index 1. */
+.hp-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(29, 78, 216, .20) 1px, transparent 1px);
+  background-size: 23px 23px;
+  -webkit-mask-image: linear-gradient(101deg,
+      rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .42) 30%, rgba(0, 0, 0, 0) 58%);
+  mask-image: linear-gradient(101deg,
+      rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .42) 30%, rgba(0, 0, 0, 0) 58%);
+}
+
 .hp-hero__media {
   position: absolute;
   inset: 0;
@@ -1283,7 +1305,10 @@ body.hp-body {
 }
 
 .hp-hero__copy {
-  max-width: 560px;
+  /* Wide enough that the gap between this column and the card reads as a
+     margin rather than as a hole. The lead and the three descriptions keep
+     their own measures, so the lines never get too long to read. */
+  max-width: 640px;
 }
 
 /* --- the left column ---------------------------------------------------- */
@@ -1308,11 +1333,29 @@ body.hp-body {
   color: var(--hp-brand);
 }
 
-/* The middot carries wide side bearings at this size, which reads as a gap
-   rather than as a separator. Pulled in and lightened. */
-.hp-hero__eyebrow span[aria-hidden="true"] {
-  margin-inline: -2px;
-  color: var(--hp-brand-soft);
+/* The separator used to be a middot typed between two spans, and its side
+   bearings at this size read as two uneven gaps rather than as a divider. It
+   is drawn now, so the spacing either side of it is exactly equal. */
+.hp-hero__eyebrow-more {
+  position: relative;
+  /* The pill's own 9px flex gap sits before the dot, so the padding is the
+     dot's 3px plus a matching 9px after it. Equal air either side. */
+  padding-left: 12px;
+  font-weight: 500;
+  color: var(--hp-brand);
+}
+
+.hp-hero__eyebrow-more::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  margin-top: -1.5px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: .55;
 }
 
 .hp-hero__h1 {
@@ -1330,36 +1373,63 @@ body.hp-body {
   color: var(--hp-ink-2);
 }
 
+/* Three reasons, each an icon tile with a claim and the line that backs it up.
+   They are the weight that lets this column stand against the form card
+   beside it: three single line ticks left the hero half empty. */
 .hp-hero__points {
   list-style: none;
-  margin: 0 0 22px;
+  margin: 0 0 24px;
   padding: 0;
   display: grid;
-  gap: 11px;
+  gap: 15px;
 }
 
 .hp-hero__points li {
   display: flex;
   align-items: flex-start;
-  gap: 11px;
-  font-size: .9375rem;
-  line-height: 1.45;
-  color: var(--hp-ink);
-  font-weight: 500;
+  gap: 13px;
 }
 
-.hp-hero__points i {
+/* The same tint the card's tab icons use, so the two columns read as one
+   piece of design rather than two. White tiles on a near white field had no
+   presence at all. */
+.hp-hero__point-ico {
   flex: 0 0 auto;
   display: grid;
   place-items: center;
-  width: 21px;
-  height: 21px;
-  margin-top: .1em;
-  border-radius: 50%;
-  font-size: .62rem;
-  color: #fff;
-  background: var(--hp-brand);
-  box-shadow: 0 2px 6px rgba(29, 78, 216, .28);
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  font-size: .85rem;
+  color: var(--hp-brand);
+  background: linear-gradient(150deg, #DCE8FD, var(--hp-brand-tint));
+  box-shadow:
+    inset 0 0 0 1px rgba(29, 78, 216, .10),
+    0 2px 8px rgba(18, 35, 63, .06);
+}
+
+.hp-hero__point-txt {
+  min-width: 0;
+  padding-top: 1px;
+}
+
+.hp-hero__point-txt strong {
+  display: block;
+  font-family: var(--hp-font-display);
+  font-size: .96rem;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -.012em;
+  color: var(--hp-ink);
+}
+
+.hp-hero__point-txt span {
+  display: block;
+  margin-top: 3px;
+  max-width: 44ch;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: var(--hp-ink-2);
 }
 
 .hp-hero__markets {
@@ -1556,8 +1626,29 @@ body.hp-body {
     display: none;
   }
 
-  .hp-hero__points li {
-    font-size: .9rem;
+  .hp-hero__points {
+    gap: 13px;
+  }
+
+  .hp-hero__point-ico {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: .78rem;
+  }
+
+  .hp-hero__point-txt strong {
+    font-size: .92rem;
+  }
+
+  .hp-hero__point-txt span {
+    font-size: .82rem;
+  }
+
+  /* The dot grid is a desktop touch: at this width the copy already runs the
+     full column and the texture only adds noise behind it. */
+  .hp-hero::after {
+    display: none;
   }
 }
 
@@ -3416,6 +3507,7 @@ body.hp-body {
 }
 
 .hp-formcard--hero {
+  position: relative;
   border: 0;
   border-radius: 20px;
   background: var(--hp-surface);
@@ -3424,6 +3516,22 @@ body.hp-body {
     0 1px 2px rgba(18, 35, 63, .06),
     0 10px 26px rgba(18, 35, 63, .12),
     0 30px 64px rgba(18, 35, 63, .16);
+}
+
+/* A hairline of brand colour along the top edge. It is the one decorative
+   mark on the card, and it does a job: it tells you which of the two things
+   on this screen is the one to act on. */
+.hp-formcard--hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(90deg,
+      var(--hp-brand-deep) 0%,
+      var(--hp-brand) 42%,
+      var(--hp-brand-aqua) 100%);
+  z-index: 2;
 }
 
 .hp-formcard--hero .hp-formcard__body {
