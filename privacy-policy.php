@@ -106,7 +106,7 @@
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><strong>Email:</strong> <a href="mailto:info@hospitalplacement.com" class="text-primary">info@hospitalplacement.com</a></li>
                     <li class="list-group-item"><strong>Address:</strong> Hospital Placement, Delhi, NCR, India</li>
-                    <li class="list-group-item"><strong>Phone:</strong> +91 98703 64340</li>
+                    <li class="list-group-item"><strong>Phone:</strong> +91 76690 73000</li>
                 </ul>
                 <p>For EU users, our Data Protection Officer can be reached at the same email.</p>
             </section>

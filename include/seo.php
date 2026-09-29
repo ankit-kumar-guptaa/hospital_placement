@@ -133,7 +133,7 @@ $org = array(
   'logo'  => 'https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg',
   'image' => $hp_ogimg,
   'email' => 'info@hospitalplacement.com',
-  'telephone' => '+91-98719-16980',
+  'telephone' => '+91-76690-73000',
   'areaServed' => array(
     array('@type' => 'Country', 'name' => 'India'),
     array('@type' => 'Country', 'name' => 'United Arab Emirates'),
@@ -147,7 +147,7 @@ $org = array(
           'addressLocality' => 'Ajman', 'addressCountry' => 'AE'),
   ),
   'contactPoint' => array(
-    array('@type' => 'ContactPoint', 'contactType' => 'sales', 'telephone' => '+91-98719-16980',
+    array('@type' => 'ContactPoint', 'contactType' => 'sales', 'telephone' => '+91-76690-73000',
           'email' => 'info@hospitalplacement.com', 'areaServed' => 'IN',
           'availableLanguage' => array('English', 'Hindi')),
     array('@type' => 'ContactPoint', 'contactType' => 'sales', 'telephone' => '+971-58-234-8005',

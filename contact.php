@@ -32,9 +32,8 @@
                         <div class="text-primary mb-3"><i class="bi bi-phone-fill fs-1"></i></div>
                         <h3 class="card-title">Call us</h3>
                         <ul class="list-unstyled mt-3">
-                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+919870364340">+91 98703 64340</a></li>
-                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+911140747520">011 4074 7520</a></li>
-                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+971582348005">+971 58 234 8005</a></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+917669073000">+91 76690 73000</a> <span class="hp-tel-k">India</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <a href="tel:+971582348005">+971 58 234 8005</a> <span class="hp-tel-k">UAE</span></li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +99,7 @@
                                 <h3 class="hp-addr__t"><i class="bi bi-geo-alt" aria-hidden="true"></i> New Delhi Office</h3>
                                 <p>A-83, Okhla Phase II</p>
                                 <p>New Delhi 110020</p>
-                                <p class="hp-addr__tel"><a href="tel:+919871916980">+91 98719 16980</a></p>
+                                <p class="hp-addr__tel"><a href="tel:+917669073000">+91 76690 73000</a></p>
                             </div>
                             <div class="hp-addr">
                                 <h3 class="hp-addr__t"><i class="bi bi-building" aria-hidden="true"></i> UAE Office</h3>
@@ -127,7 +126,7 @@
                         </div>
 
                         <div class="hp-note mt-4">
-                            <p class="mb-2"><i class="bi bi-phone-fill" aria-hidden="true"></i> <strong>Direct line:</strong> <a href="tel:+919211610707">+91 92116 10707</a></p>
+                            <p class="mb-2"><i class="bi bi-phone-fill" aria-hidden="true"></i> <strong>Direct line:</strong> <a href="tel:+917669073000">+91 76690 73000</a></p>
                             <p class="mb-2"><i class="bi bi-envelope-fill" aria-hidden="true"></i> <strong>Email:</strong> <a href="mailto:info@hospitalplacement.com">info@hospitalplacement.com</a></p>
                             <p class="mb-0"><i class="bi bi-clock" aria-hidden="true"></i> <strong>Office hours:</strong> Monday to Friday, 9:00 am to 6:00 pm</p>
                         </div>

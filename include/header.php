@@ -181,11 +181,11 @@ foreach (hp_india_cities() as $f => $c) {
     </nav>
 
     <div class="hp-header__cta">
-      <a class="hp-call" href="tel:+919870364340">
+      <a class="hp-call" href="tel:+917669073000">
         <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
         <span>
           <!-- <span class="hp-call__k">India</span> -->
-          <span class="hp-call__v">+91 98703 64340</span>
+          <span class="hp-call__v">+91 76690 73000</span>
         </span>
       </a>
 
@@ -264,9 +264,9 @@ foreach (hp_india_cities() as $f => $c) {
   </div>
 
   <div class="hp-drawer__phones">
-    <a class="hp-call" href="tel:+919870364340">
+    <a class="hp-call" href="tel:+917669073000">
       <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
-      <span><span class="hp-call__k">India</span><span class="hp-call__v">+91 98703 64340</span></span>
+      <span><span class="hp-call__k">India</span><span class="hp-call__v">+91 76690 73000</span></span>
     </a>
     <a class="hp-call" href="tel:+971582348005">
       <span class="hp-call__ico"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>

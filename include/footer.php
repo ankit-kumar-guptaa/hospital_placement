@@ -80,7 +80,7 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
           <span>
             <span class="hp-office__k">India</span>
             <span class="hp-office__v">A-83, Okhla Phase II, New Delhi 110020</span>
-            <span class="hp-office__v"><a href="tel:+919870364340">+91 98703 64340</a></span>
+            <span class="hp-office__v"><a href="tel:+917669073000">+91 76690 73000</a></span>
           </span>
         </div>
         <div class="hp-office__row">
@@ -118,7 +118,7 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
   <a class="hp-dock__wa" href="https://wa.me/+971582348005" rel="noopener">
     <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Chat on WhatsApp</span>
   </a>
-  <a class="hp-dock__tel" href="tel:+919870364340">
+  <a class="hp-dock__tel" href="tel:+917669073000">
     <i class="fa-solid fa-phone" aria-hidden="true"></i><span>Call our India office</span>
   </a>
 </div>

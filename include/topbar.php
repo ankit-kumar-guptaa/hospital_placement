@@ -26,9 +26,9 @@ require_once __DIR__ . '/markets.php';
     </nav>
 
     <div class="hp-topbar__contact">
-      <a href="tel:+919870364340">
+      <a href="tel:+917669073000">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        +91 98703 64340
+        +91 76690 73000
       </a>
       <a href="mailto:info@hospitalplacement.com" class="hp-topbar__mail">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>

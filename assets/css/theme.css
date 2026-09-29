@@ -1358,6 +1358,17 @@ body.hp-body {
   opacity: .55;
 }
 
+/* A separator needs something to separate. When this is the only span in the
+   pill, because the claim before it is commented out, the dot would sit on
+   its own at the start of the line. */
+.hp-hero__eyebrow-more:first-of-type {
+  padding-left: 0;
+}
+
+.hp-hero__eyebrow-more:first-of-type::before {
+  display: none;
+}
+
 .hp-hero__h1 {
   margin: 0 0 14px;
   font-size: clamp(1.9rem, 1rem + 2.75vw, 2.95rem);

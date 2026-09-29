@@ -11,8 +11,8 @@ $hp_p5 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
       <p>Send the role, the country and the band. A consultant who recruits in that speciality will come back to you within one working day.</p>
       <div class="hp-cta__row">
         <a class="hp-btn hp-btn--action" href="<?php echo hp_url('contact.php'); ?>">Hire staff</a>
-        <a class="hp-btn hp-btn--onDark" href="tel:+919871916980">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i> +91 98719 16980
+        <a class="hp-btn hp-btn--onDark" href="tel:+917669073000">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> +91 76690 73000
         </a>
       </div>
       <p class="hp-cta__note">Offices in New Delhi and Ajman, placing worldwide. International enquiries on +971 58 234 8005.</p>
