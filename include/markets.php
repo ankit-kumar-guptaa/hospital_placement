@@ -46,6 +46,15 @@ function hp_markets() {
       'area'  => array(array('@type' => 'Country', 'name' => 'India')),
       'file'  => 'hospital-recruitment-agency-in-india.php',
       'blurb' => 'Six city desks, no visa step, fastest joining dates',
+      'phone' => array('+91 76690 73000', '+917669073000', 'India desk'),
+      'points' => array(
+        array('fa-bolt', 'Two to six weeks to joining',
+              'Set by the notice period rather than by paperwork. No licensing exam, no visa.'),
+        array('fa-building', 'Six city desks',
+              'Delhi NCR, Mumbai, Hyderabad, Chandigarh, Kolkata and Lucknow, each holding its own pay bands.'),
+        array('fa-hand-holding-heart', 'Free for candidates, always',
+              'Hospitals pay our fee. The people we place never pay us anything.'),
+      ),
       'opening' => 'India is our home market and the one we move fastest in. There is no
                     licensing queue and no visa to wait on, so the limit on a joining date is
                     the notice period, not the paperwork. We run it from New Delhi with named
@@ -80,6 +89,15 @@ function hp_markets() {
       'area'  => array(array('@type' => 'Country', 'name' => 'United Arab Emirates')),
       'file'  => 'healthcare-recruitment-agency-in-uae.php',
       'blurb' => 'Licensing handled from our own Ajman office',
+      'phone' => array('+971 58 234 8005', '+971582348005', 'UAE desk'),
+      'points' => array(
+        array('fa-id-card', 'DHA, DOH and MOHAP files',
+              'We run the licence for the emirate you will actually work in, not a generic one.'),
+        array('fa-hourglass-half', 'Eight to sixteen weeks',
+              'Most of it DataFlow verification and the visa, rather than the search itself.'),
+        array('fa-location-dot', 'A desk inside the Gulf',
+              'Ajman, 26th Floor, Amber Gem Tower, so the file is handled in the same time zone.'),
+      ),
       'opening' => 'The Gulf does not turn on finding the candidate, it turns on getting them
                     licensed. Every emirate licenses separately, every file goes through primary
                     source verification, and most clinical roles sit behind an exam. We have an
@@ -121,6 +139,14 @@ function hp_markets() {
       'area'  => array(array('@type' => 'Country', 'name' => 'United States')),
       'file'  => 'healthcare-recruitment-agency-in-usa.php',
       'blurb' => 'The long route, run properly, with honest dates',
+      'points' => array(
+        array('fa-stamp', 'Licensure is by state',
+              'We pick the state deliberately, because moving later means a fresh endorsement.'),
+        array('fa-clipboard-check', 'NCLEX, CGFNS and VisaScreen',
+              'ECFMG certification through the USMLE for doctors. You hear your real starting point first.'),
+        array('fa-hourglass-half', 'Twelve months at best',
+              'Longer when a priority date is retrogressed, and we say so at the first call.'),
+      ),
       'opening' => 'The United States is the slowest market we work in and the one candidates are
                     most often misled about. The licensing is passable and the visa is the wall:
                     an employment-based green card for a nurse can sit behind a priority date for
@@ -165,6 +191,14 @@ function hp_markets() {
                        array('@type' => 'Country', 'name' => 'Malta')),
       'file'  => 'healthcare-recruitment-agency-in-europe.php',
       'blurb' => 'Language is the gate, so we start there',
+      'points' => array(
+        array('fa-language', 'Language decides the timeline',
+              'IELTS 7.0 or OET B for the UK and Ireland, B2 German for Germany.'),
+        array('fa-clipboard-check', 'CBT and OSCE, or recognition',
+              'NMC and GMC in the UK, NMBI in Ireland, the state authority in Germany.'),
+        array('fa-hourglass-half', 'Four to nine months',
+              'Almost entirely decided by how fast the language score arrives.'),
+      ),
       'opening' => 'Europe is not one market and the difference is language. A nurse with the
                     clinical experience for a London intensive care unit still needs an English
                     score before the register will look at them, and Germany will not begin
@@ -241,6 +275,28 @@ function hp_india_cities() {
         if (!empty($p['india_city'])) $out[$file] = $p;
     }
     return $out;
+}
+
+/**
+ * The phone number to show on the page being rendered.
+ *
+ * A market page with a desk of its own shows that desk's number: a hospital
+ * reading the UAE page should be given the Ajman office, not a number in
+ * another country and another time zone. Every other page shows the India
+ * number, which is the default for the site.
+ *
+ * Returns array(display, tel, label). The topbar and the market hero both
+ * read it, so the two cannot disagree about which office a page belongs to.
+ */
+function hp_page_phone() {
+    $default = array('+91 76690 73000', '+917669073000', 'India desk');
+
+    if (!function_exists('hp_page')) return $default;
+    $p = hp_page();
+    if (!$p || empty($p['market'])) return $default;
+
+    $mk = hp_market($p['market']);
+    return (!empty($mk['phone'])) ? $mk['phone'] : $default;
 }
 
 }

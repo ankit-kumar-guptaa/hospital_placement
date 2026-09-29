@@ -77,13 +77,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $mail->isSMTP();
         $mail->Host       = 'smtp.hostinger.com'; // Replace with your SMTP server
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'no-reply@greencarcarpool.com'; // SMTP username
+        $mail->Username   = 'smtp@greencarcarpool.com'; // SMTP username
         $mail->Password   = 'Rajiv@111@'; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587;
 
         // Recipients
-        $mail->setFrom('no-reply@greencarcarpool.com', 'Contact Form Submission for HospitalPlacement.com');
+        $mail->setFrom('smtp@greencarcarpool.com', 'Contact Form Submission for HospitalPlacement.com');
         $mail->addAddress('rajiv@elitecorporatesolutions.com'); // Admin email
 
         // Email content

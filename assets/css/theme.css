@@ -4150,6 +4150,120 @@ html.no-js .hp-modal__panel {
   }
 }
 
+/* --- the market page hero -----------------------------------------------
+   The four country pages carry the enquiry form itself rather than a button
+   that opens it, so their hero takes the home page's two column shape: the
+   pitch on the left, the card on the right. Everything the card needs is
+   already defined for the home hero, so this only has to lay the two out.  */
+
+.hp-pagehero--form {
+  align-items: stretch;
+}
+
+.hp-pagehero--form .hp-pagehero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 462px);
+  gap: clamp(26px, 3.6vw, 66px);
+  align-items: center;
+  padding-block: clamp(32px, 4vw, 58px);
+}
+
+.hp-pagehero--form .hp-pagehero__copy {
+  max-width: 640px;
+}
+
+/* The photo's right third is under the card here too, and the scrim needs
+   the same pool of light beneath it that the home hero uses. */
+.hp-pagehero--form .hp-pagehero__media img {
+  object-position: 40% 28%;
+}
+
+.hp-pagehero--form .hp-pagehero__media::after {
+  background:
+    radial-gradient(112% 86% at 80% 48%,
+      rgba(244, 248, 254, .93) 0%,
+      rgba(244, 248, 254, .70) 34%,
+      rgba(244, 248, 254, .26) 60%,
+      rgba(244, 248, 254, 0) 100%),
+    linear-gradient(97deg,
+      rgba(244, 248, 254, .93) 0%,
+      rgba(244, 248, 254, .88) 26%,
+      rgba(244, 248, 254, .66) 44%,
+      rgba(244, 248, 254, .34) 60%,
+      rgba(244, 248, 254, .16) 100%),
+    linear-gradient(180deg,
+      rgba(244, 248, 254, .58) 0%,
+      rgba(244, 248, 254, .06) 24%,
+      rgba(244, 248, 254, .06) 72%,
+      rgba(244, 248, 254, .55) 100%);
+}
+
+.hp-pagehero--form .hp-pagehero__h1 {
+  max-width: 21ch;
+  font-size: clamp(1.8rem, 1rem + 2.5vw, 2.7rem);
+  text-wrap: balance;
+}
+
+.hp-pagehero--form .hp-pagehero__lead {
+  margin-bottom: 22px;
+  max-width: 46ch;
+}
+
+.hp-pagehero__points {
+  margin-bottom: 20px;
+}
+
+/* The desk's own phone number, which on the UAE page is the Ajman office
+   rather than India. Larger and darker than the trust line it replaces,
+   because it is something to act on rather than something to note. */
+.hp-pagehero--form .hp-pagehero__note {
+  font-size: .875rem;
+  color: var(--hp-ink-2);
+}
+
+.hp-pagehero--form .hp-pagehero__note a {
+  font-family: var(--hp-font-display);
+  font-weight: 650;
+  color: var(--hp-brand);
+  text-decoration: none;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .hp-pagehero--form .hp-pagehero__note a:hover {
+    color: var(--hp-brand-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+@media (max-width:1040px) {
+  .hp-pagehero--form .hp-pagehero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(26px, 4vw, 40px);
+  }
+
+  .hp-pagehero--form .hp-pagehero__h1 {
+    max-width: 24ch;
+  }
+
+  .hp-pagehero--form .hp-heroform {
+    justify-self: start;
+    width: 100%;
+    max-width: 560px;
+  }
+
+  .hp-pagehero--form .hp-pagehero__media img {
+    object-position: 60% 26%;
+  }
+
+  .hp-pagehero--form .hp-pagehero__media::after {
+    background: linear-gradient(180deg,
+        rgba(244, 248, 254, .93) 0%,
+        rgba(244, 248, 254, .87) 46%,
+        rgba(244, 248, 254, .80) 100%);
+  }
+}
+
 /* The old pages carry their own <section> styling from style.css. Give the
    first one after the hero room to breathe so nothing butts up against it. */
 .hp-pagehero+section,

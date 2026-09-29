@@ -26,9 +26,15 @@ require_once __DIR__ . '/markets.php';
     </nav>
 
     <div class="hp-topbar__contact">
-      <a href="tel:+917669073000">
+      <?php
+      /* A market page with an office of its own shows that office's number.
+         Everywhere else this is the India number. */
+      $hp_tb_tel = hp_page_phone();
+      ?>
+      <a href="tel:<?php echo $hp_tb_tel[1]; ?>">
         <i class="fa-solid fa-phone" aria-hidden="true"></i>
-        +91 76690 73000
+        <span class="hp-topbar__cc"><?php echo htmlspecialchars(str_replace(' desk', '', $hp_tb_tel[2]), ENT_QUOTES, 'UTF-8'); ?></span>
+        <?php echo $hp_tb_tel[0]; ?>
       </a>
       <a href="mailto:info@hospitalplacement.com" class="hp-topbar__mail">
         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
