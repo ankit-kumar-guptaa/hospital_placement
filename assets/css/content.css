@@ -527,12 +527,7 @@
   margin-top: 0 !important;
 }
 
-/* Scoped to .container, the boundary this whole file uses: the body copy is
-   written in Bootstrap's .container, the redesigned components are built in
-   .hp-wrap. Unscoped, this painted navy onto every <strong> on the site,
-   including the ones inside the dark footer and the dark bands, where navy
-   on navy is invisible. */
-.hp-body .container strong {
+.hp-body strong {
   color: var(--hp-ink);
   font-weight: 600;
 }
