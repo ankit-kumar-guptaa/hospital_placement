@@ -13,10 +13,8 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
       <img class="hp-footer__logo" src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
         alt="HospitalPlacement.com" width="120" height="56" loading="lazy">
       <p class="hp-footer__about">
-        A healthcare recruitment consultancy working only in medical staffing since 2010.
-        ISO 9001:2000 certified, placing doctors, nurses, paramedical and hospital
-        administration staff for hospitals in India, the Gulf and international
-        markets, from our offices in New Delhi and Ajman.
+        Healthcare recruitment<br>
+        <strong>since 2010</strong>
       </p>
       <div class="hp-social" style="margin-top:22px;">
         <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw=="

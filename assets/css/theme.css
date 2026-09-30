@@ -2779,12 +2779,24 @@ body.hp-body {
   border-radius: 8px;
 }
 
+/* One line rather than the paragraph this used to be. A short line under a
+   logo reads as a strapline; a five line paragraph reads as something to
+   skip, which in a footer it is. */
 .hp-footer__about {
-  font-size: .9rem;
-  line-height: 1.72;
+  font-size: 1.02rem;
+  line-height: 1.32;
+  letter-spacing: -.01em;
   color: rgba(242, 246, 253, .72);
-  max-width: 38ch;
   margin: 0;
+}
+
+/* The year carries the claim, so it takes the weight and the full white. */
+.hp-footer__about strong {
+  display: block;
+  font-family: var(--hp-font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 .hp-footer h2,
@@ -4750,6 +4762,10 @@ html.no-js .hp-modal__panel {
 
 /* --- 31d. Footer nav sub-heading ---------------------------------------- */
 
-.hp-fnav__k {
-  margin-top: 26px;
+/* Scoped to .hp-footer so it outranks the `.hp-footer h2` rule above, which
+   is one specificity point heavier than a bare class and was zeroing this
+   margin: the "India city desks" heading sat flush against the list before
+   it, reading as one more item in it. */
+.hp-footer .hp-fnav__k {
+  margin-top: 28px;
 }
