@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Success message and redirect
         echo "<script>
               
-                window.location.href = 'thankyou.php'; // Redirect to a thank you page
+                window.location.href = '/thank-you'; // Redirect to a thank you page
               </script>";
     } catch (Exception $e) {
         echo "Email sending failed: {$mail->ErrorInfo}";

@@ -3691,6 +3691,134 @@ html.no-js .hp-formcard__body + .hp-formcard__body {
 }
 
 /* ==========================================================================
+   25d. Thank you page
+   --------------------------------------------------------------------------
+   One card on the canvas. Deliberately short: the page redirects itself, so
+   anything that cannot be read in a few seconds does not belong on it.
+   ========================================================================== */
+
+.hp-ty {
+  display: grid;
+  place-items: center;
+  min-height: 62vh;
+  padding-block: clamp(48px, 7vw, 96px);
+  background:
+    radial-gradient(62% 62% at 50% 0%, rgba(59, 130, 246, .10), transparent 70%),
+    var(--hp-canvas);
+}
+
+.hp-ty__card {
+  max-width: 620px;
+  margin-inline: auto;
+  padding: clamp(30px, 4vw, 52px) clamp(24px, 3.4vw, 46px);
+  text-align: center;
+  background: var(--hp-surface);
+  border-radius: 22px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, .9),
+    0 2px 8px rgba(18, 35, 63, .06),
+    0 22px 56px rgba(18, 35, 63, .14);
+}
+
+.hp-ty__tick {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(150deg, var(--hp-brand), var(--hp-brand-deep));
+  box-shadow: 0 6px 20px rgba(29, 78, 216, .34);
+}
+
+.hp-ty__h1 {
+  margin: 0 0 14px;
+  font-family: var(--hp-font-display);
+  /* Capped so the sentence fits the card on one line at desktop. Balanced
+     wrapping split it as "Thank you. We / have your details.", which breaks
+     it in the middle of the clause. */
+  font-size: clamp(1.5rem, 1.05rem + 1.55vw, 2.05rem);
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -.026em;
+  color: var(--hp-ink);
+  text-wrap: pretty;
+}
+
+.hp-ty__lead {
+  margin: 0 auto 18px;
+  max-width: 46ch;
+  font-size: clamp(1rem, .96rem + .22vw, 1.08rem);
+  line-height: 1.65;
+  color: var(--hp-ink-2);
+}
+
+.hp-ty__call {
+  margin: 0 0 26px;
+  font-size: .9375rem;
+  color: var(--hp-muted);
+}
+
+.hp-ty__call a {
+  font-family: var(--hp-font-display);
+  font-weight: 650;
+  color: var(--hp-brand);
+  text-decoration: none;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .hp-ty__call a:hover {
+    color: var(--hp-brand-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.hp-ty__act {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.hp-ty__redirect {
+  margin: 24px 0 0;
+  font-size: .8125rem;
+  color: var(--hp-muted);
+}
+
+/* A link in everything but the element: it cancels a timer, so it is a
+   button, and it has to look like the sentence it sits in. */
+.hp-ty__stay {
+  margin-left: 6px;
+  padding: 0;
+  font: inherit;
+  color: var(--hp-brand);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hp-ty__stay:hover {
+  color: var(--hp-brand-deep);
+}
+
+.hp-ty__stay:focus-visible {
+  outline: 2px solid var(--hp-brand);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* No script, no countdown: the sentence would be a lie. */
+html.no-js .hp-ty__redirect {
+  display: none;
+}
+
+/* ==========================================================================
    26. Form modal
    --------------------------------------------------------------------------
    The hero's two buttons open this rather than pushing the visitor down the

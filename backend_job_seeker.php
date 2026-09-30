@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         echo "<script>
               
-                window.location.href = 'thankyou.php';
+                window.location.href = '/thank-you';
               </script>";
         exit();
 

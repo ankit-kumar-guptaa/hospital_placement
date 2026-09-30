@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Redirect to thank you page after successful submission and email
             echo "<script>
                     // alert('Form submitted successfully! Thank you.');
-                    window.location.href = 'thankyou.php';
+                    window.location.href = '/thank-you';
                   </script>";
             exit();
 

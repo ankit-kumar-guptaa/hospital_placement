@@ -21,7 +21,7 @@ $w = array(
 
 $urls = array();
 foreach (hp_pages() as $file => $p) {
-    if ($p['group'] === 'legal') continue;          // noindex, keep it out
+    if (in_array($p['group'], array('legal', 'utility'), true)) continue;   // noindex, keep it out
     $g = isset($w[$p['group']]) ? $w[$p['group']] : array('monthly', '0.6');
     $urls[] = array(
       'loc'  => hp_abs($file),

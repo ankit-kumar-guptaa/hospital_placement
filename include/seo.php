@@ -66,7 +66,7 @@ $hp_years = (int) date('Y') - 2010;
 <title><?php echo $hp_title; ?></title>
 <meta name="description" content="<?php echo htmlspecialchars($hp_desc, ENT_QUOTES, 'UTF-8'); ?>">
 <link rel="canonical" href="<?php echo $hp_canon; ?>">
-<meta name="robots" content="<?php echo ($hp_p['group'] === 'legal') ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'; ?>">
+<meta name="robots" content="<?php echo in_array($hp_p['group'], array('legal', 'utility'), true) ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'; ?>">
 <meta name="author" content="<?php echo HP_BRAND; ?>">
 
 <!-- One language, served worldwide -->

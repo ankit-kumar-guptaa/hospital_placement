@@ -1,198 +1,107 @@
+<?php
+/**
+ * thankyou.php - where all four forms land after a successful submit.
+ *
+ * Two things were wrong with the page this replaces.
+ *
+ * It linked AOS's stylesheet, which sets [data-aos]{opacity:0} and waits for
+ * AOS's JavaScript to add .aos-animate. That JavaScript was removed from the
+ * site, so nothing ever added the class and the whole card sat at opacity 0:
+ * the page loaded, and the visitor saw an empty screen.
+ *
+ * It also fired the Google Ads conversion without ever loading gtag, because
+ * it built its own <head> instead of using include/seo.php. Every conversion
+ * from every form threw "gtag is not defined" and was lost. Including seo.php
+ * fixes that, and marks the page noindex on the way past.
+ */
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Hospital Placement</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS for animations -->
+<?php include 'include/seo.php'; ?>
 
-    <?php include "include/assets.php"?>
-
-    <!-- Google Tag Manager Conversion Tracking -->
-    <script>
-        gtag('event', 'conversion', {'send_to': 'AW-10893858085/yNPDCKzkkLwDEKWqzMoo'});
-    </script>
-    <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-10893858085/p3sfCI6N-qEaEKWqzMoo',
-                'value': 1.0,
-                'currency': 'INR',
-                'event_callback': callback
-            });
-            return false;
-        }
-    </script>
-
-    <style>
-        .thankyou-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 70vh; /* Adjust based on your header/footer height */
-            background: #f0f8f7; /* Light mint background like in the image */
-            padding: 20px;
-        }
-
-        .thankyou-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-            border: 2px solid #e8f5e9; /* Soft green border */
-            position: relative;
-            overflow: hidden;
-        }
-
-        .thankyou-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(56, 142, 60, 0.1), transparent);
-            animation: pulse 6s infinite;
-            z-index: 0;
-        }
-
-        .thankyou-title {
-            color: #2e7d32; /* Dark green like in the image */
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-            animation: fadeInDown 1s ease-in-out;
-        }
-
-        .thankyou-text, .redirect-text {
-            color: #4a4a4a;
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-            animation: fadeInUp 1.2s ease-in-out;
-        }
-
-        #countdown {
-            display: inline-block;
-            background: #2e7d32;
-            color: #fff;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            animation: bounce 2s infinite;
-        }
-
-        .btn-thankyou {
-            background: #2e7d32;
-            color: #fff;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1.1rem;
-            border-radius: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn-thankyou:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
-            background: #1b5e20;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* Responsive */
-        @media (max-width: 576px) {
-            .thankyou-card {
-                padding: 20px;
-                margin: 20px;
-            }
-            .thankyou-title {
-                font-size: 2rem;
-            }
-            .thankyou-text, .redirect-text {
-                font-size: 1rem;
-            }
-        }
-    </style>
+<!-- Google Ads conversion for a completed form. seo.php has already defined
+     gtag above, so this now has something to fire into. -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-10893858085/yNPDCKzkkLwDEKWqzMoo'});
+</script>
 </head>
-<body>
-    <?php include "include/header.php"?>
 
-    <!-- Thank You Section -->
-    <div class="thankyou-container" data-aos="fade-up">
-        <div class="thankyou-card">
-            <h2 class="thankyou-title">Thank You!</h2>
-            <p class="thankyou-text">Your submission has been received successfully. We’ll reach out to you soon!</p>
-            <p class="redirect-text">Redirecting to homepage in <span id="countdown">5</span> seconds...</p>
-            <a href="index.php" class="btn-thankyou">Back to Homepage</a>
+<body class="hp-body">
+
+<?php include "include/header.php"; ?>
+
+<main id="main" tabindex="-1">
+  <section class="hp-ty" aria-labelledby="ty-title">
+    <div class="hp-wrap">
+      <div class="hp-ty__card">
+
+        <span class="hp-ty__tick" aria-hidden="true">
+          <i class="fa-solid fa-check"></i>
+        </span>
+
+        <h1 class="hp-ty__h1" id="ty-title">Thank you. We have your details.</h1>
+
+        <p class="hp-ty__lead">
+          Your enquiry has reached our recruitment team. A consultant who works
+          your speciality will come back to you within one working day.
+        </p>
+
+        <p class="hp-ty__call">
+          In a hurry? Call us on
+          <?php
+          $hp_ty_tel = function_exists('hp_page_phone')
+              ? hp_page_phone()
+              : array('+91 76690 73000', '+917669073000', 'India desk');
+          ?>
+          <a href="tel:<?php echo $hp_ty_tel[1]; ?>"><?php echo $hp_ty_tel[0]; ?></a>
+        </p>
+
+        <div class="hp-ty__act">
+          <a class="hp-btn hp-btn--action" href="<?php echo hp_url(); ?>">Back to home</a>
+          <a class="hp-btn hp-btn--ghost" href="<?php echo hp_url('jobs.php'); ?>">Explore jobs</a>
         </div>
+
+        <p class="hp-ty__redirect">
+          Taking you back to the home page in <span id="countdown">5</span> seconds.
+          <button type="button" class="hp-ty__stay" id="ty-stay">Stay on this page</button>
+        </p>
+
+      </div>
     </div>
+  </section>
+</main>
 
-    <!-- Countdown Script -->
-    <script>
-        let seconds = 5;
-        const countdownElement = document.getElementById('countdown');
+<script>
+  /* The countdown the page has always had, with one addition: it stops if the
+     visitor is still reading. Redirecting somebody away mid sentence is the
+     one thing a confirmation page must not do. */
+  (function () {
+    var el = document.getElementById('countdown');
+    var stay = document.getElementById('ty-stay');
+    var note = document.querySelector('.hp-ty__redirect');
+    var left = 5;
 
-        const countdownInterval = setInterval(() => {
-            seconds--;
-            countdownElement.textContent = seconds;
+    var timer = setInterval(function () {
+      left -= 1;
+      el.textContent = left;
+      if (left <= 0) {
+        clearInterval(timer);
+        window.location.href = <?php echo json_encode(hp_url()); ?>;
+      }
+    }, 1000);
 
-            if (seconds <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = 'index.php';
-            }
-        }, 1000);
-    </script>
+    function cancel() {
+      clearInterval(timer);
+      if (note) note.hidden = true;
+    }
 
-<?php include "include/footer.php"?>
+    stay.addEventListener('click', cancel);
+    /* Any real sign of reading cancels it too. */
+    ['keydown', 'wheel', 'touchstart'].forEach(function (ev) {
+      window.addEventListener(ev, cancel, { once: true, passive: true });
+    });
+  })();
+</script>
+
+<?php include "include/footer.php"; ?>

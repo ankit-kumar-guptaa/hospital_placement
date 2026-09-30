@@ -86,6 +86,18 @@ function hp_pages() {
       'lead'  => 'Register once and a consultant who knows your speciality works your case against live hospital vacancies. Registration is free for candidates.',
       'img'   => 'jobs_hero', 'crumb' => 'Jobs', 'type' => 'CollectionPage', 'group' => 'company',
     ),
+    /* The page every form lands on. It is in the registry so it gets the same
+       head as everything else, which is what puts the Google Ads tag on it:
+       the conversion event it fires had no gtag to fire into before. */
+    'thankyou.php' => array(
+      'route' => 'thank-you', 'kw' => 'thank you',
+      'title' => 'Thank you | ' . HP_BRAND,
+      'desc'  => 'We have your details. A consultant will be in touch within one working day.',
+      'h1'    => 'Thank you',
+      'lead'  => 'Your enquiry has reached our recruitment team.',
+      'img'   => 'about_inset', 'crumb' => 'Thank you', 'type' => 'WebPage', 'group' => 'utility',
+    ),
+
     'privacy-policy.php' => array(
       'route' => 'privacy-policy', 'kw' => 'privacy policy',
       'title' => 'Privacy Policy | ' . HP_BRAND,
