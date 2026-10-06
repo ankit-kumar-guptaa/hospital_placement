@@ -10,7 +10,7 @@
       <li class="hp-reason hp-rise">
         <span class="hp-reason__n"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></span>
         <div>
-          <h3>We only do healthcare</h3>
+          <h3>Our speciality is medical recruitment</h3>
           <p>Our consultants know what an ICU sister actually does and why a cath lab technician is not interchangeable with a radiographer. That shows up in the shortlist.</p>
         </div>
       </li>
@@ -32,14 +32,14 @@
         <span class="hp-reason__n"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></span>
         <div>
           <h3>Screening before you see a CV</h3>
-          <p>Registration status, qualification documents and real experience are checked first, so your panel spends its time on judgement rather than verification.</p>
+          <p>Registration status, qualification documents and real experience are checked first, so your panel spends more of its time on judgement.</p>
         </div>
       </li>
       <li class="hp-reason hp-rise">
         <span class="hp-reason__n"><i class="fa-solid fa-headset" aria-hidden="true"></i></span>
         <div>
-          <h3>One consultant, start to finish</h3>
-          <p>The person who took your brief runs your search, handles the offer and checks in after the joining date. No handover, no repeating yourself.</p>
+          <h3>One consultant, introduction to interview. Complete peace of mind.</h3>
+          <p>From the first brief to the candidate&rsquo;s joining, you have one dedicated point of contact managing the entire process. No handovers, no repeated explanations, just clear communication, consistent follow-up and confidence that your hiring is in safe hands.</p>
         </div>
       </li>
     </ul>

@@ -7,7 +7,7 @@ $hp_years = (int) date('Y') - 2010;
 
 $hp_stats = array(
   array('i' => 'fa-award',        'n' => $hp_years, 'suf' => '+',  'l' => 'Years of Experience'),
-  array('i' => 'fa-user-check',   'n' => 10000,     'suf' => '+',  'l' => 'Successful Placements'),
+  array('i' => 'fa-user-check',   'n' => 1000,      'suf' => '+',  'l' => 'Successful Placements'),
   array('i' => 'fa-hospital',     'n' => 500,       'suf' => '+',  'l' => 'Hospitals Served'),
   array('i' => 'fa-earth-americas','n' => null,     'txt' => 'Global', 'l' => 'Recruitment Network'),
   array('i' => 'fa-address-book', 'n' => 50000,     'suf' => '+',  'l' => 'Professionals in Database'),

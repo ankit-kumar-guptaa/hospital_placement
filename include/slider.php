@@ -26,7 +26,7 @@ if (!function_exists('hp_img')) {
 
 $hp_pp = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 $hero_title = isset($hero_title) ? $hero_title
-  : 'Healthcare Recruitment<br>Made <span class="hp-mark">Simple.</span>';
+  : 'Let&rsquo;s Interview your<br>Medical staff <span class="hp-mark">this week.</span>';
 $hero_lead = isset($hero_lead) ? $hero_lead
   : 'Connecting hospitals with the right healthcare professionals, and helping candidates find the right opportunities.';
 
@@ -46,7 +46,7 @@ $hero_points = isset($hero_points) ? $hero_points : array(
   array(
     'fa-shield-halved',
     'Checked before you see a CV',
-    'Registration, qualifications, documents and references, verified up front.'
+    'Qualifications, experience, salary expectations and other requirements are taken up front, as per the brief you share.'
   ),
   array(
     'fa-hand-holding-heart',
@@ -70,7 +70,7 @@ $hero_points = isset($hero_points) ? $hero_points : array(
       <p class="hp-hero__eyebrow hp-rise">
         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
         <!-- <span>ISO 9001:2000 certified</span> -->
-        <span class="hp-hero__eyebrow-more">recruiting for healthcare since 2010</span>
+        <span class="hp-hero__eyebrow-more">Recruiting for healthcare since 2010</span>
       </p>
 
       <h1 class="hp-h1 hp-hero__h1 hp-rise" id="hero-title"><?php echo $hero_title; ?></h1>
@@ -90,9 +90,9 @@ $hero_points = isset($hero_points) ? $hero_points : array(
       </ul>
 
       <p class="hp-hero__markets hp-rise">
-        <span class="hp-hero__markets-k">Recruiting into</span>
-        <span class="hp-hero__markets-v">India <i aria-hidden="true">&middot;</i> UAE <i aria-hidden="true">&middot;</i>
-          USA <i aria-hidden="true">&middot;</i> Europe</span>
+        <span class="hp-hero__markets-k">Recruiting in</span>
+        <span class="hp-hero__markets-v">India <i aria-hidden="true">&ndash;</i> UAE <i aria-hidden="true">&ndash;</i>
+          USA <i aria-hidden="true">&ndash;</i> Europe</span>
       </p>
     </div>
 

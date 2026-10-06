@@ -48,20 +48,16 @@ $hp_years = (int) date('Y') - 2010;
 
       <div>
         <h2 class="hp-h2 hp-rise" id="about-title">
-          A recruitment firm that only ever worked in <span class="hp-mark">healthcare</span>
+          A recruitment firm that has served <span class="hp-mark">healthcare</span>
+          for more than a decade
         </h2>
         <p class="hp-copy hp-rise" style="margin-top:18px;">
-          HospitalPlacement.com has recruited for hospitals, nursing homes and diagnostic
-          centres since 2010, and nothing else. That focus is the whole point: our
-          consultants read a clinical brief the way your medical superintendent reads it,
-          so the shortlist arrives already filtered for registration, speciality and
-          shift reality.
-        </p>
-        <p class="hp-copy hp-rise" style="margin-top:14px;">
-          We work from New Delhi and from Ajman, recruiting for hospitals in India, across
-          the Gulf and in international markets. One team carries a candidate from first
-          call through licensing, visa and joining date, whichever country they are moving
-          to, so the file is never handed around.
+          Since 2010, HospitalPlacement.com has focused exclusively on healthcare
+          recruitment across the globe, with multiple offices in India and the UAE,
+          helping hospitals, nursing homes and diagnostic centres find the right
+          professionals. Our specialised understanding of clinical requirements means
+          every profile is assessed for the skills, registration, speciality and
+          practical requirements that matter.
         </p>
 
         <ul class="hp-ticks">

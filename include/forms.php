@@ -94,6 +94,15 @@ $hp_form_inline = (isset($hp_form_mode) && $hp_form_mode === 'inline');
               required>
               </div>
               <div class="mb-3">
+              <select id="employer-country" name="country" class="form-select" required>
+              <option value="" disabled selected>Where are you hiring? Select country</option>
+              <option value="India">India</option>
+              <option value="U.A.E.">U.A.E.</option>
+              <option value="USA">USA</option>
+              <option value="Europe">Europe</option>
+              </select>
+              </div>
+              <div class="mb-3">
               <!-- <label for="remarks" class="form-label">Remarks (Hiring For / Budget, etc.)</label> -->
               <textarea id="remarks" name="remarks" class="form-control"
               placeholder="Remarks (Hiring For / Budget, etc.)" rows="2" required></textarea>
@@ -375,6 +384,16 @@ $hp_form_inline = (isset($hp_form_mode) && $hp_form_mode === 'inline');
               <div class="col-md-4">
               <input type="text" name="phone" class="form-control" placeholder="Phone No" required>
               </div>
+              </div>
+
+              <div class="mb-3">
+              <select id="jobseeker-country" name="country" class="form-select" required>
+              <option value="" disabled selected>Where do you want to work? Select country</option>
+              <option value="India">India</option>
+              <option value="U.A.E.">U.A.E.</option>
+              <option value="USA">USA</option>
+              <option value="Europe">Europe</option>
+              </select>
               </div>
 
               <!-- CAPTCHA Container -->

@@ -52,6 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
     $department = $_POST['department'] ?? null; // Optional field
     $qualification = $_POST['qualification'] ?? null; // Optional field
+    // New field on the form. Carried into the email only, because the
+    // job seeker table has no column for it.
+    $country = htmlspecialchars(trim($_POST['country'] ?? ''));
 
     // Check if the PDO connection is established
     if ($pdo) {
@@ -100,6 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p><strong>Name:</strong> $name</p>
             <p><strong>Email:</strong> $email</p>
             <p><strong>Phone:</strong> $phone</p>
+            <p><strong>Preferred country:</strong> $country</p>
             <p><strong>Department:</strong> " . ($department ?? 'Not provided') . "</p>
             <p><strong>Qualification:</strong> " . ($qualification ?? 'Not provided') . "</p>
         ";

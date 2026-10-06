@@ -500,6 +500,66 @@
     });
   }
 
+  /* ---------------------------------------------------------------------------
+     13. Sliding rails. A scroll-snap row with a pair of arrows: the browser
+         does the scrolling, this only moves it by one card and keeps the
+         buttons honest about whether there is anything left to show.
+
+         No auto-advance on purpose. A row that moves on its own takes the
+         line somebody is reading away from them.
+     ------------------------------------------------------------------------ */
+  function initRails() {
+    all('[data-rail]').forEach(function (wrap) {
+      var rail = wrap.querySelector('.hp-rail--slide');
+      var nav  = wrap.querySelector('.hp-rail__nav');
+      var prev = wrap.querySelector('[data-rail-prev]');
+      var next = wrap.querySelector('[data-rail-next]');
+      if (!rail || !nav) return;
+
+      function overflowing() {
+        return rail.scrollWidth - rail.clientWidth > 4;
+      }
+
+      function step() {
+        var card = rail.querySelector('.hp-chip');
+        if (!card) return rail.clientWidth;
+        var gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
+        return card.getBoundingClientRect().width + gap;
+      }
+
+      function sync() {
+        // Nothing to slide to? The arrows would be decoration.
+        nav.hidden = !overflowing();
+        if (nav.hidden) return;
+        var max = rail.scrollWidth - rail.clientWidth;
+        if (prev) prev.disabled = rail.scrollLeft <= 2;
+        if (next) next.disabled = rail.scrollLeft >= max - 2;
+      }
+
+      function go(dir) {
+        rail.scrollBy({
+          left: dir * step(),
+          behavior: reduced.matches ? 'auto' : 'smooth'
+        });
+      }
+
+      on(prev, 'click', function () { go(-1); });
+      on(next, 'click', function () { go(1); });
+      on(rail, 'scroll', sync);
+      on(window, 'resize', sync);
+
+      // Arrow keys when the rail itself has focus, which is how it is
+      // reachable without a mouse or a touch screen.
+      on(rail, 'keydown', function (e) {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        go(e.key === 'ArrowRight' ? 1 : -1);
+      });
+
+      sync();
+    });
+  }
+
   function init() {
     initImageFallback();
     initHeader();
@@ -513,6 +573,7 @@
     initInlineFormLinks();
     initReveal();
     initTableWrap();
+    initRails();
     initContentReveal();
   }
 

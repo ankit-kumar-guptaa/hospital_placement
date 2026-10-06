@@ -50,6 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(trim($_POST['phone']));
     $remarks = htmlspecialchars(trim($_POST['remarks']));
+    // New field on the form. Carried into the email only, because the
+    // employer_submissions table has no column for it.
+    $country = htmlspecialchars(trim($_POST['country'] ?? ''));
 
     // Validate required fields
     if (empty($organization_name) || empty($contact_name) || empty($email) || empty($phone) || empty($remarks)) {
@@ -113,6 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p><strong>Contact Name:</strong> $contact_name</p>
                 <p><strong>Email:</strong> $email</p>
                 <p><strong>Phone:</strong> $phone</p>
+                <p><strong>Hiring for:</strong> $country</p>
                 <p><strong>Remarks:</strong> $remarks</p>
                 <p><strong>Submission Date:</strong> " . date('Y-m-d H:i:s') . "</p>
             ";

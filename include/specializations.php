@@ -12,7 +12,7 @@ $hp_specs = array(
   array('nurse-staffing-agency-india.php',    'fa-user-nurse',   'c2', 'Nurses',
         'Staff Nurses | Nursing Supervisors'),
   array('paramedical-recruitment-agency.php', 'fa-microscope',   'c3', 'Paramedical Staff',
-        'Lab Technicians | Radiologists | Physiotherapists'),
+        'Lab Technicians | Radiographers | Physiotherapists'),
   array('specialty-placement.php',            'fa-pills',        'c4', 'Pharma',
         'Pharmacists | Sales &amp; Medical Representatives'),
   array('temporary-staffing-services.php',    'fa-hospital-user','c5', 'Hospital Administration',

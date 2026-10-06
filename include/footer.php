@@ -12,12 +12,6 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
     <div>
       <img class="hp-footer__logo" src="https://hosptal.hospitalplacement.com/wp-content/uploads/2021/05/logo-220.jpg"
         alt="HospitalPlacement.com" width="120" height="56" loading="lazy">
-      <p class="hp-footer__about">
-        A healthcare recruitment consultancy working only in medical staffing since 2010.
-        ISO 9001:2000 certified, placing doctors, nurses, paramedical and hospital
-        administration staff for hospitals in India, the Gulf and international
-        markets, from our offices in New Delhi and Ajman.
-      </p>
       <div class="hp-social" style="margin-top:22px;">
         <a href="https://www.instagram.com/hospital_placement?igsh=MWttN2JqZXp1OGRzaw=="
           aria-label="HospitalPlacement on Instagram" rel="noopener">
@@ -58,13 +52,13 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
     </nav>
 
     <nav aria-labelledby="foot-mk">
-      <h2 id="foot-mk">Where we hire</h2>
+      <h2 id="foot-mk">Locations we serve</h2>
       <ul class="hp-fnav">
         <?php foreach (hp_markets() as $hp_fm): ?>
           <li><a href="<?php echo hp_url($hp_fm['file']); ?>"><?php echo htmlspecialchars($hp_fm['name'], ENT_QUOTES, 'UTF-8'); ?></a></li>
         <?php endforeach; ?>
       </ul>
-      <h2 class="hp-fnav__k">India city desks</h2>
+      <h2 class="hp-fnav__k">Network across the nation</h2>
       <ul class="hp-fnav">
         <?php foreach (hp_india_cities() as $hp_fc_file => $hp_fc): ?>
           <li><a href="<?php echo hp_url($hp_fc_file); ?>"><?php echo htmlspecialchars($hp_fc['city'], ENT_QUOTES, 'UTF-8'); ?></a></li>
@@ -73,7 +67,7 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
     </nav>
 
     <div>
-      <h2>Talk to us</h2>
+      <h2>Let&rsquo;s begin with your requirement</h2>
       <div class="hp-office">
         <div class="hp-office__row">
           <i class="fa-solid fa-location-dot" aria-hidden="true"></i>

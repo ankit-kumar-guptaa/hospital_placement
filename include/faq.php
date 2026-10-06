@@ -6,7 +6,6 @@ require_once __DIR__ . '/pages.php';
  * never drift apart.
  */
 $hp_p4 = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
-$hp_years = (int) date('Y') - 2010;
 
 $hp_faq = array(
   array(
@@ -15,27 +14,27 @@ $hp_faq = array(
   ),
   array(
     'q' => 'How does your fee model work?',
-    'a' => 'We work on a pay on success basis. There is no retainer and no upfront listing charge. Our fee becomes due once your candidate joins and clears the guarantee period agreed in writing before the search starts.',
+    'a' => 'Let us discuss it. We keep our fee structure transparent, flexible and designed to work in your favour.',
   ),
   array(
     'q' => 'Which cities and countries do you cover?',
-    'a' => 'Across India we run dedicated desks for Delhi NCR, Mumbai, Hyderabad, Chandigarh, Kolkata and Lucknow, and we recruit nationwide from our New Delhi office. Our Ajman office covers the Emirates and the wider Gulf, and we place candidates into international markets from both offices. Tell us the country you are hiring for and we will confirm the desk that handles it.',
+    'a' => 'We serve all locations in India and the UAE. Locations in the USA and Europe are to be discussed.',
   ),
   array(
     'q' => 'How quickly can you send a shortlist?',
-    'a' => 'It depends on the role. Ward nursing, administration and most paramedical posts move fastest because we hold pre-screened candidates. Super-speciality consultant and head of department searches take longer because they are head hunted rather than advertised. We commit to a timeline with you when we take the brief, not after.',
+    'a' => 'We keep searches as fast as we can, however it depends on the specific role and requirement.',
   ),
   array(
     'q' => 'Do you help candidates moving abroad?',
-    'a' => 'Yes, that is a large part of what we do. Practising clinically in another country means holding a licence from that country health authority, and each one sets its own examination and document requirements. We tell you which pathway applies to your qualification, what paperwork to prepare, and we coordinate the employer side of the process.',
+    'a' => 'Generally we do not. That is pretty much between the hospital and the candidate. Our role is to match the right candidate with the requirement.',
   ),
   array(
     'q' => 'Are you certified, and how long have you been doing this?',
-    'a' => 'HospitalPlacement.com is an ISO 9001:2000 certified recruitment consultancy and has worked exclusively in healthcare staffing since 2010, which is ' . $hp_years . ' years of placements into hospitals, nursing homes and diagnostic centres in India and overseas.',
+    'a' => 'Yes, we are certified, and we have been serving since 2010.',
   ),
   array(
     'q' => 'Do you charge job seekers a placement fee?',
-    'a' => 'Registering with us is free for candidates. Our fee is paid by the hiring hospital or clinic. If anyone asks you for money to be placed through us, tell us before you pay anything.',
+    'a' => 'We never charge any jobseeker in any circumstance.',
   ),
 );
 ?>

@@ -123,7 +123,7 @@ if ($p['group'] === 'hospitals') {
 
       <p class="hp-pagehero__note">
         <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-        recruiting for healthcare since 2010
+        Recruiting for healthcare since 2010
       </p>
 
       <?php endif; ?>
