@@ -109,7 +109,7 @@ $hp_pf = (strpos($_SERVER['PHP_SELF'], '/blog/') !== false) ? '/' : '';
 </footer>
 
 <div class="hp-dock">
-  <a class="hp-dock__wa" href="https://wa.me/+971582348005" rel="noopener">
+  <a class="hp-dock__wa" href="https://wa.me/917669073000" rel="noopener">
     <i class="fab fa-whatsapp" aria-hidden="true"></i><span>Chat on WhatsApp</span>
   </a>
   <a class="hp-dock__tel" href="tel:+917669073000">
